@@ -11,7 +11,10 @@ import { AirdropCard, SponsoredCard } from "@/components/AirdropCard";
 import { FilterBar } from "@/components/FilterBar";
 import { AAds } from "@/components/AAds";
 import { ExchangeCTA } from "@/components/ExchangeCTA";
+import { Pagination } from "@/components/Pagination";
 import { siteUrl, breadcrumbJsonLd, jsonLdScript } from "@/lib/seo";
+
+const PAGE_SIZE = 30;
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -42,29 +45,40 @@ function pickStr(v: string | string[] | undefined): string | undefined {
 export default async function HomePage({ searchParams }: PageProps) {
   const sp = await searchParams;
 
+  const chainSlug = pickStr(sp.chain) || undefined;
+  const categorySlug = pickStr(sp.category) || undefined;
+  const status = (() => {
+    const s = pickStr(sp.status) as AirdropStatus | undefined;
+    return s && ALLOWED_STATUS.has(s) ? s : undefined;
+  })();
+  const kyc = pickStr(sp.kyc) === "yes" ? "yes" as const
+    : pickStr(sp.kyc) === "no" ? "no" as const
+    : undefined;
+  const sort = (() => {
+    const s = pickStr(sp.sort);
+    return s && ALLOWED_SORT.has(s) ? (s as AirdropFilters["sort"]) : "newest";
+  })();
+  const page = Math.max(1, Math.min(50, Number(pickStr(sp.page)) || 1));
+
+  // Fetch one extra row to detect whether a "next page" exists without a
+  // separate COUNT() round-trip.
   const filters: AirdropFilters = {
-    chainSlug: pickStr(sp.chain) || undefined,
-    categorySlug: pickStr(sp.category) || undefined,
-    status: (() => {
-      const s = pickStr(sp.status) as AirdropStatus | undefined;
-      return s && ALLOWED_STATUS.has(s) ? s : undefined;
-    })(),
-    kycOnly:
-      pickStr(sp.kyc) === "yes" ? "yes"
-        : pickStr(sp.kyc) === "no" ? "no"
-        : undefined,
-    sort: (() => {
-      const s = pickStr(sp.sort);
-      return s && ALLOWED_SORT.has(s) ? (s as AirdropFilters["sort"]) : "newest";
-    })(),
-    limit: 60,
+    chainSlug,
+    categorySlug,
+    status,
+    kycOnly: kyc,
+    sort,
+    limit: PAGE_SIZE + 1,
+    offset: (page - 1) * PAGE_SIZE,
   };
 
-  const [airdrops, chains, categories] = await Promise.all([
+  const [fetched, chains, categories] = await Promise.all([
     listAirdrops(filters),
     listChains(),
     listCategories(),
   ]);
+  const hasNext = fetched.length > PAGE_SIZE;
+  const airdrops = fetched.slice(0, PAGE_SIZE);
 
   const empty = airdrops.length === 0;
 
@@ -93,7 +107,7 @@ export default async function HomePage({ searchParams }: PageProps) {
               ))}
             </ListGrid>
 
-            {airdrops.length > 6 ? (
+            {airdrops.length > 6 && page === 1 ? (
               <div className="my-8">
                 <ExchangeCTA variant="row" />
               </div>
@@ -106,6 +120,19 @@ export default async function HomePage({ searchParams }: PageProps) {
                 </CardSlot>
               ))}
             </ListGrid>
+
+            <Pagination
+              page={page}
+              hasNext={hasNext}
+              basePath="/"
+              preserveParams={{
+                chain: chainSlug ?? "",
+                category: categorySlug ?? "",
+                status: status ?? "",
+                kyc: kyc ?? "",
+                sort: sort === "newest" ? "" : (sort ?? ""),
+              }}
+            />
           </>
         )}
       </div>

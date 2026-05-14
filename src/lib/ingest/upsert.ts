@@ -12,8 +12,13 @@
  *   - status, funding, social_score, end_date are refreshed every run.
  */
 import { type Pool } from "mysql2/promise";
+import crypto from "node:crypto";
 import { slugify } from "@/lib/format";
 import type { NormalizedAirdrop } from "./types";
+
+function visitCodeFor(slug: string): string {
+  return crypto.createHash("sha256").update(`v1:${slug}`).digest("base64url").slice(0, 8);
+}
 
 export interface UpsertResult {
   action: "inserted" | "updated" | "skipped-editorial" | "error";
@@ -170,6 +175,7 @@ export async function upsertNormalized(
       }
 
       // Insert new
+      const code = visitCodeFor(baseSlug);
       await pool.query(
         `INSERT INTO airdrops (
           slug, name, token_symbol, logo_url, short_description,
@@ -178,8 +184,9 @@ export async function upsertNormalized(
           kyc_required, funding_raised_usd,
           estimated_value_usd_min, estimated_value_usd_max, social_score,
           project_url, twitter_url, discord_url,
+          primary_cta_visit_code,
           started_at, snapshot_date, end_date
-        ) VALUES (?,?,?,?,?, ?,?,?, ?,?,?,?, ?,?, ?,?,?, ?,?,?, ?,?,?)`,
+        ) VALUES (?,?,?,?,?, ?,?,?, ?,?,?,?, ?,?, ?,?,?, ?,?,?, ?, ?,?,?)`,
         [
           baseSlug, r.name, r.token_symbol ?? null, r.logo_url ?? null, r.short_description ?? null,
           r.description_md ?? "", r.eligibility_md ?? "", r.how_to_claim_md ?? "",
@@ -187,9 +194,22 @@ export async function upsertNormalized(
           r.kyc_required ? 1 : 0, r.funding_raised_usd ?? null,
           r.estimated_value_usd_min ?? null, r.estimated_value_usd_max ?? null, r.social_score ?? null,
           r.project_url ?? null, r.twitter_url ?? null, r.discord_url ?? null,
+          code,
           r.started_at ?? null, r.snapshot_date ?? null, r.end_date ?? null,
         ],
       );
+      // Map the visit code to the project_url so /visit/{code} 302s correctly.
+      if (r.project_url) {
+        await pool.query(
+          `INSERT INTO visit_codes (code, target_url, airdrop_id, source_label)
+           VALUES (?, ?, (SELECT id FROM airdrops WHERE slug = ? LIMIT 1), ?)
+           ON DUPLICATE KEY UPDATE
+             target_url = VALUES(target_url),
+             airdrop_id = VALUES(airdrop_id),
+             source_label = VALUES(source_label)`,
+          [code, r.project_url, baseSlug, `ingest-${sourceSlug}`],
+        );
+      }
       out.push({ action: "inserted", slug: baseSlug });
     } catch (e) {
       console.error(`upsert error for ${r.name}:`, e instanceof Error ? e.message : e);

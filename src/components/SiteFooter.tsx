@@ -50,8 +50,6 @@ export function SiteFooter() {
           <NewsletterForm source="footer" />
           <ul className="mt-5 space-y-1.5 text-sm text-text-dim">
             <li><Link href="/feed.xml" className="hover:text-text">RSS feed</Link></li>
-            <li><a href="https://t.me/" className="hover:text-text" rel="noopener nofollow">Telegram</a></li>
-            <li><a href="https://x.com/" className="hover:text-text" rel="noopener nofollow">X / Twitter</a></li>
           </ul>
         </div>
       </div>

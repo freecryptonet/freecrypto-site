@@ -3,12 +3,21 @@ import { notFound } from "next/navigation";
 import { listAirdrops, listCategories } from "@/lib/db";
 import { AirdropListing } from "@/components/AirdropListing";
 import { AAds } from "@/components/AAds";
+import { Pagination } from "@/components/Pagination";
 import { breadcrumbJsonLd, jsonLdScript, siteUrl } from "@/lib/seo";
 
 export const dynamic = "force-dynamic";
 
+const PAGE_SIZE = 30;
+
 interface PageProps {
   params: Promise<{ slug: string }>;
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+}
+
+function pickStr(v: string | string[] | undefined): string | undefined {
+  if (Array.isArray(v)) return v[0];
+  return v;
 }
 
 async function findCategory(slug: string) {
@@ -29,12 +38,21 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-export default async function CategoryPage({ params }: PageProps) {
+export default async function CategoryPage({ params, searchParams }: PageProps) {
   const { slug } = await params;
   const cat = await findCategory(slug);
   if (!cat) notFound();
 
-  const airdrops = await listAirdrops({ categorySlug: cat.slug, limit: 60 });
+  const sp = await searchParams;
+  const page = Math.max(1, Math.min(50, Number(pickStr(sp.page)) || 1));
+
+  const fetched = await listAirdrops({
+    categorySlug: cat.slug,
+    limit: PAGE_SIZE + 1,
+    offset: (page - 1) * PAGE_SIZE,
+  });
+  const hasNext = fetched.length > PAGE_SIZE;
+  const airdrops = fetched.slice(0, PAGE_SIZE);
 
   return (
     <div className="mx-auto max-w-page px-4 py-8">
@@ -59,6 +77,13 @@ export default async function CategoryPage({ params }: PageProps) {
       </div>
 
       <AirdropListing airdrops={airdrops} />
+
+      <Pagination
+        page={page}
+        hasNext={hasNext}
+        basePath={`/categories/${cat.slug}`}
+        preserveParams={{}}
+      />
 
       <script
         type="application/ld+json"

@@ -71,29 +71,40 @@ export default async function AirdropDetailPage({ params }: PageProps) {
 
       <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_320px]">
         <div className="min-w-0">
-          <Section title="About">
-            <div
-              className="prose prose-invert prose-sm max-w-none"
-              dangerouslySetInnerHTML={{ __html: renderMarkdown(a.description_md) }}
-            />
-          </Section>
+          {a.description_md.trim() ? (
+            <Section title="About">
+              <div
+                className="prose prose-invert prose-sm max-w-none"
+                dangerouslySetInnerHTML={{ __html: renderMarkdown(a.description_md) }}
+              />
+            </Section>
+          ) : null}
 
-          <Section title="Eligibility">
-            <div
-              className="prose prose-invert prose-sm max-w-none"
-              dangerouslySetInnerHTML={{ __html: renderMarkdown(a.eligibility_md) }}
-            />
-          </Section>
+          {a.eligibility_md.trim() ? (
+            <Section title="Eligibility">
+              <div
+                className="prose prose-invert prose-sm max-w-none"
+                dangerouslySetInnerHTML={{ __html: renderMarkdown(a.eligibility_md) }}
+              />
+            </Section>
+          ) : null}
 
           <div className="my-8 flex justify-center">
             <AAds zone="leaderboard" />
           </div>
 
-          <Section title="How to claim">
-            <div
-              className="prose prose-invert prose-sm max-w-none"
-              dangerouslySetInnerHTML={{ __html: renderMarkdown(a.how_to_claim_md) }}
-            />
+          <Section title={a.how_to_claim_md.trim() ? "How to claim" : `Visit ${a.name}`}>
+            {a.how_to_claim_md.trim() ? (
+              <div
+                className="prose prose-invert prose-sm max-w-none"
+                dangerouslySetInnerHTML={{ __html: renderMarkdown(a.how_to_claim_md) }}
+              />
+            ) : (
+              <p className="text-text-dim text-sm max-w-prose">
+                This listing is pulled from an external source. Follow the
+                link below for the project's own claim guide.
+              </p>
+            )}
             <a
               href={ctaHref}
               className="mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-btn bg-accent text-ink-soft font-semibold hover:bg-accent/90 transition-colors"
@@ -234,18 +245,29 @@ function Hero({ a, ctaHref }: { a: AirdropDetail; ctaHref: string }) {
 }
 
 function InfoCard({ a }: { a: AirdropDetail }) {
-  const rows: Array<[string, React.ReactNode]> = [
-    ["Token", a.token_symbol ?? "—"],
-    ["Chain", a.chain_name ?? "—"],
-    ["Category", a.category_name ?? "—"],
-    ["Estimated value", formatValueRange(a.estimated_value_usd_min, a.estimated_value_usd_max)],
-    ["Funding raised", a.funding_raised_usd ? formatUsd(a.funding_raised_usd, { compact: true }) : "—"],
-    ["Social score", a.social_score != null ? `${a.social_score}/100` : "—"],
-    ["Started", a.started_at ? a.started_at.toISOString().slice(0, 10) : "—"],
-    ["Snapshot", a.snapshot_date ? a.snapshot_date.toISOString().slice(0, 10) : "—"],
-    ["Ends", a.end_date ? a.end_date.toISOString().slice(0, 10) : "—"],
+  // Only render rows whose value is meaningful. The "Updated" row always
+  // renders since updated_at is non-null by definition.
+  const allRows: Array<[string, React.ReactNode | null]> = [
+    ["Token", a.token_symbol || null],
+    ["Chain", a.chain_name || null],
+    ["Category", a.category_name || null],
+    [
+      "Estimated value",
+      a.estimated_value_usd_min != null || a.estimated_value_usd_max != null
+        ? formatValueRange(a.estimated_value_usd_min, a.estimated_value_usd_max)
+        : null,
+    ],
+    [
+      "Funding raised",
+      a.funding_raised_usd ? formatUsd(a.funding_raised_usd, { compact: true }) : null,
+    ],
+    ["Social score", a.social_score != null ? `${a.social_score}/100` : null],
+    ["Started", a.started_at ? a.started_at.toISOString().slice(0, 10) : null],
+    ["Snapshot", a.snapshot_date ? a.snapshot_date.toISOString().slice(0, 10) : null],
+    ["Ends", a.end_date ? a.end_date.toISOString().slice(0, 10) : null],
     ["Updated", timeAgo(a.updated_at)],
   ];
+  const rows = allRows.filter(([, v]) => v != null) as Array<[string, React.ReactNode]>;
   return (
     <div className="card p-4">
       <div className="text-xs uppercase tracking-widest text-text-faint mb-2">
