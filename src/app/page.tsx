@@ -14,6 +14,7 @@ import { ExchangeCTA } from "@/components/ExchangeCTA";
 import { siteUrl, breadcrumbJsonLd, jsonLdScript } from "@/lib/seo";
 
 export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 export const metadata: Metadata = {
   title: "Free Crypto Airdrops, Verified Daily",
