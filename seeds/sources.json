@@ -3,5 +3,6 @@
   { "slug": "defillama",      "name": "DefiLlama Airdrops",         "url": "https://defillama.com/airdrops" },
   { "slug": "cryptorank",     "name": "CryptoRank Drophunting",     "url": "https://cryptorank.io/drophunting" },
   { "slug": "airdropalert",   "name": "AirdropAlert",               "url": "https://airdropalert.com" },
+  { "slug": "airdropsio",     "name": "airdrops.io",                "url": "https://airdrops.io" },
   { "slug": "coinmarketcap",  "name": "CoinMarketCap Airdrops",     "url": "https://coinmarketcap.com/airdrop" }
 ]

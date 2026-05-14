@@ -14,7 +14,7 @@
 import mysql from "mysql2/promise";
 import { config as loadEnv } from "dotenv";
 import { defiLlamaSource } from "../src/lib/ingest/sources/defillama";
-import { airdropAlertSource } from "../src/lib/ingest/sources/airdropalert";
+import { airdropsIoSource } from "../src/lib/ingest/sources/airdropsio";
 import { upsertNormalized } from "../src/lib/ingest/upsert";
 import type { IngestStats, SourceAdapter } from "../src/lib/ingest/types";
 
@@ -26,7 +26,7 @@ if (!DATABASE_URL) {
   process.exit(1);
 }
 
-const SOURCES: SourceAdapter[] = [defiLlamaSource, airdropAlertSource];
+const SOURCES: SourceAdapter[] = [defiLlamaSource, airdropsIoSource];
 
 async function runSource(pool: import("mysql2/promise").Pool, src: SourceAdapter): Promise<IngestStats> {
   const t0 = Date.now();

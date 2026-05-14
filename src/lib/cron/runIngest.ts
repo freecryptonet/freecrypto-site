@@ -7,11 +7,14 @@
  */
 import type { Pool } from "mysql2/promise";
 import { defiLlamaSource } from "@/lib/ingest/sources/defillama";
-import { airdropAlertSource } from "@/lib/ingest/sources/airdropalert";
+import { airdropsIoSource } from "@/lib/ingest/sources/airdropsio";
 import { upsertNormalized } from "@/lib/ingest/upsert";
 import type { IngestStats, SourceAdapter } from "@/lib/ingest/types";
 
-const SOURCES: SourceAdapter[] = [defiLlamaSource, airdropAlertSource];
+// airdropalert.ts kept in the tree for git history but no longer pulled —
+// its RSS feed drifted into generic crypto blog content. Replaced by
+// airdrops.io /latest/ scraper which still publishes real airdrop cards.
+const SOURCES: SourceAdapter[] = [defiLlamaSource, airdropsIoSource];
 
 export async function runOneSource(pool: Pool, src: SourceAdapter): Promise<IngestStats> {
   const t0 = Date.now();
