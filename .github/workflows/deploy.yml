@@ -1,0 +1,67 @@
+name: Deploy production
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-prod
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Configure SSH
+        run: |
+          set -e
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          printf '%s\n' "${SSH_KEY}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keygen -y -f ~/.ssh/id_ed25519 > /dev/null
+          cat > ~/.ssh/config <<'EOF'
+          Host vps
+            HostName 72.62.154.119
+            User deploy
+            IdentityFile ~/.ssh/id_ed25519
+            StrictHostKeyChecking accept-new
+            UserKnownHostsFile ~/.ssh/known_hosts
+            ConnectTimeout 30
+            ServerAliveInterval 30
+          EOF
+          chmod 600 ~/.ssh/config
+        env:
+          SSH_KEY: ${{ secrets.VPS_SSH_KEY }}
+
+      - name: Pull, build, reload (production)
+        run: |
+          ssh vps bash -se << 'REMOTE'
+            set -euo pipefail
+            cd /home/deploy/freecrypto
+            echo "===> git pull"
+            git fetch --quiet origin main
+            git reset --hard origin/main
+            git log -1 --pretty="%h %s"
+            echo "===> npm ci"
+            if ! npm ci --no-audit --no-fund --prefer-offline --include=optional; then
+              echo "===> npm ci failed; clean install"
+              rm -rf node_modules
+              npm install --no-audit --no-fund
+            fi
+            echo "===> nuke .next"
+            rm -rf .next
+            echo "===> next build"
+            NODE_OPTIONS=--max-old-space-size=6144 npm run build
+            if [ ! -f .next/BUILD_ID ]; then
+              echo "ERROR: .next/BUILD_ID missing after build"
+              exit 1
+            fi
+            echo "===> pm2 reload"
+            pm2 reload fc --update-env
+            pm2 save
+            sleep 3
+            curl -sf -o /dev/null -w "smoke: HTTP %{http_code}\n" http://127.0.0.1:3003/
+          REMOTE
