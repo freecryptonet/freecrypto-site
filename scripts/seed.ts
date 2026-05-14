@@ -30,6 +30,13 @@ interface ChainSeed { slug: string; name: string; description: string | null; so
 interface CategorySeed { slug: string; name: string; description: string | null; sort_order: number; }
 interface SourceSeed { slug: string; name: string; url: string | null; }
 interface FaqSeed { question: string; answer_md: string; }
+interface GuideSeed {
+  slug: string;
+  title: string;
+  excerpt: string;
+  body_md: string;
+  published_at: string;
+}
 interface AirdropSeed {
   slug: string;
   name: string;
@@ -195,6 +202,45 @@ async function main() {
         [aId, i, f.question, f.answer_md],
       );
     }
+  }
+
+  // Exchange + tool visit codes (independent of airdrops — site-wide CTAs)
+  const codesPath = path.join(SEEDS_DIR, "visit_codes.json");
+  if (fs.existsSync(codesPath)) {
+    interface CodeSeed { code: string; target_url: string; source_label: string; notes?: string; }
+    const codes = readJson<CodeSeed[]>("visit_codes.json");
+    console.log(`Seeding ${codes.length} visit codes…`);
+    for (const c of codes) {
+      await conn.query(
+        `INSERT INTO visit_codes (code, target_url, airdrop_id, source_label)
+         VALUES (?, ?, NULL, ?)
+         ON DUPLICATE KEY UPDATE
+           target_url   = VALUES(target_url),
+           source_label = VALUES(source_label)`,
+        [c.code, c.target_url, c.source_label],
+      );
+    }
+    console.log(`✓ Seeded ${codes.length} visit codes.`);
+  }
+
+  // Guides (optional — only loads if seeds/guides.json exists)
+  const guidesPath = path.join(SEEDS_DIR, "guides.json");
+  if (fs.existsSync(guidesPath)) {
+    const guides = readJson<GuideSeed[]>("guides.json");
+    console.log(`Seeding ${guides.length} guides…`);
+    for (const g of guides) {
+      await conn.query(
+        `INSERT INTO guides (slug, title, excerpt, body_md, published_at)
+         VALUES (?, ?, ?, ?, ?)
+         ON DUPLICATE KEY UPDATE
+           title = VALUES(title),
+           excerpt = VALUES(excerpt),
+           body_md = VALUES(body_md),
+           published_at = VALUES(published_at)`,
+        [g.slug, g.title, g.excerpt, g.body_md, g.published_at],
+      );
+    }
+    console.log(`✓ Seeded ${guides.length} guides.`);
   }
 
   await conn.end();

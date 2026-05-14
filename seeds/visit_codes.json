@@ -1,0 +1,44 @@
+[
+  {
+    "code": "binance",
+    "target_url": "https://accounts.binance.com/register?ref=REPLACE_ME",
+    "source_label": "binance-ref",
+    "notes": "Replace REPLACE_ME with your Binance referral ID from accounts.binance.com → Referral. CPA varies by user volume."
+  },
+  {
+    "code": "bybit",
+    "target_url": "https://www.bybit.com/invite?ref=REPLACE_ME",
+    "source_label": "bybit-ref",
+    "notes": "Replace REPLACE_ME with your Bybit invite code from bybit.com → Affiliates. Strong CPA in 2026."
+  },
+  {
+    "code": "okx",
+    "target_url": "https://www.okx.com/join/REPLACE_ME",
+    "source_label": "okx-ref",
+    "notes": "Replace REPLACE_ME with your OKX affiliate slug from okx.com → Affiliate Center."
+  },
+  {
+    "code": "mexc",
+    "target_url": "https://www.mexc.com/register?inviteCode=REPLACE_ME",
+    "source_label": "mexc-ref",
+    "notes": "Replace REPLACE_ME with your MEXC invite code from mexc.com → Affiliate Program."
+  },
+  {
+    "code": "kraken",
+    "target_url": "https://www.kraken.com/sign-up?ref=REPLACE_ME",
+    "source_label": "kraken-ref",
+    "notes": "Kraken Affiliate Program — strong for US users who can't use Binance/Bybit."
+  },
+  {
+    "code": "rabby",
+    "target_url": "https://rabby.io/",
+    "source_label": "rabby-tool",
+    "notes": "Rabby wallet — recommended over MetaMask for transaction simulation. No affiliate program; link is editorial recommendation."
+  },
+  {
+    "code": "revoke",
+    "target_url": "https://revoke.cash/",
+    "source_label": "revoke-tool",
+    "notes": "revoke.cash — token approval revoker. No affiliate program; editorial recommendation."
+  }
+]

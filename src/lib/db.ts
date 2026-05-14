@@ -310,6 +310,65 @@ export async function resolveVisitCode(code: string): Promise<VisitCodeTarget | 
   }
 }
 
+export interface GuideListItem {
+  id: number;
+  slug: string;
+  title: string;
+  excerpt: string | null;
+  cover_url: string | null;
+  published_at: Date | null;
+  updated_at: Date;
+}
+
+export interface GuideDetail extends GuideListItem {
+  body_md: string;
+}
+
+export async function listGuides(limit = 50): Promise<GuideListItem[]> {
+  const pool = getPool();
+  if (!pool) return [];
+  try {
+    const [rows] = await pool.query<RowDataPacket[]>(`
+      SELECT id, slug, title, excerpt, cover_url, published_at, updated_at
+      FROM guides
+      WHERE published_at IS NOT NULL AND published_at <= NOW()
+      ORDER BY published_at DESC
+      LIMIT ${Math.min(Math.max(limit, 1), 200)}
+    `);
+    return (rows as unknown as GuideListItem[]).map((r) => ({
+      ...r,
+      published_at: r.published_at ? new Date(r.published_at) : null,
+      updated_at: new Date(r.updated_at),
+    }));
+  } catch {
+    return [];
+  }
+}
+
+export async function getGuideBySlug(slug: string): Promise<GuideDetail | null> {
+  const pool = getPool();
+  if (!pool) return null;
+  try {
+    const [rows] = await pool.query<RowDataPacket[]>(
+      `SELECT id, slug, title, excerpt, body_md, cover_url, published_at, updated_at
+       FROM guides
+       WHERE slug = ? AND published_at IS NOT NULL AND published_at <= NOW()
+       LIMIT 1`,
+      [slug],
+    );
+    const arr = rows as unknown as GuideDetail[];
+    if (arr.length === 0) return null;
+    const r = arr[0];
+    return {
+      ...r,
+      published_at: r.published_at ? new Date(r.published_at) : null,
+      updated_at: new Date(r.updated_at),
+    };
+  } catch {
+    return null;
+  }
+}
+
 export async function logVisitClick(args: {
   code: string;
   ipHash: string;
