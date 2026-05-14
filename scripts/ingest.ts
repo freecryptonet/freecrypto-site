@@ -15,6 +15,7 @@ import mysql from "mysql2/promise";
 import { config as loadEnv } from "dotenv";
 import { defiLlamaSource } from "../src/lib/ingest/sources/defillama";
 import { airdropsIoSource } from "../src/lib/ingest/sources/airdropsio";
+import { enrichAirdropsIoRows } from "../src/lib/ingest/enrich/airdropsio-detail";
 import { upsertNormalized } from "../src/lib/ingest/upsert";
 import type { IngestStats, SourceAdapter } from "../src/lib/ingest/types";
 
@@ -78,6 +79,31 @@ async function main() {
       `✓ ${s.source}: fetched=${s.fetched} inserted=${s.inserted} updated=${s.updated} ` +
         `skipped(editorial)=${s.skipped} errors=${s.errors} ${s.durationMs}ms`,
     );
+  }
+
+  // Enrichment pass: airdrops.io detail-page structured-data scrape.
+  try {
+    const enrich = await enrichAirdropsIoRows(pool);
+    const eStats: IngestStats = {
+      source: "airdropsio-enrich",
+      fetched: enrich.scanned,
+      inserted: 0,
+      updated: enrich.enriched,
+      skipped: 0,
+      errors: enrich.failed,
+      durationMs: enrich.durationMs,
+    };
+    allStats.push(eStats);
+    console.log(
+      `✓ ${eStats.source}: scanned=${eStats.fetched} enriched=${eStats.updated} ` +
+        `failed=${eStats.errors} ${eStats.durationMs}ms`,
+    );
+  } catch (e) {
+    console.error("✗ airdropsio-enrich failed:", e instanceof Error ? e.message : e);
+    allStats.push({
+      source: "airdropsio-enrich",
+      fetched: 0, inserted: 0, updated: 0, skipped: 0, errors: 1, durationMs: 0,
+    });
   }
 
   await pool.end();

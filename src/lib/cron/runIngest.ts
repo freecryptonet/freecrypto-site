@@ -8,6 +8,7 @@
 import type { Pool } from "mysql2/promise";
 import { defiLlamaSource } from "@/lib/ingest/sources/defillama";
 import { airdropsIoSource } from "@/lib/ingest/sources/airdropsio";
+import { enrichAirdropsIoRows } from "@/lib/ingest/enrich/airdropsio-detail";
 import { upsertNormalized } from "@/lib/ingest/upsert";
 import type { IngestStats, SourceAdapter } from "@/lib/ingest/types";
 
@@ -53,6 +54,28 @@ export async function runIngest(pool: Pool): Promise<IngestStats[]> {
   const out: IngestStats[] = [];
   for (const src of SOURCES) {
     out.push(await runOneSource(pool, src));
+  }
+  // After source adapters: enrich airdrops.io rows that still have thin
+  // descriptions by scraping the project's detail page for structured data
+  // (step titles, numbers, social links). Synthesised summary, no prose copy.
+  try {
+    const enrich = await enrichAirdropsIoRows(pool);
+    out.push({
+      source: "airdropsio-enrich",
+      fetched: enrich.scanned,
+      inserted: 0,
+      updated: enrich.enriched,
+      skipped: 0,
+      errors: enrich.failed,
+      durationMs: enrich.durationMs,
+    });
+  } catch (e) {
+    console.error("airdropsio-enrich failed:", e instanceof Error ? e.message : e);
+    out.push({
+      source: "airdropsio-enrich",
+      fetched: 0, inserted: 0, updated: 0, skipped: 0, errors: 1,
+      durationMs: 0,
+    });
   }
   return out;
 }
