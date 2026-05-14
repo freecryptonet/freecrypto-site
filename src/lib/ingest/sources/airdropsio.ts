@@ -21,7 +21,12 @@
 import { slugify } from "@/lib/format";
 import type { NormalizedAirdrop, SourceAdapter } from "../types";
 
-const MIN_TEMPERATURE = 100;
+// `/latest/` lists fresh entries; most haven't accumulated heat votes yet,
+// so they sit at 0-90°. Don't filter on temperature here — the structural
+// HTML filter (must be in <article> + must have temperature-N + must have
+// /SLUG/ link + must have <h3>) plus the name denylist already give us
+// quality. Heat just becomes a sort signal.
+const MIN_TEMPERATURE = 0;
 const MAX_ROWS = 25;
 
 // CEX / wrapped / bridge name patterns — same shape as the DefiLlama filter.
@@ -69,12 +74,16 @@ function stripTags(s: string): string {
 
 function parseCards(html: string): RawCard[] {
   const cards: RawCard[] = [];
-  // Each card is bounded by an outer wrapper. We split on the wrapper opener.
-  const blockRe = /<div\s+class=['"]air-wrapper\s+temperature-(\d+)['"][^>]*>([\s\S]*?)<div\s+class=['"]air-back/gi;
-  let m: RegExpExecArray | null;
-  while ((m = blockRe.exec(html)) !== null) {
-    const temperature = Number(m[1]) || 0;
-    const block = m[2];
+  // Each card is wrapped in an <article>...</article> on /latest/. We grab
+  // each article that contains an `air-wrapper temperature-N` and parse
+  // its inner content.
+  const articleRe = /<article\b[^>]*>([\s\S]*?)<\/article>/gi;
+  let am: RegExpExecArray | null;
+  while ((am = articleRe.exec(html)) !== null) {
+    const block = am[1];
+    const tempMatch = block.match(/air-wrapper\s+temperature-(\d+)/i);
+    if (!tempMatch) continue;
+    const temperature = Number(tempMatch[1]) || 0;
 
     // Name + slug
     const nameMatch = block.match(/<a\s+href=['"]?https?:\/\/airdrops\.io\/([^/'"\s]+)\/?['"]?[^>]*>\s*<h3[^>]*>([^<]+)<\/h3>/i);
