@@ -68,6 +68,70 @@ function deriveName(title: string): string {
     .trim();
 }
 
+/**
+ * AirdropAlert's RSS feed mixes real airdrop announcements with blog posts,
+ * news articles, and listicles. We only want the airdrop entries.
+ *
+ * Heuristic:
+ *   1. Title must reference an airdrop / token-distribution event by keyword.
+ *   2. Title length must be plausibly short (real ones are like "Monad Airdrop",
+ *      not "6 crypto tokens that had a big week and why the market is...").
+ *   3. Title must not contain obvious blog-post patterns.
+ *   4. URL must not point to a known non-airdrop section.
+ */
+const TITLE_KEYWORD_RE = /\b(airdrop|token\s+(sale|distribution|drop)|launchpad|incentive|points\s+program|retroactive)\b/i;
+
+const TITLE_BLOG_PATTERNS = [
+  /\bis\s+pumping\b/i,
+  /\bhere'?s\b/i,
+  /\bwhy\s+(the|crypto|bitcoin)/i,
+  /\bhow\s+to\b/i,
+  /^\s*(best|top|biggest)\s+\d*\s*crypto/i,
+  /\bcrypto\s+tokens\b/i,
+  /\bbetting\s+sites\b/i,
+  /\bworld\s+cup\b/i,
+  /\bexplained\b/i,
+  /\breview\b/i,
+  /\bguide\b/i,
+  /\bwhat['']?s\s+going\s+on\b/i,
+  /\bmemes\b/i,
+];
+
+const URL_DENY_PATTERNS = [
+  /\/news\//i,
+  /\/blog\//i,
+  /\/insights\//i,
+  /\/guides?\//i,
+  /\/reviews?\//i,
+  /\/articles?\//i,
+];
+
+function looksLikeRealAirdropPost(title: string, link: string): boolean {
+  if (!title) return false;
+
+  // Must mention airdrop or related event
+  if (!TITLE_KEYWORD_RE.test(title)) return false;
+
+  // Real airdrop titles are short: "ProjectName Airdrop" or "Acme Token Sale"
+  const wordCount = title.split(/\s+/).filter(Boolean).length;
+  if (wordCount > 8) return false;
+  if (title.length > 80) return false;
+
+  // Reject obvious blog-post patterns
+  for (const pat of TITLE_BLOG_PATTERNS) {
+    if (pat.test(title)) return false;
+  }
+
+  // Reject URLs pointing to non-airdrop sections of the site
+  if (link) {
+    for (const pat of URL_DENY_PATTERNS) {
+      if (pat.test(link)) return false;
+    }
+  }
+
+  return true;
+}
+
 export const airdropAlertSource: SourceAdapter = {
   slug: "airdropalert",
   name: "AirdropAlert RSS",
@@ -86,7 +150,9 @@ export const airdropAlertSource: SourceAdapter = {
         return [];
       }
       const xml = await res.text();
-      const items = parseRss(xml);
+      const items = parseRss(xml).filter((it) =>
+        looksLikeRealAirdropPost(it.title, it.link),
+      );
 
       return items.map((it): NormalizedAirdrop => {
         const name = deriveName(it.title);
