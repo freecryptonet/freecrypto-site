@@ -26,7 +26,7 @@ export function AirdropCard({ a }: { a: AirdropListItem }) {
             {a.token_symbol?.slice(0, 3) ?? a.name.slice(0, 2).toUpperCase()}
           </div>
           <div className="min-w-0">
-            <h3 className="font-semibold text-text leading-tight truncate">{a.name}</h3>
+            <h2 className="font-semibold text-text leading-tight truncate">{a.name}</h2>
             <div className="text-xs text-text-faint flex items-center gap-2 mt-0.5">
               {a.chain_name ? <span>{a.chain_name}</span> : null}
               {a.chain_name && a.category_name ? <span aria-hidden>•</span> : null}

@@ -18,14 +18,15 @@ export async function GET(
   context: { params: Promise<{ code: string }> },
 ) {
   const { code } = await context.params;
-  if (!/^[A-Za-z0-9_-]{4,20}$/.test(code)) {
-    return new NextResponse("Not found", { status: 404 });
-  }
+  const notFound = () => {
+    const r = new NextResponse("Not found", { status: 404 });
+    r.headers.set("X-Robots-Tag", "noindex, nofollow");
+    return r;
+  };
+  if (!/^[A-Za-z0-9_-]{4,20}$/.test(code)) return notFound();
 
   const target = await resolveVisitCode(code);
-  if (!target) {
-    return new NextResponse("Not found", { status: 404 });
-  }
+  if (!target) return notFound();
 
   // Fire-and-forget log
   const ip = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
@@ -38,5 +39,10 @@ export async function GET(
     uaHash: sha256(ua),
   });
 
-  return NextResponse.redirect(target.target_url, 302);
+  // Belt-and-braces: robots.txt already disallows /visit/, but if Google
+  // hits this URL anyway (e.g. via an external link), tell it not to index
+  // the redirect URL itself and not to crawl the affiliate target either.
+  const res = NextResponse.redirect(target.target_url, 302);
+  res.headers.set("X-Robots-Tag", "noindex, nofollow");
+  return res;
 }

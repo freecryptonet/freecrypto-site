@@ -41,11 +41,11 @@ export function AAds({ zone, className }: { zone: ZoneKey; className?: string })
     return (
       <div
         className={cn(
-          "flex flex-col items-center justify-center text-text-faint text-xs",
+          "flex flex-col items-center justify-center text-text-faint text-xs w-full",
           "rounded-card border border-dashed border-edge bg-ink-soft/40",
           className,
         )}
-        style={{ width: w, height: h, maxWidth: "100%" }}
+        style={{ maxWidth: w, aspectRatio: `${w} / ${h}` }}
         aria-hidden
       >
         <div className="font-mono">A-Ads placeholder</div>
@@ -55,14 +55,19 @@ export function AAds({ zone, className }: { zone: ZoneKey; className?: string })
     );
   }
 
-  // Standard A-Ads iframe embed.
+  // Standard A-Ads iframe embed. The outer wrapper uses aspect-ratio so the
+  // intrinsic 728/300 width never pushes its grid track wider than the
+  // viewport on mobile (would otherwise cause horizontal page scroll).
   const src = `//acceptable.a-ads.com/${id}/?size=${w}x${h}`;
   return (
-    <div className={cn("relative", className)} style={{ width: w, height: h, maxWidth: "100%" }}>
+    <div
+      className={cn("relative w-full", className)}
+      style={{ maxWidth: w, aspectRatio: `${w} / ${h}` }}
+    >
       <iframe
         title={`Sponsored — ${label}`}
         src={src}
-        style={{ border: "0", padding: 0, width: "100%", height: "100%", overflow: "hidden" }}
+        style={{ border: 0, padding: 0, width: "100%", height: "100%", overflow: "hidden", display: "block" }}
         loading="lazy"
         scrolling="no"
       />

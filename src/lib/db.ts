@@ -392,6 +392,64 @@ export async function getGuideBySlug(slug: string): Promise<GuideDetail | null> 
   }
 }
 
+/**
+ * Sitemap-only: return slug + lastmod + total content length for every
+ * airdrop. Lets sitemap.ts filter out thin pages (Google skips them anyway,
+ * and including them wastes crawl budget on URLs that get demoted as
+ * low-value rather than indexed).
+ */
+export interface SitemapAirdropRow {
+  slug: string;
+  updated_at: Date;
+  content_chars: number;
+}
+export async function listAirdropSlugsForSitemap(): Promise<SitemapAirdropRow[]> {
+  const pool = getPool();
+  if (!pool) return [];
+  try {
+    const [rows] = await pool.query<RowDataPacket[]>(`
+      SELECT slug, updated_at,
+        (CHAR_LENGTH(description_md) + CHAR_LENGTH(eligibility_md) + CHAR_LENGTH(how_to_claim_md)) AS content_chars
+      FROM airdrops
+      WHERE deleted_at IS NULL
+      ORDER BY updated_at DESC
+    `);
+    return (rows as unknown as Array<{ slug: string; updated_at: string | Date; content_chars: number }>).map((r) => ({
+      slug: r.slug,
+      updated_at: new Date(r.updated_at),
+      content_chars: Number(r.content_chars) || 0,
+    }));
+  } catch {
+    return [];
+  }
+}
+
+export interface SitemapGuideRow {
+  slug: string;
+  updated_at: Date;
+  content_chars: number;
+}
+export async function listGuideSlugsForSitemap(): Promise<SitemapGuideRow[]> {
+  const pool = getPool();
+  if (!pool) return [];
+  try {
+    const [rows] = await pool.query<RowDataPacket[]>(`
+      SELECT slug, updated_at,
+        (CHAR_LENGTH(body_md) + CHAR_LENGTH(COALESCE(excerpt, ''))) AS content_chars
+      FROM guides
+      WHERE published_at IS NOT NULL AND published_at <= NOW()
+      ORDER BY updated_at DESC
+    `);
+    return (rows as unknown as Array<{ slug: string; updated_at: string | Date; content_chars: number }>).map((r) => ({
+      slug: r.slug,
+      updated_at: new Date(r.updated_at),
+      content_chars: Number(r.content_chars) || 0,
+    }));
+  } catch {
+    return [];
+  }
+}
+
 export async function logVisitClick(args: {
   code: string;
   ipHash: string;

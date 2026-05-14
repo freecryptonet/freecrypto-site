@@ -27,7 +27,7 @@ export function AirdropListing({ airdrops }: AirdropListingProps) {
   }
 
   return (
-    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
       {airdrops.map((a, i) => (
         <SlotWithAd key={a.id} index={i}>
           <AirdropCard a={a} />

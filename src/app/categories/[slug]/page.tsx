@@ -28,13 +28,24 @@ async function findCategory(slug: string) {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const cat = await findCategory(slug);
-  if (!cat) return { title: "Category not found" };
+  if (!cat) return { title: "Category not found", robots: { index: false, follow: false } };
+  const title = `${cat.name} Airdrops — Active Drops & Eligibility`;
+  const description =
+    cat.description ||
+    `Every active ${cat.name.toLowerCase()} airdrop. Deadlines, eligibility, and how to claim.`;
+  const indexable = cat.airdrop_count > 0;
   return {
-    title: `${cat.name} Airdrops — Active Drops & Eligibility`,
-    description:
-      cat.description ||
-      `Every active ${cat.name.toLowerCase()} airdrop. Deadlines, eligibility, and how to claim.`,
+    title,
+    description,
     alternates: { canonical: `/categories/${cat.slug}` },
+    openGraph: {
+      title,
+      description,
+      type: "website",
+      url: siteUrl(`/categories/${cat.slug}`),
+    },
+    twitter: { card: "summary_large_image", title, description },
+    robots: indexable ? undefined : { index: false, follow: true },
   };
 }
 

@@ -28,13 +28,26 @@ async function findChain(slug: string) {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const chain = await findChain(slug);
-  if (!chain) return { title: "Chain not found" };
+  if (!chain) return { title: "Chain not found", robots: { index: false, follow: false } };
+  const description =
+    chain.description ||
+    `Every active ${chain.name} airdrop in one place. Deadlines, eligibility, and how to claim.`;
+  const title = `${chain.name} Airdrops — Active Drops & Eligibility`;
+  // Listing pages with zero active drops add nothing the user can act on,
+  // so we keep them out of the index to avoid soft-empty signals.
+  const indexable = chain.airdrop_count > 0;
   return {
-    title: `${chain.name} Airdrops — Active Drops & Eligibility`,
-    description:
-      chain.description ||
-      `Every active ${chain.name} airdrop in one place. Deadlines, eligibility, and how to claim.`,
+    title,
+    description,
     alternates: { canonical: `/chains/${chain.slug}` },
+    openGraph: {
+      title,
+      description,
+      type: "website",
+      url: siteUrl(`/chains/${chain.slug}`),
+    },
+    twitter: { card: "summary_large_image", title, description },
+    robots: indexable ? undefined : { index: false, follow: true },
   };
 }
 

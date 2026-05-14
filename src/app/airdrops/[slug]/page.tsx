@@ -13,6 +13,7 @@ import {
   airdropEventJsonLd,
   breadcrumbJsonLd,
   faqJsonLd,
+  isAirdropIndexable,
   jsonLdScript,
   siteUrl,
 } from "@/lib/seo";
@@ -24,7 +25,8 @@ interface PageProps {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const a = await getAirdropBySlug(slug);
-  if (!a) return { title: "Airdrop not found" };
+  if (!a) return { title: "Airdrop not found", robots: { index: false, follow: false } };
+  const indexable = isAirdropIndexable(a);
   return {
     title: `${a.name} Airdrop — Eligibility & How to Claim`,
     description: a.short_description ||
@@ -36,6 +38,17 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       type: "article",
       url: siteUrl(`/airdrops/${a.slug}`),
     },
+    twitter: {
+      card: "summary_large_image",
+      title: `${a.name} Airdrop — freecrypto.net`,
+      description: a.short_description || undefined,
+    },
+    robots: indexable
+      ? undefined
+      : {
+          index: false,
+          follow: true,
+        },
   };
 }
 
@@ -153,7 +166,7 @@ export default async function AirdropDetailPage({ params }: PageProps) {
           <h2 className="text-h2 font-semibold mb-4">
             More {a.chain_name ?? "airdrops"} to farm
           </h2>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {moreFiltered.map((m) => (
               <AirdropCard key={m.id} a={m} />
             ))}

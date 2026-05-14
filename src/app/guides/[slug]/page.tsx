@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getGuideBySlug, listGuides } from "@/lib/db";
 import { renderMarkdown } from "@/lib/markdown";
-import { breadcrumbJsonLd, jsonLdScript, siteUrl } from "@/lib/seo";
+import { breadcrumbJsonLd, isGuideIndexable, jsonLdScript, siteUrl } from "@/lib/seo";
 import { timeAgo } from "@/lib/format";
 import { AAds } from "@/components/AAds";
 
@@ -16,7 +16,8 @@ interface PageProps {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const g = await getGuideBySlug(slug);
-  if (!g) return { title: "Guide not found" };
+  if (!g) return { title: "Guide not found", robots: { index: false, follow: false } };
+  const indexable = isGuideIndexable(g);
   return {
     title: g.title,
     description: g.excerpt ?? undefined,
@@ -29,6 +30,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       publishedTime: g.published_at?.toISOString(),
       modifiedTime: g.updated_at.toISOString(),
     },
+    twitter: {
+      card: "summary_large_image",
+      title: g.title,
+      description: g.excerpt ?? undefined,
+    },
+    robots: indexable ? undefined : { index: false, follow: true },
   };
 }
 
