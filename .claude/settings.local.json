@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:earndrop.io)",
+      "WebFetch(domain:earnifi.com)",
+      "WebFetch(domain:defillama.com)",
+      "WebFetch(domain:coinmarketcap.com)",
+      "WebFetch(domain:airdropalert.com)",
+      "WebFetch(domain:cryptorank.io)",
+      "WebFetch(domain:airdrops.io)",
+      "WebSearch",
+      "WebFetch(domain:earni.fi)",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(git init *)",
+      "Bash(git add *)"
+    ]
+  }
+}

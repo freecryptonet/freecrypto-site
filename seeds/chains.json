@@ -1,0 +1,14 @@
+[
+  { "slug": "ethereum",    "name": "Ethereum",    "sort_order": 10, "description": "Original smart-contract chain. Most airdrops still anchor here for L2 retroactives." },
+  { "slug": "solana",      "name": "Solana",      "sort_order": 20, "description": "High-throughput L1 with an active airdrop ecosystem (Jupiter, Drift, Kamino, Jito)." },
+  { "slug": "base",        "name": "Base",        "sort_order": 30, "description": "Coinbase L2 with strong consumer-app traction and no native token (yet)." },
+  { "slug": "arbitrum",    "name": "Arbitrum",    "sort_order": 40, "description": "Optimistic L2; protocols deployed here remain top airdrop hunting ground." },
+  { "slug": "optimism",    "name": "Optimism",    "sort_order": 50, "description": "OP Stack chain with recurring Merit-based airdrop rounds." },
+  { "slug": "scroll",      "name": "Scroll",      "sort_order": 60, "description": "zkEVM L2; protocols on it are points-heavy pre-TGE." },
+  { "slug": "linea",       "name": "Linea",       "sort_order": 70, "description": "ConsenSys zkEVM, MetaMask-integrated, no native token announced." },
+  { "slug": "berachain",   "name": "Berachain",   "sort_order": 80, "description": "Proof-of-Liquidity L1; testnet activity points are tracked for genesis distribution." },
+  { "slug": "monad",       "name": "Monad",       "sort_order": 90, "description": "Parallel-EVM L1 in testnet phase; testnet usage may qualify for genesis allocation." },
+  { "slug": "sui",         "name": "Sui",         "sort_order": 100, "description": "Move-based L1 with periodic ecosystem incentive programs." },
+  { "slug": "ton",         "name": "TON",         "sort_order": 110, "description": "Telegram-native chain; tap-to-earn and mini-app airdrops are concentrated here." },
+  { "slug": "starknet",    "name": "Starknet",    "sort_order": 120, "description": "Cairo-based zkRollup; protocols deployed here remain in points phase." }
+]

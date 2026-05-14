@@ -1,0 +1,9 @@
+[
+  { "slug": "retroactive",  "name": "Retroactive",  "sort_order": 10, "description": "Drops that reward past on-chain activity — usually announced after a snapshot. The highest-EV category historically." },
+  { "slug": "testnet",      "name": "Testnet",      "sort_order": 20, "description": "Active incentivized testnets where on-chain tasks accrue points convertible to a future token." },
+  { "slug": "points",       "name": "Points",       "sort_order": 30, "description": "Live points programs (Eigen, Ether.fi, Renzo, Pendle YT etc.) where points are expected to convert to tokens." },
+  { "slug": "holder",       "name": "Holder",       "sort_order": 40, "description": "Hold-to-earn drops: holders of a specific NFT or token at snapshot qualify automatically." },
+  { "slug": "task",         "name": "Task-based",   "sort_order": 50, "description": "Galxe-style quest campaigns: complete on-chain or social tasks for whitelist or guaranteed allocation." },
+  { "slug": "exchange",     "name": "Exchange",     "sort_order": 60, "description": "Centralized exchange Launchpool / Megadrop / HODLer style drops (Binance, Bybit, OKX, MEXC)." },
+  { "slug": "telegram",     "name": "Telegram",     "sort_order": 70, "description": "TON-native tap-to-earn and Telegram mini-app airdrops." }
+]
