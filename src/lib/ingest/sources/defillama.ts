@@ -2,11 +2,9 @@
  * DefiLlama tokenless-protocols adapter.
  *
  * DefiLlama exposes /protocols (free, no key, no rate limit beyond fair use).
- * Every protocol with no listed token is a candidate for an eventual airdrop,
- * which is the universe their /airdrops page tracks.
- *
- * We pull the protocol list, filter to tokenless protocols, map their
- * primary chain to our chain slug, and emit a NormalizedAirdrop per row.
+ * Every protocol with no listed token AND no CoinGecko gecko_id is a candidate
+ * for an eventual airdrop. We filter aggressively to keep only protocols that
+ * plausibly distribute via airdrop, not CEX wrapped assets / bridges / etc.
  *
  * Endpoint reference: https://api.llama.fi/protocols
  */
@@ -51,8 +49,122 @@ const CHAIN_MAP: Record<string, string> = {
 function mapChain(name: string | null): string | null {
   if (!name) return null;
   if (CHAIN_MAP[name]) return CHAIN_MAP[name];
-  // best-effort lower-snake match
   return CHAIN_MAP[name.toLowerCase()] ?? null;
+}
+
+// Min TVL to consider — raised from $1M to $5M to focus on serious protocols.
+// At $1M we were getting too much long-tail noise.
+const MIN_TVL_USD = 5_000_000;
+
+// Hard cap on rows emitted per run.
+const MAX_ROWS = 40;
+
+// DefiLlama categories that are NOT airdrop candidates:
+// - CEX / Bridge / Liquid Staking / Liquid Restaking → already-token-issuing services
+// - RWA / Banking / Insurance / Coins / Stablecoins / Indexes → no airdrop tradition
+const CATEGORY_DENY = new Set([
+  "Cex",
+  "CEX",
+  "Bridge",
+  "Cross Chain Bridge",
+  "Liquid Staking",
+  "Liquid Restaking",
+  "Restaking",
+  "Restaked ETH",
+  "RWA",
+  "RWA Lending",
+  "Banking",
+  "Insurance",
+  "Coins",
+  "Stablecoins",
+  "Algo-Stables",
+  "Indexes",
+  "Synthetics",
+  "Wallets",
+  "Reserve Currency",
+  "Liquidity Manager",
+  "Yield Tokens",
+  "Treasury Manager",
+  "Anchor BTC",
+]);
+
+// Protocol-name patterns we never want to ingest, even when category is missing.
+// Match is case-insensitive substring.
+const NAME_DENY_PATTERNS = [
+  // Major CEXes (they're never going to airdrop to retail wallets via on-chain claim)
+  "binance",
+  "bybit",
+  "coinbase",
+  "okx",
+  "kraken",
+  "bitfinex",
+  "bitget",
+  "bitstamp",
+  "bingx",
+  "mexc",
+  "kucoin",
+  "huobi",
+  "htx",
+  "upbit",
+  "gate.io",
+  "gemini",
+  "crypto.com",
+  "bitmex",
+  "deribit",
+  "phemex",
+  "bittrex",
+  "robinhood",
+  "revolut",
+  "figure markets",
+  // Wrapped-asset and bridge name patterns
+  "bridge",
+  "wrapped",
+  "staked eth",
+  "staked sol",
+  "staked btc",
+  "liquid staking",
+  "lst",
+  // Stablecoin-issuer products (not airdrop targets)
+  "usdt0",
+  "usyc",
+  "usdc.",
+  // Generic exchange/listing services
+  " ico ",
+];
+
+function nameLooksLikeAirdropCandidate(name: string): boolean {
+  const lower = name.toLowerCase();
+  for (const pat of NAME_DENY_PATTERNS) {
+    if (lower.includes(pat)) return false;
+  }
+  return true;
+}
+
+function isCandidate(p: DefiLlamaProtocol): boolean {
+  if (!p) return false;
+  // Already has a token (CoinGecko-paired)
+  if (p.gecko_id) return false;
+  // DefiLlama uses "-" or "" for tokenless; anything else means "has a token"
+  if (p.symbol && p.symbol.trim() !== "-" && p.symbol.trim() !== "") return false;
+  // Minimum TVL
+  if ((p.tvl ?? 0) < MIN_TVL_USD) return false;
+  // Category-level denylist
+  if (p.category && CATEGORY_DENY.has(p.category)) return false;
+  // Name-pattern denylist
+  if (!nameLooksLikeAirdropCandidate(p.name)) return false;
+  return true;
+}
+
+// Map DefiLlama categories to our internal category slugs so the
+// ingested rows land somewhere sensible in /categories/*.
+function mapCategory(cat: string | null): string {
+  if (!cat) return "points";
+  const c = cat.toLowerCase();
+  if (c.includes("derivatives") || c.includes("options") || c.includes("perp")) return "points";
+  if (c.includes("dex") || c.includes("aggregator")) return "points";
+  if (c.includes("lending") || c.includes("yield") || c.includes("farm")) return "points";
+  if (c.includes("launchpad")) return "task";
+  return "points";
 }
 
 export const defiLlamaSource: SourceAdapter = {
@@ -72,20 +184,10 @@ export const defiLlamaSource: SourceAdapter = {
       const protocols = (await res.json()) as DefiLlamaProtocol[];
       if (!Array.isArray(protocols)) return [];
 
-      const tokenless = protocols.filter((p) => {
-        if (!p) return false;
-        // Tokenless heuristic: no gecko_id and no symbol (DefiLlama uses "-" for tokenless)
-        if (p.gecko_id) return false;
-        if (p.symbol && p.symbol.trim() !== "-" && p.symbol.trim() !== "") return false;
-        // TVL > $1M filter — keeps the list useful
-        if ((p.tvl ?? 0) < 1_000_000) return false;
-        return true;
-      });
-
-      // Cap at 60 — we don't want to flood the listing with low-quality candidates.
-      const top = tokenless
+      const filtered = protocols.filter(isCandidate);
+      const top = filtered
         .sort((a, b) => (b.tvl ?? 0) - (a.tvl ?? 0))
-        .slice(0, 60);
+        .slice(0, MAX_ROWS);
 
       return top.map((p): NormalizedAirdrop => ({
         external_id: `defillama-${p.id}`,
@@ -96,7 +198,7 @@ export const defiLlamaSource: SourceAdapter = {
         short_description: p.description ? p.description.slice(0, 280) : null,
         description_md: p.description ? p.description : "",
         chain_slug: mapChain(p.chain),
-        category_slug: "points",
+        category_slug: mapCategory(p.category),
         status: "potential",
         kyc_required: false,
         funding_raised_usd: null,
