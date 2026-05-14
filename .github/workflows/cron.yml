@@ -1,0 +1,47 @@
+name: cron
+
+on:
+  schedule:
+    # Daily 02:00 UTC — pull fresh airdrops from DefiLlama + AirdropAlert
+    - cron: "0 2 * * *"
+    # Sunday 14:00 UTC — weekly subscriber digest
+    - cron: "0 14 * * 0"
+  workflow_dispatch:
+    inputs:
+      job:
+        description: "Which cron to run"
+        required: true
+        default: "ingest"
+        type: choice
+        options: [ingest, digest, both]
+
+jobs:
+  cron:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Ingest (daily 02:00 + manual)
+        if: >
+          github.event.schedule == '0 2 * * *' ||
+          github.event.inputs.job == 'ingest' ||
+          github.event.inputs.job == 'both'
+        run: |
+          curl --fail --silent --show-error --max-time 360 \
+            -H "Authorization: Bearer ${CRON_SECRET}" \
+            -H "Accept: application/json" \
+            https://freecrypto.net/api/cron/ingest | jq .
+        env:
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
+
+      - name: Digest (Sunday 14:00 + manual)
+        if: >
+          github.event.schedule == '0 14 * * 0' ||
+          github.event.inputs.job == 'digest' ||
+          github.event.inputs.job == 'both'
+        run: |
+          curl --fail --silent --show-error --max-time 360 \
+            -H "Authorization: Bearer ${CRON_SECRET}" \
+            -H "Accept: application/json" \
+            https://freecrypto.net/api/cron/digest | jq .
+        env:
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}

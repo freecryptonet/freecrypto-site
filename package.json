@@ -11,7 +11,8 @@
     "seed": "tsx scripts/seed.ts",
     "migrate": "tsx scripts/migrate.ts",
     "ingest": "tsx scripts/ingest.ts",
-    "digest": "tsx scripts/digest.ts"
+    "digest": "tsx scripts/digest.ts",
+    "seed:sql": "tsx scripts/seed-to-sql.ts"
   },
   "dependencies": {
     "@next/third-parties": "^16.2.5",
