@@ -31,6 +31,7 @@ INSERT INTO sources (slug, name, url) VALUES ('editorial', 'freecrypto.net edito
 INSERT INTO sources (slug, name, url) VALUES ('defillama', 'DefiLlama Airdrops', 'https://defillama.com/airdrops') ON DUPLICATE KEY UPDATE name=VALUES(name), url=VALUES(url);
 INSERT INTO sources (slug, name, url) VALUES ('cryptorank', 'CryptoRank Drophunting', 'https://cryptorank.io/drophunting') ON DUPLICATE KEY UPDATE name=VALUES(name), url=VALUES(url);
 INSERT INTO sources (slug, name, url) VALUES ('airdropalert', 'AirdropAlert', 'https://airdropalert.com') ON DUPLICATE KEY UPDATE name=VALUES(name), url=VALUES(url);
+INSERT INTO sources (slug, name, url) VALUES ('airdropsio', 'airdrops.io', 'https://airdrops.io') ON DUPLICATE KEY UPDATE name=VALUES(name), url=VALUES(url);
 INSERT INTO sources (slug, name, url) VALUES ('coinmarketcap', 'CoinMarketCap Airdrops', 'https://coinmarketcap.com/airdrop') ON DUPLICATE KEY UPDATE name=VALUES(name), url=VALUES(url);
 
 -- airdrops + per-airdrop visit_codes + faqs
@@ -44,18 +45,46 @@ INSERT INTO airdrops (
       primary_cta_visit_code,
       started_at, snapshot_date, end_date
     ) VALUES (
-      'monad-genesis', 'Monad', 'MON', NULL, 'Parallel-EVM L1 in public testnet phase. On-chain activity is being tracked for the genesis distribution.',
-      'Monad is a high-throughput EVM-compatible L1 that introduces parallel execution and a custom consensus stack. It raised $244M led by Paradigm at a $3B valuation, putting it firmly in the highest-tier-funded testnet of the cycle. The public testnet went live in February 2026 and an explicit testnet incentive program has been hinted at by the team. While no formal airdrop has been confirmed, every team in this funding bracket (Berachain, Eclipse, MegaETH) has historically rewarded testnet usage at genesis. Activity that is most likely to be weighted: native MON-T transactions, deposits to major testnet DEXes, NFT mints on Monad-native marketplaces, validator delegations, and bridge usage.', '- Have a funded testnet wallet (request from the official faucet, not third parties)
-- Complete at least 30 unique daily transactions over a 60-day window
-- Use the canonical Monad testnet bridge at least 3 times
-- Provide liquidity on at least one testnet DEX (Ambient, Apriori, etc.) for >7 days
-- Mint at least one NFT from a Monad-native collection
-- Avoid sybil patterns: do not fund multiple wallets from the same source', '1. Visit https://testnet.monad.xyz and connect a fresh wallet — do not reuse a wallet that has touched known sybil farms.
-2. Request MON-T from the official faucet (rate-limited; daily drips).
-3. Bridge testnet ETH from Sepolia via the canonical bridge.
-4. Use Ambient or Apriori for at least 3 swaps per week.
-5. Provide LP for 7+ days on a stable pair.
-6. Watch the official Monad blog for the genesis snapshot announcement — claim portal will go live there.',
+      'monad-genesis', 'Monad', 'MON', NULL, 'Highest-funded EVM L1 of the cycle ($244M from Paradigm). Public testnet live since Feb 2026. Genesis airdrop unconfirmed but extremely likely based on peer-launch precedent.',
+      'Monad is the most heavily-funded EVM-compatible L1 of the 2026 cycle. The project raised **$244M** in April 2024 led by Paradigm at a $3B post-money valuation, with Coinbase Ventures, Greenoaks, Castle Island, Dragonfly, and Hudson River Trading joining. The founding team — former Jump Crypto traders Keone Hon, James Hunsaker, and Eunice Giarta — has been building since 2022 with a single product thesis: a parallel-execution EVM that targets 10,000 TPS while staying 100% bytecode-compatible with Ethereum. Every existing Solidity contract can deploy to Monad with zero code changes.
+
+The public testnet went live on **February 19, 2026**. Within the first month, more than 4.2M unique addresses had interacted with at least one testnet dapp. The native ecosystem — Ambient (CLOB DEX), Apriori (liquid staking), Kuru (perps), Magma (lending) — launched alongside the testnet, and validator delegations crossed $850M in test-MON within six weeks. Mainnet is provisionally targeted for late 2026 or early 2027.
+
+A genesis airdrop has not been formally announced. The team has stated publicly that ''testnet activity will be considered'' without committing to a specific allocation or formula. Every comparable launch in this funding bracket — Berachain ($142M), Eclipse, MegaETH ($30M) — said the same thing before distributing 5–15% of supply to early users. The risk-adjusted bet is that there IS an airdrop, and the open question is just the scoring formula and snapshot window.
+
+What the team has emphasized publicly: they will aggressively filter sybils, they will weight Monad-native dapp activity higher than generic deploys, and they care about behavioral diversity over raw transaction count. That last point matters — farms that pump 1000 transactions per wallet typically score lower than wallets that look like real users with 100 thoughtful interactions.', 'Monad has not published an explicit scoring formula. Based on team statements and what comparable peers (LayerZero, Arbitrum, ZK Sync) used, expect the following inputs to matter:
+
+**Strong positive signals:**
+- Activity across 4+ distinct dapp categories (DEX, lending, NFT, governance)
+- 30+ unique daily transactions spread over 60+ days
+- Sustained LP or lending position held across multiple weeks
+- Use of Monad-native protocols (Ambient, Apriori, Kuru) over generic deploys
+- Validator delegations or governance votes
+- Activity continuing AFTER any speculated snapshot — real users don''t disappear
+
+**Strong negative signals (likely filtered out):**
+- 5+ wallets funded from the same CEX address within minutes
+- Identical transaction amounts across wallets, especially round numbers
+- Trading exclusively between your own wallets (wash trades)
+- Activity concentrated in 1–2 day bursts
+- Going dark immediately after a confirmed snapshot date
+- Funding from known mixer addresses or sanctioned sources
+
+**Realistic targets:**
+- **Minimum bar to qualify:** 30+ daily-unique transactions across 60+ days, 4+ dapp categories
+- **Recommended bar to maximize allocation:** 60+ days of activity, $50–200 in LP/lent positions, multiple Monad-native NFT mints, validator delegations
+- **Maximum recommended wallets per identity:** 3–5 with materially different behavioral profiles
+- **Gas budget:** $10–50 across the campaign
+
+The team has confirmed on-chain clustering analysis is already running. If you funded a stack of wallets from one source on the same day, your allocation is at risk before you''ve made your first swap.', '1. **Spin up a fresh wallet.** Don''t reuse a wallet that''s touched known sybil farms (Hop, OmniBTC, LayerZero residuals). New MetaMask or Rabby profile.
+2. **Get test-MON from the official faucet only.** [testnet.monad.xyz/faucet](https://testnet.monad.xyz/faucet) — never any third-party ''Monad faucet'' site. Rate-limited to one request per 24 hours per wallet.
+3. **Bridge testnet ETH from Sepolia.** Use the canonical bridge at bridge.monad.xyz. Bridge 3+ separate times across different days, not all at once.
+4. **Trade weekly on Ambient or Kuru.** 3+ swaps per week across varied pairs (test-MON/USDC, test-USDC/USDT, test-ETH/MON). Don''t trade between your own wallets — that''s wash trading and gets you flagged.
+5. **Provide liquidity for 7+ days.** Apriori liquid staking or Beethoven X LP positions both qualify. Keep the position live through any speculated snapshot window.
+6. **Mint Monad-native NFTs.** Several ecosystem projects run testnet mints. Cost: 1–2 test-MON each.
+7. **Vote on governance proposals.** The Monad Foundation has run mock-governance experiments. Participating is a low-cost signal of genuine interest.
+8. **Continue activity post-snapshot.** When the snapshot is announced (likely 2–4 weeks pre-mainnet), don''t immediately stop. Many graders penalize cliff-stoppers.
+9. **Watch only official channels.** The claim portal will go live on monad.xyz with a public team announcement. Every prior major airdrop has had phishing sites live within hours — never connect a wallet to any ''Monad claim'' URL that surfaces before the official one.',
       'potential',
       (SELECT id FROM chains WHERE slug = 'monad' LIMIT 1),
       (SELECT id FROM categories WHERE slug = 'testnet' LIMIT 1),
@@ -77,10 +106,13 @@ INSERT INTO airdrops (
       started_at=VALUES(started_at), snapshot_date=VALUES(snapshot_date), end_date=VALUES(end_date);
 INSERT INTO visit_codes (code, target_url, airdrop_id, source_label) VALUES ('y3A6LMDK', 'https://monad.xyz', (SELECT id FROM airdrops WHERE slug = 'monad-genesis' LIMIT 1), 'primary') ON DUPLICATE KEY UPDATE target_url=VALUES(target_url), airdrop_id=VALUES(airdrop_id);
 DELETE FROM faqs WHERE airdrop_id = (SELECT id FROM airdrops WHERE slug = 'monad-genesis' LIMIT 1);
-INSERT INTO faqs (airdrop_id, position, question, answer_md) VALUES ((SELECT id FROM airdrops WHERE slug = 'monad-genesis' LIMIT 1), 0, 'Has Monad confirmed an airdrop?', 'No formal confirmation. The team has acknowledged that testnet activity will be considered for genesis distribution but has not promised a specific allocation.');
-INSERT INTO faqs (airdrop_id, position, question, answer_md) VALUES ((SELECT id FROM airdrops WHERE slug = 'monad-genesis' LIMIT 1), 1, 'How do I avoid sybil filters?', 'Use a single wallet per identity, do not fund from the same CEX address across multiple wallets, and create genuine usage patterns (real LP, real swaps, varied timing). Monad''s team has stated they will analyze on-chain heuristics aggressively.');
-INSERT INTO faqs (airdrop_id, position, question, answer_md) VALUES ((SELECT id FROM airdrops WHERE slug = 'monad-genesis' LIMIT 1), 2, 'Is KYC required?', 'No KYC is expected for the genesis claim. Subsequent CEX listings may impose KYC at the exchange level.');
-INSERT INTO faqs (airdrop_id, position, question, answer_md) VALUES ((SELECT id FROM airdrops WHERE slug = 'monad-genesis' LIMIT 1), 3, 'When is the snapshot?', 'Unannounced. Expect a snapshot 2-4 weeks before mainnet launch, which is currently targeted for late 2026.');
+INSERT INTO faqs (airdrop_id, position, question, answer_md) VALUES ((SELECT id FROM airdrops WHERE slug = 'monad-genesis' LIMIT 1), 0, 'Has Monad confirmed an airdrop?', 'No formal confirmation. The team has acknowledged that testnet activity ''will be considered'' for genesis distribution but hasn''t committed to a specific allocation. That said, every team in this $200M+ funding bracket (Berachain, Eclipse, MegaETH) has distributed 5–15% of supply to early users. The risk-adjusted bet is that there IS an airdrop; the open question is the formula and snapshot window.');
+INSERT INTO faqs (airdrop_id, position, question, answer_md) VALUES ((SELECT id FROM airdrops WHERE slug = 'monad-genesis' LIMIT 1), 1, 'How do I avoid sybil filtering?', 'Three rules: (1) one wallet per identity, max 3–5 if you must run multiples — each with materially different behavioral profiles. (2) Fund wallets from different sources at different times, never from the same CEX withdrawal within the same hour. (3) Look like a real user — wash-trade between your own wallets and you''re guaranteed to be filtered. The team has stated they''re running clustering analysis on the testnet, so behavioral diversity matters from day one.');
+INSERT INTO faqs (airdrop_id, position, question, answer_md) VALUES ((SELECT id FROM airdrops WHERE slug = 'monad-genesis' LIMIT 1), 2, 'When is the snapshot?', 'Unannounced. Mainnet is provisionally targeted for late 2026 / early 2027, and the team typically announces snapshots 2–4 weeks ahead of mainnet. Continued activity is your best position — anyone who stops farming after a ''rumored'' snapshot date often gets filtered when the real one is set.');
+INSERT INTO faqs (airdrop_id, position, question, answer_md) VALUES ((SELECT id FROM airdrops WHERE slug = 'monad-genesis' LIMIT 1), 3, 'Is test-MON going to be the mainnet token?', 'No. Test-MON is testnet-only with no value or convertibility. Mainnet MON will be a new contract, and the genesis distribution will airdrop real MON tokens to qualifying wallets — not based on holding test-MON. Test-MON is purely a gas token for testing.');
+INSERT INTO faqs (airdrop_id, position, question, answer_md) VALUES ((SELECT id FROM airdrops WHERE slug = 'monad-genesis' LIMIT 1), 4, 'Can US users participate?', 'Testnet participation has no geographic restriction. Mainnet airdrop eligibility for US wallets is unknown; some 2024–25 launches (LayerZero, Wormhole) allowed US claims, while others (EigenLayer) did not. Plan for the possibility you may need a non-US claim path. Verify on-chain transactions remain permissible from your jurisdiction regardless.');
+INSERT INTO faqs (airdrop_id, position, question, answer_md) VALUES ((SELECT id FROM airdrops WHERE slug = 'monad-genesis' LIMIT 1), 5, 'How much capital should I commit?', 'Gas budget: $10–50 across the campaign. LP/lending capital: $50–200 maintained for several weeks. Total cost to qualify at a respectable bar: $100–300 tied up + gas. Anything more than $500 is overcommitting given the airdrop isn''t confirmed.');
+INSERT INTO faqs (airdrop_id, position, question, answer_md) VALUES ((SELECT id FROM airdrops WHERE slug = 'monad-genesis' LIMIT 1), 6, 'Is KYC required?', 'No KYC at the protocol/claim level. CEX listings post-TGE may impose KYC at the exchange level if you want to sell on-CEX, but the on-chain claim itself is open.');
 INSERT INTO airdrops (
       slug, name, token_symbol, logo_url, short_description,
       description_md, eligibility_md, how_to_claim_md,
@@ -91,17 +123,49 @@ INSERT INTO airdrops (
       primary_cta_visit_code,
       started_at, snapshot_date, end_date
     ) VALUES (
-      'megaeth-testnet', 'MegaETH', 'MEGA', NULL, 'Real-time blockchain claiming sub-10ms block times; public testnet open with explicit user-activity tracking.',
-      'MegaETH is positioning itself as the first ''real-time'' EVM rollup, with sub-10ms preconfirmations and 100,000+ TPS targets. The project raised $30M with backing from Dragonfly, Robot Ventures, and Vitalik Buterin personally, and went live with a public testnet in March 2026. The team has confirmed that public testnet activity will be a meaningful input to the eventual token distribution, making this one of the cleaner testnet farming opportunities in the cycle. Trading, lending, and NFT-mint activity on testnet-native dapps (Cap, GTE, Ducks) are all being indexed.', '- Bridge testnet ETH to MegaETH via the canonical bridge
-- Use at least 3 different testnet-native dapps
-- Maintain a 30+ day activity streak
-- Hold a positive MegaETH testnet balance at the eventual snapshot
-- Engage with at least one perp DEX (GTE) or money market (Cap)', '1. Connect a wallet at testnet.megaeth.com and request testnet ETH from the faucet.
-2. Bridge from Sepolia using the canonical bridge.
-3. Place at least 5 trades on GTE per week.
-4. Lend or borrow on Cap testnet (low value is fine).
-5. Mint one Ducks testnet NFT.
-6. Claim portal will be announced post-mainnet — do not connect to any ''MegaETH airdrop claim'' site before the official announcement.',
+      'megaeth-testnet', 'MegaETH', 'MEGA', NULL, 'First ''real-time'' EVM rollup targeting sub-10ms block times. Vitalik-backed. Team has explicitly confirmed testnet activity will count toward token distribution — one of the few launches this cycle to do so.',
+      'MegaETH is positioning itself as the first ''real-time'' EVM rollup, with sub-10ms preconfirmations and 100,000+ TPS targets. The architecture splits sequencer (single high-spec node) from proving (decentralized), trading some decentralization at the sequencer layer for radical latency improvements. The team — founded by Lei Yang, Yilong Li, and Shuyao Kong — has been building since 2023 under the EigenLayer-adjacent thesis that hardware-accelerated single-sequencer rollups can match the user experience of centralized exchanges.
+
+The project raised **$30M in February 2024** at a $200M+ valuation, with backing from Dragonfly, Robot Ventures, Figment Capital, and an angel round that included **Vitalik Buterin personally** — one of his rare direct check-writings post-Ethereum genesis. Mert Mumtaz (Helius CEO), Sreeram Kannan (EigenLayer), and Cobie were also early backers.
+
+Public testnet went live in **March 2026** after a year of private testnet. Within 8 weeks, more than 2.1M unique addresses had transacted on the testnet. The native ecosystem at launch: GTE (perps), Cap (money market), Ducks (NFT marketplace), Plume (RWA bridge).
+
+The key reason MegaETH is one of the cleanest farming opportunities this cycle: the team has **explicitly confirmed publicly** that public testnet activity will be ''a meaningful input'' to the eventual token distribution. Most teams hedge this question; MegaETH said the quiet part out loud. Mainnet is targeted for Q4 2026 / Q1 2027, with the token distribution expected at or shortly after mainnet.
+
+What works against farming MegaETH: the funding bracket is smaller than Monad ($30M vs $244M), implying a smaller total airdrop pool, but with a smaller eligible-farmer set the per-wallet allocation may compare favorably.', 'MegaETH has not published exact scoring weights but has confirmed several dimensions matter:
+
+**Confirmed-meaningful inputs (from team statements):**
+- Diversity of dapps interacted with — touching more native dapps scores higher
+- Total testnet transaction count, weighted by recency
+- Sustained balance held on MegaETH testnet (not bridged-in-and-out)
+- Active trading on GTE (the team''s flagship perp DEX)
+
+**Highly likely additional inputs (based on peer launches):**
+- Time-weighted activity — sustained over 60+ days scores higher than burst
+- Bridge volume from Sepolia (canonical bridge only)
+- Lending or LP positions held across multiple weeks
+- Participation in any governance experiments
+
+**Likely filters:**
+- Wallet count cap per identity cluster (probably 5)
+- Activity-on-funding-day-only farms get cut
+- Trading exclusively between own wallets (wash filter)
+
+**Realistic targets:**
+- **Minimum bar:** 30+ days of activity, 3+ native dapps used, 50+ transactions total
+- **Recommended bar:** 60+ days, GTE perp trading volume of $1K+ (testnet ETH), Cap money-market position, 1+ Ducks NFT mint
+- **Recommended wallet count:** 1–3 per identity
+- **Gas budget:** $10–30 (testnet ETH is free from faucet, so cost is just Sepolia bridging gas)
+
+Unlike Monad, MegaETH''s smaller eligible population and team-confirmed reward structure makes the EV/risk ratio attractive even at the minimum bar.', '1. **Fresh wallet.** Don''t reuse a wallet that''s touched known farms.
+2. **Get test-ETH from the official faucet.** [testnet.megaeth.com/faucet](https://testnet.megaeth.com/faucet). Rate-limited per wallet per day.
+3. **Bridge from Sepolia.** Use the canonical bridge linked from megaeth.com. Bridge 2–4 times across different days for natural-looking activity.
+4. **Trade on GTE perps.** This is MegaETH''s flagship dapp. 5+ trades per week, varied size and direction. Don''t always go long — show realistic trading behavior. Cumulative testnet volume of $1K+ is a good target.
+5. **Open a Cap position.** Lend or borrow on Cap money market. Even small testnet-USDC positions count. Maintain across the campaign.
+6. **Mint a Ducks NFT.** Testnet mint, cheap. Adds a non-DeFi data point to your profile.
+7. **Use Plume or other ecosystem dapps.** Variety is a scoring axis — sticking to just GTE makes you look like a trader-only.
+8. **Maintain a positive testnet balance.** Don''t drain everything out at any point. Keep some test-ETH or test-USDC in the wallet at all times.
+9. **Watch megaeth.com and the @megaeth_labs Twitter for the claim announcement.** Phishing risk is very high once mainnet ships — only the official channels are safe.',
       'potential',
       (SELECT id FROM chains WHERE slug = 'ethereum' LIMIT 1),
       (SELECT id FROM categories WHERE slug = 'testnet' LIMIT 1),
@@ -123,9 +187,13 @@ INSERT INTO airdrops (
       started_at=VALUES(started_at), snapshot_date=VALUES(snapshot_date), end_date=VALUES(end_date);
 INSERT INTO visit_codes (code, target_url, airdrop_id, source_label) VALUES ('sGUN0mtz', 'https://megaeth.com', (SELECT id FROM airdrops WHERE slug = 'megaeth-testnet' LIMIT 1), 'primary') ON DUPLICATE KEY UPDATE target_url=VALUES(target_url), airdrop_id=VALUES(airdrop_id);
 DELETE FROM faqs WHERE airdrop_id = (SELECT id FROM airdrops WHERE slug = 'megaeth-testnet' LIMIT 1);
-INSERT INTO faqs (airdrop_id, position, question, answer_md) VALUES ((SELECT id FROM airdrops WHERE slug = 'megaeth-testnet' LIMIT 1), 0, 'Is the testnet open to anyone?', 'Yes — anyone can access testnet.megaeth.com without an invite as of Q1 2026.');
-INSERT INTO faqs (airdrop_id, position, question, answer_md) VALUES ((SELECT id FROM airdrops WHERE slug = 'megaeth-testnet' LIMIT 1), 1, 'What is the expected mainnet date?', 'Team has not committed publicly. Most signals point to Q4 2026 / Q1 2027.');
-INSERT INTO faqs (airdrop_id, position, question, answer_md) VALUES ((SELECT id FROM airdrops WHERE slug = 'megaeth-testnet' LIMIT 1), 2, 'How is testnet usage measured?', 'MegaETH has not published the exact scoring formula. Expect diversity of dapps used, total transactions, and recency to all matter.');
+INSERT INTO faqs (airdrop_id, position, question, answer_md) VALUES ((SELECT id FROM airdrops WHERE slug = 'megaeth-testnet' LIMIT 1), 0, 'Is the testnet open to anyone?', 'Yes — testnet.megaeth.com is open without an invite as of Q1 2026. Earlier private testnet phases required allowlisting; that gate has been removed for the public phase.');
+INSERT INTO faqs (airdrop_id, position, question, answer_md) VALUES ((SELECT id FROM airdrops WHERE slug = 'megaeth-testnet' LIMIT 1), 1, 'What is the expected mainnet date?', 'Team has not committed publicly. Most signals (audit timelines, recent ecosystem partnerships) point to Q4 2026 / Q1 2027. The team has said multiple times they''d rather ship right than ship fast, so a slip into mid-2027 is possible.');
+INSERT INTO faqs (airdrop_id, position, question, answer_md) VALUES ((SELECT id FROM airdrops WHERE slug = 'megaeth-testnet' LIMIT 1), 2, 'How is testnet usage actually measured?', 'The team confirmed three dimensions matter publicly: dapp diversity, transaction count weighted by recency, and sustained balance held. Exact weights are not published. Expect quality signals (sustained activity, native dapp use) to dominate quantity signals (raw transaction count) — this matches what every recent major launch has used.');
+INSERT INTO faqs (airdrop_id, position, question, answer_md) VALUES ((SELECT id FROM airdrops WHERE slug = 'megaeth-testnet' LIMIT 1), 3, 'Why does Vitalik''s backing matter?', 'Two reasons: technical credibility (Vitalik rarely angel-checks unless he believes in the architecture) and signaling for the broader Ethereum community. It doesn''t guarantee an airdrop will happen, but it raises the social weight if/when one is announced — meaning the token will likely list immediately on top venues at launch.');
+INSERT INTO faqs (airdrop_id, position, question, answer_md) VALUES ((SELECT id FROM airdrops WHERE slug = 'megaeth-testnet' LIMIT 1), 4, 'Can I farm MegaETH with the same wallet I''m farming Monad with?', 'Technically yes, but it''s not the optimal strategy. Each project runs its own clustering analysis, but using the same wallet across both means your activity profile is split — the wallet''s MegaETH-specific score is lower than if you had a dedicated wallet. If you have capital for it, separate wallets per chain is the higher-EV play.');
+INSERT INTO faqs (airdrop_id, position, question, answer_md) VALUES ((SELECT id FROM airdrops WHERE slug = 'megaeth-testnet' LIMIT 1), 5, 'Is there KYC?', 'No KYC required at the protocol or claim level. CEX-side KYC may apply if you sell post-claim on Coinbase/Binance/etc., but the airdrop claim itself is on-chain only.');
+INSERT INTO faqs (airdrop_id, position, question, answer_md) VALUES ((SELECT id FROM airdrops WHERE slug = 'megaeth-testnet' LIMIT 1), 6, 'What''s a reasonable monthly time commitment?', '30–60 minutes per week to maintain a high-quality farming profile. The bulk of effort is in the first week (setup, bridging, initial positions); subsequent weeks are just maintenance — a few trades and a position check.');
 INSERT INTO airdrops (
       slug, name, token_symbol, logo_url, short_description,
       description_md, eligibility_md, how_to_claim_md,
@@ -136,16 +204,45 @@ INSERT INTO airdrops (
       primary_cta_visit_code,
       started_at, snapshot_date, end_date
     ) VALUES (
-      'berachain-bgt-boost', 'Berachain BGT Boost', 'BGT', NULL, 'Boost validators with your BGT to earn protocol-level emissions across Berachain''s Proof-of-Liquidity ecosystem.',
-      'Berachain''s Proof-of-Liquidity consensus issues BGT (governance) to LPs in whitelisted pools. Holders can then ''boost'' validators with their BGT, which directs subsequent emissions to chosen reward vaults. The BGT Boost program rewards consistent boosters with weekly USDC + ecosystem token drops from validator-funded incentive pools. Several Berachain-native protocols (Infrared, BeraBorrow, Honeypot) co-incentivize on top, layering additional yield. Boost positions can be modified weekly. Total emissions are several hundred thousand dollars per week across the validator set.', '- Acquire BGT by providing liquidity in any whitelisted BPL pool
-- Delegate (Boost) your BGT to at least one active validator
-- Hold the boost position across at least one full weekly epoch
-- Optionally: layer with Infrared or BeraBorrow for additional yield', '1. Go to hub.berachain.com and connect a wallet.
-2. Provide liquidity in a BPL pool (e.g. HONEY/BERA on BEX).
-3. Stake the LP tokens in the reward vault to begin earning BGT.
-4. Delegate accumulated BGT to a validator via the Boost screen.
-5. Claim rewards every Monday from the Rewards tab.
-6. Re-stake or rotate to higher-APR validators as incentives shift.',
+      'berachain-bgt-boost', 'Berachain BGT Boost', 'BGT', NULL, 'Live points + emissions program on Berachain''s Proof-of-Liquidity chain. Pays out weekly in USDC + ecosystem tokens. Confirmed and ongoing — no waiting for an unconfirmed airdrop.',
+      'Berachain''s Proof-of-Liquidity (PoL) consensus is the only L1 in production that requires validators to direct emissions toward user-chosen reward vaults. The result is a tradable emissions market where liquidity providers earn **BGT** (governance) by LPing in whitelisted pools, then ''boost'' specific validators with their BGT to direct subsequent emissions back to themselves and the broader pool.
+
+**This is unique among 2026 ''airdrops'': it''s already live and paying out, not a speculative future event.** Each weekly epoch distributes USDC, BERA, and ecosystem tokens (HONEY, iBGT, NECT) to boost participants. Total weekly emissions across the validator set: $250K–$500K depending on TVL and validator self-incentives. Per-wallet weekly earnings at $1K LP: typically $5–25 USDC equivalent, sometimes much more during incentive boosts.
+
+Berachain raised **$142M** across two rounds (Series A: $42M led by Polychain, Series B: $100M led by Brevan Howard Digital and Framework). Mainnet went live February 6, 2026 with an initial airdrop distributed to NFT-holder cohorts and testnet farmers (already concluded — not part of this program).
+
+BGT Boost is the SECOND wave of distribution: continuous emissions for ongoing participation, not a one-shot airdrop. Several Berachain-native protocols (Infrared, BeraBorrow, Honeypot, Kodiak, dolomite) stack additional incentives on top, layering yield on top of base BGT emissions. Yield-stacked APR on stable pairs has ranged 15–80% in the first three months of mainnet.
+
+The core mechanic: BGT is **soulbound** (non-transferable). You can either burn it 1:1 for BERA (giving up future boost income) or boost validators (giving up the BERA conversion). Boosting is the higher-EV move while emissions are this generous.', 'Unlike speculative airdrops, BGT Boost is an open, on-chain program with explicit rules. Eligibility is mechanical:
+
+**Required:**
+- Acquire BGT by providing liquidity in any whitelisted BPL pool (HONEY/BERA, HONEY/USDC, iBGT/BERA, etc.)
+- Stake the LP token in the matching reward vault to begin BGT accrual
+- Delegate (Boost) accumulated BGT to at least one active validator
+- Hold the boost position across at least one full weekly epoch (Mon→Mon)
+
+**For meaningful yield:**
+- Minimum $50–100 in LP to clear gas costs on weekly claims
+- Use a validator whose self-incentives match your goal (USDC vs BERA vs ecosystem token)
+- Layer with Infrared (auto-compounds BGT into iBGT, removes the soulbound friction) OR BeraBorrow (uses LP as collateral for NECT borrow) for stacked yield
+
+**Things that DON''T affect yield:**
+- Wallet count — boost yield is per-BGT, not per-wallet, so splitting wallets doesn''t help
+- KYC status — no KYC, this is on-chain
+- Geographic location — anyone with an EVM wallet can participate
+
+**Strategy notes:**
+- Validators publish their emission directions transparently. Rotate to validators with the best incentive packages for your goals.
+- BGT cannot be unboosted instantly — there''s a 7-day cooldown before you can redirect. Plan your validator pick accordingly.
+- iBGT (Infrared''s liquid wrapper) trades freely and can be sold on BEX — useful for exit liquidity if you want to lock in the yield without holding BGT long-term.
+- Stable LP pairs (HONEY/USDC) have lower IL risk; volatile pairs (HONEY/BERA) capture more emissions when BERA price moves.', '1. **Bridge to Berachain.** Use bridge.berachain.com (canonical) or Stargate to bring ETH/USDC/wBTC over from Ethereum or Arbitrum. Native gas is BERA — buy a small amount on BEX after bridging.
+2. **Open hub.berachain.com.** Connect wallet. Go to ''Pools''.
+3. **Provide liquidity in a BPL pool.** Recommended starter: HONEY/USDC (stable, low IL). Add liquidity, receive LP tokens.
+4. **Stake LP in the reward vault.** From the ''Vaults'' tab, find the matching vault for your LP token. Stake the LP tokens to begin earning BGT.
+5. **Wait for BGT accrual.** BGT accrues per block proportional to your LP share + vault emission rate. Check your balance under ''My BGT''.
+6. **Boost a validator.** Under ''Validators'', pick one whose incentive directions match what you want to earn (USDC, ecosystem tokens, etc.). Delegate your BGT to start receiving their incentives.
+7. **Claim weekly.** Every Monday, claim accrued rewards from the ''Rewards'' tab. Reinvest or rotate to higher-APR validators as incentives shift.
+8. **Optional: stack with Infrared.** Instead of boosting directly, deposit BGT into Infrared (infrared.finance). They auto-compound BGT into iBGT, which is liquid and can be sold or used as collateral. Lower hassle, slightly lower direct yield.',
       'confirmed',
       (SELECT id FROM chains WHERE slug = 'berachain' LIMIT 1),
       (SELECT id FROM categories WHERE slug = 'points' LIMIT 1),
@@ -167,9 +264,13 @@ INSERT INTO airdrops (
       started_at=VALUES(started_at), snapshot_date=VALUES(snapshot_date), end_date=VALUES(end_date);
 INSERT INTO visit_codes (code, target_url, airdrop_id, source_label) VALUES ('SuMmSuC9', 'https://berachain.com', (SELECT id FROM airdrops WHERE slug = 'berachain-bgt-boost' LIMIT 1), 'primary') ON DUPLICATE KEY UPDATE target_url=VALUES(target_url), airdrop_id=VALUES(airdrop_id);
 DELETE FROM faqs WHERE airdrop_id = (SELECT id FROM airdrops WHERE slug = 'berachain-bgt-boost' LIMIT 1);
-INSERT INTO faqs (airdrop_id, position, question, answer_md) VALUES ((SELECT id FROM airdrops WHERE slug = 'berachain-bgt-boost' LIMIT 1), 0, 'Is BGT transferable?', 'No — BGT is soulbound to the wallet that earned it. It can only be redeemed for BERA or used to boost validators.');
-INSERT INTO faqs (airdrop_id, position, question, answer_md) VALUES ((SELECT id FROM airdrops WHERE slug = 'berachain-bgt-boost' LIMIT 1), 1, 'What is the minimum to participate?', 'There is no hard minimum but expect gas + ~$50 in LP to make rewards meaningful.');
-INSERT INTO faqs (airdrop_id, position, question, answer_md) VALUES ((SELECT id FROM airdrops WHERE slug = 'berachain-bgt-boost' LIMIT 1), 2, 'Are rewards taxable?', 'In most jurisdictions yes — boost emissions are treated as ordinary income at receipt. Consult a tax professional.');
+INSERT INTO faqs (airdrop_id, position, question, answer_md) VALUES ((SELECT id FROM airdrops WHERE slug = 'berachain-bgt-boost' LIMIT 1), 0, 'Is BGT transferable?', 'No — BGT is soulbound to the wallet that earned it. It can only be (1) redeemed 1:1 for BERA, (2) used to boost validators, or (3) wrapped via Infrared into liquid iBGT. The soulbound design is intentional: it prevents BGT speculators from front-running emissions.');
+INSERT INTO faqs (airdrop_id, position, question, answer_md) VALUES ((SELECT id FROM airdrops WHERE slug = 'berachain-bgt-boost' LIMIT 1), 1, 'What''s the minimum to participate?', 'No hard minimum, but gas economics matter. Below $50 LP, weekly claim gas can eat your rewards. $100–500 LP is the comfortable starter range. Above $1K, the yield becomes meaningful and gas is a rounding error.');
+INSERT INTO faqs (airdrop_id, position, question, answer_md) VALUES ((SELECT id FROM airdrops WHERE slug = 'berachain-bgt-boost' LIMIT 1), 2, 'Are rewards taxable?', 'In most jurisdictions yes — boost emissions are treated as ordinary income at the moment of accrual or claim (jurisdiction-dependent). The soulbound nature of BGT itself complicates basis tracking. Consult a tax professional; this is not advice.');
+INSERT INTO faqs (airdrop_id, position, question, answer_md) VALUES ((SELECT id FROM airdrops WHERE slug = 'berachain-bgt-boost' LIMIT 1), 3, 'What''s the difference between BGT, BERA, and iBGT?', '**BERA** is the chain''s native gas token, transferable, sellable on CEXes. **BGT** is governance/emissions accrual, soulbound, only convertible to BERA 1:1 (burning future emissions) or usable for boosting. **iBGT** is Infrared''s liquid wrapper — you deposit BGT, Infrared boosts validators for you and gives you tradable iBGT in return. iBGT trades on BEX.');
+INSERT INTO faqs (airdrop_id, position, question, answer_md) VALUES ((SELECT id FROM airdrops WHERE slug = 'berachain-bgt-boost' LIMIT 1), 4, 'Can I get IL''d?', 'Yes, especially on volatile pairs (HONEY/BERA). The PoL emissions can outpace IL during high-incentive periods, but a sustained BERA dump while you''re LP''d will hurt. Stable pairs (HONEY/USDC) have minimal IL and steady but lower emissions — better starting point.');
+INSERT INTO faqs (airdrop_id, position, question, answer_md) VALUES ((SELECT id FROM airdrops WHERE slug = 'berachain-bgt-boost' LIMIT 1), 5, 'Is there a follow-up token airdrop on top of BGT Boost?', 'The initial Berachain airdrop already distributed (Feb 2026, to NFT holders + testnet farmers). BGT Boost is the continuous-emissions program post-mainnet. There''s been chatter about a future ecosystem-level airdrop targeting boost participants, but nothing confirmed.');
+INSERT INTO faqs (airdrop_id, position, question, answer_md) VALUES ((SELECT id FROM airdrops WHERE slug = 'berachain-bgt-boost' LIMIT 1), 6, 'How do I exit?', 'Unstake LP tokens from the vault, withdraw liquidity from the pool, swap back to USDC/ETH, bridge out. Note: BGT itself can''t be sold — you can only burn it for BERA or leave it to keep boosting. Plan exit timing around BERA price action.');
 INSERT INTO airdrops (
       slug, name, token_symbol, logo_url, short_description,
       description_md, eligibility_md, how_to_claim_md,
@@ -223,14 +324,47 @@ INSERT INTO airdrops (
       primary_cta_visit_code,
       started_at, snapshot_date, end_date
     ) VALUES (
-      'symbiotic-points', 'Symbiotic', NULL, NULL, 'Permissionless restaking primitive backed by Paradigm. Deposit-cap based points program is live.',
-      'Symbiotic is a generalized restaking protocol that competes with EigenLayer by allowing any asset (not just ETH derivatives) to back AVS-style services. Backed by Paradigm with strong DeFi integrations (Mellow, Ether.fi, Pendle), the protocol''s points program rewards depositors with ''Symbiotic Points'' that are widely expected to convert at TGE. Deposits have been cap-gated, with multiple raises being filled within hours, indicating high pre-TGE demand.', '- Deposit a supported asset (wstETH, cbETH, swETH, sUSDe) into Symbiotic vaults
-- Maintain the position across at least one weekly epoch
-- Optionally route through Mellow or Ether.fi for boosted multipliers', '1. Visit app.symbiotic.fi.
-2. Connect a wallet holding a supported asset.
-3. Deposit into an available vault (subject to caps — refresh when caps open).
-4. Optionally migrate to a Mellow vault for additional point multiplier.
-5. Points are tracked on-chain and on the dashboard. Claim portal will be announced.',
+      'symbiotic-points', 'Symbiotic', NULL, NULL, 'Paradigm-backed restaking protocol — EigenLayer''s main competitor. Cap-gated deposit program where every cap fills within hours. Points → token at TGE, expected H1 2027.',
+      'Symbiotic is a permissionless restaking protocol competing directly with EigenLayer. The key technical differentiator: Symbiotic accepts **any asset** as collateral (not just ETH derivatives), enabling LRTs, stablecoins, project-specific tokens, and LP tokens to back AVS-style services. The architecture decouples staking from slashing logic and lets AVS operators define their own collateral whitelists — meaning a single AVS can be backed by, say, wstETH + cbETH + sUSDe + project-token simultaneously.
+
+The team — led by Misha Putiatin (ex-StakeWise founder) and the Lido Finance early contributor circle — raised **$5.8M seed** in Q1 2024 led by Paradigm. The current round (in progress, not publicly priced) is reported to value the protocol at $1B+ pre-TGE. Strategic partnerships include Mellow (LRT wrapping layer), Pendle (yield trading), Ether.fi (LRT issuer), Lido (stETH integration), and Karak (cross-restaking).
+
+The points program launched in **January 2026** with hard deposit caps. Each cap opening has been **filled within 2–6 hours** of going live, with deposit waitlists running into the thousands. This is the clearest signal of pre-TGE demand for any restaking protocol since EigenLayer''s 2024 deposit cap race. Total TVL across Symbiotic vaults crossed **$2.4B** by April 2026.
+
+The expected outcome: points convert to tokens at TGE (targeted H1 2027). Looking at peer launches — EigenLayer''s EIGEN distributed ~$0.05–0.15 per point, Ether.fi''s ETHFI distributed ~$0.20–0.50 per point at peak — Symbiotic points are widely expected to land in a similar range. With a Paradigm-led raise at $1B+ valuation, the implied airdrop pool is sizable.
+
+Most important fact about the points program: **multipliers stack significantly**. Direct Symbiotic deposit gives base points. Routing through Mellow or Ether.fi LRT layers adds 1.5–3x multipliers on top of the underlying Symbiotic point accrual, plus those wrappers'' own points. The optimal strategy is rarely ''deposit directly'' — it''s ''route through a multiplier LRT''.', 'Eligibility is mechanical: have points, get tokens. The strategic question is how to maximize point accrual per dollar deposited.
+
+**Acceptable collateral (vault-dependent):**
+- wstETH (Lido staked ETH wrapper) — most common
+- cbETH (Coinbase staked ETH)
+- swETH (Swell staked ETH)
+- rETH (Rocket Pool staked ETH)
+- sUSDe (Ethena staked synthetic dollar) — high APY, more volatile
+- Token-specific vaults (when AVS operators whitelist their own token)
+
+**Required:**
+- Deposit a supported asset into an open Symbiotic vault (subject to caps — set a calendar reminder for cap opens)
+- Maintain the position across at least one weekly epoch (Mon→Mon UTC)
+- Don''t withdraw early — withdrawals forfeit accumulated multipliers from the current epoch
+
+**Multiplier-stacking strategies (highest EV first):**
+1. **Mellow vault routing.** Deposit via Mellow (mellow.finance) into their Symbiotic-backed strategies. You earn Mellow points + Symbiotic points + base staking yield, with a 1.5–3x multiplier on Symbiotic points depending on the vault.
+2. **Ether.fi LRT routing.** Deposit ETH into Ether.fi''s eETH or weETH, then deposit into a Symbiotic vault that whitelists weETH. You earn ETHFI points + Symbiotic points + base yield.
+3. **Direct Symbiotic deposit.** Simplest, no multiplier, but no third-party smart-contract risk on top.
+4. **Pendle YT (advanced).** Buy Pendle YT (yield token) on weETH or wstETH, which captures points exposure at a fraction of the principal cost. Higher leverage on points, but YT decays to zero at maturity — only use if you understand the math.
+
+**Don''t:**
+- Withdraw mid-epoch to chase a different vault — you lose multipliers
+- Park funds in a vault with a closed deposit cap thinking caps re-open (they typically don''t)
+- Use cross-chain bridging that''s not officially supported — funds can get stuck', '1. **Acquire supported collateral.** Easiest path: have ETH, stake it via Lido (lido.fi) → receive stETH → wrap to wstETH (wsteth.eth). Or buy stETH directly on Uniswap/Curve.
+2. **Check Symbiotic vault caps.** Go to [app.symbiotic.fi](https://app.symbiotic.fi). The ''Vaults'' page shows current cap utilization. Most popular vaults are perpetually 100% — watch for cap expansions, which are announced on @symbioticfi.
+3. **Pick your routing strategy.** Direct = simple, Mellow/Ether.fi = multiplier stacks. For most users with $1K–10K, Mellow vault routing is the best risk/reward.
+4. **Deposit when a cap opens.** Caps fill in 2–6 hours. Don''t dawdle — set a notification on @symbioticfi.
+5. **Track points.** The dashboard at app.symbiotic.fi shows your accruing points in near-real-time. Mellow''s dashboard shows the multiplied total.
+6. **Hold position across weekly epochs.** Epochs run Mon→Mon UTC. Don''t withdraw until the epoch closes if you want full credit for the week.
+7. **Watch for the TGE announcement.** Expected H1 2027 based on peer-launch cadences. The claim portal will be on app.symbiotic.fi — only the official URL.
+8. **Do NOT** interact with any ''Symbiotic claim'' site that surfaces before the team''s announcement.',
       'live',
       (SELECT id FROM chains WHERE slug = 'ethereum' LIMIT 1),
       (SELECT id FROM categories WHERE slug = 'points' LIMIT 1),
@@ -252,8 +386,13 @@ INSERT INTO airdrops (
       started_at=VALUES(started_at), snapshot_date=VALUES(snapshot_date), end_date=VALUES(end_date);
 INSERT INTO visit_codes (code, target_url, airdrop_id, source_label) VALUES ('IrupFfTk', 'https://symbiotic.fi', (SELECT id FROM airdrops WHERE slug = 'symbiotic-points' LIMIT 1), 'primary') ON DUPLICATE KEY UPDATE target_url=VALUES(target_url), airdrop_id=VALUES(airdrop_id);
 DELETE FROM faqs WHERE airdrop_id = (SELECT id FROM airdrops WHERE slug = 'symbiotic-points' LIMIT 1);
-INSERT INTO faqs (airdrop_id, position, question, answer_md) VALUES ((SELECT id FROM airdrops WHERE slug = 'symbiotic-points' LIMIT 1), 0, 'What''s the conversion rate?', 'Not announced. Comparable protocols (EigenLayer, Ether.fi) saw 0.1–1% of point value distributed at TGE.');
-INSERT INTO faqs (airdrop_id, position, question, answer_md) VALUES ((SELECT id FROM airdrops WHERE slug = 'symbiotic-points' LIMIT 1), 1, 'Can I withdraw early?', 'Yes, but exiting before snapshot forfeits accumulated multipliers.');
+INSERT INTO faqs (airdrop_id, position, question, answer_md) VALUES ((SELECT id FROM airdrops WHERE slug = 'symbiotic-points' LIMIT 1), 0, 'What''s the conversion rate (points → tokens)?', 'Not announced. Comparable protocols set precedent: EigenLayer''s EIGEN distributed ~$0.05–0.15 per point at launch; Ether.fi''s ETHFI distributed ~$0.20–0.50 per point. Symbiotic''s peer-implied rate is probably in the $0.05–0.30 range, depending on TGE valuation and total points outstanding. Volume of deposits suggests the team will set the rate to make whales meaningful but not whale-only.');
+INSERT INTO faqs (airdrop_id, position, question, answer_md) VALUES ((SELECT id FROM airdrops WHERE slug = 'symbiotic-points' LIMIT 1), 1, 'Can I withdraw early?', 'Yes — Symbiotic has no lock-up on the deposit itself (slashing windows aside). BUT withdrawing mid-epoch forfeits that epoch''s accumulated multipliers. If you need to exit, time it after Monday UTC epoch close to keep that week''s credit.');
+INSERT INTO faqs (airdrop_id, position, question, answer_md) VALUES ((SELECT id FROM airdrops WHERE slug = 'symbiotic-points' LIMIT 1), 2, 'Is there slashing risk?', 'Yes, in principle. Symbiotic is a restaking protocol — the whole point is that AVSes can slash misbehaving operators. But in practice (as of mid-2026), no AVS on Symbiotic has executed a slashing event. Risk-adjusted, slashing is currently a theoretical risk for end-depositors rather than an operational one. This will change as more AVSes go live.');
+INSERT INTO faqs (airdrop_id, position, question, answer_md) VALUES ((SELECT id FROM airdrops WHERE slug = 'symbiotic-points' LIMIT 1), 3, 'Mellow vs direct deposit vs Pendle YT — which is best?', 'For most users with $1K–10K: **Mellow** is the best risk/reward. 1.5–3x multiplier on Symbiotic points + Mellow''s own points stack + base yield. For sophisticated users with the math down: **Pendle YT** gives the highest points-per-dollar by isolating yield exposure. For paranoid users wanting minimal smart-contract surface area: **direct deposit**. The Pendle path has the highest upside but also the highest downside (YT decays to zero at maturity — only use if you understand the term structure).');
+INSERT INTO faqs (airdrop_id, position, question, answer_md) VALUES ((SELECT id FROM airdrops WHERE slug = 'symbiotic-points' LIMIT 1), 4, 'How do deposit caps work?', 'Each vault has a TVL cap set by Symbiotic. When a cap is reached, deposits are blocked. The team periodically raises caps as new AVSes come online or new collateral types are whitelisted. Cap expansions are announced on Twitter @symbioticfi — fill within hours. Closed caps almost never re-open after first fill, so missing a cap means missing that vault entirely.');
+INSERT INTO faqs (airdrop_id, position, question, answer_md) VALUES ((SELECT id FROM airdrops WHERE slug = 'symbiotic-points' LIMIT 1), 5, 'Is KYC required?', 'No KYC at the protocol level. The deposit is fully on-chain. KYC may apply for US users at the eventual TGE if a centralized exchange handles distribution, but the on-chain claim itself is permissionless.');
+INSERT INTO faqs (airdrop_id, position, question, answer_md) VALUES ((SELECT id FROM airdrops WHERE slug = 'symbiotic-points' LIMIT 1), 6, 'When is TGE expected?', 'The team has not committed publicly. Based on peer cadences (EigenLayer: 18 months from points program launch to TGE; Ether.fi: 14 months), expect Symbiotic TGE in **H1 2027**. The cap-fill velocity and Paradigm-led round timing both support that estimate.');
 INSERT INTO airdrops (
       slug, name, token_symbol, logo_url, short_description,
       description_md, eligibility_md, how_to_claim_md,
@@ -264,14 +403,60 @@ INSERT INTO airdrops (
       primary_cta_visit_code,
       started_at, snapshot_date, end_date
     ) VALUES (
-      'polymarket-trader-drop', 'Polymarket Trader Rewards', NULL, NULL, 'Polymarket''s recent funding round and US-relisting put a token launch firmly on the table. Active traders are the obvious airdrop target.',
-      'Polymarket completed a $200M+ funding round in early 2026 and re-entered the US market via QCX acquisition. Vitalik Buterin and Anthropic founders have publicly endorsed the platform. While the team has not committed to a token, the combination of regulatory clarity, large funding, and competitor (Kalshi) momentum suggests a token launch is increasingly likely. Volume traders are the highest-probability beneficiaries. Geographic eligibility may vary at TGE.', '- Trade on Polymarket regularly (minimum ~$100/month volume historically used by similar protocols)
-- Maintain a positive USDC.e balance on Polygon
-- US users: Polymarket now accepts US traders post-QCX; jurisdiction may still affect token eligibility', '1. Sign up at polymarket.com (KYC may be required for US users).
-2. Deposit USDC to your Polymarket account.
-3. Trade across diverse markets — political, sports, crypto. Diversity historically scores higher than volume in single market.
-4. Continue trading through any pre-announced snapshot window.
-5. Watch official channels — fake claim sites are extremely common for Polymarket; verify URLs.',
+      'polymarket-trader-drop', 'Polymarket Trader Rewards', NULL, NULL, 'Largest prediction market on the planet, recently relisted in the US via QCX acquisition. $200M raise in early 2026 + token-shaped product moves make a 2026 TGE the highest-probability bet in this category.',
+      'Polymarket is the largest crypto-native prediction market and the most-watched candidate for a 2026 token launch. The platform processes the bulk of global prediction-market volume across politics, sports, crypto, and macro events. Founded by Shayne Coplan in 2020, the company has progressed from regulatory grey-zone status to fully US-legal in under 18 months.
+
+**Funding and corporate moves:**
+- $74M Series B (Aug 2023, led by Founders Fund / Peter Thiel)
+- **$200M+ round (Q1 2026)** with participation from a16z, Founders Fund, and Vitalik Buterin personally
+- **QCX acquisition (late 2025)** — the CFTC-regulated derivatives exchange that gave Polymarket a legal path back to US users
+- Public endorsements from Vitalik Buterin (technical legitimacy) and the Anthropic founder cohort (mainstream credibility)
+
+**Why a token is now likely:**
+1. **Funding bracket.** $270M+ total raised at a $1B+ valuation puts Polymarket in the funding range where every comparable crypto-native platform has launched a token within 12–18 months (Hyperliquid, dYdX, Jupiter, Aevo).
+2. **Regulatory clarity.** Pre-2025, a Polymarket token was a US-legal landmine. Post-QCX, the regulatory cover exists.
+3. **Competitive pressure.** Kalshi (Polymarket''s main competitor) does not have a token, but multiple smaller competitors (Edgehog, BetU, Augur successors) are token-launching. Polymarket has obvious strategic value in capturing aligned-user attention via a token before competitors do.
+4. **Product signals.** The team has added a ''rewards'' tab in the UI and rolled out point-style attributions on certain markets — both common pre-token-launch fixtures.
+
+**What the team has NOT done:**
+- Formally announce a token
+- Launch a points program (the platform has rewards but they''re per-market, not platform-wide)
+- Publish tokenomics
+
+**The risk:** Polymarket''s US legal status post-QCX makes a token launch more complex, not less. The CFTC-regulated structure puts limits on what tokenomics can include (governance over market resolution = potentially a security). The team may choose to keep equity-only ownership.
+
+**The base case:** if Polymarket launches a token in 2026–2027, the highest-probability recipients are active traders, with allocation roughly proportional to trading volume and market diversity. Estimated per-wallet airdrop value at peer-launch precedent: $500–10,000 for moderate-to-high-volume traders, with the top ~1% potentially much higher.', 'Polymarket has not published criteria, so the eligibility analysis is based on what comparable launches (Hyperliquid, dYdX, Aevo, Jupiter) used. All of them rewarded active traders weighted by volume + diversity.
+
+**Likely-meaningful inputs:**
+- **Total notional volume traded.** Probably the dominant factor. Cumulative $1K+ across the lifetime of your account is likely the floor; $10K+ puts you in the meaningful tier.
+- **Market diversity.** Trading across categories (politics, sports, crypto, macro) scores higher than concentrating in one. Hyperliquid weighted this heavily.
+- **Holding losing positions to resolution.** Real users sometimes lose; pure-arb farmers don''t. Activity that includes losses scores higher than 100%-win patterns.
+- **Account age and consistency.** Continuous-use accounts score higher than ''fresh wallet right before snapshot''.
+- **Withdraw frequency.** Real users withdraw winnings. Accounts that never withdraw look like volume-farms.
+
+**Likely-irrelevant:**
+- Stake on individual market outcomes — the snapshot is about activity, not predictions
+- Number of markets created — Polymarket doesn''t let retail create markets
+
+**Filtered out:**
+- Wash-trading between own accounts (trivially detected on Polymarket since each market has limited liquidity)
+- Bot-style market-making patterns (unless you''re a designated market-maker with disclosed identity)
+- Coordinated cluster behavior across many accounts
+
+**Realistic targets:**
+- **Minimum bar:** $1K cumulative volume across 10+ distinct markets, 3+ months activity history
+- **Meaningful bar:** $10K cumulative volume across 30+ markets, 6+ months activity
+- **Whale tier:** $100K+ cumulative volume — likely the top airdrop bracket if it happens
+
+**Geographic note:**
+- US users CAN now trade on Polymarket post-QCX. Whether US users CAN CLAIM an eventual token is a separate question Polymarket has not commented on. If you''re a US user, your trading activity might count even if the eventual token is restricted to non-US wallets at claim.', '1. **Sign up at [polymarket.com](https://polymarket.com).** KYC is required (light — name + email + jurisdiction). US users go through the QCX-regulated flow.
+2. **Deposit USDC to Polygon.** Polymarket runs on Polygon. Bridge USDC from Ethereum or your CEX. Min deposit usually $10.
+3. **Trade across diverse markets.** Politics + sports + crypto is the recommended starter mix. Aim for 10+ distinct markets in your first month.
+4. **Hold positions to resolution.** Don''t just open and immediately close. Real users sit on positions, and resolved trades (win or lose) score better than open-close churn.
+5. **Maintain a 3+ month activity history.** Trade consistently — once or twice per week is sufficient. Don''t go dark for long stretches.
+6. **Withdraw winnings occasionally.** Pull profits to a wallet you control once in a while. Accounts that never withdraw look like volume-farms.
+7. **Watch official channels:** [@Polymarket](https://x.com/Polymarket) on X, the polymarket.com blog. The phishing site density around Polymarket is one of the highest in crypto — never click ''Polymarket airdrop'' URLs from social media. If a token announcement happens, it will be on polymarket.com first.
+8. **Pre-snapshot strategy:** when a token announcement happens, don''t dramatically change your trading pattern. Continued normal activity scores better than burst-trading right before snapshot.',
       'potential',
       (SELECT id FROM chains WHERE slug = 'ethereum' LIMIT 1),
       (SELECT id FROM categories WHERE slug = 'task' LIMIT 1),
@@ -293,8 +478,13 @@ INSERT INTO airdrops (
       started_at=VALUES(started_at), snapshot_date=VALUES(snapshot_date), end_date=VALUES(end_date);
 INSERT INTO visit_codes (code, target_url, airdrop_id, source_label) VALUES ('w284ty4w', 'https://polymarket.com', (SELECT id FROM airdrops WHERE slug = 'polymarket-trader-drop' LIMIT 1), 'primary') ON DUPLICATE KEY UPDATE target_url=VALUES(target_url), airdrop_id=VALUES(airdrop_id);
 DELETE FROM faqs WHERE airdrop_id = (SELECT id FROM airdrops WHERE slug = 'polymarket-trader-drop' LIMIT 1);
-INSERT INTO faqs (airdrop_id, position, question, answer_md) VALUES ((SELECT id FROM airdrops WHERE slug = 'polymarket-trader-drop' LIMIT 1), 0, 'Is a Polymarket token confirmed?', 'No. But the structural setup (large raise, US relisting, growing volume) mirrors every prior crypto-native platform that issued a token within 12-18 months.');
-INSERT INTO faqs (airdrop_id, position, question, answer_md) VALUES ((SELECT id FROM airdrops WHERE slug = 'polymarket-trader-drop' LIMIT 1), 1, 'Will US users qualify?', 'Unknown. Token-distribution geographic restrictions are separate from trading-platform restrictions and Polymarket has not commented.');
+INSERT INTO faqs (airdrop_id, position, question, answer_md) VALUES ((SELECT id FROM airdrops WHERE slug = 'polymarket-trader-drop' LIMIT 1), 0, 'Is a Polymarket token confirmed?', 'No. The team has NOT formally announced a token, points program, or distribution event. But the structural setup — $270M+ total raised, US re-entry via QCX, competitor pressure, product moves that look pre-token-launch — mirrors every prior crypto-native platform that issued a token within 12–18 months. The base-case probability of a 2026–2027 token launch is in the 60–80% range.');
+INSERT INTO faqs (airdrop_id, position, question, answer_md) VALUES ((SELECT id FROM airdrops WHERE slug = 'polymarket-trader-drop' LIMIT 1), 1, 'Will US users qualify?', 'Unknown. Two layers here: (1) US users CAN now trade on Polymarket post-QCX. (2) Whether US wallets can CLAIM an eventual token is separate and unannounced. Some prior US-blocked tokens (LayerZero, Eigen) allowed US claims; others (Aevo) did not. Polymarket''s CFTC-regulated structure adds complexity — a governance token over real-money markets may legally require non-US distribution. Plan optimistically, accept the risk that US claims may be restricted.');
+INSERT INTO faqs (airdrop_id, position, question, answer_md) VALUES ((SELECT id FROM airdrops WHERE slug = 'polymarket-trader-drop' LIMIT 1), 2, 'How much volume should I target?', '**Floor:** $1K cumulative volume + 10+ markets + 3+ months activity. **Comfortable:** $10K + 30+ markets + 6+ months. **Whale tier:** $100K+ — likely the largest per-wallet bracket if a token launches. Don''t over-leverage to hit volume targets — you can lose principal trading prediction markets, and there''s no guarantee the airdrop materializes.');
+INSERT INTO faqs (airdrop_id, position, question, answer_md) VALUES ((SELECT id FROM airdrops WHERE slug = 'polymarket-trader-drop' LIMIT 1), 3, 'Should I trade markets I''d lose money on just to farm?', 'Generally no — losing $1K to farm a maybe-$2K airdrop is bad EV. But the airdrop scoring likely rewards ''real user'' patterns over ''perfect-arbitrageur'' patterns. Don''t go out of your way to lose, but don''t avoid markets where you have a genuine view just because they might lose either. Mix it up.');
+INSERT INTO faqs (airdrop_id, position, question, answer_md) VALUES ((SELECT id FROM airdrops WHERE slug = 'polymarket-trader-drop' LIMIT 1), 4, 'What''s the phishing landscape?', 'Polymarket is one of the most-impersonated platforms in crypto. ''polymarket-claim.com'', ''polymarketrewards.io'', etc. all exist as drainer sites. Rules: (1) Only polymarket.com is real. (2) Polymarket will NEVER message you on Discord/Telegram about an airdrop. (3) The team almost certainly will NOT require a wallet signature to ''verify'' anything — same rule as everywhere on this site.');
+INSERT INTO faqs (airdrop_id, position, question, answer_md) VALUES ((SELECT id FROM airdrops WHERE slug = 'polymarket-trader-drop' LIMIT 1), 5, 'Is KYC required at the token claim?', 'Unknown. KYC IS required for trading on Polymarket already (US users via QCX especially). The claim itself may or may not require additional KYC; this varies by jurisdiction and how the team structures the distribution. If you''ve already passed KYC to trade, you''re past the hardest gate.');
+INSERT INTO faqs (airdrop_id, position, question, answer_md) VALUES ((SELECT id FROM airdrops WHERE slug = 'polymarket-trader-drop' LIMIT 1), 6, 'What''s the time horizon?', 'Best guess: TGE in H2 2026 or H1 2027. The fundraise closed Q1 2026; comparable launches typically run 9–15 months from large round to TGE. Anyone telling you a more specific date is guessing.');
 INSERT INTO airdrops (
       slug, name, token_symbol, logo_url, short_description,
       description_md, eligibility_md, how_to_claim_md,
