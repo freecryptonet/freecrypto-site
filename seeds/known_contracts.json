@@ -1,0 +1,27 @@
+[
+  {
+    "airdrop_slug": "arbitrum-arb-retroactive-demo",
+    "airdrop_meta": {
+      "name": "Arbitrum (ARB) — Retroactive (historical demo)",
+      "token_symbol": "ARB",
+      "status": "ended",
+      "chain": "arbitrum",
+      "category": "retroactive",
+      "kyc_required": false,
+      "funding_raised_usd": null,
+      "estimated_value_usd_min": 500,
+      "estimated_value_usd_max": 12000,
+      "social_score": null,
+      "short_description": "March 2023 ARB retroactive airdrop. Demo entry — the distributor's claim window has closed, but unclaimed allocations still show as 'eligible' until the contract is fully swept. Useful as a sanity-check that the checker's RPC + contract-read pipeline works.",
+      "project_url": "https://arbitrum.foundation",
+      "started_at": "2023-03-23",
+      "end_date": "2023-09-23"
+    },
+    "chain_slug": "arbitrum",
+    "contract_addr": "0x67a24CE4321aB3aF51c2D0a4801c3E111D88C9d9",
+    "method": "claimable-view",
+    "snapshot_block": null,
+    "claim_url": "https://arbitrum.foundation/eligibility",
+    "notes": "Arbitrum Foundation token-distributor. Exposes claimableTokens(address). Wallets that never claimed still return > 0 here."
+  }
+]

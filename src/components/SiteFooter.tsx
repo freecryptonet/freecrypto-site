@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { NewsletterForm } from "@/components/NewsletterForm";
 
 export function SiteFooter() {
   return (
@@ -41,12 +42,16 @@ export function SiteFooter() {
         </div>
 
         <div>
-          <div className="text-sm font-semibold mb-3">Updates</div>
-          <ul className="space-y-1.5 text-sm text-text-dim">
+          <div className="text-sm font-semibold mb-3">Weekly digest</div>
+          <p className="text-xs text-text-faint mb-3">
+            Every Sunday: deadlines, snapshots, and the highest-value drops
+            of the week.
+          </p>
+          <NewsletterForm source="footer" />
+          <ul className="mt-5 space-y-1.5 text-sm text-text-dim">
             <li><Link href="/feed.xml" className="hover:text-text">RSS feed</Link></li>
             <li><a href="https://t.me/" className="hover:text-text" rel="noopener nofollow">Telegram</a></li>
             <li><a href="https://x.com/" className="hover:text-text" rel="noopener nofollow">X / Twitter</a></li>
-            <li><Link href="/newsletter" className="hover:text-text">Newsletter</Link></li>
           </ul>
         </div>
       </div>

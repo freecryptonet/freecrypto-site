@@ -10,6 +10,7 @@ import {
 import { AirdropCard, SponsoredCard } from "@/components/AirdropCard";
 import { FilterBar } from "@/components/FilterBar";
 import { AAds } from "@/components/AAds";
+import { ExchangeCTA } from "@/components/ExchangeCTA";
 import { siteUrl, breadcrumbJsonLd, jsonLdScript } from "@/lib/seo";
 
 export const dynamic = "force-dynamic";
@@ -84,13 +85,27 @@ export default async function HomePage({ searchParams }: PageProps) {
         {empty ? (
           <EmptyState />
         ) : (
-          <ListGrid>
-            {airdrops.map((a, i) => (
-              <CardSlot key={a.id} index={i}>
-                <AirdropCard a={a} />
-              </CardSlot>
-            ))}
-          </ListGrid>
+          <>
+            <ListGrid>
+              {airdrops.slice(0, 6).map((a) => (
+                <AirdropCard key={a.id} a={a} />
+              ))}
+            </ListGrid>
+
+            {airdrops.length > 6 ? (
+              <div className="my-8">
+                <ExchangeCTA variant="row" />
+              </div>
+            ) : null}
+
+            <ListGrid>
+              {airdrops.slice(6).map((a, i) => (
+                <CardSlot key={a.id} index={i}>
+                  <AirdropCard a={a} />
+                </CardSlot>
+              ))}
+            </ListGrid>
+          </>
         )}
       </div>
 

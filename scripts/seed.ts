@@ -204,6 +204,95 @@ async function main() {
     }
   }
 
+  // Known airdrop contracts (used by /api/check) — each entry can carry an
+  // airdrop_meta that bootstraps an airdrop row, in which case we upsert it
+  // first and link the contract to it.
+  const knownPath = path.join(SEEDS_DIR, "known_contracts.json");
+  if (fs.existsSync(knownPath)) {
+    interface KnownContractSeed {
+      airdrop_slug: string;
+      airdrop_meta?: {
+        name: string; token_symbol: string | null;
+        status: "confirmed" | "potential" | "snapshot" | "live" | "ended";
+        chain: string; category: string;
+        kyc_required: boolean;
+        funding_raised_usd: number | null;
+        estimated_value_usd_min: number | null;
+        estimated_value_usd_max: number | null;
+        social_score: number | null;
+        short_description: string | null;
+        project_url: string | null;
+        started_at: string | null;
+        end_date: string | null;
+      };
+      chain_slug: string;
+      contract_addr: string;
+      method: string;
+      snapshot_block: number | null;
+      claim_url: string | null;
+      notes: string | null;
+    }
+    const known = readJson<KnownContractSeed[]>("known_contracts.json");
+    console.log(`Seeding ${known.length} known airdrop contracts…`);
+    for (const k of known) {
+      // Bootstrap airdrop row if missing
+      if (k.airdrop_meta) {
+        const m = k.airdrop_meta;
+        const cId = chainId.get(m.chain) ?? null;
+        const catId = categoryId.get(m.category) ?? null;
+        await conn.query(
+          `INSERT INTO airdrops (
+            slug, name, token_symbol, short_description,
+            status, chain_id, category_id, primary_source_id,
+            kyc_required, funding_raised_usd,
+            estimated_value_usd_min, estimated_value_usd_max, social_score,
+            project_url, started_at, end_date
+          ) VALUES (?,?,?,?, ?,?,?,?, ?,?, ?,?,?, ?,?,?)
+          ON DUPLICATE KEY UPDATE
+            short_description = COALESCE(VALUES(short_description), short_description),
+            status = VALUES(status),
+            estimated_value_usd_min = VALUES(estimated_value_usd_min),
+            estimated_value_usd_max = VALUES(estimated_value_usd_max)`,
+          [
+            k.airdrop_slug, m.name, m.token_symbol, m.short_description,
+            m.status, cId, catId, editorialId,
+            m.kyc_required ? 1 : 0, m.funding_raised_usd,
+            m.estimated_value_usd_min, m.estimated_value_usd_max, m.social_score,
+            m.project_url, m.started_at, m.end_date,
+          ],
+        );
+      }
+      const [aRows] = await conn.query<RowDataPacket[]>(
+        "SELECT id FROM airdrops WHERE slug = ? LIMIT 1",
+        [k.airdrop_slug],
+      );
+      const aId = (aRows[0] as { id: number } | undefined)?.id;
+      if (!aId) {
+        console.warn(`  skip ${k.airdrop_slug}: no airdrop row exists`);
+        continue;
+      }
+      const cId = chainId.get(k.chain_slug) ?? null;
+      if (!cId) {
+        console.warn(`  skip ${k.airdrop_slug}: chain ${k.chain_slug} not in chains table`);
+        continue;
+      }
+      // Idempotent upsert via (airdrop_id, chain_id, contract_addr) — no unique
+      // key exists, so DELETE+INSERT is the cleanest path.
+      await conn.query(
+        `DELETE FROM known_airdrop_contracts
+         WHERE airdrop_id = ? AND chain_id = ? AND LOWER(contract_addr) = LOWER(?)`,
+        [aId, cId, k.contract_addr],
+      );
+      await conn.query(
+        `INSERT INTO known_airdrop_contracts
+           (airdrop_id, chain_id, contract_addr, method, snapshot_block, claim_url, notes)
+         VALUES (?, ?, ?, ?, ?, ?, ?)`,
+        [aId, cId, k.contract_addr, k.method, k.snapshot_block, k.claim_url, k.notes],
+      );
+    }
+    console.log(`✓ Seeded ${known.length} known contracts.`);
+  }
+
   // Exchange + tool visit codes (independent of airdrops — site-wide CTAs)
   const codesPath = path.join(SEEDS_DIR, "visit_codes.json");
   if (fs.existsSync(codesPath)) {

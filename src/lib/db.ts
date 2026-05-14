@@ -4,7 +4,7 @@ const DATABASE_URL = process.env.DATABASE_URL || "";
 
 let cachedPool: Pool | null = null;
 
-function getPool(): Pool | null {
+export function getPool(): Pool | null {
   if (cachedPool) return cachedPool;
   if (!DATABASE_URL) return null;
   cachedPool = mysql.createPool({
@@ -234,6 +234,29 @@ export async function getAirdropBySlug(slug: string): Promise<AirdropDetail | nu
     };
   } catch {
     return null;
+  }
+}
+
+export async function listAirdropsWithDeadlines(limit = 100): Promise<AirdropListItem[]> {
+  const pool = getPool();
+  if (!pool) return [];
+  const q = `${BASE_SELECT}
+    WHERE a.deleted_at IS NULL
+      AND a.end_date IS NOT NULL
+      AND a.end_date >= NOW()
+      AND a.status != 'ended'
+    ORDER BY a.end_date ASC
+    LIMIT ${Math.min(Math.max(limit, 1), 500)}`;
+  try {
+    const [rows] = await pool.query<RowDataPacket[]>(q);
+    return (rows as unknown as AirdropListItem[]).map((r) => ({
+      ...r,
+      kyc_required: !!r.kyc_required,
+      end_date: r.end_date ? new Date(r.end_date) : null,
+      updated_at: new Date(r.updated_at),
+    }));
+  } catch {
+    return [];
   }
 }
 

@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { getAirdropBySlug, listAirdrops, type AirdropDetail } from "@/lib/db";
 import { AirdropCard } from "@/components/AirdropCard";
 import { AAds } from "@/components/AAds";
+import { ExchangeCTA } from "@/components/ExchangeCTA";
 import { StatusChip, KycChip } from "@/components/StatusChip";
 import { Countdown } from "@/components/Countdown";
 import { formatUsd, formatValueRange, timeAgo } from "@/lib/format";
@@ -101,6 +102,12 @@ export default async function AirdropDetailPage({ params }: PageProps) {
               Go to {a.name} →
             </a>
           </Section>
+
+          {a.kyc_required ? (
+            <div className="mt-8">
+              <ExchangeCTA variant="row" />
+            </div>
+          ) : null}
 
           {a.faqs.length > 0 && (
             <Section title="FAQ">

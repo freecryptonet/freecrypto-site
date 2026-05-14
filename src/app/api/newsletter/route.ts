@@ -5,6 +5,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import crypto from "node:crypto";
 import { getDb } from "@/lib/db";
+import { sendEmail, isEmailEnabled } from "@/lib/email";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -45,6 +46,19 @@ export async function POST(req: NextRequest) {
       VALUES (${email}, ${source}, ${sha256(ip)})
       ON DUPLICATE KEY UPDATE source = VALUES(source)
     `;
+
+    // Best-effort welcome email — never blocks the response.
+    if (isEmailEnabled()) {
+      void sendEmail({
+        to: email,
+        subject: "You're in — freecrypto.net weekly digest",
+        html: `<p>Thanks for subscribing to <a href="https://freecrypto.net">freecrypto.net</a>.</p>
+<p>Every Sunday you'll get the top airdrops ending in the week ahead, plus any high-value retroactive announcements we spot. We never sell, share, or rent your email.</p>
+<p>If you want to bookmark anything in the meantime, the <a href="https://freecrypto.net/calendar">calendar view</a> shows every upcoming deadline we track.</p>`,
+        unsubscribeFor: email,
+      });
+    }
+
     return NextResponse.json({ ok: true });
   } catch {
     return NextResponse.json(
