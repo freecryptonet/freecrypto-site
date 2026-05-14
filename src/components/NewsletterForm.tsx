@@ -34,8 +34,8 @@ export function NewsletterForm({ source = "footer" }: { source?: string }) {
   }
 
   return (
-    <form onSubmit={onSubmit} className="flex flex-col gap-2">
-      <div className="flex gap-2">
+    <form onSubmit={onSubmit} className="flex flex-col gap-2 w-full">
+      <div className="flex gap-2 w-full">
         <input
           type="email"
           inputMode="email"
@@ -44,7 +44,7 @@ export function NewsletterForm({ source = "footer" }: { source?: string }) {
           placeholder="you@email.com"
           aria-label="Email address"
           required
-          className="flex-1 bg-ink-soft border border-edge rounded-btn px-3 py-2 text-sm placeholder:text-text-faint focus:outline-none focus:ring-1 focus:ring-accent/60"
+          className="flex-1 min-w-0 bg-ink-soft border border-edge rounded-btn px-3 py-2 text-sm placeholder:text-text-faint focus:outline-none focus:ring-1 focus:ring-accent/60"
         />
         <button
           type="submit"

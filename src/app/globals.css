@@ -13,6 +13,10 @@ body {
   font-family: var(--font-inter), system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  /* Safety net so a single mis-styled child can't introduce horizontal
+   * page scroll. Specific layouts that need to overflow (e.g. a
+   * deliberate scroll-snap row) should opt out locally. */
+  overflow-x: hidden;
 }
 
 ::selection {
