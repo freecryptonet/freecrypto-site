@@ -36,3 +36,10 @@ next-env.d.ts
 
 # logs / ops
 *.log
+
+# playwright runtime / screenshots
+.playwright-mcp/
+
+# deploy artifacts
+freecrypto-deploy.*
+.claude/
