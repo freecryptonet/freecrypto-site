@@ -65,6 +65,7 @@ export function AAds({ zone, className }: { zone: ZoneKey; className?: string })
       style={{ maxWidth: w, aspectRatio: `${w} / ${h}` }}
     >
       <iframe
+        data-aa={id}
         title={`Sponsored — ${label}`}
         src={src}
         style={{ border: 0, padding: 0, width: "100%", height: "100%", overflow: "hidden", display: "block" }}
