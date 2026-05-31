@@ -83,7 +83,7 @@ export default async function AirdropDetailPage({ params }: PageProps) {
       <Hero a={a} ctaHref={ctaHref} />
 
       <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_320px]">
-        <div className="min-w-0">
+        <div className="min-w-0 order-2 lg:order-none">
           {a.description_md.trim() ? (
             <Section title="About">
               <div
@@ -153,7 +153,7 @@ export default async function AirdropDetailPage({ params }: PageProps) {
           )}
         </div>
 
-        <aside className="lg:sticky lg:top-20 lg:self-start space-y-6">
+        <aside className="order-1 lg:order-none lg:sticky lg:top-20 lg:self-start space-y-6">
           <InfoCard a={a} />
           <div className="flex justify-center">
             <AAds zone="sidebar" />
