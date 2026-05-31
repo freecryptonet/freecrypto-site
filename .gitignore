@@ -40,6 +40,12 @@ next-env.d.ts
 # playwright runtime / screenshots
 .playwright-mcp/
 
+# stray root-level screenshots (e.g. home-mobile-375.png)
+/*.png
+/*.jpg
+/*.jpeg
+/*.webp
+
 # deploy artifacts
 freecrypto-deploy.*
 .claude/
