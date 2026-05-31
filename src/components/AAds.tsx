@@ -58,6 +58,10 @@ export function AAds({ zone, className }: { zone: ZoneKey; className?: string })
   // Standard A-Ads iframe embed. The outer wrapper uses aspect-ratio so the
   // intrinsic 728/300 width never pushes its grid track wider than the
   // viewport on mobile (would otherwise cause horizontal page scroll).
+  //
+  // NOT lazy-loaded: A-Ads' verifier requires the unit to appear immediately
+  // after page load, otherwise it flags "ad unit is partly or fully hidden"
+  // and pays nothing. A below-the-fold lazy iframe never loads for the bot.
   const src = `//acceptable.a-ads.com/${id}/?size=${w}x${h}`;
   return (
     <div
@@ -69,7 +73,6 @@ export function AAds({ zone, className }: { zone: ZoneKey; className?: string })
         title={`Sponsored — ${label}`}
         src={src}
         style={{ border: 0, padding: 0, width: "100%", height: "100%", overflow: "hidden", display: "block" }}
-        loading="lazy"
         scrolling="no"
       />
     </div>
