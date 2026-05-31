@@ -4,16 +4,22 @@
  * empty. Generates from data already in the DB (step titles parsed out of
  * how_to_claim_md) — no network, no scraping.
  *
- * Scope (deliberately tight — the "near-miss" band):
+ * Scope:
  *   - NOT editorial-locked (primary_source_id != editorial source)
  *   - eligibility_md shorter than 50 chars (effectively empty)
- *   - combined description+eligibility+how_to_claim between 600 and 799
+ *   - combined description+eligibility+how_to_claim between MIN_TOTAL and 799
  *     (so the generated paragraph reliably lifts them over 800)
+ *
+ * MIN_TOTAL defaults to 600 (the original near-miss band); pass --min-total=N
+ * to widen it (e.g. --min-total=400 for the next bucket). The eligibility<50
+ * guard means already-filled rows are skipped, so widening only picks up the
+ * still-empty rows in the new band.
  *
  * Idempotent: re-runs only fill rows whose eligibility is still empty.
  *
- *   npx tsx scripts/backfill-eligibility.ts --dry-run   # preview, no writes
- *   npx tsx scripts/backfill-eligibility.ts             # apply
+ *   npx tsx scripts/backfill-eligibility.ts --dry-run                 # preview
+ *   npx tsx scripts/backfill-eligibility.ts --min-total=400 --dry-run # wider preview
+ *   npx tsx scripts/backfill-eligibility.ts --min-total=400          # apply
  */
 import mysql from "mysql2/promise";
 import { config as loadEnv } from "dotenv";
@@ -25,6 +31,8 @@ loadEnv({ path: ".env.local" });
 loadEnv({ path: ".env" });
 
 const DRY_RUN = process.argv.includes("--dry-run");
+const minTotalArg = process.argv.find((a) => a.startsWith("--min-total="));
+const MIN_TOTAL = minTotalArg ? Math.max(0, parseInt(minTotalArg.split("=")[1], 10) || 600) : 600;
 const DATABASE_URL = process.env.DATABASE_URL;
 if (!DATABASE_URL) {
   console.error("DATABASE_URL not set (.env.local or .env)");
@@ -60,12 +68,13 @@ async function main() {
      WHERE a.deleted_at IS NULL
        AND a.primary_source_id <> (SELECT id FROM sources WHERE slug = 'editorial')
        AND CHAR_LENGTH(a.eligibility_md) < 50
-       AND (CHAR_LENGTH(a.description_md)+CHAR_LENGTH(a.eligibility_md)+CHAR_LENGTH(a.how_to_claim_md)) BETWEEN 600 AND 799
+       AND (CHAR_LENGTH(a.description_md)+CHAR_LENGTH(a.eligibility_md)+CHAR_LENGTH(a.how_to_claim_md)) BETWEEN ? AND 799
      ORDER BY a.slug`,
+    [MIN_TOTAL],
   );
   const candidates = rows as Row[];
 
-  console.log(`${DRY_RUN ? "[DRY RUN] " : ""}${candidates.length} candidate rows\n`);
+  console.log(`${DRY_RUN ? "[DRY RUN] " : ""}${candidates.length} candidate rows (total ${MIN_TOTAL}-799)\n`);
 
   let written = 0;
   let willClear = 0;
