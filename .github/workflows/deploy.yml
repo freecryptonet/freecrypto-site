@@ -30,6 +30,7 @@ jobs:
             StrictHostKeyChecking accept-new
             UserKnownHostsFile ~/.ssh/known_hosts
             ConnectTimeout 30
+            ConnectionAttempts 3
             ServerAliveInterval 30
           EOF
           chmod 600 ~/.ssh/config
@@ -38,6 +39,14 @@ jobs:
 
       - name: Pull, build, reload (production)
         run: |
+          # Ride out transient port-22 connect timeouts (observed 2026-05-31,
+          # exit 255): wait for SSH to come back before running the deploy.
+          for i in 1 2 3 4 5; do
+            if ssh -o ConnectTimeout=15 vps 'true' >/dev/null 2>&1; then
+              echo "SSH reachable (probe $i)"; break
+            fi
+            echo "SSH not reachable (probe $i/5); retrying in 15s..."; sleep 15
+          done
           ssh vps bash -se << 'REMOTE'
             set -euo pipefail
             cd /home/deploy/freecrypto
