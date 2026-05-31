@@ -20,6 +20,7 @@
  * Idempotent + capped at `maxRows` fetches per run.
  */
 import type { Pool, RowDataPacket } from "mysql2/promise";
+import { buildEligibility } from "./eligibility";
 
 interface ParsedDetail {
   airdropsIoUrl: string;
@@ -253,11 +254,17 @@ export async function enrichAirdropsIoRows(pool: Pool, maxRows = 25): Promise<En
 
     const newDescription = buildDescription(row.name, detail);
     const newHowToClaim = buildHowToClaim(row.name, detail);
+    const newEligibility = buildEligibility({
+      name: row.name,
+      stepTitles: detail.stepTitles,
+      estimatedValue: detail.estimatedValue,
+    });
 
     try {
       await pool.query(
         `UPDATE airdrops SET
            description_md          = CASE WHEN LENGTH(description_md)  < 100 THEN ? ELSE description_md END,
+           eligibility_md          = CASE WHEN LENGTH(eligibility_md)  <  50 THEN ? ELSE eligibility_md END,
            how_to_claim_md         = CASE WHEN LENGTH(how_to_claim_md) <  50 THEN ? ELSE how_to_claim_md END,
            twitter_url             = COALESCE(twitter_url, ?),
            discord_url             = COALESCE(discord_url, ?),
@@ -265,6 +272,7 @@ export async function enrichAirdropsIoRows(pool: Pool, maxRows = 25): Promise<En
          WHERE id = ?`,
         [
           newDescription,
+          newEligibility || "",
           newHowToClaim || "",
           detail.twitterUrl,
           detail.discordUrl,
