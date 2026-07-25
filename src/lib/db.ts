@@ -468,3 +468,170 @@ export async function logVisitClick(args: {
     // best-effort
   }
 }
+
+// ============================================================
+// stores (earn-hub shop-to-earn engine)
+// ============================================================
+export type CashbackKind = "percent" | "sats" | "discount" | "unknown";
+export type GeoScope = "global" | "eu" | "nl" | "other";
+
+export interface StoreListItem {
+  id: number;
+  slug: string;
+  name: string;
+  logo_url: string | null;
+  cashback_text: string | null;
+  cashback_kind: CashbackKind;
+  cashback_value: number | null;
+  category_slug: string | null;
+  category_name: string | null;
+  geo_scope: GeoScope;
+  is_bitcoin_native: boolean;
+  updated_at: Date;
+}
+
+export interface StoreDetail extends StoreListItem {
+  description_md: string;
+  how_it_works_md: string;
+  worth_it_md: string;
+  satsback_slug: string | null;
+  faqs: Array<{ question: string; answer_md: string }>;
+}
+
+export interface StoreCategoryRow {
+  id: number;
+  slug: string;
+  name: string;
+  description: string | null;
+  store_count: number;
+}
+
+export interface StoreFilters {
+  categorySlug?: string;
+  geo?: GeoScope;
+  bitcoinNative?: boolean;
+  sort?: "rate" | "name";
+  limit?: number;
+  offset?: number;
+}
+
+const STORE_BASE_SELECT = `
+  SELECT
+    s.id, s.slug, s.name, s.logo_url, s.cashback_text, s.cashback_kind,
+    s.cashback_value, s.category_slug, s.geo_scope, s.is_bitcoin_native, s.updated_at,
+    sc.name AS category_name
+  FROM stores s
+  LEFT JOIN store_categories sc ON sc.slug = s.category_slug
+`;
+
+function mapStoreRow(r: Record<string, unknown>): StoreListItem {
+  return {
+    id: Number(r.id),
+    slug: String(r.slug),
+    name: String(r.name),
+    logo_url: (r.logo_url as string) ?? null,
+    cashback_text: (r.cashback_text as string) ?? null,
+    cashback_kind: (r.cashback_kind as CashbackKind) ?? "unknown",
+    cashback_value: r.cashback_value == null ? null : Number(r.cashback_value),
+    category_slug: (r.category_slug as string) ?? null,
+    category_name: (r.category_name as string) ?? null,
+    geo_scope: (r.geo_scope as GeoScope) ?? "global",
+    is_bitcoin_native: !!r.is_bitcoin_native,
+    updated_at: new Date(r.updated_at as string),
+  };
+}
+
+export async function listStores(f: StoreFilters = {}): Promise<StoreListItem[]> {
+  const pool = getPool();
+  if (!pool) return [];
+  const limit = Math.min(Math.max(f.limit ?? 60, 1), 200);
+  const offset = Math.max(f.offset ?? 0, 0);
+  const where: string[] = ["s.deleted_at IS NULL"];
+  const params: unknown[] = [];
+  if (f.categorySlug) { where.push("s.category_slug = ?"); params.push(f.categorySlug); }
+  if (f.geo) { where.push("s.geo_scope = ?"); params.push(f.geo); }
+  if (f.bitcoinNative != null) { where.push("s.is_bitcoin_native = ?"); params.push(f.bitcoinNative ? 1 : 0); }
+  const orderBy = f.sort === "name"
+    ? "s.name ASC"
+    : "(s.cashback_kind = 'percent') DESC, s.cashback_value DESC, s.name ASC";
+  const q = `${STORE_BASE_SELECT} WHERE ${where.join(" AND ")} ORDER BY ${orderBy} LIMIT ${limit} OFFSET ${offset}`;
+  try {
+    const [rows] = await pool.query<RowDataPacket[]>(q, params);
+    return (rows as unknown as Record<string, unknown>[]).map(mapStoreRow);
+  } catch {
+    return [];
+  }
+}
+
+export async function getStoreBySlug(slug: string): Promise<StoreDetail | null> {
+  const pool = getPool();
+  if (!pool) return null;
+  try {
+    const [rows] = await pool.query<RowDataPacket[]>(
+      `SELECT s.id, s.slug, s.name, s.logo_url, s.cashback_text, s.cashback_kind,
+              s.cashback_value, s.category_slug, s.geo_scope, s.is_bitcoin_native, s.updated_at,
+              s.description_md, s.how_it_works_md, s.worth_it_md, s.satsback_slug,
+              sc.name AS category_name
+       FROM stores s
+       LEFT JOIN store_categories sc ON sc.slug = s.category_slug
+       WHERE s.slug = ? AND s.deleted_at IS NULL LIMIT 1`,
+      [slug],
+    );
+    const arr = rows as unknown as Record<string, unknown>[];
+    if (arr.length === 0) return null;
+    const base = mapStoreRow(arr[0]);
+    const [faqRows] = await pool.query<RowDataPacket[]>(
+      "SELECT question, answer_md FROM faqs WHERE store_id = ? ORDER BY position ASC",
+      [base.id],
+    );
+    return {
+      ...base,
+      description_md: String(arr[0].description_md ?? ""),
+      how_it_works_md: String(arr[0].how_it_works_md ?? ""),
+      worth_it_md: String(arr[0].worth_it_md ?? ""),
+      satsback_slug: (arr[0].satsback_slug as string) ?? null,
+      faqs: faqRows as unknown as Array<{ question: string; answer_md: string }>,
+    };
+  } catch {
+    return null;
+  }
+}
+
+export async function listStoreCategories(): Promise<StoreCategoryRow[]> {
+  const pool = getPool();
+  if (!pool) return [];
+  try {
+    const [rows] = await pool.query<RowDataPacket[]>(`
+      SELECT sc.id, sc.slug, sc.name, sc.description,
+        COUNT(s.id) AS store_count
+      FROM store_categories sc
+      LEFT JOIN stores s ON s.category_slug = sc.slug AND s.deleted_at IS NULL
+      GROUP BY sc.id
+      ORDER BY sc.sort_order ASC, sc.name ASC
+    `);
+    return (rows as unknown as Array<Record<string, unknown>>).map((r) => ({
+      id: Number(r.id), slug: String(r.slug), name: String(r.name),
+      description: (r.description as string) ?? null, store_count: Number(r.store_count) || 0,
+    }));
+  } catch {
+    return [];
+  }
+}
+
+export interface SitemapStoreRow { slug: string; updated_at: Date; content_chars: number }
+export async function listStoreSlugsForSitemap(): Promise<SitemapStoreRow[]> {
+  const pool = getPool();
+  if (!pool) return [];
+  try {
+    const [rows] = await pool.query<RowDataPacket[]>(`
+      SELECT slug, updated_at,
+        (CHAR_LENGTH(description_md) + CHAR_LENGTH(how_it_works_md) + CHAR_LENGTH(worth_it_md)) AS content_chars
+      FROM stores WHERE deleted_at IS NULL ORDER BY updated_at DESC
+    `);
+    return (rows as unknown as Array<{ slug: string; updated_at: string; content_chars: number }>).map((r) => ({
+      slug: r.slug, updated_at: new Date(r.updated_at), content_chars: Number(r.content_chars) || 0,
+    }));
+  } catch {
+    return [];
+  }
+}
