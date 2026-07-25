@@ -968,11 +968,11 @@ git commit -m "feat(shop): store index, detail, and category-hub routes"
 Add to `seeds/visit_codes.json` (then `npm run seed`), matching its existing shape:
 ```json
 { "code": "satsback", "target_url": "https://satsback.com/register/ozBlyPnj26PY19ve", "source_label": "satsback-ref" },
+{ "code": "nexo",     "target_url": "https://nexo.com/ref/d0gip5tq3j?src=web-link", "source_label": "nexo-ref" },
 { "code": "bitvavo",  "target_url": "REPLACE_ME_BITVAVO_REF",  "source_label": "bitvavo-ref" },
-{ "code": "nexo",     "target_url": "REPLACE_ME_NEXO_REF",     "source_label": "nexo-ref" },
 { "code": "coinbase", "target_url": "REPLACE_ME_COINBASE_REF", "source_label": "coinbase-ref" }
 ```
-(Only `satsback` is live now; exchange codes stay `REPLACE_ME` until Tim supplies them — their pages omit the CTA meanwhile.)
+**Live now:** `satsback` and `nexo` (real referral URLs captured from Tim's accounts). **`bitvavo` is blocked on KYC** — Tim must finish Bitvavo identity verification before a referral link exists; leave it `REPLACE_ME` and omit the Bitvavo CTA until then. `coinbase` still to supply. A `/visit/{code}` page whose `target_url` is `REPLACE_ME…` should be treated as unconfigured (hide the CTA / skip the guide's affiliate button).
 
 - [ ] **Step 2: Add stores to the sitemap**
 

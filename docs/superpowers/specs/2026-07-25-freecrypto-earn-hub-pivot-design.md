@@ -185,8 +185,11 @@ Category hubs must be **genuinely comparative** (sortable table of stores in tha
 
 ## 14. Open questions / Tim TODOs
 
-- Confirm/collect referral URLs for **Bitvavo, Nexo, Coinbase** (Satsback code already captured). Until then those `visit_codes` use placeholders and their bonus pages can `noindex` or omit the CTA.
-- Confirm Satsback referral code `ozBlyPnj26PY19ve` is the one to bake into `visit_codes` (it's Tim's live code as shown on the referral page).
+- **Referral links status (2026-07-25):**
+  - ✅ **Satsback** — `satsback.com/register/ozBlyPnj26PY19ve` (live; 21% of referee cashback for 1 yr).
+  - ✅ **Nexo** — `nexo.com/ref/d0gip5tq3j?src=web-link` (live; up to $2,500 NEXO per referral, but referee must add $5,000+ in assets — high-value, high-friction → frame the bonus guide honestly around the deposit requirement).
+  - ⏳ **Bitvavo** — **blocked on KYC.** No referral link until Tim finishes Bitvavo identity verification. Bitvavo CTA omitted until then; the EU-targeting story waits on this.
+  - ❔ **Coinbase** — link still to supply.
 - Phase-2 NL: confirm willingness to write/verify Dutch copy.
 
 ---
