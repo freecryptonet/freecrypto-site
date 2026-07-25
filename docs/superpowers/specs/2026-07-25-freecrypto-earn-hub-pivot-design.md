@@ -188,8 +188,8 @@ Category hubs must be **genuinely comparative** (sortable table of stores in tha
 - **Referral links status (2026-07-25):**
   - ✅ **Satsback** — `satsback.com/register/ozBlyPnj26PY19ve` (live; 21% of referee cashback for 1 yr).
   - ✅ **Nexo** — `nexo.com/ref/d0gip5tq3j?src=web-link` (live; up to $2,500 NEXO per referral, but referee must add $5,000+ in assets — high-value, high-friction → frame the bonus guide honestly around the deposit requirement).
-  - ⏳ **Bitvavo** — **blocked on KYC.** No referral link until Tim finishes Bitvavo identity verification. Bitvavo CTA omitted until then; the EU-targeting story waits on this.
-  - ❔ **Coinbase** — link still to supply.
+  - ✅ **Coinbase** — `coinbase.com/join/PEF43HD` (live).
+  - ✅ **Bitvavo** — `bitvavo.com/invite?a=DE26EBA45E` (live; €10 in BTC per invited friend who switches + verifies). Earlier KYC blocker resolved — the affiliate/invite page is active.
 - Phase-2 NL: confirm willingness to write/verify Dutch copy.
 
 ---

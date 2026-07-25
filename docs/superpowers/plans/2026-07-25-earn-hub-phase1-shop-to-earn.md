@@ -969,10 +969,10 @@ Add to `seeds/visit_codes.json` (then `npm run seed`), matching its existing sha
 ```json
 { "code": "satsback", "target_url": "https://satsback.com/register/ozBlyPnj26PY19ve", "source_label": "satsback-ref" },
 { "code": "nexo",     "target_url": "https://nexo.com/ref/d0gip5tq3j?src=web-link", "source_label": "nexo-ref" },
-{ "code": "bitvavo",  "target_url": "REPLACE_ME_BITVAVO_REF",  "source_label": "bitvavo-ref" },
-{ "code": "coinbase", "target_url": "REPLACE_ME_COINBASE_REF", "source_label": "coinbase-ref" }
+{ "code": "coinbase", "target_url": "https://coinbase.com/join/PEF43HD", "source_label": "coinbase-ref" },
+{ "code": "bitvavo",  "target_url": "https://bitvavo.com/invite?a=DE26EBA45E", "source_label": "bitvavo-ref" }
 ```
-**Live now:** `satsback` and `nexo` (real referral URLs captured from Tim's accounts). **`bitvavo` is blocked on KYC** — Tim must finish Bitvavo identity verification before a referral link exists; leave it `REPLACE_ME` and omit the Bitvavo CTA until then. `coinbase` still to supply. A `/visit/{code}` page whose `target_url` is `REPLACE_ME…` should be treated as unconfigured (hide the CTA / skip the guide's affiliate button).
+**All four live** — real referral URLs captured from Tim's accounts (Satsback 21%/1yr, Nexo up-to-$2,500 but $5k deposit gate, Coinbase invite, Bitvavo €10-in-BTC per switch). Keep the "unconfigured code = hide CTA" guard anyway (defensive) but no `REPLACE_ME` remains. Bitvavo note: referral pays when the invited friend switches + verifies; frame honestly.
 
 - [ ] **Step 2: Add stores to the sitemap**
 
