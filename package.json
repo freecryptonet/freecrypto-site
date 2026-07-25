@@ -13,7 +13,8 @@
     "migrate": "tsx scripts/migrate.ts",
     "ingest": "tsx scripts/ingest.ts",
     "digest": "tsx scripts/digest.ts",
-    "seed:sql": "tsx scripts/seed-to-sql.ts"
+    "seed:sql": "tsx scripts/seed-to-sql.ts",
+    "scrape:satsback": "tsx scripts/scrape-satsback.ts"
   },
   "dependencies": {
     "@next/third-parties": "^16.2.5",
@@ -34,6 +35,7 @@
     "dotenv": "^16.6.1",
     "eslint": "^9",
     "eslint-config-next": "16.2.5",
+    "playwright": "^1.62.0",
     "postcss": "^8.5.14",
     "tailwindcss": "^3.4.19",
     "tsx": "^4.20.0",

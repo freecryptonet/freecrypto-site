@@ -1,0 +1,758 @@
+[
+  {
+    "satsback_slug": "thuisbezorgdnl",
+    "name": "Thuisbezorgd.nl",
+    "cashback_text": "up to 1.6%",
+    "logo_url": "https://satsback.com/assets/media/partners/thuisbezorgd.svg"
+  },
+  {
+    "satsback_slug": "hema",
+    "name": "HEMA",
+    "cashback_text": "up to 1%",
+    "logo_url": "https://cdn.satsback.com/stores/s/hema-nl-70537.svg"
+  },
+  {
+    "satsback_slug": "aliexpress",
+    "name": "AliExpress",
+    "cashback_text": "up to 2.7%",
+    "logo_url": "https://cdn.satsback.com/stores/partners/aliexpress.svg"
+  },
+  {
+    "satsback_slug": "mediamarkt",
+    "name": "MediaMarkt",
+    "cashback_text": "up to 1.3%",
+    "logo_url": "https://cdn.satsback.com/stores/partners/mediamarkt-v2.svg"
+  },
+  {
+    "satsback_slug": "zooplus-16",
+    "name": "Zooplus",
+    "cashback_text": "up to 3.2%",
+    "logo_url": "https://cdn.satsback.com/stores/s/zooplus-1058987.svg"
+  },
+  {
+    "satsback_slug": "booking",
+    "name": "Booking.com",
+    "cashback_text": "up to 1%",
+    "logo_url": "https://cdn.satsback.com/stores/partners/booking.svg"
+  },
+  {
+    "satsback_slug": "holland-barrett",
+    "name": "Holland & Barrett",
+    "cashback_text": "up to 3.2%",
+    "logo_url": "https://cdn.satsback.com/stores/partners/holland-barrett-v2.svg"
+  },
+  {
+    "satsback_slug": "anwb-webwinkel",
+    "name": "ANWB Webwinkel",
+    "cashback_text": "up to 2.3%",
+    "logo_url": "https://cdn.satsback.com/stores/s/anwb-webwinkel-90637.svg"
+  },
+  {
+    "satsback_slug": "allekabels",
+    "name": "Allekabels",
+    "cashback_text": "up to 2%",
+    "logo_url": "https://cdn.satsback.com/stores/partners/allekabels-v2.svg"
+  },
+  {
+    "satsback_slug": "staatsloterij-losse-loten",
+    "name": "Staatsloterij losse loten",
+    "cashback_text": "up to 2%",
+    "logo_url": "https://cdn.satsback.com/stores/partners/staatsloterij-v2.svg"
+  },
+  {
+    "satsback_slug": "plus",
+    "name": "PLUS",
+    "cashback_text": "up to 7.971 sats",
+    "logo_url": "https://cdn.satsback.com/stores/partners/plus-v2.svg"
+  },
+  {
+    "satsback_slug": "plein",
+    "name": "Plein",
+    "cashback_text": "up to 1.3%",
+    "logo_url": "https://cdn.satsback.com/stores/s/plein-nl-122450.jpg"
+  },
+  {
+    "satsback_slug": "ibood",
+    "name": "iBOOD",
+    "cashback_text": "up to 1.6%",
+    "logo_url": "https://cdn.satsback.com/stores/partners/ibood-v3.svg"
+  },
+  {
+    "satsback_slug": "odido-2",
+    "name": "Odido",
+    "cashback_text": "up to 20%",
+    "logo_url": "https://satsback.com/assets/media/partners/odido.svg"
+  },
+  {
+    "satsback_slug": "the-butchery",
+    "name": "The Butchery",
+    "cashback_text": "up to 2.9%",
+    "logo_url": "https://cdn.satsback.com/stores/partners/the-butchery-v2.svg"
+  },
+  {
+    "satsback_slug": "bitbox",
+    "name": "Bitbox",
+    "cashback_text": "5% discount code",
+    "logo_url": "https://cdn.satsback.com/stores/partners/bitbox.svg"
+  },
+  {
+    "satsback_slug": "blockstream-store",
+    "name": "Blockstream Store",
+    "cashback_text": "10% discount code",
+    "logo_url": "https://cdn.satsback.com/stores/partners/blockstream.svg"
+  },
+  {
+    "satsback_slug": "cryptosteel",
+    "name": "Cryptosteel",
+    "cashback_text": "21% discount code",
+    "logo_url": "https://cdn.satsback.com/stores/partners/cryptosteel.png"
+  },
+  {
+    "satsback_slug": "freedomia",
+    "name": "Freedomia",
+    "cashback_text": "1 free month",
+    "logo_url": "https://cdn.satsback.com/stores/partners/freedomia.png"
+  },
+  {
+    "satsback_slug": "wavespace-instant-btceur-swaps",
+    "name": "Instant BTC/EUR Swaps – wave.space",
+    "cashback_text": "100% discount code",
+    "logo_url": "https://cdn.satsback.com/stores/partners/wave-space.svg"
+  },
+  {
+    "satsback_slug": "konsensus-network",
+    "name": "Konsensus Network",
+    "cashback_text": "10% discount code",
+    "logo_url": "https://cdn.satsback.com/stores/partners/konsensusnetwork.png"
+  },
+  {
+    "satsback_slug": "seedor",
+    "name": "Seedor",
+    "cashback_text": "5% discount code",
+    "logo_url": "https://cdn.satsback.com/stores/partners/seedor.svg"
+  },
+  {
+    "satsback_slug": "shopinbit",
+    "name": "ShopinBit",
+    "cashback_text": "€5 discount code",
+    "logo_url": "https://cdn.satsback.com/stores/partners/shopinbit.svg"
+  },
+  {
+    "satsback_slug": "start9",
+    "name": "Start9",
+    "cashback_text": "95% discount code",
+    "logo_url": "https://cdn.satsback.com/stores/partners/start9.png"
+  },
+  {
+    "satsback_slug": "twentytwo",
+    "name": "TwentyTwo",
+    "cashback_text": "5% discount code",
+    "logo_url": "https://cdn.satsback.com/stores/partners/twenty-two.svg"
+  },
+  {
+    "satsback_slug": "wavespace-bitcoin-visa-debit-card",
+    "name": "wavecard® BTC Debit Card – wave.space",
+    "cashback_text": "21% discount code",
+    "logo_url": "https://cdn.satsback.com/stores/partners/wave-space.svg"
+  },
+  {
+    "satsback_slug": "lidlnl",
+    "name": "Lidl.nl",
+    "cashback_text": "up to 1%",
+    "logo_url": "https://satsback.com/assets/media/partners/lidl.svg"
+  },
+  {
+    "satsback_slug": "koffievoordeel-2",
+    "name": "Koffievoordeel",
+    "cashback_text": "up to 2.5%",
+    "logo_url": "https://cdn.satsback.com/stores/partners/koffievoordeel-v2.svg"
+  },
+  {
+    "satsback_slug": "expert",
+    "name": "Expert",
+    "cashback_text": "up to 1.8%",
+    "logo_url": "https://satsback.com/assets/media/partners/expert.svg"
+  },
+  {
+    "satsback_slug": "brekznl",
+    "name": "Brekz.nl",
+    "cashback_text": "up to 1.5%",
+    "logo_url": "https://cdn.satsback.com/stores/partners/brekznl-v2.svg"
+  },
+  {
+    "satsback_slug": "klm-4",
+    "name": "KLM",
+    "cashback_text": "up to 1%",
+    "logo_url": "https://satsback.com/assets/media/partners/klm.svg"
+  },
+  {
+    "satsback_slug": "scapino",
+    "name": "Scapino",
+    "cashback_text": "up to 1.3%",
+    "logo_url": "https://cdn.satsback.com/stores/s/scapino-nlnl-112304.svg"
+  },
+  {
+    "satsback_slug": "proshop",
+    "name": "Proshop",
+    "cashback_text": "up to 1%",
+    "logo_url": "https://cdn.satsback.com/stores/partners/proshop-v2.svg"
+  },
+  {
+    "satsback_slug": "adidas-21",
+    "name": "adidas",
+    "cashback_text": "up to 2.5%",
+    "logo_url": "https://satsback.com/assets/media/partners/adidas.svg"
+  },
+  {
+    "satsback_slug": "alternate",
+    "name": "ALTERNATE",
+    "cashback_text": "up to 1%",
+    "logo_url": "https://cdn.satsback.com/stores/partners/alternate.svg"
+  },
+  {
+    "satsback_slug": "lounge-by-zalando",
+    "name": "Lounge by Zalando",
+    "cashback_text": "up to 2.5%",
+    "logo_url": "https://cdn.satsback.com/stores/s/zalando-lounge-nl-113283.jpg"
+  },
+  {
+    "satsback_slug": "greetznl-3",
+    "name": "Greetz.nl",
+    "cashback_text": "up to 4.2%",
+    "logo_url": "https://cdn.satsback.com/stores/partners/greetznl-v2.svg"
+  },
+  {
+    "satsback_slug": "kpn-2",
+    "name": "KPN",
+    "cashback_text": "up to 38.261 sats",
+    "logo_url": "https://cdn.satsback.com/stores/s/kpn-mobielnl-1066270.png"
+  },
+  {
+    "satsback_slug": "temu",
+    "name": "Temu",
+    "cashback_text": "up to 6%",
+    "logo_url": "https://cdn.satsback.com/stores/partners/temu-v2.svg"
+  },
+  {
+    "satsback_slug": "gaslichtcom",
+    "name": "Gaslicht.com",
+    "cashback_text": "up to 17.713 sats",
+    "logo_url": "https://cdn.satsback.com/stores/s/gaslicht-nl-67801.gif"
+  },
+  {
+    "satsback_slug": "brunanl",
+    "name": "Bruna.nl",
+    "cashback_text": "up to 3.4%",
+    "logo_url": "https://cdn.satsback.com/stores/partners/bruna-nl-v2.png"
+  },
+  {
+    "satsback_slug": "conrad",
+    "name": "Conrad",
+    "cashback_text": "up to 1.3%",
+    "logo_url": "https://satsback.com/assets/media/partners/conrad.svg"
+  },
+  {
+    "satsback_slug": "about-you-13",
+    "name": "ABOUT YOU",
+    "cashback_text": "up to 6%",
+    "logo_url": "https://cdn.satsback.com/stores/partners/about-you-v2.svg"
+  },
+  {
+    "satsback_slug": "drogistnl",
+    "name": "Drogist.nl",
+    "cashback_text": "up to 2%",
+    "logo_url": "https://cdn.satsback.com/stores/s/drogist-1053077.svg"
+  },
+  {
+    "satsback_slug": "joybuy-8",
+    "name": "Joybuy",
+    "cashback_text": "up to 1.3%",
+    "logo_url": "https://cdn.satsback.com/stores/partners/joybuy-v2.png"
+  },
+  {
+    "satsback_slug": "bergfreunde",
+    "name": "Bergfreunde",
+    "cashback_text": "up to 2.9%",
+    "logo_url": "https://cdn.satsback.com/stores/partners/bergfreunde-v2.svg"
+  },
+  {
+    "satsback_slug": "galaxus-4",
+    "name": "Galaxus",
+    "cashback_text": "up to 2.5%",
+    "logo_url": "https://cdn.satsback.com/stores/partners/galaxus-v2.svg"
+  },
+  {
+    "satsback_slug": "douglas",
+    "name": "Douglas",
+    "cashback_text": "up to 2%",
+    "logo_url": "https://cdn.satsback.com/stores/partners/douglas-v2.svg"
+  },
+  {
+    "satsback_slug": "hbm-machines",
+    "name": "HBM Machines",
+    "cashback_text": "up to 2%",
+    "logo_url": "https://cdn.satsback.com/stores/partners/hbm-machines-v2.png"
+  },
+  {
+    "satsback_slug": "ziengs",
+    "name": "Ziengs",
+    "cashback_text": "up to 2.2%",
+    "logo_url": "https://cdn.satsback.com/stores/partners/ziengs-v2.svg"
+  },
+  {
+    "satsback_slug": "simyo",
+    "name": "Simyo",
+    "cashback_text": "up to 28.341 sats",
+    "logo_url": "https://cdn.satsback.com/stores/partners/simyo-v2.svg"
+  },
+  {
+    "satsback_slug": "albelli-5",
+    "name": "Albelli",
+    "cashback_text": "up to 3.2%",
+    "logo_url": "https://cdn.satsback.com/stores/partners/albelli-v2.jpg"
+  },
+  {
+    "satsback_slug": "vidaxlnl",
+    "name": "vidaXL.nl",
+    "cashback_text": "up to 3.2%",
+    "logo_url": "https://satsback.com/assets/media/partners/vidaxl.svg"
+  },
+  {
+    "satsback_slug": "getyourguide-12",
+    "name": "GetYourGuide",
+    "cashback_text": "up to 2.9%",
+    "logo_url": "https://cdn.satsback.com/stores/partners/getyourguide-12-v2.svg"
+  },
+  {
+    "satsback_slug": "plutosport",
+    "name": "Plutosport",
+    "cashback_text": "up to 2%",
+    "logo_url": "https://cdn.satsback.com/stores/partners/plutosport-v2.svg"
+  },
+  {
+    "satsback_slug": "gall-gall-2",
+    "name": "Gall & Gall",
+    "cashback_text": "up to 2%",
+    "logo_url": "https://cdn.satsback.com/stores/s/gall-en-gall-nl-1072619.png"
+  },
+  {
+    "satsback_slug": "winparts",
+    "name": "Winparts",
+    "cashback_text": "up to 1.1%",
+    "logo_url": "https://cdn.satsback.com/stores/s/winparts-auto-onderdelen-137945.png"
+  },
+  {
+    "satsback_slug": "lego-10",
+    "name": "LEGO",
+    "cashback_text": "up to 1.3%",
+    "logo_url": "https://satsback.com/assets/media/partners/lego.svg"
+  },
+  {
+    "satsback_slug": "hallmark",
+    "name": "Hallmark",
+    "cashback_text": "up to 4.9%",
+    "logo_url": "https://cdn.satsback.com/stores/partners/hallmark-v2.svg"
+  },
+  {
+    "satsback_slug": "nedgame",
+    "name": "Nedgame",
+    "cashback_text": "up to 2%",
+    "logo_url": "https://cdn.satsback.com/stores/partners/nedgame-v2.png"
+  },
+  {
+    "satsback_slug": "braadbaas",
+    "name": "Braadbaas",
+    "cashback_text": "up to 3.2%",
+    "logo_url": "https://cdn.satsback.com/stores/s/braadbaas-1063675.svg"
+  },
+  {
+    "satsback_slug": "barefoot-more-3",
+    "name": "Barefoot & More",
+    "cashback_text": "up to 3.2%",
+    "logo_url": "https://cdn.satsback.com/stores/s/barefoot-more-1060296.jpg"
+  },
+  {
+    "satsback_slug": "printabout",
+    "name": "PrintAbout",
+    "cashback_text": "up to 4%",
+    "logo_url": "https://cdn.satsback.com/stores/partners/printabout-v2.svg"
+  },
+  {
+    "satsback_slug": "simpel",
+    "name": "Simpel",
+    "cashback_text": "up to 10.628 sats",
+    "logo_url": "https://cdn.satsback.com/stores/s/simpel-nl-132972.jpg"
+  },
+  {
+    "satsback_slug": "daka",
+    "name": "Daka",
+    "cashback_text": "up to 2%",
+    "logo_url": "https://cdn.satsback.com/stores/s/daka-7548.jpg"
+  },
+  {
+    "satsback_slug": "batterijenhuis",
+    "name": "Batterijenhuis",
+    "cashback_text": "up to 1.6%",
+    "logo_url": "https://cdn.satsback.com/stores/partners/batterijenhuis-v2.png"
+  },
+  {
+    "satsback_slug": "trivago",
+    "name": "Trivago",
+    "cashback_text": "up to 2.125 sats",
+    "logo_url": "https://cdn.satsback.com/stores/s/trivago-cashback-1072708.png"
+  },
+  {
+    "satsback_slug": "haarshopnl-2",
+    "name": "Haarshop.nl",
+    "cashback_text": "up to 3.2%",
+    "logo_url": "https://cdn.satsback.com/stores/s/haarshop-1066879.png"
+  },
+  {
+    "satsback_slug": "prime-video-9",
+    "name": "Prime Video",
+    "cashback_text": "up to 2.479 sats",
+    "logo_url": "https://cdn.satsback.com/stores/s/amazon-prime-video-nl-1070589.png"
+  },
+  {
+    "satsback_slug": "pme-legend-3",
+    "name": "PME Legend",
+    "cashback_text": "up to 4%",
+    "logo_url": "https://satsback.com/assets/media/partners/pme-legend.svg"
+  },
+  {
+    "satsback_slug": "pazzoxnl-2",
+    "name": "Pazzox.nl",
+    "cashback_text": "up to 2.9%",
+    "logo_url": "https://cdn.satsback.com/stores/s/pazzox-nl-1056188.jpg"
+  },
+  {
+    "satsback_slug": "mothers-earth",
+    "name": "Mother's Earth",
+    "cashback_text": "up to 1%",
+    "logo_url": "https://cdn.satsback.com/stores/s/mothers-earth-1062672.svg"
+  },
+  {
+    "satsback_slug": "bergzeit",
+    "name": "Bergzeit",
+    "cashback_text": "up to 3.2%",
+    "logo_url": "https://cdn.satsback.com/stores/partners/bergzeit-v2.png"
+  },
+  {
+    "satsback_slug": "sliponlinenl",
+    "name": "Sliponline.nl",
+    "cashback_text": "up to 4%",
+    "logo_url": "https://cdn.satsback.com/stores/s/sliponline-nl-89359.jpg"
+  },
+  {
+    "satsback_slug": "hm-4",
+    "name": "H&M",
+    "cashback_text": "up to 4%",
+    "logo_url": "https://cdn.satsback.com/stores/s/handm-nl-1064201.png"
+  },
+  {
+    "satsback_slug": "bbquality-2",
+    "name": "BBQuality",
+    "cashback_text": "up to 2%",
+    "logo_url": "https://cdn.satsback.com/stores/s/bbquality-nl-1069453.png"
+  },
+  {
+    "satsback_slug": "kraken-3",
+    "name": "Kraken",
+    "cashback_text": "up to 7.085 sats",
+    "logo_url": "https://cdn.satsback.com/stores/s/kraken-nl-1062177.svg"
+  },
+  {
+    "satsback_slug": "van-asten-babysuperstore",
+    "name": "Van Asten BabySuperstore",
+    "cashback_text": "up to 1%",
+    "logo_url": "https://cdn.satsback.com/stores/s/van-asten-babysuperstore-123890.jpg"
+  },
+  {
+    "satsback_slug": "schuurman-schoenen",
+    "name": "Schuurman Schoenen",
+    "cashback_text": "up to 3.2%",
+    "logo_url": "https://cdn.satsback.com/stores/partners/schuurman-schoenen-v2.svg"
+  },
+  {
+    "satsback_slug": "foot-locker",
+    "name": "Foot Locker",
+    "cashback_text": "up to 2.5%",
+    "logo_url": "https://satsback.com/assets/media/partners/foot-locker.svg"
+  },
+  {
+    "satsback_slug": "philips-persoonlijke-verzorging",
+    "name": "Philips Persoonlijke Verzorging",
+    "cashback_text": "up to 2%",
+    "logo_url": "https://cdn.satsback.com/stores/s/philips-nl-97259.png"
+  },
+  {
+    "satsback_slug": "tripcom-13",
+    "name": "Trip.com",
+    "cashback_text": "up to 2%",
+    "logo_url": "https://cdn.satsback.com/stores/l/tripcom-13-logo"
+  },
+  {
+    "satsback_slug": "essent",
+    "name": "Essent",
+    "cashback_text": "up to 42.512 sats",
+    "logo_url": "https://cdn.satsback.com/stores/s/essent-dc1-101454.jpg"
+  },
+  {
+    "satsback_slug": "superfoodstorenl-3",
+    "name": "Superfoodstore.nl",
+    "cashback_text": "up to 2%",
+    "logo_url": "https://cdn.satsback.com/stores/s/superfoodstore-nl-1067807.jpg"
+  },
+  {
+    "satsback_slug": "under-armour-23",
+    "name": "Under Armour",
+    "cashback_text": "up to 2%",
+    "logo_url": "https://satsback.com/assets/media/partners/under-armour.svg"
+  },
+  {
+    "satsback_slug": "nordvpn",
+    "name": "NordVPN",
+    "cashback_text": "up to 20%",
+    "logo_url": "https://cdn.satsback.com/stores/s/nordvpn-nl-118972.svg"
+  },
+  {
+    "satsback_slug": "123jaloezie-2",
+    "name": "123jaloezie",
+    "cashback_text": "up to 2.6%",
+    "logo_url": "https://cdn.satsback.com/stores/s/123jaloezie-nl-1071009.jpg"
+  },
+  {
+    "satsback_slug": "pharmamarket",
+    "name": "PharmaMarket",
+    "cashback_text": "up to 1.6%",
+    "logo_url": "https://cdn.satsback.com/stores/partners/pharmamarket-v2.svg"
+  },
+  {
+    "satsback_slug": "kpn-thuis-2",
+    "name": "KPN Thuis",
+    "cashback_text": "up to 40.386 sats",
+    "logo_url": "https://cdn.satsback.com/stores/s/kpn-thuis-1066272.png"
+  },
+  {
+    "satsback_slug": "jumbo-sports",
+    "name": "Jumbo Sports",
+    "cashback_text": "up to 2%",
+    "logo_url": "https://cdn.satsback.com/stores/s/jumbogolf-88175.jpg"
+  },
+  {
+    "satsback_slug": "hostinger-9",
+    "name": "Hostinger",
+    "cashback_text": "up to 16.8%",
+    "logo_url": "https://cdn.satsback.com/stores/l/hostinger-9-logo"
+  },
+  {
+    "satsback_slug": "vision-direct",
+    "name": "Vision Direct",
+    "cashback_text": "up to 4%",
+    "logo_url": "https://cdn.satsback.com/stores/partners/vision-direct-v2.svg"
+  },
+  {
+    "satsback_slug": "dekbed-discounter-3",
+    "name": "Dekbed-Discounter",
+    "cashback_text": "up to 1%",
+    "logo_url": "https://cdn.satsback.com/stores/partners/dekbed-discounter-3-v2.svg"
+  },
+  {
+    "satsback_slug": "energiedirect-2",
+    "name": "Energiedirect",
+    "cashback_text": "up to 31.884 sats",
+    "logo_url": "https://cdn.satsback.com/stores/s/energiedirect-nl-1063586.png"
+  },
+  {
+    "satsback_slug": "medpets",
+    "name": "Medpets",
+    "cashback_text": "up to 1.6%",
+    "logo_url": "https://cdn.satsback.com/stores/s/medpets-1063008.svg"
+  },
+  {
+    "satsback_slug": "pricewise-internet-tv",
+    "name": "PriceWise Internet & tv",
+    "cashback_text": "up to 22.319 sats",
+    "logo_url": "https://cdn.satsback.com/stores/s/pricewise-internet-tv-1059381.jpg"
+  },
+  {
+    "satsback_slug": "sharkninja-10",
+    "name": "SharkNinja",
+    "cashback_text": "up to 4%",
+    "logo_url": "https://cdn.satsback.com/stores/s/ninja-1062265.png"
+  },
+  {
+    "satsback_slug": "mango-14",
+    "name": "Mango",
+    "cashback_text": "up to 1.3%",
+    "logo_url": "https://cdn.satsback.com/stores/s/mango-nl-1072039.jpg"
+  },
+  {
+    "satsback_slug": "voordeeluitjesnl-2",
+    "name": "Voordeeluitjes.nl",
+    "cashback_text": "up to 1.6%",
+    "logo_url": "https://cdn.satsback.com/stores/s/nl-voordeeluitjes-128894.jpg"
+  },
+  {
+    "satsback_slug": "geldnl",
+    "name": "Geld.nl",
+    "cashback_text": "up to 90.339 sats",
+    "logo_url": "https://cdn.satsback.com/stores/s/geldnl-80022.png"
+  },
+  {
+    "satsback_slug": "solcon",
+    "name": "Solcon",
+    "cashback_text": "up to 46.055 sats",
+    "logo_url": "https://cdn.satsback.com/stores/partners/solcon-v2.svg"
+  },
+  {
+    "satsback_slug": "beltegoednl",
+    "name": "Beltegoed.nl",
+    "cashback_text": "up to 1.6%",
+    "logo_url": "https://cdn.satsback.com/stores/s/beltegoed-nl-1064671.png"
+  },
+  {
+    "satsback_slug": "factor",
+    "name": "Factor",
+    "cashback_text": "up to 8.502 sats",
+    "logo_url": "https://cdn.satsback.com/stores/s/factor-1057346.svg"
+  },
+  {
+    "satsback_slug": "suitableshop",
+    "name": "Suitableshop",
+    "cashback_text": "up to 3.2%",
+    "logo_url": "https://cdn.satsback.com/stores/s/suitable-68306.jpg"
+  },
+  {
+    "satsback_slug": "fietstascom",
+    "name": "Fietstas.com",
+    "cashback_text": "up to 2%",
+    "logo_url": "https://cdn.satsback.com/stores/s/fietstas-com-82009.jpg"
+  },
+  {
+    "satsback_slug": "123lens",
+    "name": "123Lens",
+    "cashback_text": "up to 1.6%",
+    "logo_url": "https://cdn.satsback.com/stores/s/123lens-128288.jpg"
+  },
+  {
+    "satsback_slug": "ohra-huisdierenverzekering-2",
+    "name": "OHRA Huisdierenverzekering",
+    "cashback_text": "up to 17.004 sats",
+    "logo_url": "https://cdn.satsback.com/stores/s/ohra-huisdierenverzekering-nl-1060294.jpg"
+  },
+  {
+    "satsback_slug": "inktwebnl",
+    "name": "Inktweb.nl",
+    "cashback_text": "up to 7%",
+    "logo_url": "https://cdn.satsback.com/stores/s/inktweb-nl-69274.jpg"
+  },
+  {
+    "satsback_slug": "goedkoopste-kantoorartikelennl",
+    "name": "Goedkoopste-Kantoorartikelen.nl",
+    "cashback_text": "up to 2.5%",
+    "logo_url": "https://cdn.satsback.com/stores/s/goedkoopstekantoorartikelen-nl-29460.jpg"
+  },
+  {
+    "satsback_slug": "eset",
+    "name": "ESET",
+    "cashback_text": "up to 12%",
+    "logo_url": "https://cdn.satsback.com/stores/s/eset-nl-118535.jpg"
+  },
+  {
+    "satsback_slug": "marriott-bonvoy-2",
+    "name": "Marriott Bonvoy",
+    "cashback_text": "up to 1.3%",
+    "logo_url": "https://cdn.satsback.com/stores/partners/marriott-bonvoy-v2.svg"
+  },
+  {
+    "satsback_slug": "auping",
+    "name": "Auping",
+    "cashback_text": "up to 1.3%",
+    "logo_url": "https://cdn.satsback.com/stores/partners/auping-v2.svg"
+  },
+  {
+    "satsback_slug": "vonroc",
+    "name": "Vonroc",
+    "cashback_text": "up to 2%",
+    "logo_url": "https://cdn.satsback.com/stores/s/nl-vonroc-1052699.jpg"
+  },
+  {
+    "satsback_slug": "shein-19",
+    "name": "SHEIN",
+    "cashback_text": "up to 4.2%",
+    "logo_url": "https://cdn.satsback.com/stores/l/shein-19-logo"
+  },
+  {
+    "satsback_slug": "turkish-airlines-2",
+    "name": "Turkish Airlines",
+    "cashback_text": "up to 1%",
+    "logo_url": "https://cdn.satsback.com/stores/partners/turkish-airlines-2-v2.svg"
+  },
+  {
+    "satsback_slug": "lednl-3",
+    "name": "LED.nl",
+    "cashback_text": "up to 3.7%",
+    "logo_url": "https://cdn.satsback.com/stores/s/led-nl-1069795.png"
+  },
+  {
+    "satsback_slug": "skyscanner-12",
+    "name": "Skyscanner",
+    "cashback_text": "up to 1.8%",
+    "logo_url": "https://cdn.satsback.com/stores/s/nlskyscanner-129445.png"
+  },
+  {
+    "satsback_slug": "staatsloterij-automatisch-meespelen",
+    "name": "Staatsloterij automatisch meespelen",
+    "cashback_text": "up to 10.628 sats",
+    "logo_url": "https://cdn.satsback.com/stores/s/nl-staatsloterij-138708.png"
+  },
+  {
+    "satsback_slug": "eurojackpot-2",
+    "name": "Eurojackpot",
+    "cashback_text": "up to 5.2%",
+    "logo_url": "https://cdn.satsback.com/stores/s/eurojackpot-nl1-1060289.png"
+  },
+  {
+    "satsback_slug": "odido-thuis",
+    "name": "Odido Thuis",
+    "cashback_text": "up to 51.369 sats",
+    "logo_url": "https://satsback.com/assets/media/partners/odido.svg"
+  },
+  {
+    "satsback_slug": "energie-van-budget-thuis",
+    "name": "Energie van Budget Thuis",
+    "cashback_text": "up to 28.341 sats",
+    "logo_url": "https://cdn.satsback.com/stores/s/budget-energie-nl-85213.png"
+  },
+  {
+    "satsback_slug": "namecheap",
+    "name": "Namecheap",
+    "cashback_text": "up to 14%",
+    "logo_url": "https://satsback.com/assets/media/partners/namecheap.svg"
+  },
+  {
+    "satsback_slug": "lampenlichtnl",
+    "name": "LampenLicht.nl",
+    "cashback_text": "up to 1%",
+    "logo_url": "https://cdn.satsback.com/stores/s/lampenlichtnl-133009.jpg"
+  },
+  {
+    "satsback_slug": "luxplus",
+    "name": "Luxplus",
+    "cashback_text": "up to 2.9%",
+    "logo_url": "https://cdn.satsback.com/stores/s/luxplus-nl-84059.jpg"
+  },
+  {
+    "satsback_slug": "jeans-centre",
+    "name": "Jeans Centre",
+    "cashback_text": "up to 2.9%",
+    "logo_url": "https://cdn.satsback.com/stores/partners/jeans-centre-v2.svg"
+  },
+  {
+    "satsback_slug": "dreamland-2",
+    "name": "DreamLand",
+    "cashback_text": "up to 1.6%",
+    "logo_url": "https://cdn.satsback.com/stores/s/toychamp-1058067.png"
+  }
+]
