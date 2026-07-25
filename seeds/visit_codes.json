@@ -1,5 +1,29 @@
 [
   {
+    "code": "satsback",
+    "target_url": "https://satsback.com/register/ozBlyPnj26PY19ve",
+    "source_label": "satsback-ref",
+    "notes": "Satsback referral — 21% of a referred user's Bitcoin cashback for their first year. Powers every /shop store CTA."
+  },
+  {
+    "code": "nexo",
+    "target_url": "https://nexo.com/ref/d0gip5tq3j?src=web-link",
+    "source_label": "nexo-ref",
+    "notes": "Nexo referral — up to $2,500 in NEXO per referral once the friend adds $5,000+ in assets."
+  },
+  {
+    "code": "coinbase",
+    "target_url": "https://coinbase.com/join/PEF43HD",
+    "source_label": "coinbase-ref",
+    "notes": "Coinbase invite link."
+  },
+  {
+    "code": "bitvavo",
+    "target_url": "https://bitvavo.com/invite?a=DE26EBA45E",
+    "source_label": "bitvavo-ref",
+    "notes": "Bitvavo invite — EUR10 in BTC per invited friend who switches and verifies. EU-focused."
+  },
+  {
     "code": "binance",
     "target_url": "https://accounts.binance.com/register?ref=REPLACE_ME",
     "source_label": "binance-ref",

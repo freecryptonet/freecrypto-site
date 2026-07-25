@@ -1,9 +1,8 @@
 import Link from "next/link";
 
 const NAV = [
+  { href: "/shop", label: "Shop & Earn" },
   { href: "/", label: "Airdrops" },
-  { href: "/categories/retroactive", label: "Retroactive" },
-  { href: "/categories/testnet", label: "Testnets" },
   { href: "/calendar", label: "Calendar" },
   { href: "/check", label: "Wallet Check" },
   { href: "/guides", label: "Guides" },

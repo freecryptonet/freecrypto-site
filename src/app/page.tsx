@@ -4,10 +4,13 @@ import {
   listAirdrops,
   listChains,
   listCategories,
+  listStores,
   type AirdropFilters,
   type AirdropStatus,
+  type StoreListItem,
 } from "@/lib/db";
 import { AirdropCard, SponsoredCard } from "@/components/AirdropCard";
+import { StoreCard } from "@/components/StoreCard";
 import { FilterBar } from "@/components/FilterBar";
 import { AAds } from "@/components/AAds";
 import { ExchangeCTA } from "@/components/ExchangeCTA";
@@ -72,10 +75,11 @@ export default async function HomePage({ searchParams }: PageProps) {
     offset: (page - 1) * PAGE_SIZE,
   };
 
-  const [fetched, chains, categories] = await Promise.all([
+  const [fetched, chains, categories, topStores] = await Promise.all([
     listAirdrops(filters),
     listChains(),
     listCategories(),
+    listStores({ limit: 8, sort: "rate" }),
   ]);
   const hasNext = fetched.length > PAGE_SIZE;
   const airdrops = fetched.slice(0, PAGE_SIZE);
@@ -85,6 +89,8 @@ export default async function HomePage({ searchParams }: PageProps) {
   return (
     <>
       <Hero />
+
+      {topStores.length > 0 && <ShopSection stores={topStores} />}
 
       <div className="mx-auto max-w-page px-4 pb-12">
         <div className="mb-6 flex justify-center">
@@ -177,6 +183,35 @@ function Hero() {
           >
             Browse airdrops
           </Link>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ShopSection({ stores }: { stores: StoreListItem[] }) {
+  return (
+    <section className="border-y border-edge/60 bg-ink-soft/30">
+      <div className="mx-auto max-w-page px-4 py-10">
+        <div className="mb-5 flex flex-wrap items-end justify-between gap-3">
+          <div>
+            <h2 className="text-h2 font-semibold">Earn Bitcoin when you shop</h2>
+            <p className="mt-1 max-w-2xl text-sm text-text-dim">
+              Get real Bitcoin cashback at stores you already use — paid in sats, no points or
+              vouchers. Route your purchase through Satsback and stack sats on spending you&apos;d do anyway.
+            </p>
+          </div>
+          <Link
+            href="/shop"
+            className="inline-flex items-center gap-1 rounded-btn border border-edge px-3 py-1.5 text-sm text-text hover:bg-edge/50 transition-colors"
+          >
+            Browse all stores →
+          </Link>
+        </div>
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {stores.map((s) => (
+            <StoreCard key={s.id} store={s} />
+          ))}
         </div>
       </div>
     </section>
