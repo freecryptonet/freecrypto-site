@@ -99,3 +99,15 @@ export function isGuideIndexable(g: { body_md?: string | null; excerpt?: string 
   const total = (g.body_md?.length ?? 0) + (g.excerpt?.length ?? 0);
   return total >= MIN_INDEXABLE_DESCRIPTION_CHARS;
 }
+
+export function isStoreIndexable(s: {
+  description_md: string;
+  how_it_works_md?: string;
+  worth_it_md?: string;
+}): boolean {
+  const total =
+    (s.description_md?.length ?? 0) +
+    (s.how_it_works_md?.length ?? 0) +
+    (s.worth_it_md?.length ?? 0);
+  return total >= MIN_INDEXABLE_DESCRIPTION_CHARS;
+}

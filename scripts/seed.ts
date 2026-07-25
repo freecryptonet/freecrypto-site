@@ -13,6 +13,7 @@ import crypto from "node:crypto";
 import { fileURLToPath } from "node:url";
 import mysql, { type RowDataPacket } from "mysql2/promise";
 import { config as loadEnv } from "dotenv";
+import { parseCashback } from "../src/lib/stores/cashback";
 
 loadEnv({ path: ".env.local" });
 
@@ -330,6 +331,69 @@ async function main() {
       );
     }
     console.log(`✓ Seeded ${guides.length} guides.`);
+  }
+
+  // Store categories + stores (earn-hub shop-to-earn engine).
+  const storeCatsPath = path.join(SEEDS_DIR, "store_categories.json");
+  if (fs.existsSync(storeCatsPath)) {
+    interface StoreCatSeed { slug: string; name: string; description: string | null; sort_order: number; }
+    const storeCats = readJson<StoreCatSeed[]>("store_categories.json");
+    console.log(`Seeding ${storeCats.length} store categories…`);
+    for (const c of storeCats) {
+      await conn.query(
+        `INSERT INTO store_categories (slug, name, description, sort_order)
+         VALUES (?, ?, ?, ?)
+         ON DUPLICATE KEY UPDATE name = VALUES(name), description = VALUES(description), sort_order = VALUES(sort_order)`,
+        [c.slug, c.name, c.description ?? null, c.sort_order ?? 100],
+      );
+    }
+    console.log(`✓ Seeded ${storeCats.length} store categories.`);
+  }
+
+  const storesPath = path.join(SEEDS_DIR, "stores.json");
+  if (fs.existsSync(storesPath)) {
+    interface StoreSeed {
+      slug: string; name: string; logo_url: string | null; satsback_slug: string | null;
+      cashback_text: string | null; category_slug: string | null;
+      geo_scope: "global" | "eu" | "nl" | "other"; is_bitcoin_native: boolean;
+      description_md: string; how_it_works_md: string; worth_it_md: string;
+      faqs: FaqSeed[];
+    }
+    const stores = readJson<StoreSeed[]>("stores.json");
+    console.log(`Seeding ${stores.length} stores…`);
+    for (const s of stores) {
+      const cb = parseCashback(s.cashback_text ?? "");
+      // Preserve hand-edited editorial: only overwrite prose when the incoming row provides real content.
+      await conn.query(
+        `INSERT INTO stores
+           (slug, name, logo_url, satsback_slug, cashback_text, cashback_kind, cashback_value,
+            category_slug, geo_scope, is_bitcoin_native, description_md, how_it_works_md, worth_it_md)
+         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+         ON DUPLICATE KEY UPDATE
+           name = VALUES(name), logo_url = VALUES(logo_url), satsback_slug = VALUES(satsback_slug),
+           cashback_text = VALUES(cashback_text), cashback_kind = VALUES(cashback_kind),
+           cashback_value = VALUES(cashback_value), category_slug = VALUES(category_slug),
+           geo_scope = VALUES(geo_scope), is_bitcoin_native = VALUES(is_bitcoin_native),
+           description_md = IF(VALUES(description_md) = '' OR VALUES(description_md) LIKE 'PLACEHOLDER%', description_md, VALUES(description_md)),
+           how_it_works_md = IF(VALUES(how_it_works_md) = '', how_it_works_md, VALUES(how_it_works_md)),
+           worth_it_md = IF(VALUES(worth_it_md) = '', worth_it_md, VALUES(worth_it_md))`,
+        [s.slug, s.name, s.logo_url ?? null, s.satsback_slug ?? null, cb.text || null, cb.kind, cb.value,
+         s.category_slug ?? null, s.geo_scope ?? "global", s.is_bitcoin_native ? 1 : 0,
+         s.description_md ?? "", s.how_it_works_md ?? "", s.worth_it_md ?? ""],
+      );
+      const [idRows] = await conn.query<RowDataPacket[]>("SELECT id FROM stores WHERE slug = ?", [s.slug]);
+      const storeId = (idRows[0] as { id: number } | undefined)?.id;
+      if (storeId && Array.isArray(s.faqs) && s.faqs.length) {
+        await conn.query("DELETE FROM faqs WHERE store_id = ?", [storeId]);
+        for (let i = 0; i < s.faqs.length; i++) {
+          await conn.query(
+            "INSERT INTO faqs (store_id, position, question, answer_md) VALUES (?, ?, ?, ?)",
+            [storeId, i, s.faqs[i].question, s.faqs[i].answer_md],
+          );
+        }
+      }
+    }
+    console.log(`✓ Seeded ${stores.length} stores.`);
   }
 
   await conn.end();

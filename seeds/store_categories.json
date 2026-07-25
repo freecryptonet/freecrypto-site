@@ -1,0 +1,10 @@
+[
+  { "slug": "bitcoin-gear", "name": "Bitcoin Hardware & Gear", "description": "Hardware wallets, nodes, and Bitcoin-native shops that pay you back in sats.", "sort_order": 10 },
+  { "slug": "travel", "name": "Travel & Flights", "description": "Book flights, hotels, and stays and earn Bitcoin cashback.", "sort_order": 20 },
+  { "slug": "fashion", "name": "Fashion & Apparel", "description": "Clothing and footwear retailers with Bitcoin cashback.", "sort_order": 30 },
+  { "slug": "tech-electronics", "name": "Tech & Electronics", "description": "Gadgets, computing, and electronics stores that give BTC back.", "sort_order": 40 },
+  { "slug": "marketplaces", "name": "Marketplaces", "description": "Large general marketplaces with Bitcoin cashback.", "sort_order": 50 },
+  { "slug": "services", "name": "Services & Software", "description": "VPNs, courses, and online services paying Bitcoin rewards.", "sort_order": 60 },
+  { "slug": "groceries-food", "name": "Groceries & Food", "description": "Supermarkets and food delivery with Bitcoin cashback.", "sort_order": 70 },
+  { "slug": "health-beauty", "name": "Health & Beauty", "description": "Pharmacies and beauty retailers giving BTC back.", "sort_order": 80 }
+]

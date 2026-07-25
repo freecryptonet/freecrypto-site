@@ -1,0 +1,2273 @@
+[
+  {
+    "slug": "thuisbezorgdnl",
+    "name": "Thuisbezorgd.nl",
+    "satsback_slug": "thuisbezorgdnl",
+    "logo_url": "https://satsback.com/assets/media/partners/thuisbezorgd.svg",
+    "cashback_text": "up to 1.6%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "hema",
+    "name": "HEMA",
+    "satsback_slug": "hema",
+    "logo_url": "https://cdn.satsback.com/stores/s/hema-nl-70537.svg",
+    "cashback_text": "up to 1%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "aliexpress",
+    "name": "AliExpress",
+    "satsback_slug": "aliexpress",
+    "logo_url": "https://cdn.satsback.com/stores/partners/aliexpress.svg",
+    "cashback_text": "up to 2.7%",
+    "category_slug": "marketplaces",
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "## Earn Bitcoin at AliExpress\n\nAliExpress is the global marketplace for low-cost electronics and just about everything else. Buy through Satsback and you get up to 2.7% of your order value back in Bitcoin, paid as sats to a Lightning wallet you control.\n\nIf AliExpress is already on your shopping list, routing the order through Satsback is free money on spending you'd do regardless — this page covers the current rate, how the tracking really works, and whether it's worth the extra step for a marketplaces purchase.",
+    "how_it_works_md": "## How AliExpress Bitcoin cashback works\n\n1. Create a free Satsback account (no KYC required) and add the browser extension.\n2. Open AliExpress through Satsback — the extension prompts you to activate rewards with one click.\n3. Shop and check out as normal. Your cashback (up to 2.7%) shows as *pending* in your Satsback dashboard.\n4. After AliExpress confirms the sale, the sats become withdrawable to any Bitcoin Lightning wallet.\n\n**Tracking caveat — worth reading.** Satsback depends on affiliate tracking, and users report roughly two out of three orders track cleanly (it sits around 3.2/5 on the Chrome Web Store). To give yourself the best odds: disable ad-blockers on the AliExpress tab, don't run other coupon or cashback extensions at checkout, and make the Satsback tab the last thing you touch before paying. If an order doesn't appear within a few days, Satsback support can chase it with your receipt.",
+    "worth_it_md": "## Is it worth it?\n\nThe rate is solid for marketplaces; on a normal-sized AliExpress order it adds up to a worthwhile chunk of sats.\n\nTwo things to weigh: the reward is Bitcoin, so its fiat value moves with BTC — a plus if you're stacking long-term, a variable if you're not. And Satsback rarely stacks with AliExpress's own loyalty program on the same order, so compare the two and use whichever pays more.",
+    "faqs": [
+      {
+        "question": "How much Bitcoin do I earn at AliExpress?",
+        "answer_md": "Currently up to 2.7%, credited in sats to your Satsback dashboard once AliExpress confirms the order."
+      },
+      {
+        "question": "Do I need to verify my identity (KYC) to earn?",
+        "answer_md": "No. Satsback is free and requires no KYC — you only need an account and the browser extension to earn Bitcoin at AliExpress."
+      },
+      {
+        "question": "When can I withdraw my AliExpress cashback?",
+        "answer_md": "Once the order moves from *pending* to *confirmed* (after AliExpress's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
+      }
+    ]
+  },
+  {
+    "slug": "mediamarkt",
+    "name": "MediaMarkt",
+    "satsback_slug": "mediamarkt",
+    "logo_url": "https://cdn.satsback.com/stores/partners/mediamarkt-v2.svg",
+    "cashback_text": "up to 1.3%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "zooplus-16",
+    "name": "Zooplus",
+    "satsback_slug": "zooplus-16",
+    "logo_url": "https://cdn.satsback.com/stores/s/zooplus-1058987.svg",
+    "cashback_text": "up to 3.2%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "booking",
+    "name": "Booking.com",
+    "satsback_slug": "booking",
+    "logo_url": "https://cdn.satsback.com/stores/partners/booking.svg",
+    "cashback_text": "up to 1%",
+    "category_slug": "travel",
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "## Earn Bitcoin at Booking.com\n\nBooking.com — the global hotel and accommodation platform Booking.com — is on Satsback. Buy through Satsback and you get up to 1% of your order value back in Bitcoin, paid as sats to a Lightning wallet you control.\n\nRather than a coupon or cashback voucher, Booking.com shoppers get paid in Bitcoin here. Below: the live rate, the honest truth about tracking reliability, and when it's actually worth using for travel.",
+    "how_it_works_md": "## How Booking.com Bitcoin cashback works\n\n1. Create a free Satsback account (no KYC required) and add the browser extension.\n2. Open Booking.com through Satsback — the extension prompts you to activate rewards with one click.\n3. Shop and check out as normal. Your cashback (up to 1%) shows as *pending* in your Satsback dashboard.\n4. After Booking.com confirms the sale, the sats become withdrawable to any Bitcoin Lightning wallet.\n\n**Tracking caveat — worth reading.** Satsback depends on affiliate tracking, and users report roughly two out of three orders track cleanly (it sits around 3.2/5 on the Chrome Web Store). To give yourself the best odds: disable ad-blockers on the Booking.com tab, don't run other coupon or cashback extensions at checkout, and make the Satsback tab the last thing you touch before paying. If an order doesn't appear within a few days, Satsback support can chase it with your receipt.",
+    "worth_it_md": "## Is it worth it?\n\nThe rate is modest, so it's most worth it on larger Booking.com orders where even a small percentage becomes meaningful sats.\n\nTwo things to weigh: the reward is Bitcoin, so its fiat value moves with BTC — a plus if you're stacking long-term, a variable if you're not. And Satsback rarely stacks with Booking.com's own loyalty program on the same order, so compare the two and use whichever pays more.",
+    "faqs": [
+      {
+        "question": "How much Bitcoin do I earn at Booking.com?",
+        "answer_md": "Currently up to 1%, credited in sats to your Satsback dashboard once Booking.com confirms the order."
+      },
+      {
+        "question": "Do I need to verify my identity (KYC) to earn?",
+        "answer_md": "No. Satsback is free and requires no KYC — you only need an account and the browser extension to earn Bitcoin at Booking.com."
+      },
+      {
+        "question": "When can I withdraw my Booking.com cashback?",
+        "answer_md": "Once the order moves from *pending* to *confirmed* (after Booking.com's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
+      }
+    ]
+  },
+  {
+    "slug": "holland-barrett",
+    "name": "Holland & Barrett",
+    "satsback_slug": "holland-barrett",
+    "logo_url": "https://cdn.satsback.com/stores/partners/holland-barrett-v2.svg",
+    "cashback_text": "up to 3.2%",
+    "category_slug": "health-beauty",
+    "geo_scope": "eu",
+    "is_bitcoin_native": false,
+    "description_md": "## Earn Bitcoin at Holland & Barrett\n\nHolland & Barrett, the health, wellness, and supplements retailer Holland & Barrett, is one of the stores paying Bitcoin back through Satsback. Buy through Satsback and you get up to 3.2% of your order value back in Bitcoin, paid as sats to a Lightning wallet you control.\n\nRather than a coupon or cashback voucher, Holland & Barrett shoppers get paid in Bitcoin here. Below: the live rate, the honest truth about tracking reliability, and when it's actually worth using for health beauty.",
+    "how_it_works_md": "## How Holland & Barrett Bitcoin cashback works\n\n1. Create a free Satsback account (no KYC required) and add the browser extension.\n2. Open Holland & Barrett through Satsback — the extension prompts you to activate rewards with one click.\n3. Shop and check out as normal. Your cashback (up to 3.2%) shows as *pending* in your Satsback dashboard.\n4. After Holland & Barrett confirms the sale, the sats become withdrawable to any Bitcoin Lightning wallet.\n\n**Tracking caveat — worth reading.** Satsback depends on affiliate tracking, and users report roughly two out of three orders track cleanly (it sits around 3.2/5 on the Chrome Web Store). To give yourself the best odds: disable ad-blockers on the Holland & Barrett tab, don't run other coupon or cashback extensions at checkout, and make the Satsback tab the last thing you touch before paying. If an order doesn't appear within a few days, Satsback support can chase it with your receipt.",
+    "worth_it_md": "## Is it worth it?\n\nAt 3.2%+, Holland & Barrett is one of the stronger health beauty rates on Satsback — comfortably worth the two-minute setup.\n\nTwo things to weigh: the reward is Bitcoin, so its fiat value moves with BTC — a plus if you're stacking long-term, a variable if you're not. And Satsback rarely stacks with Holland & Barrett's own loyalty program on the same order, so compare the two and use whichever pays more.",
+    "faqs": [
+      {
+        "question": "How much Bitcoin do I earn at Holland & Barrett?",
+        "answer_md": "Currently up to 3.2%, credited in sats to your Satsback dashboard once Holland & Barrett confirms the order."
+      },
+      {
+        "question": "Do I need to verify my identity (KYC) to earn?",
+        "answer_md": "No. Satsback is free and requires no KYC — you only need an account and the browser extension to earn Bitcoin at Holland & Barrett."
+      },
+      {
+        "question": "When can I withdraw my Holland & Barrett cashback?",
+        "answer_md": "Once the order moves from *pending* to *confirmed* (after Holland & Barrett's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
+      }
+    ]
+  },
+  {
+    "slug": "anwb-webwinkel",
+    "name": "ANWB Webwinkel",
+    "satsback_slug": "anwb-webwinkel",
+    "logo_url": "https://cdn.satsback.com/stores/s/anwb-webwinkel-90637.svg",
+    "cashback_text": "up to 2.3%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "allekabels",
+    "name": "Allekabels",
+    "satsback_slug": "allekabels",
+    "logo_url": "https://cdn.satsback.com/stores/partners/allekabels-v2.svg",
+    "cashback_text": "up to 2%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "staatsloterij-losse-loten",
+    "name": "Staatsloterij losse loten",
+    "satsback_slug": "staatsloterij-losse-loten",
+    "logo_url": "https://cdn.satsback.com/stores/partners/staatsloterij-v2.svg",
+    "cashback_text": "up to 2%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "plus",
+    "name": "PLUS",
+    "satsback_slug": "plus",
+    "logo_url": "https://cdn.satsback.com/stores/partners/plus-v2.svg",
+    "cashback_text": "up to 7.971 sats",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "plein",
+    "name": "Plein",
+    "satsback_slug": "plein",
+    "logo_url": "https://cdn.satsback.com/stores/s/plein-nl-122450.jpg",
+    "cashback_text": "up to 1.3%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "ibood",
+    "name": "iBOOD",
+    "satsback_slug": "ibood",
+    "logo_url": "https://cdn.satsback.com/stores/partners/ibood-v3.svg",
+    "cashback_text": "up to 1.6%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "odido-2",
+    "name": "Odido",
+    "satsback_slug": "odido-2",
+    "logo_url": "https://satsback.com/assets/media/partners/odido.svg",
+    "cashback_text": "up to 20%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "the-butchery",
+    "name": "The Butchery",
+    "satsback_slug": "the-butchery",
+    "logo_url": "https://cdn.satsback.com/stores/partners/the-butchery-v2.svg",
+    "cashback_text": "up to 2.9%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "bitbox",
+    "name": "Bitbox",
+    "satsback_slug": "bitbox",
+    "logo_url": "https://cdn.satsback.com/stores/partners/bitbox.svg",
+    "cashback_text": "5% discount code",
+    "category_slug": "bitcoin-gear",
+    "geo_scope": "global",
+    "is_bitcoin_native": true,
+    "description_md": "## Earn Bitcoin at Bitbox\n\nBitbox is the Swiss maker of the BitBox02 hardware wallet. Buy through Satsback and you get a 5% discount code applied at checkout — an instant saving rather than cashback.\n\nFor bitcoiners it's a straightforward saving on gear you already want — the code comes off the price at checkout, no funding or waiting involved.",
+    "how_it_works_md": "## How the Bitbox offer works\n\n1. Create a free Satsback account (no KYC required) and open the Bitbox page on Satsback.\n2. Reveal the offer — 5% discount code — and copy the code or follow through to Bitbox.\n3. Paste the code at Bitbox's checkout; the saving is applied to your order immediately.\n\nBecause this is a discount code rather than tracked cashback, there's no waiting for the sale to confirm — you see the saving at checkout. Codes can expire or change, so check the current offer on the Bitbox page before you buy.",
+    "worth_it_md": "## Is it worth it?\n\nThis is a flat discount code rather than percentage cashback, so the value is fixed regardless of basket size — best used on a single planned Bitbox purchase.\n\nOne caveat: a discount code is a one-off saving, not recurring Bitcoin cashback, and codes can expire — so confirm the current offer before you count on it. On gear you were going to buy from Bitbox anyway, it's still a clean win.",
+    "faqs": [
+      {
+        "question": "What's the current Bitbox offer on Satsback?",
+        "answer_md": "5% discount code, applied at Bitbox's checkout. Offers can change, so check the Bitbox page for the live code before buying."
+      },
+      {
+        "question": "Do I need to verify my identity (KYC) to use it?",
+        "answer_md": "No. Satsback is free and requires no KYC — you only need a free account to unlock the Bitbox offer."
+      },
+      {
+        "question": "Is it Bitcoin cashback or a discount?",
+        "answer_md": "For Bitbox this is a discount code — an instant saving at checkout — rather than tracked Bitcoin cashback. Either way it's free to use through Satsback."
+      }
+    ]
+  },
+  {
+    "slug": "blockstream-store",
+    "name": "Blockstream Store",
+    "satsback_slug": "blockstream-store",
+    "logo_url": "https://cdn.satsback.com/stores/partners/blockstream.svg",
+    "cashback_text": "10% discount code",
+    "category_slug": "bitcoin-gear",
+    "geo_scope": "global",
+    "is_bitcoin_native": true,
+    "description_md": "## Earn Bitcoin at Blockstream Store\n\nBlockstream Store — the official Blockstream shop for Jade hardware wallets and Bitcoin gear — is on Satsback. Buy through Satsback and you get a 10% discount code applied at checkout — an instant saving rather than cashback.\n\nFor bitcoiners it's a straightforward saving on gear you already want — the code comes off the price at checkout, no funding or waiting involved.",
+    "how_it_works_md": "## How the Blockstream Store offer works\n\n1. Create a free Satsback account (no KYC required) and open the Blockstream Store page on Satsback.\n2. Reveal the offer — 10% discount code — and copy the code or follow through to Blockstream Store.\n3. Paste the code at Blockstream Store's checkout; the saving is applied to your order immediately.\n\nBecause this is a discount code rather than tracked cashback, there's no waiting for the sale to confirm — you see the saving at checkout. Codes can expire or change, so check the current offer on the Blockstream Store page before you buy.",
+    "worth_it_md": "## Is it worth it?\n\nThis is a flat discount code rather than percentage cashback, so the value is fixed regardless of basket size — best used on a single planned Blockstream Store purchase.\n\nOne caveat: a discount code is a one-off saving, not recurring Bitcoin cashback, and codes can expire — so confirm the current offer before you count on it. On gear you were going to buy from Blockstream Store anyway, it's still a clean win.",
+    "faqs": [
+      {
+        "question": "What's the current Blockstream Store offer on Satsback?",
+        "answer_md": "10% discount code, applied at Blockstream Store's checkout. Offers can change, so check the Blockstream Store page for the live code before buying."
+      },
+      {
+        "question": "Do I need to verify my identity (KYC) to use it?",
+        "answer_md": "No. Satsback is free and requires no KYC — you only need a free account to unlock the Blockstream Store offer."
+      },
+      {
+        "question": "Is it Bitcoin cashback or a discount?",
+        "answer_md": "For Blockstream Store this is a discount code — an instant saving at checkout — rather than tracked Bitcoin cashback. Either way it's free to use through Satsback."
+      }
+    ]
+  },
+  {
+    "slug": "cryptosteel",
+    "name": "Cryptosteel",
+    "satsback_slug": "cryptosteel",
+    "logo_url": "https://cdn.satsback.com/stores/partners/cryptosteel.png",
+    "cashback_text": "21% discount code",
+    "category_slug": "bitcoin-gear",
+    "geo_scope": "global",
+    "is_bitcoin_native": true,
+    "description_md": "## Earn Bitcoin at Cryptosteel\n\nCryptosteel, the maker of indestructible stainless-steel seed-phrase backups, is one of the stores paying Bitcoin back through Satsback. Buy through Satsback and you get a 21% discount code applied at checkout — an instant saving rather than cashback.\n\nFor bitcoiners it's a straightforward saving on gear you already want — the code comes off the price at checkout, no funding or waiting involved.",
+    "how_it_works_md": "## How the Cryptosteel offer works\n\n1. Create a free Satsback account (no KYC required) and open the Cryptosteel page on Satsback.\n2. Reveal the offer — 21% discount code — and copy the code or follow through to Cryptosteel.\n3. Paste the code at Cryptosteel's checkout; the saving is applied to your order immediately.\n\nBecause this is a discount code rather than tracked cashback, there's no waiting for the sale to confirm — you see the saving at checkout. Codes can expire or change, so check the current offer on the Cryptosteel page before you buy.",
+    "worth_it_md": "## Is it worth it?\n\nThis is a flat discount code rather than percentage cashback, so the value is fixed regardless of basket size — best used on a single planned Cryptosteel purchase.\n\nOne caveat: a discount code is a one-off saving, not recurring Bitcoin cashback, and codes can expire — so confirm the current offer before you count on it. On gear you were going to buy from Cryptosteel anyway, it's still a clean win.",
+    "faqs": [
+      {
+        "question": "What's the current Cryptosteel offer on Satsback?",
+        "answer_md": "21% discount code, applied at Cryptosteel's checkout. Offers can change, so check the Cryptosteel page for the live code before buying."
+      },
+      {
+        "question": "Do I need to verify my identity (KYC) to use it?",
+        "answer_md": "No. Satsback is free and requires no KYC — you only need a free account to unlock the Cryptosteel offer."
+      },
+      {
+        "question": "Is it Bitcoin cashback or a discount?",
+        "answer_md": "For Cryptosteel this is a discount code — an instant saving at checkout — rather than tracked Bitcoin cashback. Either way it's free to use through Satsback."
+      }
+    ]
+  },
+  {
+    "slug": "freedomia",
+    "name": "Freedomia",
+    "satsback_slug": "freedomia",
+    "logo_url": "https://cdn.satsback.com/stores/partners/freedomia.png",
+    "cashback_text": "1 free month",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "wavespace-instant-btceur-swaps",
+    "name": "Instant BTC/EUR Swaps – wave.space",
+    "satsback_slug": "wavespace-instant-btceur-swaps",
+    "logo_url": "https://cdn.satsback.com/stores/partners/wave-space.svg",
+    "cashback_text": "100% discount code",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "konsensus-network",
+    "name": "Konsensus Network",
+    "satsback_slug": "konsensus-network",
+    "logo_url": "https://cdn.satsback.com/stores/partners/konsensusnetwork.png",
+    "cashback_text": "10% discount code",
+    "category_slug": "bitcoin-gear",
+    "geo_scope": "global",
+    "is_bitcoin_native": true,
+    "description_md": "## Earn Bitcoin at Konsensus Network\n\nKonsensus Network is a publisher of Bitcoin books and educational material. Buy through Satsback and you get a 10% discount code applied at checkout — an instant saving rather than cashback.\n\nFor bitcoiners it's a straightforward saving on gear you already want — the code comes off the price at checkout, no funding or waiting involved.",
+    "how_it_works_md": "## How the Konsensus Network offer works\n\n1. Create a free Satsback account (no KYC required) and open the Konsensus Network page on Satsback.\n2. Reveal the offer — 10% discount code — and copy the code or follow through to Konsensus Network.\n3. Paste the code at Konsensus Network's checkout; the saving is applied to your order immediately.\n\nBecause this is a discount code rather than tracked cashback, there's no waiting for the sale to confirm — you see the saving at checkout. Codes can expire or change, so check the current offer on the Konsensus Network page before you buy.",
+    "worth_it_md": "## Is it worth it?\n\nThis is a flat discount code rather than percentage cashback, so the value is fixed regardless of basket size — best used on a single planned Konsensus Network purchase.\n\nOne caveat: a discount code is a one-off saving, not recurring Bitcoin cashback, and codes can expire — so confirm the current offer before you count on it. On gear you were going to buy from Konsensus Network anyway, it's still a clean win.",
+    "faqs": [
+      {
+        "question": "What's the current Konsensus Network offer on Satsback?",
+        "answer_md": "10% discount code, applied at Konsensus Network's checkout. Offers can change, so check the Konsensus Network page for the live code before buying."
+      },
+      {
+        "question": "Do I need to verify my identity (KYC) to use it?",
+        "answer_md": "No. Satsback is free and requires no KYC — you only need a free account to unlock the Konsensus Network offer."
+      },
+      {
+        "question": "Is it Bitcoin cashback or a discount?",
+        "answer_md": "For Konsensus Network this is a discount code — an instant saving at checkout — rather than tracked Bitcoin cashback. Either way it's free to use through Satsback."
+      }
+    ]
+  },
+  {
+    "slug": "seedor",
+    "name": "Seedor",
+    "satsback_slug": "seedor",
+    "logo_url": "https://cdn.satsback.com/stores/partners/seedor.svg",
+    "cashback_text": "5% discount code",
+    "category_slug": "bitcoin-gear",
+    "geo_scope": "global",
+    "is_bitcoin_native": true,
+    "description_md": "## Earn Bitcoin at Seedor\n\nSeedor is a maker of steel seed-phrase backup plates built to survive fire and flood. Buy through Satsback and you get a 5% discount code applied at checkout — an instant saving rather than cashback.\n\nFor bitcoiners it's a straightforward saving on gear you already want — the code comes off the price at checkout, no funding or waiting involved.",
+    "how_it_works_md": "## How the Seedor offer works\n\n1. Create a free Satsback account (no KYC required) and open the Seedor page on Satsback.\n2. Reveal the offer — 5% discount code — and copy the code or follow through to Seedor.\n3. Paste the code at Seedor's checkout; the saving is applied to your order immediately.\n\nBecause this is a discount code rather than tracked cashback, there's no waiting for the sale to confirm — you see the saving at checkout. Codes can expire or change, so check the current offer on the Seedor page before you buy.",
+    "worth_it_md": "## Is it worth it?\n\nThis is a flat discount code rather than percentage cashback, so the value is fixed regardless of basket size — best used on a single planned Seedor purchase.\n\nOne caveat: a discount code is a one-off saving, not recurring Bitcoin cashback, and codes can expire — so confirm the current offer before you count on it. On gear you were going to buy from Seedor anyway, it's still a clean win.",
+    "faqs": [
+      {
+        "question": "What's the current Seedor offer on Satsback?",
+        "answer_md": "5% discount code, applied at Seedor's checkout. Offers can change, so check the Seedor page for the live code before buying."
+      },
+      {
+        "question": "Do I need to verify my identity (KYC) to use it?",
+        "answer_md": "No. Satsback is free and requires no KYC — you only need a free account to unlock the Seedor offer."
+      },
+      {
+        "question": "Is it Bitcoin cashback or a discount?",
+        "answer_md": "For Seedor this is a discount code — an instant saving at checkout — rather than tracked Bitcoin cashback. Either way it's free to use through Satsback."
+      }
+    ]
+  },
+  {
+    "slug": "shopinbit",
+    "name": "ShopinBit",
+    "satsback_slug": "shopinbit",
+    "logo_url": "https://cdn.satsback.com/stores/partners/shopinbit.svg",
+    "cashback_text": "€5 discount code",
+    "category_slug": "marketplaces",
+    "geo_scope": "global",
+    "is_bitcoin_native": true,
+    "description_md": "## Earn Bitcoin at ShopinBit\n\nShopinBit — a marketplace where you can buy almost anything and pay with crypto — is on Satsback. Buy through Satsback and you get a €5 discount code applied at checkout — an instant saving rather than cashback.\n\nFor bitcoiners it's a straightforward saving on gear you already want — the code comes off the price at checkout, no funding or waiting involved.",
+    "how_it_works_md": "## How the ShopinBit offer works\n\n1. Create a free Satsback account (no KYC required) and open the ShopinBit page on Satsback.\n2. Reveal the offer — €5 discount code — and copy the code or follow through to ShopinBit.\n3. Paste the code at ShopinBit's checkout; the saving is applied to your order immediately.\n\nBecause this is a discount code rather than tracked cashback, there's no waiting for the sale to confirm — you see the saving at checkout. Codes can expire or change, so check the current offer on the ShopinBit page before you buy.",
+    "worth_it_md": "## Is it worth it?\n\nThis is a flat discount code rather than percentage cashback, so the value is fixed regardless of basket size — best used on a single planned ShopinBit purchase.\n\nOne caveat: a discount code is a one-off saving, not recurring Bitcoin cashback, and codes can expire — so confirm the current offer before you count on it. On gear you were going to buy from ShopinBit anyway, it's still a clean win.",
+    "faqs": [
+      {
+        "question": "What's the current ShopinBit offer on Satsback?",
+        "answer_md": "€5 discount code, applied at ShopinBit's checkout. Offers can change, so check the ShopinBit page for the live code before buying."
+      },
+      {
+        "question": "Do I need to verify my identity (KYC) to use it?",
+        "answer_md": "No. Satsback is free and requires no KYC — you only need a free account to unlock the ShopinBit offer."
+      },
+      {
+        "question": "Is it Bitcoin cashback or a discount?",
+        "answer_md": "For ShopinBit this is a discount code — an instant saving at checkout — rather than tracked Bitcoin cashback. Either way it's free to use through Satsback."
+      }
+    ]
+  },
+  {
+    "slug": "start9",
+    "name": "Start9",
+    "satsback_slug": "start9",
+    "logo_url": "https://cdn.satsback.com/stores/partners/start9.png",
+    "cashback_text": "95% discount code",
+    "category_slug": "bitcoin-gear",
+    "geo_scope": "global",
+    "is_bitcoin_native": true,
+    "description_md": "## Earn Bitcoin at Start9\n\nStart9 is the maker of self-hosted servers that run your own Bitcoin and Lightning node. Buy through Satsback and you get a 95% discount code applied at checkout — an instant saving rather than cashback.\n\nFor bitcoiners it's a straightforward saving on gear you already want — the code comes off the price at checkout, no funding or waiting involved.",
+    "how_it_works_md": "## How the Start9 offer works\n\n1. Create a free Satsback account (no KYC required) and open the Start9 page on Satsback.\n2. Reveal the offer — 95% discount code — and copy the code or follow through to Start9.\n3. Paste the code at Start9's checkout; the saving is applied to your order immediately.\n\nBecause this is a discount code rather than tracked cashback, there's no waiting for the sale to confirm — you see the saving at checkout. Codes can expire or change, so check the current offer on the Start9 page before you buy.",
+    "worth_it_md": "## Is it worth it?\n\nThis is a flat discount code rather than percentage cashback, so the value is fixed regardless of basket size — best used on a single planned Start9 purchase.\n\nOne caveat: a discount code is a one-off saving, not recurring Bitcoin cashback, and codes can expire — so confirm the current offer before you count on it. On gear you were going to buy from Start9 anyway, it's still a clean win.",
+    "faqs": [
+      {
+        "question": "What's the current Start9 offer on Satsback?",
+        "answer_md": "95% discount code, applied at Start9's checkout. Offers can change, so check the Start9 page for the live code before buying."
+      },
+      {
+        "question": "Do I need to verify my identity (KYC) to use it?",
+        "answer_md": "No. Satsback is free and requires no KYC — you only need a free account to unlock the Start9 offer."
+      },
+      {
+        "question": "Is it Bitcoin cashback or a discount?",
+        "answer_md": "For Start9 this is a discount code — an instant saving at checkout — rather than tracked Bitcoin cashback. Either way it's free to use through Satsback."
+      }
+    ]
+  },
+  {
+    "slug": "twentytwo",
+    "name": "TwentyTwo",
+    "satsback_slug": "twentytwo",
+    "logo_url": "https://cdn.satsback.com/stores/partners/twenty-two.svg",
+    "cashback_text": "5% discount code",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "wavespace-bitcoin-visa-debit-card",
+    "name": "wavecard® BTC Debit Card – wave.space",
+    "satsback_slug": "wavespace-bitcoin-visa-debit-card",
+    "logo_url": "https://cdn.satsback.com/stores/partners/wave-space.svg",
+    "cashback_text": "21% discount code",
+    "category_slug": "bitcoin-gear",
+    "geo_scope": "eu",
+    "is_bitcoin_native": true,
+    "description_md": "## Earn Bitcoin at wavecard® BTC Debit Card – wave.space\n\nwavecard® BTC Debit Card – wave.space — the wavecard® Bitcoin Visa debit card that lets you spend BTC anywhere — is on Satsback. Buy through Satsback and you get a 21% discount code applied at checkout — an instant saving rather than cashback.\n\nFor bitcoiners it's a straightforward saving on gear you already want — the code comes off the price at checkout, no funding or waiting involved.",
+    "how_it_works_md": "## How the wavecard® BTC Debit Card – wave.space offer works\n\n1. Create a free Satsback account (no KYC required) and open the wavecard® BTC Debit Card – wave.space page on Satsback.\n2. Reveal the offer — 21% discount code — and copy the code or follow through to wavecard® BTC Debit Card – wave.space.\n3. Paste the code at wavecard® BTC Debit Card – wave.space's checkout; the saving is applied to your order immediately.\n\nBecause this is a discount code rather than tracked cashback, there's no waiting for the sale to confirm — you see the saving at checkout. Codes can expire or change, so check the current offer on the wavecard® BTC Debit Card – wave.space page before you buy.",
+    "worth_it_md": "## Is it worth it?\n\nThis is a flat discount code rather than percentage cashback, so the value is fixed regardless of basket size — best used on a single planned wavecard® BTC Debit Card – wave.space purchase.\n\nOne caveat: a discount code is a one-off saving, not recurring Bitcoin cashback, and codes can expire — so confirm the current offer before you count on it. On gear you were going to buy from wavecard® BTC Debit Card – wave.space anyway, it's still a clean win.",
+    "faqs": [
+      {
+        "question": "What's the current wavecard® BTC Debit Card – wave.space offer on Satsback?",
+        "answer_md": "21% discount code, applied at wavecard® BTC Debit Card – wave.space's checkout. Offers can change, so check the wavecard® BTC Debit Card – wave.space page for the live code before buying."
+      },
+      {
+        "question": "Do I need to verify my identity (KYC) to use it?",
+        "answer_md": "No. Satsback is free and requires no KYC — you only need a free account to unlock the wavecard® BTC Debit Card – wave.space offer."
+      },
+      {
+        "question": "Is it Bitcoin cashback or a discount?",
+        "answer_md": "For wavecard® BTC Debit Card – wave.space this is a discount code — an instant saving at checkout — rather than tracked Bitcoin cashback. Either way it's free to use through Satsback."
+      }
+    ]
+  },
+  {
+    "slug": "lidlnl",
+    "name": "Lidl.nl",
+    "satsback_slug": "lidlnl",
+    "logo_url": "https://satsback.com/assets/media/partners/lidl.svg",
+    "cashback_text": "up to 1%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "koffievoordeel-2",
+    "name": "Koffievoordeel",
+    "satsback_slug": "koffievoordeel-2",
+    "logo_url": "https://cdn.satsback.com/stores/partners/koffievoordeel-v2.svg",
+    "cashback_text": "up to 2.5%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "expert",
+    "name": "Expert",
+    "satsback_slug": "expert",
+    "logo_url": "https://satsback.com/assets/media/partners/expert.svg",
+    "cashback_text": "up to 1.8%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "brekznl",
+    "name": "Brekz.nl",
+    "satsback_slug": "brekznl",
+    "logo_url": "https://cdn.satsback.com/stores/partners/brekznl-v2.svg",
+    "cashback_text": "up to 1.5%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "klm-4",
+    "name": "KLM",
+    "satsback_slug": "klm-4",
+    "logo_url": "https://satsback.com/assets/media/partners/klm.svg",
+    "cashback_text": "up to 1%",
+    "category_slug": "travel",
+    "geo_scope": "eu",
+    "is_bitcoin_native": false,
+    "description_md": "## Earn Bitcoin at KLM\n\nKLM — the Dutch flag carrier KLM — is on Satsback. Buy through Satsback and you get up to 1% of your order value back in Bitcoin, paid as sats to a Lightning wallet you control.\n\nRather than a coupon or cashback voucher, KLM shoppers get paid in Bitcoin here. Below: the live rate, the honest truth about tracking reliability, and when it's actually worth using for travel.",
+    "how_it_works_md": "## How KLM Bitcoin cashback works\n\n1. Create a free Satsback account (no KYC required) and add the browser extension.\n2. Open KLM through Satsback — the extension prompts you to activate rewards with one click.\n3. Shop and check out as normal. Your cashback (up to 1%) shows as *pending* in your Satsback dashboard.\n4. After KLM confirms the sale, the sats become withdrawable to any Bitcoin Lightning wallet.\n\n**Tracking caveat — worth reading.** Satsback depends on affiliate tracking, and users report roughly two out of three orders track cleanly (it sits around 3.2/5 on the Chrome Web Store). To give yourself the best odds: disable ad-blockers on the KLM tab, don't run other coupon or cashback extensions at checkout, and make the Satsback tab the last thing you touch before paying. If an order doesn't appear within a few days, Satsback support can chase it with your receipt.",
+    "worth_it_md": "## Is it worth it?\n\nThe rate is modest, so it's most worth it on larger KLM orders where even a small percentage becomes meaningful sats.\n\nTwo things to weigh: the reward is Bitcoin, so its fiat value moves with BTC — a plus if you're stacking long-term, a variable if you're not. And Satsback rarely stacks with KLM's own loyalty program on the same order, so compare the two and use whichever pays more.",
+    "faqs": [
+      {
+        "question": "How much Bitcoin do I earn at KLM?",
+        "answer_md": "Currently up to 1%, credited in sats to your Satsback dashboard once KLM confirms the order."
+      },
+      {
+        "question": "Do I need to verify my identity (KYC) to earn?",
+        "answer_md": "No. Satsback is free and requires no KYC — you only need an account and the browser extension to earn Bitcoin at KLM."
+      },
+      {
+        "question": "When can I withdraw my KLM cashback?",
+        "answer_md": "Once the order moves from *pending* to *confirmed* (after KLM's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
+      }
+    ]
+  },
+  {
+    "slug": "scapino",
+    "name": "Scapino",
+    "satsback_slug": "scapino",
+    "logo_url": "https://cdn.satsback.com/stores/s/scapino-nlnl-112304.svg",
+    "cashback_text": "up to 1.3%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "proshop",
+    "name": "Proshop",
+    "satsback_slug": "proshop",
+    "logo_url": "https://cdn.satsback.com/stores/partners/proshop-v2.svg",
+    "cashback_text": "up to 1%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "adidas-21",
+    "name": "adidas",
+    "satsback_slug": "adidas-21",
+    "logo_url": "https://satsback.com/assets/media/partners/adidas.svg",
+    "cashback_text": "up to 2.5%",
+    "category_slug": "fashion",
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "## Earn Bitcoin at adidas\n\nadidas is the global sportswear brand adidas. Buy through Satsback and you get up to 2.5% of your order value back in Bitcoin, paid as sats to a Lightning wallet you control.\n\nIf adidas is already on your shopping list, routing the order through Satsback is free money on spending you'd do regardless — this page covers the current rate, how the tracking really works, and whether it's worth the extra step for a fashion purchase.",
+    "how_it_works_md": "## How adidas Bitcoin cashback works\n\n1. Create a free Satsback account (no KYC required) and add the browser extension.\n2. Open adidas through Satsback — the extension prompts you to activate rewards with one click.\n3. Shop and check out as normal. Your cashback (up to 2.5%) shows as *pending* in your Satsback dashboard.\n4. After adidas confirms the sale, the sats become withdrawable to any Bitcoin Lightning wallet.\n\n**Tracking caveat — worth reading.** Satsback depends on affiliate tracking, and users report roughly two out of three orders track cleanly (it sits around 3.2/5 on the Chrome Web Store). To give yourself the best odds: disable ad-blockers on the adidas tab, don't run other coupon or cashback extensions at checkout, and make the Satsback tab the last thing you touch before paying. If an order doesn't appear within a few days, Satsback support can chase it with your receipt.",
+    "worth_it_md": "## Is it worth it?\n\nThe rate is solid for fashion; on a normal-sized adidas order it adds up to a worthwhile chunk of sats.\n\nTwo things to weigh: the reward is Bitcoin, so its fiat value moves with BTC — a plus if you're stacking long-term, a variable if you're not. And Satsback rarely stacks with adidas's own loyalty program on the same order, so compare the two and use whichever pays more.",
+    "faqs": [
+      {
+        "question": "How much Bitcoin do I earn at adidas?",
+        "answer_md": "Currently up to 2.5%, credited in sats to your Satsback dashboard once adidas confirms the order."
+      },
+      {
+        "question": "Do I need to verify my identity (KYC) to earn?",
+        "answer_md": "No. Satsback is free and requires no KYC — you only need an account and the browser extension to earn Bitcoin at adidas."
+      },
+      {
+        "question": "When can I withdraw my adidas cashback?",
+        "answer_md": "Once the order moves from *pending* to *confirmed* (after adidas's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
+      }
+    ]
+  },
+  {
+    "slug": "alternate",
+    "name": "ALTERNATE",
+    "satsback_slug": "alternate",
+    "logo_url": "https://cdn.satsback.com/stores/partners/alternate.svg",
+    "cashback_text": "up to 1%",
+    "category_slug": "tech-electronics",
+    "geo_scope": "eu",
+    "is_bitcoin_native": false,
+    "description_md": "## Earn Bitcoin at ALTERNATE\n\nALTERNATE, the German electronics retailer ALTERNATE, is one of the stores paying Bitcoin back through Satsback. Buy through Satsback and you get up to 1% of your order value back in Bitcoin, paid as sats to a Lightning wallet you control.\n\nIf ALTERNATE is already on your shopping list, routing the order through Satsback is free money on spending you'd do regardless — this page covers the current rate, how the tracking really works, and whether it's worth the extra step for a tech electronics purchase.",
+    "how_it_works_md": "## How ALTERNATE Bitcoin cashback works\n\n1. Create a free Satsback account (no KYC required) and add the browser extension.\n2. Open ALTERNATE through Satsback — the extension prompts you to activate rewards with one click.\n3. Shop and check out as normal. Your cashback (up to 1%) shows as *pending* in your Satsback dashboard.\n4. After ALTERNATE confirms the sale, the sats become withdrawable to any Bitcoin Lightning wallet.\n\n**Tracking caveat — worth reading.** Satsback depends on affiliate tracking, and users report roughly two out of three orders track cleanly (it sits around 3.2/5 on the Chrome Web Store). To give yourself the best odds: disable ad-blockers on the ALTERNATE tab, don't run other coupon or cashback extensions at checkout, and make the Satsback tab the last thing you touch before paying. If an order doesn't appear within a few days, Satsback support can chase it with your receipt.",
+    "worth_it_md": "## Is it worth it?\n\nThe rate is modest, so it's most worth it on larger ALTERNATE orders where even a small percentage becomes meaningful sats.\n\nTwo things to weigh: the reward is Bitcoin, so its fiat value moves with BTC — a plus if you're stacking long-term, a variable if you're not. And Satsback rarely stacks with ALTERNATE's own loyalty program on the same order, so compare the two and use whichever pays more.",
+    "faqs": [
+      {
+        "question": "How much Bitcoin do I earn at ALTERNATE?",
+        "answer_md": "Currently up to 1%, credited in sats to your Satsback dashboard once ALTERNATE confirms the order."
+      },
+      {
+        "question": "Do I need to verify my identity (KYC) to earn?",
+        "answer_md": "No. Satsback is free and requires no KYC — you only need an account and the browser extension to earn Bitcoin at ALTERNATE."
+      },
+      {
+        "question": "When can I withdraw my ALTERNATE cashback?",
+        "answer_md": "Once the order moves from *pending* to *confirmed* (after ALTERNATE's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
+      }
+    ]
+  },
+  {
+    "slug": "lounge-by-zalando",
+    "name": "Lounge by Zalando",
+    "satsback_slug": "lounge-by-zalando",
+    "logo_url": "https://cdn.satsback.com/stores/s/zalando-lounge-nl-113283.jpg",
+    "cashback_text": "up to 2.5%",
+    "category_slug": "fashion",
+    "geo_scope": "eu",
+    "is_bitcoin_native": false,
+    "description_md": "## Earn Bitcoin at Lounge by Zalando\n\nLounge by Zalando, Zalando's members-only fashion outlet, Lounge by Zalando, is one of the stores paying Bitcoin back through Satsback. Buy through Satsback and you get up to 2.5% of your order value back in Bitcoin, paid as sats to a Lightning wallet you control.\n\nIf Lounge by Zalando is already on your shopping list, routing the order through Satsback is free money on spending you'd do regardless — this page covers the current rate, how the tracking really works, and whether it's worth the extra step for a fashion purchase.",
+    "how_it_works_md": "## How Lounge by Zalando Bitcoin cashback works\n\n1. Create a free Satsback account (no KYC required) and add the browser extension.\n2. Open Lounge by Zalando through Satsback — the extension prompts you to activate rewards with one click.\n3. Shop and check out as normal. Your cashback (up to 2.5%) shows as *pending* in your Satsback dashboard.\n4. After Lounge by Zalando confirms the sale, the sats become withdrawable to any Bitcoin Lightning wallet.\n\n**Tracking caveat — worth reading.** Satsback depends on affiliate tracking, and users report roughly two out of three orders track cleanly (it sits around 3.2/5 on the Chrome Web Store). To give yourself the best odds: disable ad-blockers on the Lounge by Zalando tab, don't run other coupon or cashback extensions at checkout, and make the Satsback tab the last thing you touch before paying. If an order doesn't appear within a few days, Satsback support can chase it with your receipt.",
+    "worth_it_md": "## Is it worth it?\n\nThe rate is solid for fashion; on a normal-sized Lounge by Zalando order it adds up to a worthwhile chunk of sats.\n\nTwo things to weigh: the reward is Bitcoin, so its fiat value moves with BTC — a plus if you're stacking long-term, a variable if you're not. And Satsback rarely stacks with Lounge by Zalando's own loyalty program on the same order, so compare the two and use whichever pays more.",
+    "faqs": [
+      {
+        "question": "How much Bitcoin do I earn at Lounge by Zalando?",
+        "answer_md": "Currently up to 2.5%, credited in sats to your Satsback dashboard once Lounge by Zalando confirms the order."
+      },
+      {
+        "question": "Do I need to verify my identity (KYC) to earn?",
+        "answer_md": "No. Satsback is free and requires no KYC — you only need an account and the browser extension to earn Bitcoin at Lounge by Zalando."
+      },
+      {
+        "question": "When can I withdraw my Lounge by Zalando cashback?",
+        "answer_md": "Once the order moves from *pending* to *confirmed* (after Lounge by Zalando's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
+      }
+    ]
+  },
+  {
+    "slug": "greetznl-3",
+    "name": "Greetz.nl",
+    "satsback_slug": "greetznl-3",
+    "logo_url": "https://cdn.satsback.com/stores/partners/greetznl-v2.svg",
+    "cashback_text": "up to 4.2%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "kpn-2",
+    "name": "KPN",
+    "satsback_slug": "kpn-2",
+    "logo_url": "https://cdn.satsback.com/stores/s/kpn-mobielnl-1066270.png",
+    "cashback_text": "up to 38.261 sats",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "temu",
+    "name": "Temu",
+    "satsback_slug": "temu",
+    "logo_url": "https://cdn.satsback.com/stores/partners/temu-v2.svg",
+    "cashback_text": "up to 6%",
+    "category_slug": "marketplaces",
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "## Earn Bitcoin at Temu\n\nTemu, the fast-growing budget marketplace Temu, is one of the stores paying Bitcoin back through Satsback. Buy through Satsback and you get up to 6% of your order value back in Bitcoin, paid as sats to a Lightning wallet you control.\n\nRather than a coupon or cashback voucher, Temu shoppers get paid in Bitcoin here. Below: the live rate, the honest truth about tracking reliability, and when it's actually worth using for marketplaces.",
+    "how_it_works_md": "## How Temu Bitcoin cashback works\n\n1. Create a free Satsback account (no KYC required) and add the browser extension.\n2. Open Temu through Satsback — the extension prompts you to activate rewards with one click.\n3. Shop and check out as normal. Your cashback (up to 6%) shows as *pending* in your Satsback dashboard.\n4. After Temu confirms the sale, the sats become withdrawable to any Bitcoin Lightning wallet.\n\n**Tracking caveat — worth reading.** Satsback depends on affiliate tracking, and users report roughly two out of three orders track cleanly (it sits around 3.2/5 on the Chrome Web Store). To give yourself the best odds: disable ad-blockers on the Temu tab, don't run other coupon or cashback extensions at checkout, and make the Satsback tab the last thing you touch before paying. If an order doesn't appear within a few days, Satsback support can chase it with your receipt.",
+    "worth_it_md": "## Is it worth it?\n\nAt 6%+, Temu is one of the stronger marketplaces rates on Satsback — comfortably worth the two-minute setup.\n\nTwo things to weigh: the reward is Bitcoin, so its fiat value moves with BTC — a plus if you're stacking long-term, a variable if you're not. And Satsback rarely stacks with Temu's own loyalty program on the same order, so compare the two and use whichever pays more.",
+    "faqs": [
+      {
+        "question": "How much Bitcoin do I earn at Temu?",
+        "answer_md": "Currently up to 6%, credited in sats to your Satsback dashboard once Temu confirms the order."
+      },
+      {
+        "question": "Do I need to verify my identity (KYC) to earn?",
+        "answer_md": "No. Satsback is free and requires no KYC — you only need an account and the browser extension to earn Bitcoin at Temu."
+      },
+      {
+        "question": "When can I withdraw my Temu cashback?",
+        "answer_md": "Once the order moves from *pending* to *confirmed* (after Temu's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
+      }
+    ]
+  },
+  {
+    "slug": "gaslichtcom",
+    "name": "Gaslicht.com",
+    "satsback_slug": "gaslichtcom",
+    "logo_url": "https://cdn.satsback.com/stores/s/gaslicht-nl-67801.gif",
+    "cashback_text": "up to 17.713 sats",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "brunanl",
+    "name": "Bruna.nl",
+    "satsback_slug": "brunanl",
+    "logo_url": "https://cdn.satsback.com/stores/partners/bruna-nl-v2.png",
+    "cashback_text": "up to 3.4%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "conrad",
+    "name": "Conrad",
+    "satsback_slug": "conrad",
+    "logo_url": "https://satsback.com/assets/media/partners/conrad.svg",
+    "cashback_text": "up to 1.3%",
+    "category_slug": "tech-electronics",
+    "geo_scope": "eu",
+    "is_bitcoin_native": false,
+    "description_md": "## Earn Bitcoin at Conrad\n\nConrad — the electronics and components retailer Conrad — is on Satsback. Buy through Satsback and you get up to 1.3% of your order value back in Bitcoin, paid as sats to a Lightning wallet you control.\n\nRather than a coupon or cashback voucher, Conrad shoppers get paid in Bitcoin here. Below: the live rate, the honest truth about tracking reliability, and when it's actually worth using for tech electronics.",
+    "how_it_works_md": "## How Conrad Bitcoin cashback works\n\n1. Create a free Satsback account (no KYC required) and add the browser extension.\n2. Open Conrad through Satsback — the extension prompts you to activate rewards with one click.\n3. Shop and check out as normal. Your cashback (up to 1.3%) shows as *pending* in your Satsback dashboard.\n4. After Conrad confirms the sale, the sats become withdrawable to any Bitcoin Lightning wallet.\n\n**Tracking caveat — worth reading.** Satsback depends on affiliate tracking, and users report roughly two out of three orders track cleanly (it sits around 3.2/5 on the Chrome Web Store). To give yourself the best odds: disable ad-blockers on the Conrad tab, don't run other coupon or cashback extensions at checkout, and make the Satsback tab the last thing you touch before paying. If an order doesn't appear within a few days, Satsback support can chase it with your receipt.",
+    "worth_it_md": "## Is it worth it?\n\nThe rate is modest, so it's most worth it on larger Conrad orders where even a small percentage becomes meaningful sats.\n\nTwo things to weigh: the reward is Bitcoin, so its fiat value moves with BTC — a plus if you're stacking long-term, a variable if you're not. And Satsback rarely stacks with Conrad's own loyalty program on the same order, so compare the two and use whichever pays more.",
+    "faqs": [
+      {
+        "question": "How much Bitcoin do I earn at Conrad?",
+        "answer_md": "Currently up to 1.3%, credited in sats to your Satsback dashboard once Conrad confirms the order."
+      },
+      {
+        "question": "Do I need to verify my identity (KYC) to earn?",
+        "answer_md": "No. Satsback is free and requires no KYC — you only need an account and the browser extension to earn Bitcoin at Conrad."
+      },
+      {
+        "question": "When can I withdraw my Conrad cashback?",
+        "answer_md": "Once the order moves from *pending* to *confirmed* (after Conrad's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
+      }
+    ]
+  },
+  {
+    "slug": "about-you-13",
+    "name": "ABOUT YOU",
+    "satsback_slug": "about-you-13",
+    "logo_url": "https://cdn.satsback.com/stores/partners/about-you-v2.svg",
+    "cashback_text": "up to 6%",
+    "category_slug": "fashion",
+    "geo_scope": "eu",
+    "is_bitcoin_native": false,
+    "description_md": "## Earn Bitcoin at ABOUT YOU\n\nABOUT YOU, the European fashion platform ABOUT YOU, is one of the stores paying Bitcoin back through Satsback. Buy through Satsback and you get up to 6% of your order value back in Bitcoin, paid as sats to a Lightning wallet you control.\n\nIf ABOUT YOU is already on your shopping list, routing the order through Satsback is free money on spending you'd do regardless — this page covers the current rate, how the tracking really works, and whether it's worth the extra step for a fashion purchase.",
+    "how_it_works_md": "## How ABOUT YOU Bitcoin cashback works\n\n1. Create a free Satsback account (no KYC required) and add the browser extension.\n2. Open ABOUT YOU through Satsback — the extension prompts you to activate rewards with one click.\n3. Shop and check out as normal. Your cashback (up to 6%) shows as *pending* in your Satsback dashboard.\n4. After ABOUT YOU confirms the sale, the sats become withdrawable to any Bitcoin Lightning wallet.\n\n**Tracking caveat — worth reading.** Satsback depends on affiliate tracking, and users report roughly two out of three orders track cleanly (it sits around 3.2/5 on the Chrome Web Store). To give yourself the best odds: disable ad-blockers on the ABOUT YOU tab, don't run other coupon or cashback extensions at checkout, and make the Satsback tab the last thing you touch before paying. If an order doesn't appear within a few days, Satsback support can chase it with your receipt.",
+    "worth_it_md": "## Is it worth it?\n\nAt 6%+, ABOUT YOU is one of the stronger fashion rates on Satsback — comfortably worth the two-minute setup.\n\nTwo things to weigh: the reward is Bitcoin, so its fiat value moves with BTC — a plus if you're stacking long-term, a variable if you're not. And Satsback rarely stacks with ABOUT YOU's own loyalty program on the same order, so compare the two and use whichever pays more.",
+    "faqs": [
+      {
+        "question": "How much Bitcoin do I earn at ABOUT YOU?",
+        "answer_md": "Currently up to 6%, credited in sats to your Satsback dashboard once ABOUT YOU confirms the order."
+      },
+      {
+        "question": "Do I need to verify my identity (KYC) to earn?",
+        "answer_md": "No. Satsback is free and requires no KYC — you only need an account and the browser extension to earn Bitcoin at ABOUT YOU."
+      },
+      {
+        "question": "When can I withdraw my ABOUT YOU cashback?",
+        "answer_md": "Once the order moves from *pending* to *confirmed* (after ABOUT YOU's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
+      }
+    ]
+  },
+  {
+    "slug": "drogistnl",
+    "name": "Drogist.nl",
+    "satsback_slug": "drogistnl",
+    "logo_url": "https://cdn.satsback.com/stores/s/drogist-1053077.svg",
+    "cashback_text": "up to 2%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "joybuy-8",
+    "name": "Joybuy",
+    "satsback_slug": "joybuy-8",
+    "logo_url": "https://cdn.satsback.com/stores/partners/joybuy-v2.png",
+    "cashback_text": "up to 1.3%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "bergfreunde",
+    "name": "Bergfreunde",
+    "satsback_slug": "bergfreunde",
+    "logo_url": "https://cdn.satsback.com/stores/partners/bergfreunde-v2.svg",
+    "cashback_text": "up to 2.9%",
+    "category_slug": "fashion",
+    "geo_scope": "eu",
+    "is_bitcoin_native": false,
+    "description_md": "## Earn Bitcoin at Bergfreunde\n\nBergfreunde, the outdoor and mountaineering gear retailer Bergfreunde, is one of the stores paying Bitcoin back through Satsback. Buy through Satsback and you get up to 2.9% of your order value back in Bitcoin, paid as sats to a Lightning wallet you control.\n\nRather than a coupon or cashback voucher, Bergfreunde shoppers get paid in Bitcoin here. Below: the live rate, the honest truth about tracking reliability, and when it's actually worth using for fashion.",
+    "how_it_works_md": "## How Bergfreunde Bitcoin cashback works\n\n1. Create a free Satsback account (no KYC required) and add the browser extension.\n2. Open Bergfreunde through Satsback — the extension prompts you to activate rewards with one click.\n3. Shop and check out as normal. Your cashback (up to 2.9%) shows as *pending* in your Satsback dashboard.\n4. After Bergfreunde confirms the sale, the sats become withdrawable to any Bitcoin Lightning wallet.\n\n**Tracking caveat — worth reading.** Satsback depends on affiliate tracking, and users report roughly two out of three orders track cleanly (it sits around 3.2/5 on the Chrome Web Store). To give yourself the best odds: disable ad-blockers on the Bergfreunde tab, don't run other coupon or cashback extensions at checkout, and make the Satsback tab the last thing you touch before paying. If an order doesn't appear within a few days, Satsback support can chase it with your receipt.",
+    "worth_it_md": "## Is it worth it?\n\nThe rate is solid for fashion; on a normal-sized Bergfreunde order it adds up to a worthwhile chunk of sats.\n\nTwo things to weigh: the reward is Bitcoin, so its fiat value moves with BTC — a plus if you're stacking long-term, a variable if you're not. And Satsback rarely stacks with Bergfreunde's own loyalty program on the same order, so compare the two and use whichever pays more.",
+    "faqs": [
+      {
+        "question": "How much Bitcoin do I earn at Bergfreunde?",
+        "answer_md": "Currently up to 2.9%, credited in sats to your Satsback dashboard once Bergfreunde confirms the order."
+      },
+      {
+        "question": "Do I need to verify my identity (KYC) to earn?",
+        "answer_md": "No. Satsback is free and requires no KYC — you only need an account and the browser extension to earn Bitcoin at Bergfreunde."
+      },
+      {
+        "question": "When can I withdraw my Bergfreunde cashback?",
+        "answer_md": "Once the order moves from *pending* to *confirmed* (after Bergfreunde's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
+      }
+    ]
+  },
+  {
+    "slug": "galaxus-4",
+    "name": "Galaxus",
+    "satsback_slug": "galaxus-4",
+    "logo_url": "https://cdn.satsback.com/stores/partners/galaxus-v2.svg",
+    "cashback_text": "up to 2.5%",
+    "category_slug": "tech-electronics",
+    "geo_scope": "eu",
+    "is_bitcoin_native": false,
+    "description_md": "## Earn Bitcoin at Galaxus\n\nGalaxus is the Swiss online department store Galaxus. Buy through Satsback and you get up to 2.5% of your order value back in Bitcoin, paid as sats to a Lightning wallet you control.\n\nIf Galaxus is already on your shopping list, routing the order through Satsback is free money on spending you'd do regardless — this page covers the current rate, how the tracking really works, and whether it's worth the extra step for a tech electronics purchase.",
+    "how_it_works_md": "## How Galaxus Bitcoin cashback works\n\n1. Create a free Satsback account (no KYC required) and add the browser extension.\n2. Open Galaxus through Satsback — the extension prompts you to activate rewards with one click.\n3. Shop and check out as normal. Your cashback (up to 2.5%) shows as *pending* in your Satsback dashboard.\n4. After Galaxus confirms the sale, the sats become withdrawable to any Bitcoin Lightning wallet.\n\n**Tracking caveat — worth reading.** Satsback depends on affiliate tracking, and users report roughly two out of three orders track cleanly (it sits around 3.2/5 on the Chrome Web Store). To give yourself the best odds: disable ad-blockers on the Galaxus tab, don't run other coupon or cashback extensions at checkout, and make the Satsback tab the last thing you touch before paying. If an order doesn't appear within a few days, Satsback support can chase it with your receipt.",
+    "worth_it_md": "## Is it worth it?\n\nThe rate is solid for tech electronics; on a normal-sized Galaxus order it adds up to a worthwhile chunk of sats.\n\nTwo things to weigh: the reward is Bitcoin, so its fiat value moves with BTC — a plus if you're stacking long-term, a variable if you're not. And Satsback rarely stacks with Galaxus's own loyalty program on the same order, so compare the two and use whichever pays more.",
+    "faqs": [
+      {
+        "question": "How much Bitcoin do I earn at Galaxus?",
+        "answer_md": "Currently up to 2.5%, credited in sats to your Satsback dashboard once Galaxus confirms the order."
+      },
+      {
+        "question": "Do I need to verify my identity (KYC) to earn?",
+        "answer_md": "No. Satsback is free and requires no KYC — you only need an account and the browser extension to earn Bitcoin at Galaxus."
+      },
+      {
+        "question": "When can I withdraw my Galaxus cashback?",
+        "answer_md": "Once the order moves from *pending* to *confirmed* (after Galaxus's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
+      }
+    ]
+  },
+  {
+    "slug": "douglas",
+    "name": "Douglas",
+    "satsback_slug": "douglas",
+    "logo_url": "https://cdn.satsback.com/stores/partners/douglas-v2.svg",
+    "cashback_text": "up to 2%",
+    "category_slug": "health-beauty",
+    "geo_scope": "eu",
+    "is_bitcoin_native": false,
+    "description_md": "## Earn Bitcoin at Douglas\n\nDouglas — the European beauty and cosmetics retailer Douglas — is on Satsback. Buy through Satsback and you get up to 2% of your order value back in Bitcoin, paid as sats to a Lightning wallet you control.\n\nRather than a coupon or cashback voucher, Douglas shoppers get paid in Bitcoin here. Below: the live rate, the honest truth about tracking reliability, and when it's actually worth using for health beauty.",
+    "how_it_works_md": "## How Douglas Bitcoin cashback works\n\n1. Create a free Satsback account (no KYC required) and add the browser extension.\n2. Open Douglas through Satsback — the extension prompts you to activate rewards with one click.\n3. Shop and check out as normal. Your cashback (up to 2%) shows as *pending* in your Satsback dashboard.\n4. After Douglas confirms the sale, the sats become withdrawable to any Bitcoin Lightning wallet.\n\n**Tracking caveat — worth reading.** Satsback depends on affiliate tracking, and users report roughly two out of three orders track cleanly (it sits around 3.2/5 on the Chrome Web Store). To give yourself the best odds: disable ad-blockers on the Douglas tab, don't run other coupon or cashback extensions at checkout, and make the Satsback tab the last thing you touch before paying. If an order doesn't appear within a few days, Satsback support can chase it with your receipt.",
+    "worth_it_md": "## Is it worth it?\n\nThe rate is solid for health beauty; on a normal-sized Douglas order it adds up to a worthwhile chunk of sats.\n\nTwo things to weigh: the reward is Bitcoin, so its fiat value moves with BTC — a plus if you're stacking long-term, a variable if you're not. And Satsback rarely stacks with Douglas's own loyalty program on the same order, so compare the two and use whichever pays more.",
+    "faqs": [
+      {
+        "question": "How much Bitcoin do I earn at Douglas?",
+        "answer_md": "Currently up to 2%, credited in sats to your Satsback dashboard once Douglas confirms the order."
+      },
+      {
+        "question": "Do I need to verify my identity (KYC) to earn?",
+        "answer_md": "No. Satsback is free and requires no KYC — you only need an account and the browser extension to earn Bitcoin at Douglas."
+      },
+      {
+        "question": "When can I withdraw my Douglas cashback?",
+        "answer_md": "Once the order moves from *pending* to *confirmed* (after Douglas's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
+      }
+    ]
+  },
+  {
+    "slug": "hbm-machines",
+    "name": "HBM Machines",
+    "satsback_slug": "hbm-machines",
+    "logo_url": "https://cdn.satsback.com/stores/partners/hbm-machines-v2.png",
+    "cashback_text": "up to 2%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "ziengs",
+    "name": "Ziengs",
+    "satsback_slug": "ziengs",
+    "logo_url": "https://cdn.satsback.com/stores/partners/ziengs-v2.svg",
+    "cashback_text": "up to 2.2%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "simyo",
+    "name": "Simyo",
+    "satsback_slug": "simyo",
+    "logo_url": "https://cdn.satsback.com/stores/partners/simyo-v2.svg",
+    "cashback_text": "up to 28.341 sats",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "albelli-5",
+    "name": "Albelli",
+    "satsback_slug": "albelli-5",
+    "logo_url": "https://cdn.satsback.com/stores/partners/albelli-v2.jpg",
+    "cashback_text": "up to 3.2%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "vidaxlnl",
+    "name": "vidaXL.nl",
+    "satsback_slug": "vidaxlnl",
+    "logo_url": "https://satsback.com/assets/media/partners/vidaxl.svg",
+    "cashback_text": "up to 3.2%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "getyourguide-12",
+    "name": "GetYourGuide",
+    "satsback_slug": "getyourguide-12",
+    "logo_url": "https://cdn.satsback.com/stores/partners/getyourguide-12-v2.svg",
+    "cashback_text": "up to 2.9%",
+    "category_slug": "travel",
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "## Earn Bitcoin at GetYourGuide\n\nGetYourGuide, the tours and activities marketplace GetYourGuide, is one of the stores paying Bitcoin back through Satsback. Buy through Satsback and you get up to 2.9% of your order value back in Bitcoin, paid as sats to a Lightning wallet you control.\n\nRather than a coupon or cashback voucher, GetYourGuide shoppers get paid in Bitcoin here. Below: the live rate, the honest truth about tracking reliability, and when it's actually worth using for travel.",
+    "how_it_works_md": "## How GetYourGuide Bitcoin cashback works\n\n1. Create a free Satsback account (no KYC required) and add the browser extension.\n2. Open GetYourGuide through Satsback — the extension prompts you to activate rewards with one click.\n3. Shop and check out as normal. Your cashback (up to 2.9%) shows as *pending* in your Satsback dashboard.\n4. After GetYourGuide confirms the sale, the sats become withdrawable to any Bitcoin Lightning wallet.\n\n**Tracking caveat — worth reading.** Satsback depends on affiliate tracking, and users report roughly two out of three orders track cleanly (it sits around 3.2/5 on the Chrome Web Store). To give yourself the best odds: disable ad-blockers on the GetYourGuide tab, don't run other coupon or cashback extensions at checkout, and make the Satsback tab the last thing you touch before paying. If an order doesn't appear within a few days, Satsback support can chase it with your receipt.",
+    "worth_it_md": "## Is it worth it?\n\nThe rate is solid for travel; on a normal-sized GetYourGuide order it adds up to a worthwhile chunk of sats.\n\nTwo things to weigh: the reward is Bitcoin, so its fiat value moves with BTC — a plus if you're stacking long-term, a variable if you're not. And Satsback rarely stacks with GetYourGuide's own loyalty program on the same order, so compare the two and use whichever pays more.",
+    "faqs": [
+      {
+        "question": "How much Bitcoin do I earn at GetYourGuide?",
+        "answer_md": "Currently up to 2.9%, credited in sats to your Satsback dashboard once GetYourGuide confirms the order."
+      },
+      {
+        "question": "Do I need to verify my identity (KYC) to earn?",
+        "answer_md": "No. Satsback is free and requires no KYC — you only need an account and the browser extension to earn Bitcoin at GetYourGuide."
+      },
+      {
+        "question": "When can I withdraw my GetYourGuide cashback?",
+        "answer_md": "Once the order moves from *pending* to *confirmed* (after GetYourGuide's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
+      }
+    ]
+  },
+  {
+    "slug": "plutosport",
+    "name": "Plutosport",
+    "satsback_slug": "plutosport",
+    "logo_url": "https://cdn.satsback.com/stores/partners/plutosport-v2.svg",
+    "cashback_text": "up to 2%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "gall-gall-2",
+    "name": "Gall & Gall",
+    "satsback_slug": "gall-gall-2",
+    "logo_url": "https://cdn.satsback.com/stores/s/gall-en-gall-nl-1072619.png",
+    "cashback_text": "up to 2%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "winparts",
+    "name": "Winparts",
+    "satsback_slug": "winparts",
+    "logo_url": "https://cdn.satsback.com/stores/s/winparts-auto-onderdelen-137945.png",
+    "cashback_text": "up to 1.1%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "lego-10",
+    "name": "LEGO",
+    "satsback_slug": "lego-10",
+    "logo_url": "https://satsback.com/assets/media/partners/lego.svg",
+    "cashback_text": "up to 1.3%",
+    "category_slug": "marketplaces",
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "## Earn Bitcoin at LEGO\n\nLEGO, the official LEGO store, is one of the stores paying Bitcoin back through Satsback. Buy through Satsback and you get up to 1.3% of your order value back in Bitcoin, paid as sats to a Lightning wallet you control.\n\nRather than a coupon or cashback voucher, LEGO shoppers get paid in Bitcoin here. Below: the live rate, the honest truth about tracking reliability, and when it's actually worth using for marketplaces.",
+    "how_it_works_md": "## How LEGO Bitcoin cashback works\n\n1. Create a free Satsback account (no KYC required) and add the browser extension.\n2. Open LEGO through Satsback — the extension prompts you to activate rewards with one click.\n3. Shop and check out as normal. Your cashback (up to 1.3%) shows as *pending* in your Satsback dashboard.\n4. After LEGO confirms the sale, the sats become withdrawable to any Bitcoin Lightning wallet.\n\n**Tracking caveat — worth reading.** Satsback depends on affiliate tracking, and users report roughly two out of three orders track cleanly (it sits around 3.2/5 on the Chrome Web Store). To give yourself the best odds: disable ad-blockers on the LEGO tab, don't run other coupon or cashback extensions at checkout, and make the Satsback tab the last thing you touch before paying. If an order doesn't appear within a few days, Satsback support can chase it with your receipt.",
+    "worth_it_md": "## Is it worth it?\n\nThe rate is modest, so it's most worth it on larger LEGO orders where even a small percentage becomes meaningful sats.\n\nTwo things to weigh: the reward is Bitcoin, so its fiat value moves with BTC — a plus if you're stacking long-term, a variable if you're not. And Satsback rarely stacks with LEGO's own loyalty program on the same order, so compare the two and use whichever pays more.",
+    "faqs": [
+      {
+        "question": "How much Bitcoin do I earn at LEGO?",
+        "answer_md": "Currently up to 1.3%, credited in sats to your Satsback dashboard once LEGO confirms the order."
+      },
+      {
+        "question": "Do I need to verify my identity (KYC) to earn?",
+        "answer_md": "No. Satsback is free and requires no KYC — you only need an account and the browser extension to earn Bitcoin at LEGO."
+      },
+      {
+        "question": "When can I withdraw my LEGO cashback?",
+        "answer_md": "Once the order moves from *pending* to *confirmed* (after LEGO's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
+      }
+    ]
+  },
+  {
+    "slug": "hallmark",
+    "name": "Hallmark",
+    "satsback_slug": "hallmark",
+    "logo_url": "https://cdn.satsback.com/stores/partners/hallmark-v2.svg",
+    "cashback_text": "up to 4.9%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "nedgame",
+    "name": "Nedgame",
+    "satsback_slug": "nedgame",
+    "logo_url": "https://cdn.satsback.com/stores/partners/nedgame-v2.png",
+    "cashback_text": "up to 2%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "braadbaas",
+    "name": "Braadbaas",
+    "satsback_slug": "braadbaas",
+    "logo_url": "https://cdn.satsback.com/stores/s/braadbaas-1063675.svg",
+    "cashback_text": "up to 3.2%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "barefoot-more-3",
+    "name": "Barefoot & More",
+    "satsback_slug": "barefoot-more-3",
+    "logo_url": "https://cdn.satsback.com/stores/s/barefoot-more-1060296.jpg",
+    "cashback_text": "up to 3.2%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "printabout",
+    "name": "PrintAbout",
+    "satsback_slug": "printabout",
+    "logo_url": "https://cdn.satsback.com/stores/partners/printabout-v2.svg",
+    "cashback_text": "up to 4%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "simpel",
+    "name": "Simpel",
+    "satsback_slug": "simpel",
+    "logo_url": "https://cdn.satsback.com/stores/s/simpel-nl-132972.jpg",
+    "cashback_text": "up to 10.628 sats",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "daka",
+    "name": "Daka",
+    "satsback_slug": "daka",
+    "logo_url": "https://cdn.satsback.com/stores/s/daka-7548.jpg",
+    "cashback_text": "up to 2%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "batterijenhuis",
+    "name": "Batterijenhuis",
+    "satsback_slug": "batterijenhuis",
+    "logo_url": "https://cdn.satsback.com/stores/partners/batterijenhuis-v2.png",
+    "cashback_text": "up to 1.6%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "trivago",
+    "name": "Trivago",
+    "satsback_slug": "trivago",
+    "logo_url": "https://cdn.satsback.com/stores/s/trivago-cashback-1072708.png",
+    "cashback_text": "up to 2.125 sats",
+    "category_slug": "travel",
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "## Earn Bitcoin at Trivago\n\nTrivago, the hotel price-comparison site Trivago, is one of the stores paying Bitcoin back through Satsback. Buy through Satsback and you get a fixed up to 2.125 sats in Bitcoin per qualifying order, paid to a Lightning wallet you control.\n\nIf Trivago is already on your shopping list, routing the order through Satsback is free money on spending you'd do regardless — this page covers the current rate, how the tracking really works, and whether it's worth the extra step for a travel purchase.",
+    "how_it_works_md": "## How Trivago Bitcoin cashback works\n\n1. Create a free Satsback account (no KYC required) and add the browser extension.\n2. Open Trivago through Satsback — the extension prompts you to activate rewards with one click.\n3. Shop and check out as normal. Your cashback (up to 2.125 sats) shows as *pending* in your Satsback dashboard.\n4. After Trivago confirms the sale, the sats become withdrawable to any Bitcoin Lightning wallet.\n\n**Tracking caveat — worth reading.** Satsback depends on affiliate tracking, and users report roughly two out of three orders track cleanly (it sits around 3.2/5 on the Chrome Web Store). To give yourself the best odds: disable ad-blockers on the Trivago tab, don't run other coupon or cashback extensions at checkout, and make the Satsback tab the last thing you touch before paying. If an order doesn't appear within a few days, Satsback support can chase it with your receipt.",
+    "worth_it_md": "## Is it worth it?\n\nTrivago pays a fixed number of sats per order here, so it's most rewarding on smaller baskets where that flat reward is a bigger share of what you spend.\n\nTwo things to weigh: the reward is Bitcoin, so its fiat value moves with BTC — a plus if you're stacking long-term, a variable if you're not. And Satsback rarely stacks with Trivago's own loyalty program on the same order, so compare the two and use whichever pays more.",
+    "faqs": [
+      {
+        "question": "How much Bitcoin do I earn at Trivago?",
+        "answer_md": "Currently up to 2.125 sats, credited in sats to your Satsback dashboard once Trivago confirms the order."
+      },
+      {
+        "question": "Do I need to verify my identity (KYC) to earn?",
+        "answer_md": "No. Satsback is free and requires no KYC — you only need an account and the browser extension to earn Bitcoin at Trivago."
+      },
+      {
+        "question": "When can I withdraw my Trivago cashback?",
+        "answer_md": "Once the order moves from *pending* to *confirmed* (after Trivago's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
+      }
+    ]
+  },
+  {
+    "slug": "haarshopnl-2",
+    "name": "Haarshop.nl",
+    "satsback_slug": "haarshopnl-2",
+    "logo_url": "https://cdn.satsback.com/stores/s/haarshop-1066879.png",
+    "cashback_text": "up to 3.2%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "prime-video-9",
+    "name": "Prime Video",
+    "satsback_slug": "prime-video-9",
+    "logo_url": "https://cdn.satsback.com/stores/s/amazon-prime-video-nl-1070589.png",
+    "cashback_text": "up to 2.479 sats",
+    "category_slug": "services",
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "## Earn Bitcoin at Prime Video\n\nPrime Video is Amazon's on-demand video streaming service. Buy through Satsback and you get a fixed up to 2.479 sats in Bitcoin per qualifying order, paid to a Lightning wallet you control.\n\nRather than a coupon or cashback voucher, Prime Video shoppers get paid in Bitcoin here. Below: the live rate, the honest truth about tracking reliability, and when it's actually worth using for services.",
+    "how_it_works_md": "## How Prime Video Bitcoin cashback works\n\n1. Create a free Satsback account (no KYC required) and add the browser extension.\n2. Open Prime Video through Satsback — the extension prompts you to activate rewards with one click.\n3. Shop and check out as normal. Your cashback (up to 2.479 sats) shows as *pending* in your Satsback dashboard.\n4. After Prime Video confirms the sale, the sats become withdrawable to any Bitcoin Lightning wallet.\n\n**Tracking caveat — worth reading.** Satsback depends on affiliate tracking, and users report roughly two out of three orders track cleanly (it sits around 3.2/5 on the Chrome Web Store). To give yourself the best odds: disable ad-blockers on the Prime Video tab, don't run other coupon or cashback extensions at checkout, and make the Satsback tab the last thing you touch before paying. If an order doesn't appear within a few days, Satsback support can chase it with your receipt.",
+    "worth_it_md": "## Is it worth it?\n\nPrime Video pays a fixed number of sats per order here, so it's most rewarding on smaller baskets where that flat reward is a bigger share of what you spend.\n\nTwo things to weigh: the reward is Bitcoin, so its fiat value moves with BTC — a plus if you're stacking long-term, a variable if you're not. And Satsback rarely stacks with Prime Video's own loyalty program on the same order, so compare the two and use whichever pays more.",
+    "faqs": [
+      {
+        "question": "How much Bitcoin do I earn at Prime Video?",
+        "answer_md": "Currently up to 2.479 sats, credited in sats to your Satsback dashboard once Prime Video confirms the order."
+      },
+      {
+        "question": "Do I need to verify my identity (KYC) to earn?",
+        "answer_md": "No. Satsback is free and requires no KYC — you only need an account and the browser extension to earn Bitcoin at Prime Video."
+      },
+      {
+        "question": "When can I withdraw my Prime Video cashback?",
+        "answer_md": "Once the order moves from *pending* to *confirmed* (after Prime Video's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
+      }
+    ]
+  },
+  {
+    "slug": "pme-legend-3",
+    "name": "PME Legend",
+    "satsback_slug": "pme-legend-3",
+    "logo_url": "https://satsback.com/assets/media/partners/pme-legend.svg",
+    "cashback_text": "up to 4%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "pazzoxnl-2",
+    "name": "Pazzox.nl",
+    "satsback_slug": "pazzoxnl-2",
+    "logo_url": "https://cdn.satsback.com/stores/s/pazzox-nl-1056188.jpg",
+    "cashback_text": "up to 2.9%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "mothers-earth",
+    "name": "Mother's Earth",
+    "satsback_slug": "mothers-earth",
+    "logo_url": "https://cdn.satsback.com/stores/s/mothers-earth-1062672.svg",
+    "cashback_text": "up to 1%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "bergzeit",
+    "name": "Bergzeit",
+    "satsback_slug": "bergzeit",
+    "logo_url": "https://cdn.satsback.com/stores/partners/bergzeit-v2.png",
+    "cashback_text": "up to 3.2%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "sliponlinenl",
+    "name": "Sliponline.nl",
+    "satsback_slug": "sliponlinenl",
+    "logo_url": "https://cdn.satsback.com/stores/s/sliponline-nl-89359.jpg",
+    "cashback_text": "up to 4%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "hm-4",
+    "name": "H&M",
+    "satsback_slug": "hm-4",
+    "logo_url": "https://cdn.satsback.com/stores/s/handm-nl-1064201.png",
+    "cashback_text": "up to 4%",
+    "category_slug": "fashion",
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "## Earn Bitcoin at H&M\n\nH&M — the high-street fashion retailer H&M — is on Satsback. Buy through Satsback and you get up to 4% of your order value back in Bitcoin, paid as sats to a Lightning wallet you control.\n\nIf H&M is already on your shopping list, routing the order through Satsback is free money on spending you'd do regardless — this page covers the current rate, how the tracking really works, and whether it's worth the extra step for a fashion purchase.",
+    "how_it_works_md": "## How H&M Bitcoin cashback works\n\n1. Create a free Satsback account (no KYC required) and add the browser extension.\n2. Open H&M through Satsback — the extension prompts you to activate rewards with one click.\n3. Shop and check out as normal. Your cashback (up to 4%) shows as *pending* in your Satsback dashboard.\n4. After H&M confirms the sale, the sats become withdrawable to any Bitcoin Lightning wallet.\n\n**Tracking caveat — worth reading.** Satsback depends on affiliate tracking, and users report roughly two out of three orders track cleanly (it sits around 3.2/5 on the Chrome Web Store). To give yourself the best odds: disable ad-blockers on the H&M tab, don't run other coupon or cashback extensions at checkout, and make the Satsback tab the last thing you touch before paying. If an order doesn't appear within a few days, Satsback support can chase it with your receipt.",
+    "worth_it_md": "## Is it worth it?\n\nAt 4%+, H&M is one of the stronger fashion rates on Satsback — comfortably worth the two-minute setup.\n\nTwo things to weigh: the reward is Bitcoin, so its fiat value moves with BTC — a plus if you're stacking long-term, a variable if you're not. And Satsback rarely stacks with H&M's own loyalty program on the same order, so compare the two and use whichever pays more.",
+    "faqs": [
+      {
+        "question": "How much Bitcoin do I earn at H&M?",
+        "answer_md": "Currently up to 4%, credited in sats to your Satsback dashboard once H&M confirms the order."
+      },
+      {
+        "question": "Do I need to verify my identity (KYC) to earn?",
+        "answer_md": "No. Satsback is free and requires no KYC — you only need an account and the browser extension to earn Bitcoin at H&M."
+      },
+      {
+        "question": "When can I withdraw my H&M cashback?",
+        "answer_md": "Once the order moves from *pending* to *confirmed* (after H&M's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
+      }
+    ]
+  },
+  {
+    "slug": "bbquality-2",
+    "name": "BBQuality",
+    "satsback_slug": "bbquality-2",
+    "logo_url": "https://cdn.satsback.com/stores/s/bbquality-nl-1069453.png",
+    "cashback_text": "up to 2%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "kraken-3",
+    "name": "Kraken",
+    "satsback_slug": "kraken-3",
+    "logo_url": "https://cdn.satsback.com/stores/s/kraken-nl-1062177.svg",
+    "cashback_text": "up to 7.085 sats",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "van-asten-babysuperstore",
+    "name": "Van Asten BabySuperstore",
+    "satsback_slug": "van-asten-babysuperstore",
+    "logo_url": "https://cdn.satsback.com/stores/s/van-asten-babysuperstore-123890.jpg",
+    "cashback_text": "up to 1%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "schuurman-schoenen",
+    "name": "Schuurman Schoenen",
+    "satsback_slug": "schuurman-schoenen",
+    "logo_url": "https://cdn.satsback.com/stores/partners/schuurman-schoenen-v2.svg",
+    "cashback_text": "up to 3.2%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "foot-locker",
+    "name": "Foot Locker",
+    "satsback_slug": "foot-locker",
+    "logo_url": "https://satsback.com/assets/media/partners/foot-locker.svg",
+    "cashback_text": "up to 2.5%",
+    "category_slug": "fashion",
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "## Earn Bitcoin at Foot Locker\n\nFoot Locker, the sneaker and athletic-footwear retailer Foot Locker, is one of the stores paying Bitcoin back through Satsback. Buy through Satsback and you get up to 2.5% of your order value back in Bitcoin, paid as sats to a Lightning wallet you control.\n\nRather than a coupon or cashback voucher, Foot Locker shoppers get paid in Bitcoin here. Below: the live rate, the honest truth about tracking reliability, and when it's actually worth using for fashion.",
+    "how_it_works_md": "## How Foot Locker Bitcoin cashback works\n\n1. Create a free Satsback account (no KYC required) and add the browser extension.\n2. Open Foot Locker through Satsback — the extension prompts you to activate rewards with one click.\n3. Shop and check out as normal. Your cashback (up to 2.5%) shows as *pending* in your Satsback dashboard.\n4. After Foot Locker confirms the sale, the sats become withdrawable to any Bitcoin Lightning wallet.\n\n**Tracking caveat — worth reading.** Satsback depends on affiliate tracking, and users report roughly two out of three orders track cleanly (it sits around 3.2/5 on the Chrome Web Store). To give yourself the best odds: disable ad-blockers on the Foot Locker tab, don't run other coupon or cashback extensions at checkout, and make the Satsback tab the last thing you touch before paying. If an order doesn't appear within a few days, Satsback support can chase it with your receipt.",
+    "worth_it_md": "## Is it worth it?\n\nThe rate is solid for fashion; on a normal-sized Foot Locker order it adds up to a worthwhile chunk of sats.\n\nTwo things to weigh: the reward is Bitcoin, so its fiat value moves with BTC — a plus if you're stacking long-term, a variable if you're not. And Satsback rarely stacks with Foot Locker's own loyalty program on the same order, so compare the two and use whichever pays more.",
+    "faqs": [
+      {
+        "question": "How much Bitcoin do I earn at Foot Locker?",
+        "answer_md": "Currently up to 2.5%, credited in sats to your Satsback dashboard once Foot Locker confirms the order."
+      },
+      {
+        "question": "Do I need to verify my identity (KYC) to earn?",
+        "answer_md": "No. Satsback is free and requires no KYC — you only need an account and the browser extension to earn Bitcoin at Foot Locker."
+      },
+      {
+        "question": "When can I withdraw my Foot Locker cashback?",
+        "answer_md": "Once the order moves from *pending* to *confirmed* (after Foot Locker's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
+      }
+    ]
+  },
+  {
+    "slug": "philips-persoonlijke-verzorging",
+    "name": "Philips Persoonlijke Verzorging",
+    "satsback_slug": "philips-persoonlijke-verzorging",
+    "logo_url": "https://cdn.satsback.com/stores/s/philips-nl-97259.png",
+    "cashback_text": "up to 2%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "tripcom-13",
+    "name": "Trip.com",
+    "satsback_slug": "tripcom-13",
+    "logo_url": "https://cdn.satsback.com/stores/l/tripcom-13-logo",
+    "cashback_text": "up to 2%",
+    "category_slug": "travel",
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "## Earn Bitcoin at Trip.com\n\nTrip.com — the online travel agency Trip.com — is on Satsback. Buy through Satsback and you get up to 2% of your order value back in Bitcoin, paid as sats to a Lightning wallet you control.\n\nRather than a coupon or cashback voucher, Trip.com shoppers get paid in Bitcoin here. Below: the live rate, the honest truth about tracking reliability, and when it's actually worth using for travel.",
+    "how_it_works_md": "## How Trip.com Bitcoin cashback works\n\n1. Create a free Satsback account (no KYC required) and add the browser extension.\n2. Open Trip.com through Satsback — the extension prompts you to activate rewards with one click.\n3. Shop and check out as normal. Your cashback (up to 2%) shows as *pending* in your Satsback dashboard.\n4. After Trip.com confirms the sale, the sats become withdrawable to any Bitcoin Lightning wallet.\n\n**Tracking caveat — worth reading.** Satsback depends on affiliate tracking, and users report roughly two out of three orders track cleanly (it sits around 3.2/5 on the Chrome Web Store). To give yourself the best odds: disable ad-blockers on the Trip.com tab, don't run other coupon or cashback extensions at checkout, and make the Satsback tab the last thing you touch before paying. If an order doesn't appear within a few days, Satsback support can chase it with your receipt.",
+    "worth_it_md": "## Is it worth it?\n\nThe rate is solid for travel; on a normal-sized Trip.com order it adds up to a worthwhile chunk of sats.\n\nTwo things to weigh: the reward is Bitcoin, so its fiat value moves with BTC — a plus if you're stacking long-term, a variable if you're not. And Satsback rarely stacks with Trip.com's own loyalty program on the same order, so compare the two and use whichever pays more.",
+    "faqs": [
+      {
+        "question": "How much Bitcoin do I earn at Trip.com?",
+        "answer_md": "Currently up to 2%, credited in sats to your Satsback dashboard once Trip.com confirms the order."
+      },
+      {
+        "question": "Do I need to verify my identity (KYC) to earn?",
+        "answer_md": "No. Satsback is free and requires no KYC — you only need an account and the browser extension to earn Bitcoin at Trip.com."
+      },
+      {
+        "question": "When can I withdraw my Trip.com cashback?",
+        "answer_md": "Once the order moves from *pending* to *confirmed* (after Trip.com's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
+      }
+    ]
+  },
+  {
+    "slug": "essent",
+    "name": "Essent",
+    "satsback_slug": "essent",
+    "logo_url": "https://cdn.satsback.com/stores/s/essent-dc1-101454.jpg",
+    "cashback_text": "up to 42.512 sats",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "superfoodstorenl-3",
+    "name": "Superfoodstore.nl",
+    "satsback_slug": "superfoodstorenl-3",
+    "logo_url": "https://cdn.satsback.com/stores/s/superfoodstore-nl-1067807.jpg",
+    "cashback_text": "up to 2%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "under-armour-23",
+    "name": "Under Armour",
+    "satsback_slug": "under-armour-23",
+    "logo_url": "https://satsback.com/assets/media/partners/under-armour.svg",
+    "cashback_text": "up to 2%",
+    "category_slug": "fashion",
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "## Earn Bitcoin at Under Armour\n\nUnder Armour — the performance-sportswear brand Under Armour — is on Satsback. Buy through Satsback and you get up to 2% of your order value back in Bitcoin, paid as sats to a Lightning wallet you control.\n\nRather than a coupon or cashback voucher, Under Armour shoppers get paid in Bitcoin here. Below: the live rate, the honest truth about tracking reliability, and when it's actually worth using for fashion.",
+    "how_it_works_md": "## How Under Armour Bitcoin cashback works\n\n1. Create a free Satsback account (no KYC required) and add the browser extension.\n2. Open Under Armour through Satsback — the extension prompts you to activate rewards with one click.\n3. Shop and check out as normal. Your cashback (up to 2%) shows as *pending* in your Satsback dashboard.\n4. After Under Armour confirms the sale, the sats become withdrawable to any Bitcoin Lightning wallet.\n\n**Tracking caveat — worth reading.** Satsback depends on affiliate tracking, and users report roughly two out of three orders track cleanly (it sits around 3.2/5 on the Chrome Web Store). To give yourself the best odds: disable ad-blockers on the Under Armour tab, don't run other coupon or cashback extensions at checkout, and make the Satsback tab the last thing you touch before paying. If an order doesn't appear within a few days, Satsback support can chase it with your receipt.",
+    "worth_it_md": "## Is it worth it?\n\nThe rate is solid for fashion; on a normal-sized Under Armour order it adds up to a worthwhile chunk of sats.\n\nTwo things to weigh: the reward is Bitcoin, so its fiat value moves with BTC — a plus if you're stacking long-term, a variable if you're not. And Satsback rarely stacks with Under Armour's own loyalty program on the same order, so compare the two and use whichever pays more.",
+    "faqs": [
+      {
+        "question": "How much Bitcoin do I earn at Under Armour?",
+        "answer_md": "Currently up to 2%, credited in sats to your Satsback dashboard once Under Armour confirms the order."
+      },
+      {
+        "question": "Do I need to verify my identity (KYC) to earn?",
+        "answer_md": "No. Satsback is free and requires no KYC — you only need an account and the browser extension to earn Bitcoin at Under Armour."
+      },
+      {
+        "question": "When can I withdraw my Under Armour cashback?",
+        "answer_md": "Once the order moves from *pending* to *confirmed* (after Under Armour's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
+      }
+    ]
+  },
+  {
+    "slug": "nordvpn",
+    "name": "NordVPN",
+    "satsback_slug": "nordvpn",
+    "logo_url": "https://cdn.satsback.com/stores/s/nordvpn-nl-118972.svg",
+    "cashback_text": "up to 20%",
+    "category_slug": "services",
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "## Earn Bitcoin at NordVPN\n\nNordVPN, one of the most popular privacy VPNs, is one of the stores paying Bitcoin back through Satsback. Buy through Satsback and you get up to 20% of your order value back in Bitcoin, paid as sats to a Lightning wallet you control.\n\nRather than a coupon or cashback voucher, NordVPN shoppers get paid in Bitcoin here. Below: the live rate, the honest truth about tracking reliability, and when it's actually worth using for services.",
+    "how_it_works_md": "## How NordVPN Bitcoin cashback works\n\n1. Create a free Satsback account (no KYC required) and add the browser extension.\n2. Open NordVPN through Satsback — the extension prompts you to activate rewards with one click.\n3. Shop and check out as normal. Your cashback (up to 20%) shows as *pending* in your Satsback dashboard.\n4. After NordVPN confirms the sale, the sats become withdrawable to any Bitcoin Lightning wallet.\n\n**Tracking caveat — worth reading.** Satsback depends on affiliate tracking, and users report roughly two out of three orders track cleanly (it sits around 3.2/5 on the Chrome Web Store). To give yourself the best odds: disable ad-blockers on the NordVPN tab, don't run other coupon or cashback extensions at checkout, and make the Satsback tab the last thing you touch before paying. If an order doesn't appear within a few days, Satsback support can chase it with your receipt.",
+    "worth_it_md": "## Is it worth it?\n\nAt 20%+, NordVPN is one of the stronger services rates on Satsback — comfortably worth the two-minute setup.\n\nTwo things to weigh: the reward is Bitcoin, so its fiat value moves with BTC — a plus if you're stacking long-term, a variable if you're not. And Satsback rarely stacks with NordVPN's own loyalty program on the same order, so compare the two and use whichever pays more.",
+    "faqs": [
+      {
+        "question": "How much Bitcoin do I earn at NordVPN?",
+        "answer_md": "Currently up to 20%, credited in sats to your Satsback dashboard once NordVPN confirms the order."
+      },
+      {
+        "question": "Do I need to verify my identity (KYC) to earn?",
+        "answer_md": "No. Satsback is free and requires no KYC — you only need an account and the browser extension to earn Bitcoin at NordVPN."
+      },
+      {
+        "question": "When can I withdraw my NordVPN cashback?",
+        "answer_md": "Once the order moves from *pending* to *confirmed* (after NordVPN's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
+      }
+    ]
+  },
+  {
+    "slug": "123jaloezie-2",
+    "name": "123jaloezie",
+    "satsback_slug": "123jaloezie-2",
+    "logo_url": "https://cdn.satsback.com/stores/s/123jaloezie-nl-1071009.jpg",
+    "cashback_text": "up to 2.6%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "pharmamarket",
+    "name": "PharmaMarket",
+    "satsback_slug": "pharmamarket",
+    "logo_url": "https://cdn.satsback.com/stores/partners/pharmamarket-v2.svg",
+    "cashback_text": "up to 1.6%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "kpn-thuis-2",
+    "name": "KPN Thuis",
+    "satsback_slug": "kpn-thuis-2",
+    "logo_url": "https://cdn.satsback.com/stores/s/kpn-thuis-1066272.png",
+    "cashback_text": "up to 40.386 sats",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "jumbo-sports",
+    "name": "Jumbo Sports",
+    "satsback_slug": "jumbo-sports",
+    "logo_url": "https://cdn.satsback.com/stores/s/jumbogolf-88175.jpg",
+    "cashback_text": "up to 2%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "hostinger-9",
+    "name": "Hostinger",
+    "satsback_slug": "hostinger-9",
+    "logo_url": "https://cdn.satsback.com/stores/l/hostinger-9-logo",
+    "cashback_text": "up to 16.8%",
+    "category_slug": "services",
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "## Earn Bitcoin at Hostinger\n\nHostinger is the web-hosting provider Hostinger. Buy through Satsback and you get up to 16.8% of your order value back in Bitcoin, paid as sats to a Lightning wallet you control.\n\nRather than a coupon or cashback voucher, Hostinger shoppers get paid in Bitcoin here. Below: the live rate, the honest truth about tracking reliability, and when it's actually worth using for services.",
+    "how_it_works_md": "## How Hostinger Bitcoin cashback works\n\n1. Create a free Satsback account (no KYC required) and add the browser extension.\n2. Open Hostinger through Satsback — the extension prompts you to activate rewards with one click.\n3. Shop and check out as normal. Your cashback (up to 16.8%) shows as *pending* in your Satsback dashboard.\n4. After Hostinger confirms the sale, the sats become withdrawable to any Bitcoin Lightning wallet.\n\n**Tracking caveat — worth reading.** Satsback depends on affiliate tracking, and users report roughly two out of three orders track cleanly (it sits around 3.2/5 on the Chrome Web Store). To give yourself the best odds: disable ad-blockers on the Hostinger tab, don't run other coupon or cashback extensions at checkout, and make the Satsback tab the last thing you touch before paying. If an order doesn't appear within a few days, Satsback support can chase it with your receipt.",
+    "worth_it_md": "## Is it worth it?\n\nAt 16.8%+, Hostinger is one of the stronger services rates on Satsback — comfortably worth the two-minute setup.\n\nTwo things to weigh: the reward is Bitcoin, so its fiat value moves with BTC — a plus if you're stacking long-term, a variable if you're not. And Satsback rarely stacks with Hostinger's own loyalty program on the same order, so compare the two and use whichever pays more.",
+    "faqs": [
+      {
+        "question": "How much Bitcoin do I earn at Hostinger?",
+        "answer_md": "Currently up to 16.8%, credited in sats to your Satsback dashboard once Hostinger confirms the order."
+      },
+      {
+        "question": "Do I need to verify my identity (KYC) to earn?",
+        "answer_md": "No. Satsback is free and requires no KYC — you only need an account and the browser extension to earn Bitcoin at Hostinger."
+      },
+      {
+        "question": "When can I withdraw my Hostinger cashback?",
+        "answer_md": "Once the order moves from *pending* to *confirmed* (after Hostinger's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
+      }
+    ]
+  },
+  {
+    "slug": "vision-direct",
+    "name": "Vision Direct",
+    "satsback_slug": "vision-direct",
+    "logo_url": "https://cdn.satsback.com/stores/partners/vision-direct-v2.svg",
+    "cashback_text": "up to 4%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "dekbed-discounter-3",
+    "name": "Dekbed-Discounter",
+    "satsback_slug": "dekbed-discounter-3",
+    "logo_url": "https://cdn.satsback.com/stores/partners/dekbed-discounter-3-v2.svg",
+    "cashback_text": "up to 1%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "energiedirect-2",
+    "name": "Energiedirect",
+    "satsback_slug": "energiedirect-2",
+    "logo_url": "https://cdn.satsback.com/stores/s/energiedirect-nl-1063586.png",
+    "cashback_text": "up to 31.884 sats",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "medpets",
+    "name": "Medpets",
+    "satsback_slug": "medpets",
+    "logo_url": "https://cdn.satsback.com/stores/s/medpets-1063008.svg",
+    "cashback_text": "up to 1.6%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "pricewise-internet-tv",
+    "name": "PriceWise Internet & tv",
+    "satsback_slug": "pricewise-internet-tv",
+    "logo_url": "https://cdn.satsback.com/stores/s/pricewise-internet-tv-1059381.jpg",
+    "cashback_text": "up to 22.319 sats",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "sharkninja-10",
+    "name": "SharkNinja",
+    "satsback_slug": "sharkninja-10",
+    "logo_url": "https://cdn.satsback.com/stores/s/ninja-1062265.png",
+    "cashback_text": "up to 4%",
+    "category_slug": "tech-electronics",
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "## Earn Bitcoin at SharkNinja\n\nSharkNinja — the maker of Ninja and Shark home appliances — is on Satsback. Buy through Satsback and you get up to 4% of your order value back in Bitcoin, paid as sats to a Lightning wallet you control.\n\nRather than a coupon or cashback voucher, SharkNinja shoppers get paid in Bitcoin here. Below: the live rate, the honest truth about tracking reliability, and when it's actually worth using for tech electronics.",
+    "how_it_works_md": "## How SharkNinja Bitcoin cashback works\n\n1. Create a free Satsback account (no KYC required) and add the browser extension.\n2. Open SharkNinja through Satsback — the extension prompts you to activate rewards with one click.\n3. Shop and check out as normal. Your cashback (up to 4%) shows as *pending* in your Satsback dashboard.\n4. After SharkNinja confirms the sale, the sats become withdrawable to any Bitcoin Lightning wallet.\n\n**Tracking caveat — worth reading.** Satsback depends on affiliate tracking, and users report roughly two out of three orders track cleanly (it sits around 3.2/5 on the Chrome Web Store). To give yourself the best odds: disable ad-blockers on the SharkNinja tab, don't run other coupon or cashback extensions at checkout, and make the Satsback tab the last thing you touch before paying. If an order doesn't appear within a few days, Satsback support can chase it with your receipt.",
+    "worth_it_md": "## Is it worth it?\n\nAt 4%+, SharkNinja is one of the stronger tech electronics rates on Satsback — comfortably worth the two-minute setup.\n\nTwo things to weigh: the reward is Bitcoin, so its fiat value moves with BTC — a plus if you're stacking long-term, a variable if you're not. And Satsback rarely stacks with SharkNinja's own loyalty program on the same order, so compare the two and use whichever pays more.",
+    "faqs": [
+      {
+        "question": "How much Bitcoin do I earn at SharkNinja?",
+        "answer_md": "Currently up to 4%, credited in sats to your Satsback dashboard once SharkNinja confirms the order."
+      },
+      {
+        "question": "Do I need to verify my identity (KYC) to earn?",
+        "answer_md": "No. Satsback is free and requires no KYC — you only need an account and the browser extension to earn Bitcoin at SharkNinja."
+      },
+      {
+        "question": "When can I withdraw my SharkNinja cashback?",
+        "answer_md": "Once the order moves from *pending* to *confirmed* (after SharkNinja's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
+      }
+    ]
+  },
+  {
+    "slug": "mango-14",
+    "name": "Mango",
+    "satsback_slug": "mango-14",
+    "logo_url": "https://cdn.satsback.com/stores/s/mango-nl-1072039.jpg",
+    "cashback_text": "up to 1.3%",
+    "category_slug": "fashion",
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "## Earn Bitcoin at Mango\n\nMango, the international fashion brand Mango, is one of the stores paying Bitcoin back through Satsback. Buy through Satsback and you get up to 1.3% of your order value back in Bitcoin, paid as sats to a Lightning wallet you control.\n\nIf Mango is already on your shopping list, routing the order through Satsback is free money on spending you'd do regardless — this page covers the current rate, how the tracking really works, and whether it's worth the extra step for a fashion purchase.",
+    "how_it_works_md": "## How Mango Bitcoin cashback works\n\n1. Create a free Satsback account (no KYC required) and add the browser extension.\n2. Open Mango through Satsback — the extension prompts you to activate rewards with one click.\n3. Shop and check out as normal. Your cashback (up to 1.3%) shows as *pending* in your Satsback dashboard.\n4. After Mango confirms the sale, the sats become withdrawable to any Bitcoin Lightning wallet.\n\n**Tracking caveat — worth reading.** Satsback depends on affiliate tracking, and users report roughly two out of three orders track cleanly (it sits around 3.2/5 on the Chrome Web Store). To give yourself the best odds: disable ad-blockers on the Mango tab, don't run other coupon or cashback extensions at checkout, and make the Satsback tab the last thing you touch before paying. If an order doesn't appear within a few days, Satsback support can chase it with your receipt.",
+    "worth_it_md": "## Is it worth it?\n\nThe rate is modest, so it's most worth it on larger Mango orders where even a small percentage becomes meaningful sats.\n\nTwo things to weigh: the reward is Bitcoin, so its fiat value moves with BTC — a plus if you're stacking long-term, a variable if you're not. And Satsback rarely stacks with Mango's own loyalty program on the same order, so compare the two and use whichever pays more.",
+    "faqs": [
+      {
+        "question": "How much Bitcoin do I earn at Mango?",
+        "answer_md": "Currently up to 1.3%, credited in sats to your Satsback dashboard once Mango confirms the order."
+      },
+      {
+        "question": "Do I need to verify my identity (KYC) to earn?",
+        "answer_md": "No. Satsback is free and requires no KYC — you only need an account and the browser extension to earn Bitcoin at Mango."
+      },
+      {
+        "question": "When can I withdraw my Mango cashback?",
+        "answer_md": "Once the order moves from *pending* to *confirmed* (after Mango's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
+      }
+    ]
+  },
+  {
+    "slug": "voordeeluitjesnl-2",
+    "name": "Voordeeluitjes.nl",
+    "satsback_slug": "voordeeluitjesnl-2",
+    "logo_url": "https://cdn.satsback.com/stores/s/nl-voordeeluitjes-128894.jpg",
+    "cashback_text": "up to 1.6%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "geldnl",
+    "name": "Geld.nl",
+    "satsback_slug": "geldnl",
+    "logo_url": "https://cdn.satsback.com/stores/s/geldnl-80022.png",
+    "cashback_text": "up to 90.339 sats",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "solcon",
+    "name": "Solcon",
+    "satsback_slug": "solcon",
+    "logo_url": "https://cdn.satsback.com/stores/partners/solcon-v2.svg",
+    "cashback_text": "up to 46.055 sats",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "beltegoednl",
+    "name": "Beltegoed.nl",
+    "satsback_slug": "beltegoednl",
+    "logo_url": "https://cdn.satsback.com/stores/s/beltegoed-nl-1064671.png",
+    "cashback_text": "up to 1.6%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "factor",
+    "name": "Factor",
+    "satsback_slug": "factor",
+    "logo_url": "https://cdn.satsback.com/stores/s/factor-1057346.svg",
+    "cashback_text": "up to 8.502 sats",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "suitableshop",
+    "name": "Suitableshop",
+    "satsback_slug": "suitableshop",
+    "logo_url": "https://cdn.satsback.com/stores/s/suitable-68306.jpg",
+    "cashback_text": "up to 3.2%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "fietstascom",
+    "name": "Fietstas.com",
+    "satsback_slug": "fietstascom",
+    "logo_url": "https://cdn.satsback.com/stores/s/fietstas-com-82009.jpg",
+    "cashback_text": "up to 2%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "123lens",
+    "name": "123Lens",
+    "satsback_slug": "123lens",
+    "logo_url": "https://cdn.satsback.com/stores/s/123lens-128288.jpg",
+    "cashback_text": "up to 1.6%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "ohra-huisdierenverzekering-2",
+    "name": "OHRA Huisdierenverzekering",
+    "satsback_slug": "ohra-huisdierenverzekering-2",
+    "logo_url": "https://cdn.satsback.com/stores/s/ohra-huisdierenverzekering-nl-1060294.jpg",
+    "cashback_text": "up to 17.004 sats",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "inktwebnl",
+    "name": "Inktweb.nl",
+    "satsback_slug": "inktwebnl",
+    "logo_url": "https://cdn.satsback.com/stores/s/inktweb-nl-69274.jpg",
+    "cashback_text": "up to 7%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "goedkoopste-kantoorartikelennl",
+    "name": "Goedkoopste-Kantoorartikelen.nl",
+    "satsback_slug": "goedkoopste-kantoorartikelennl",
+    "logo_url": "https://cdn.satsback.com/stores/s/goedkoopstekantoorartikelen-nl-29460.jpg",
+    "cashback_text": "up to 2.5%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "eset",
+    "name": "ESET",
+    "satsback_slug": "eset",
+    "logo_url": "https://cdn.satsback.com/stores/s/eset-nl-118535.jpg",
+    "cashback_text": "up to 12%",
+    "category_slug": "services",
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "## Earn Bitcoin at ESET\n\nESET — the antivirus and internet-security vendor ESET — is on Satsback. Buy through Satsback and you get up to 12% of your order value back in Bitcoin, paid as sats to a Lightning wallet you control.\n\nRather than a coupon or cashback voucher, ESET shoppers get paid in Bitcoin here. Below: the live rate, the honest truth about tracking reliability, and when it's actually worth using for services.",
+    "how_it_works_md": "## How ESET Bitcoin cashback works\n\n1. Create a free Satsback account (no KYC required) and add the browser extension.\n2. Open ESET through Satsback — the extension prompts you to activate rewards with one click.\n3. Shop and check out as normal. Your cashback (up to 12%) shows as *pending* in your Satsback dashboard.\n4. After ESET confirms the sale, the sats become withdrawable to any Bitcoin Lightning wallet.\n\n**Tracking caveat — worth reading.** Satsback depends on affiliate tracking, and users report roughly two out of three orders track cleanly (it sits around 3.2/5 on the Chrome Web Store). To give yourself the best odds: disable ad-blockers on the ESET tab, don't run other coupon or cashback extensions at checkout, and make the Satsback tab the last thing you touch before paying. If an order doesn't appear within a few days, Satsback support can chase it with your receipt.",
+    "worth_it_md": "## Is it worth it?\n\nAt 12%+, ESET is one of the stronger services rates on Satsback — comfortably worth the two-minute setup.\n\nTwo things to weigh: the reward is Bitcoin, so its fiat value moves with BTC — a plus if you're stacking long-term, a variable if you're not. And Satsback rarely stacks with ESET's own loyalty program on the same order, so compare the two and use whichever pays more.",
+    "faqs": [
+      {
+        "question": "How much Bitcoin do I earn at ESET?",
+        "answer_md": "Currently up to 12%, credited in sats to your Satsback dashboard once ESET confirms the order."
+      },
+      {
+        "question": "Do I need to verify my identity (KYC) to earn?",
+        "answer_md": "No. Satsback is free and requires no KYC — you only need an account and the browser extension to earn Bitcoin at ESET."
+      },
+      {
+        "question": "When can I withdraw my ESET cashback?",
+        "answer_md": "Once the order moves from *pending* to *confirmed* (after ESET's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
+      }
+    ]
+  },
+  {
+    "slug": "marriott-bonvoy-2",
+    "name": "Marriott Bonvoy",
+    "satsback_slug": "marriott-bonvoy-2",
+    "logo_url": "https://cdn.satsback.com/stores/partners/marriott-bonvoy-v2.svg",
+    "cashback_text": "up to 1.3%",
+    "category_slug": "travel",
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "## Earn Bitcoin at Marriott Bonvoy\n\nMarriott Bonvoy is the Marriott Bonvoy family of hotels. Buy through Satsback and you get up to 1.3% of your order value back in Bitcoin, paid as sats to a Lightning wallet you control.\n\nRather than a coupon or cashback voucher, Marriott Bonvoy shoppers get paid in Bitcoin here. Below: the live rate, the honest truth about tracking reliability, and when it's actually worth using for travel.",
+    "how_it_works_md": "## How Marriott Bonvoy Bitcoin cashback works\n\n1. Create a free Satsback account (no KYC required) and add the browser extension.\n2. Open Marriott Bonvoy through Satsback — the extension prompts you to activate rewards with one click.\n3. Shop and check out as normal. Your cashback (up to 1.3%) shows as *pending* in your Satsback dashboard.\n4. After Marriott Bonvoy confirms the sale, the sats become withdrawable to any Bitcoin Lightning wallet.\n\n**Tracking caveat — worth reading.** Satsback depends on affiliate tracking, and users report roughly two out of three orders track cleanly (it sits around 3.2/5 on the Chrome Web Store). To give yourself the best odds: disable ad-blockers on the Marriott Bonvoy tab, don't run other coupon or cashback extensions at checkout, and make the Satsback tab the last thing you touch before paying. If an order doesn't appear within a few days, Satsback support can chase it with your receipt.",
+    "worth_it_md": "## Is it worth it?\n\nThe rate is modest, so it's most worth it on larger Marriott Bonvoy orders where even a small percentage becomes meaningful sats.\n\nTwo things to weigh: the reward is Bitcoin, so its fiat value moves with BTC — a plus if you're stacking long-term, a variable if you're not. And Satsback rarely stacks with Marriott Bonvoy's own loyalty program on the same order, so compare the two and use whichever pays more.",
+    "faqs": [
+      {
+        "question": "How much Bitcoin do I earn at Marriott Bonvoy?",
+        "answer_md": "Currently up to 1.3%, credited in sats to your Satsback dashboard once Marriott Bonvoy confirms the order."
+      },
+      {
+        "question": "Do I need to verify my identity (KYC) to earn?",
+        "answer_md": "No. Satsback is free and requires no KYC — you only need an account and the browser extension to earn Bitcoin at Marriott Bonvoy."
+      },
+      {
+        "question": "When can I withdraw my Marriott Bonvoy cashback?",
+        "answer_md": "Once the order moves from *pending* to *confirmed* (after Marriott Bonvoy's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
+      }
+    ]
+  },
+  {
+    "slug": "auping",
+    "name": "Auping",
+    "satsback_slug": "auping",
+    "logo_url": "https://cdn.satsback.com/stores/partners/auping-v2.svg",
+    "cashback_text": "up to 1.3%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "vonroc",
+    "name": "Vonroc",
+    "satsback_slug": "vonroc",
+    "logo_url": "https://cdn.satsback.com/stores/s/nl-vonroc-1052699.jpg",
+    "cashback_text": "up to 2%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "shein-19",
+    "name": "SHEIN",
+    "satsback_slug": "shein-19",
+    "logo_url": "https://cdn.satsback.com/stores/l/shein-19-logo",
+    "cashback_text": "up to 4.2%",
+    "category_slug": "fashion",
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "## Earn Bitcoin at SHEIN\n\nSHEIN is the fast-fashion marketplace SHEIN. Buy through Satsback and you get up to 4.2% of your order value back in Bitcoin, paid as sats to a Lightning wallet you control.\n\nIf SHEIN is already on your shopping list, routing the order through Satsback is free money on spending you'd do regardless — this page covers the current rate, how the tracking really works, and whether it's worth the extra step for a fashion purchase.",
+    "how_it_works_md": "## How SHEIN Bitcoin cashback works\n\n1. Create a free Satsback account (no KYC required) and add the browser extension.\n2. Open SHEIN through Satsback — the extension prompts you to activate rewards with one click.\n3. Shop and check out as normal. Your cashback (up to 4.2%) shows as *pending* in your Satsback dashboard.\n4. After SHEIN confirms the sale, the sats become withdrawable to any Bitcoin Lightning wallet.\n\n**Tracking caveat — worth reading.** Satsback depends on affiliate tracking, and users report roughly two out of three orders track cleanly (it sits around 3.2/5 on the Chrome Web Store). To give yourself the best odds: disable ad-blockers on the SHEIN tab, don't run other coupon or cashback extensions at checkout, and make the Satsback tab the last thing you touch before paying. If an order doesn't appear within a few days, Satsback support can chase it with your receipt.",
+    "worth_it_md": "## Is it worth it?\n\nAt 4.2%+, SHEIN is one of the stronger fashion rates on Satsback — comfortably worth the two-minute setup.\n\nTwo things to weigh: the reward is Bitcoin, so its fiat value moves with BTC — a plus if you're stacking long-term, a variable if you're not. And Satsback rarely stacks with SHEIN's own loyalty program on the same order, so compare the two and use whichever pays more.",
+    "faqs": [
+      {
+        "question": "How much Bitcoin do I earn at SHEIN?",
+        "answer_md": "Currently up to 4.2%, credited in sats to your Satsback dashboard once SHEIN confirms the order."
+      },
+      {
+        "question": "Do I need to verify my identity (KYC) to earn?",
+        "answer_md": "No. Satsback is free and requires no KYC — you only need an account and the browser extension to earn Bitcoin at SHEIN."
+      },
+      {
+        "question": "When can I withdraw my SHEIN cashback?",
+        "answer_md": "Once the order moves from *pending* to *confirmed* (after SHEIN's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
+      }
+    ]
+  },
+  {
+    "slug": "turkish-airlines-2",
+    "name": "Turkish Airlines",
+    "satsback_slug": "turkish-airlines-2",
+    "logo_url": "https://cdn.satsback.com/stores/partners/turkish-airlines-2-v2.svg",
+    "cashback_text": "up to 1%",
+    "category_slug": "travel",
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "## Earn Bitcoin at Turkish Airlines\n\nTurkish Airlines, the flag carrier Turkish Airlines, is one of the stores paying Bitcoin back through Satsback. Buy through Satsback and you get up to 1% of your order value back in Bitcoin, paid as sats to a Lightning wallet you control.\n\nRather than a coupon or cashback voucher, Turkish Airlines shoppers get paid in Bitcoin here. Below: the live rate, the honest truth about tracking reliability, and when it's actually worth using for travel.",
+    "how_it_works_md": "## How Turkish Airlines Bitcoin cashback works\n\n1. Create a free Satsback account (no KYC required) and add the browser extension.\n2. Open Turkish Airlines through Satsback — the extension prompts you to activate rewards with one click.\n3. Shop and check out as normal. Your cashback (up to 1%) shows as *pending* in your Satsback dashboard.\n4. After Turkish Airlines confirms the sale, the sats become withdrawable to any Bitcoin Lightning wallet.\n\n**Tracking caveat — worth reading.** Satsback depends on affiliate tracking, and users report roughly two out of three orders track cleanly (it sits around 3.2/5 on the Chrome Web Store). To give yourself the best odds: disable ad-blockers on the Turkish Airlines tab, don't run other coupon or cashback extensions at checkout, and make the Satsback tab the last thing you touch before paying. If an order doesn't appear within a few days, Satsback support can chase it with your receipt.",
+    "worth_it_md": "## Is it worth it?\n\nThe rate is modest, so it's most worth it on larger Turkish Airlines orders where even a small percentage becomes meaningful sats.\n\nTwo things to weigh: the reward is Bitcoin, so its fiat value moves with BTC — a plus if you're stacking long-term, a variable if you're not. And Satsback rarely stacks with Turkish Airlines's own loyalty program on the same order, so compare the two and use whichever pays more.",
+    "faqs": [
+      {
+        "question": "How much Bitcoin do I earn at Turkish Airlines?",
+        "answer_md": "Currently up to 1%, credited in sats to your Satsback dashboard once Turkish Airlines confirms the order."
+      },
+      {
+        "question": "Do I need to verify my identity (KYC) to earn?",
+        "answer_md": "No. Satsback is free and requires no KYC — you only need an account and the browser extension to earn Bitcoin at Turkish Airlines."
+      },
+      {
+        "question": "When can I withdraw my Turkish Airlines cashback?",
+        "answer_md": "Once the order moves from *pending* to *confirmed* (after Turkish Airlines's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
+      }
+    ]
+  },
+  {
+    "slug": "lednl-3",
+    "name": "LED.nl",
+    "satsback_slug": "lednl-3",
+    "logo_url": "https://cdn.satsback.com/stores/s/led-nl-1069795.png",
+    "cashback_text": "up to 3.7%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "skyscanner-12",
+    "name": "Skyscanner",
+    "satsback_slug": "skyscanner-12",
+    "logo_url": "https://cdn.satsback.com/stores/s/nlskyscanner-129445.png",
+    "cashback_text": "up to 1.8%",
+    "category_slug": "travel",
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "## Earn Bitcoin at Skyscanner\n\nSkyscanner — the flight-comparison site Skyscanner — is on Satsback. Buy through Satsback and you get up to 1.8% of your order value back in Bitcoin, paid as sats to a Lightning wallet you control.\n\nRather than a coupon or cashback voucher, Skyscanner shoppers get paid in Bitcoin here. Below: the live rate, the honest truth about tracking reliability, and when it's actually worth using for travel.",
+    "how_it_works_md": "## How Skyscanner Bitcoin cashback works\n\n1. Create a free Satsback account (no KYC required) and add the browser extension.\n2. Open Skyscanner through Satsback — the extension prompts you to activate rewards with one click.\n3. Shop and check out as normal. Your cashback (up to 1.8%) shows as *pending* in your Satsback dashboard.\n4. After Skyscanner confirms the sale, the sats become withdrawable to any Bitcoin Lightning wallet.\n\n**Tracking caveat — worth reading.** Satsback depends on affiliate tracking, and users report roughly two out of three orders track cleanly (it sits around 3.2/5 on the Chrome Web Store). To give yourself the best odds: disable ad-blockers on the Skyscanner tab, don't run other coupon or cashback extensions at checkout, and make the Satsback tab the last thing you touch before paying. If an order doesn't appear within a few days, Satsback support can chase it with your receipt.",
+    "worth_it_md": "## Is it worth it?\n\nThe rate is solid for travel; on a normal-sized Skyscanner order it adds up to a worthwhile chunk of sats.\n\nTwo things to weigh: the reward is Bitcoin, so its fiat value moves with BTC — a plus if you're stacking long-term, a variable if you're not. And Satsback rarely stacks with Skyscanner's own loyalty program on the same order, so compare the two and use whichever pays more.",
+    "faqs": [
+      {
+        "question": "How much Bitcoin do I earn at Skyscanner?",
+        "answer_md": "Currently up to 1.8%, credited in sats to your Satsback dashboard once Skyscanner confirms the order."
+      },
+      {
+        "question": "Do I need to verify my identity (KYC) to earn?",
+        "answer_md": "No. Satsback is free and requires no KYC — you only need an account and the browser extension to earn Bitcoin at Skyscanner."
+      },
+      {
+        "question": "When can I withdraw my Skyscanner cashback?",
+        "answer_md": "Once the order moves from *pending* to *confirmed* (after Skyscanner's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
+      }
+    ]
+  },
+  {
+    "slug": "staatsloterij-automatisch-meespelen",
+    "name": "Staatsloterij automatisch meespelen",
+    "satsback_slug": "staatsloterij-automatisch-meespelen",
+    "logo_url": "https://cdn.satsback.com/stores/s/nl-staatsloterij-138708.png",
+    "cashback_text": "up to 10.628 sats",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "eurojackpot-2",
+    "name": "Eurojackpot",
+    "satsback_slug": "eurojackpot-2",
+    "logo_url": "https://cdn.satsback.com/stores/s/eurojackpot-nl1-1060289.png",
+    "cashback_text": "up to 5.2%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "odido-thuis",
+    "name": "Odido Thuis",
+    "satsback_slug": "odido-thuis",
+    "logo_url": "https://satsback.com/assets/media/partners/odido.svg",
+    "cashback_text": "up to 51.369 sats",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "energie-van-budget-thuis",
+    "name": "Energie van Budget Thuis",
+    "satsback_slug": "energie-van-budget-thuis",
+    "logo_url": "https://cdn.satsback.com/stores/s/budget-energie-nl-85213.png",
+    "cashback_text": "up to 28.341 sats",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "namecheap",
+    "name": "Namecheap",
+    "satsback_slug": "namecheap",
+    "logo_url": "https://satsback.com/assets/media/partners/namecheap.svg",
+    "cashback_text": "up to 14%",
+    "category_slug": "services",
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "## Earn Bitcoin at Namecheap\n\nNamecheap is the domain registrar and web host Namecheap. Buy through Satsback and you get up to 14% of your order value back in Bitcoin, paid as sats to a Lightning wallet you control.\n\nIf Namecheap is already on your shopping list, routing the order through Satsback is free money on spending you'd do regardless — this page covers the current rate, how the tracking really works, and whether it's worth the extra step for a services purchase.",
+    "how_it_works_md": "## How Namecheap Bitcoin cashback works\n\n1. Create a free Satsback account (no KYC required) and add the browser extension.\n2. Open Namecheap through Satsback — the extension prompts you to activate rewards with one click.\n3. Shop and check out as normal. Your cashback (up to 14%) shows as *pending* in your Satsback dashboard.\n4. After Namecheap confirms the sale, the sats become withdrawable to any Bitcoin Lightning wallet.\n\n**Tracking caveat — worth reading.** Satsback depends on affiliate tracking, and users report roughly two out of three orders track cleanly (it sits around 3.2/5 on the Chrome Web Store). To give yourself the best odds: disable ad-blockers on the Namecheap tab, don't run other coupon or cashback extensions at checkout, and make the Satsback tab the last thing you touch before paying. If an order doesn't appear within a few days, Satsback support can chase it with your receipt.",
+    "worth_it_md": "## Is it worth it?\n\nAt 14%+, Namecheap is one of the stronger services rates on Satsback — comfortably worth the two-minute setup.\n\nTwo things to weigh: the reward is Bitcoin, so its fiat value moves with BTC — a plus if you're stacking long-term, a variable if you're not. And Satsback rarely stacks with Namecheap's own loyalty program on the same order, so compare the two and use whichever pays more.",
+    "faqs": [
+      {
+        "question": "How much Bitcoin do I earn at Namecheap?",
+        "answer_md": "Currently up to 14%, credited in sats to your Satsback dashboard once Namecheap confirms the order."
+      },
+      {
+        "question": "Do I need to verify my identity (KYC) to earn?",
+        "answer_md": "No. Satsback is free and requires no KYC — you only need an account and the browser extension to earn Bitcoin at Namecheap."
+      },
+      {
+        "question": "When can I withdraw my Namecheap cashback?",
+        "answer_md": "Once the order moves from *pending* to *confirmed* (after Namecheap's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
+      }
+    ]
+  },
+  {
+    "slug": "lampenlichtnl",
+    "name": "LampenLicht.nl",
+    "satsback_slug": "lampenlichtnl",
+    "logo_url": "https://cdn.satsback.com/stores/s/lampenlichtnl-133009.jpg",
+    "cashback_text": "up to 1%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "luxplus",
+    "name": "Luxplus",
+    "satsback_slug": "luxplus",
+    "logo_url": "https://cdn.satsback.com/stores/s/luxplus-nl-84059.jpg",
+    "cashback_text": "up to 2.9%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "jeans-centre",
+    "name": "Jeans Centre",
+    "satsback_slug": "jeans-centre",
+    "logo_url": "https://cdn.satsback.com/stores/partners/jeans-centre-v2.svg",
+    "cashback_text": "up to 2.9%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  },
+  {
+    "slug": "dreamland-2",
+    "name": "DreamLand",
+    "satsback_slug": "dreamland-2",
+    "logo_url": "https://cdn.satsback.com/stores/s/toychamp-1058067.png",
+    "cashback_text": "up to 1.6%",
+    "category_slug": null,
+    "geo_scope": "global",
+    "is_bitcoin_native": false,
+    "description_md": "",
+    "how_it_works_md": "",
+    "worth_it_md": "",
+    "faqs": []
+  }
+]
