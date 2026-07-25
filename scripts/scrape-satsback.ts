@@ -1,8 +1,12 @@
+// @ts-nocheck — `playwright` is an ad-hoc dependency, intentionally NOT in
+// package.json so `npm ci` (deploy + CI) never downloads Chromium. Install it
+// only when refreshing the dataset. The committed seeds/stores.raw.json is the
+// working artifact; this script documents how to regenerate it.
 /**
  * Curated Satsback store scraper. Facts only (name, slug, cashback label, logo).
  * Writes seeds/stores.raw.json. Run locally — needs a browser, not on the VPS.
  *
- *   npx playwright install chromium   # one-time
+ *   npm install -D playwright && npx playwright install chromium   # one-time
  *   npm run scrape:satsback
  *
  * Satsback returns 403 to plain fetch but renders under a real browser. The
