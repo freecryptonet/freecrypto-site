@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { listStores, listStoreCategories } from "@/lib/db";
 import { CashbackBadge } from "@/components/CashbackBadge";
+import { StoreLogo } from "@/components/StoreLogo";
 import { AAds } from "@/components/AAds";
 import { breadcrumbJsonLd, jsonLdScript, siteUrl } from "@/lib/seo";
 
@@ -80,10 +81,7 @@ export default async function StoreCategoryPage({ params }: PageProps) {
               <tr key={s.id} className="border-b border-edge/50">
                 <td className="py-3 pr-4">
                   <Link href={`/shop/${s.slug}`} className="flex items-center gap-3 hover:text-accent">
-                    {s.logo_url ? (
-                      // eslint-disable-next-line @next/next/no-img-element
-                      <img src={s.logo_url} alt="" width={28} height={28} loading="lazy" className="h-7 w-7 rounded bg-white/5 object-contain p-0.5" />
-                    ) : null}
+                    <StoreLogo src={s.logo_url} name={s.name} slug={s.slug} size={28} />
                     <span className="font-medium text-text">{s.name}</span>
                   </Link>
                 </td>

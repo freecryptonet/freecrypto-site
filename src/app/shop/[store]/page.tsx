@@ -5,6 +5,7 @@ import { getStoreBySlug } from "@/lib/db";
 import { renderMarkdown } from "@/lib/markdown";
 import { isStoreIndexable, breadcrumbJsonLd, faqJsonLd, jsonLdScript, siteUrl } from "@/lib/seo";
 import { CashbackBadge } from "@/components/CashbackBadge";
+import { StoreLogo } from "@/components/StoreLogo";
 import { AAds } from "@/components/AAds";
 
 export const dynamic = "force-dynamic";
@@ -60,10 +61,7 @@ export default async function StorePage({ params }: PageProps) {
       </nav>
 
       <header className="mb-6 flex items-center gap-4">
-        {s.logo_url ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img src={s.logo_url} alt="" width={56} height={56} className="h-14 w-14 rounded-lg bg-white/5 object-contain p-1.5" />
-        ) : null}
+        <StoreLogo src={s.logo_url} name={s.name} slug={s.slug} size={56} />
         <div>
           <h1 className="text-h1-page font-bold tracking-tight">Earn Bitcoin at {s.name}</h1>
           <div className="mt-2">

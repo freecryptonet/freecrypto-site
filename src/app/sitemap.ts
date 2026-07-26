@@ -8,6 +8,7 @@ import {
   listStoreCategories,
 } from "@/lib/db";
 import { MIN_INDEXABLE_DESCRIPTION_CHARS, siteUrl } from "@/lib/seo";
+import { BONUS_OFFERS } from "@/lib/bonuses";
 
 export const dynamic = "force-dynamic";
 
@@ -26,11 +27,20 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: siteUrl("/"), lastModified: now, changeFrequency: "hourly", priority: 1 },
     { url: siteUrl("/shop"), lastModified: now, changeFrequency: "daily", priority: 0.9 },
+    { url: siteUrl("/bonus"), lastModified: now, changeFrequency: "weekly", priority: 0.8 },
+    { url: siteUrl("/airdrops"), lastModified: now, changeFrequency: "daily", priority: 0.8 },
     { url: siteUrl("/check"), lastModified: now, changeFrequency: "weekly", priority: 0.9 },
-    { url: siteUrl("/calendar"), lastModified: now, changeFrequency: "daily", priority: 0.8 },
+    { url: siteUrl("/calendar"), lastModified: now, changeFrequency: "daily", priority: 0.6 },
     { url: siteUrl("/guides"), lastModified: now, changeFrequency: "weekly", priority: 0.7 },
     { url: siteUrl("/about"), lastModified: now, changeFrequency: "monthly", priority: 0.3 },
   ];
+
+  const bonusRoutes: MetadataRoute.Sitemap = BONUS_OFFERS.map((o) => ({
+    url: siteUrl(`/bonus/${o.slug}`),
+    lastModified: now,
+    changeFrequency: "weekly",
+    priority: 0.7,
+  }));
 
   // Store pages: only indexable rows (curated, >= threshold combined content).
   const storeRoutes: MetadataRoute.Sitemap = stores
@@ -96,6 +106,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   return [
     ...staticRoutes,
+    ...bonusRoutes,
     ...storeRoutes,
     ...storeCategoryRoutes,
     ...guideRoutes,

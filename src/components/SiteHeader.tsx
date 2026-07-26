@@ -2,9 +2,8 @@ import Link from "next/link";
 
 const NAV = [
   { href: "/shop", label: "Shop & Earn" },
-  { href: "/", label: "Airdrops" },
-  { href: "/calendar", label: "Calendar" },
-  { href: "/check", label: "Wallet Check" },
+  { href: "/bonus", label: "Bonuses" },
+  { href: "/airdrops", label: "Airdrops" },
   { href: "/guides", label: "Guides" },
 ];
 
