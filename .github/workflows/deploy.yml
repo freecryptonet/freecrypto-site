@@ -49,6 +49,18 @@ jobs:
           done
           ssh vps bash -se << 'REMOTE'
             set -euo pipefail
+            # Serialize deploys on the box: hold an exclusive lock for the whole
+            # deploy so a concurrent CI run OR an out-of-band manual SSH deploy
+            # can't clobber this working tree mid-build (a manual deploy racing
+            # an in-flight CI build failed run 30214257534 on 2026-07-26). Any
+            # deploy that acquires this same lock file waits up to 10m for the
+            # other to finish. Keep the manual-deploy command in CLAUDE.md using
+            # the identical lock path or this guard is one-sided.
+            exec 9>/home/deploy/freecrypto.deploy.lock
+            if ! flock -w 600 9; then
+              echo "ERROR: another deploy holds freecrypto.deploy.lock after 10m; aborting"
+              exit 1
+            fi
             cd /home/deploy/freecrypto
             echo "===> git pull"
             git fetch --quiet origin main
