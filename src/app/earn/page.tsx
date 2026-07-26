@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { AAds } from "@/components/AAds";
-import { breadcrumbJsonLd, faqJsonLd, jsonLdScript, siteUrl } from "@/lib/seo";
+import { breadcrumbJsonLd, faqJsonLd, jsonLdScript, siteUrl, OG_IMAGE, TWITTER_IMAGE } from "@/lib/seo";
 
 export const dynamic = "force-static";
 
@@ -13,8 +13,8 @@ export const metadata: Metadata = {
   title,
   description,
   alternates: { canonical: "/earn" },
-  openGraph: { title, description, type: "article", url: siteUrl("/earn") },
-  twitter: { card: "summary_large_image", title, description },
+  openGraph: { title, description, type: "article", url: siteUrl("/earn"), images: [OG_IMAGE] },
+  twitter: { card: "summary_large_image", title, description, images: [TWITTER_IMAGE] },
 };
 
 const METHODS = [

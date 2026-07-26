@@ -5,6 +5,23 @@ export function siteUrl(path = "/"): string {
   return new URL(path, base).toString();
 }
 
+/**
+ * Default social share image, served by the root `opengraph-image` route.
+ * Next only auto-attaches the file-convention image to pages that do NOT
+ * declare their own `openGraph` object (it replaces, not deep-merges). Pages
+ * that set `openGraph`/`twitter` must reference this explicitly so every share
+ * card gets a branded image.
+ */
+export const OG_IMAGE = {
+  url: "/opengraph-image",
+  width: 1200,
+  height: 630,
+  alt: "freecrypto.net — earn Bitcoin from what you already do",
+} as const;
+
+/** Twitter image URL (same generated card). Use in a page's `twitter.images`. */
+export const TWITTER_IMAGE = "/twitter-image";
+
 export function breadcrumbJsonLd(items: Array<{ name: string; url: string }>) {
   return {
     "@context": "https://schema.org",

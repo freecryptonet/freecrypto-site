@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getGuideBySlug, listGuides } from "@/lib/db";
 import { renderMarkdown } from "@/lib/markdown";
-import { breadcrumbJsonLd, isGuideIndexable, jsonLdScript, siteUrl } from "@/lib/seo";
+import { breadcrumbJsonLd, isGuideIndexable, jsonLdScript, siteUrl, OG_IMAGE, TWITTER_IMAGE } from "@/lib/seo";
 import { timeAgo } from "@/lib/format";
 import { AAds } from "@/components/AAds";
 
@@ -29,11 +29,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       url: siteUrl(`/guides/${g.slug}`),
       publishedTime: g.published_at?.toISOString(),
       modifiedTime: g.updated_at.toISOString(),
+      images: [OG_IMAGE],
     },
     twitter: {
       card: "summary_large_image",
       title: g.title,
       description: g.excerpt ?? undefined,
+      images: [TWITTER_IMAGE],
     },
     robots: indexable ? undefined : { index: false, follow: true },
   };

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { BONUS_OFFERS, getBonusOffer } from "@/lib/bonuses";
 import { AAds } from "@/components/AAds";
-import { breadcrumbJsonLd, jsonLdScript, siteUrl } from "@/lib/seo";
+import { breadcrumbJsonLd, jsonLdScript, siteUrl, OG_IMAGE, TWITTER_IMAGE } from "@/lib/seo";
 
 export const dynamic = "force-static";
 
@@ -25,8 +25,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title,
     description,
     alternates: { canonical: `/bonus/${o.slug}` },
-    openGraph: { title, description, type: "article", url: siteUrl(`/bonus/${o.slug}`) },
-    twitter: { card: "summary_large_image", title, description },
+    openGraph: { title, description, type: "article", url: siteUrl(`/bonus/${o.slug}`), images: [OG_IMAGE] },
+    twitter: { card: "summary_large_image", title, description, images: [TWITTER_IMAGE] },
   };
 }
 

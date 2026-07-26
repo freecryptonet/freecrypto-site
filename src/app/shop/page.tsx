@@ -3,7 +3,7 @@ import Link from "next/link";
 import { listStores, listStoreCategories } from "@/lib/db";
 import { StoreCard } from "@/components/StoreCard";
 import { AAds } from "@/components/AAds";
-import { breadcrumbJsonLd, jsonLdScript, siteUrl } from "@/lib/seo";
+import { breadcrumbJsonLd, jsonLdScript, siteUrl, OG_IMAGE, TWITTER_IMAGE } from "@/lib/seo";
 
 export const dynamic = "force-dynamic";
 
@@ -16,10 +16,14 @@ export const metadata: Metadata = {
   description,
   alternates: {
     canonical: "/shop",
-    languages: { "en": siteUrl("/shop"), "nl-NL": siteUrl("/nl/shop") },
+    languages: {
+      "en": siteUrl("/shop"),
+      "nl-NL": siteUrl("/nl/shop"),
+      "x-default": siteUrl("/shop"),
+    },
   },
-  openGraph: { title, description, type: "website", url: siteUrl("/shop") },
-  twitter: { card: "summary_large_image", title, description },
+  openGraph: { title, description, type: "website", url: siteUrl("/shop"), images: [OG_IMAGE] },
+  twitter: { card: "summary_large_image", title, description, images: [TWITTER_IMAGE] },
 };
 
 export default async function ShopIndexPage() {

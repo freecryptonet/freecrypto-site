@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BONUS_OFFERS } from "@/lib/bonuses";
 import { AAds } from "@/components/AAds";
-import { breadcrumbJsonLd, jsonLdScript, siteUrl } from "@/lib/seo";
+import { breadcrumbJsonLd, jsonLdScript, siteUrl, OG_IMAGE, TWITTER_IMAGE } from "@/lib/seo";
 
 export const dynamic = "force-static";
 
@@ -14,8 +14,8 @@ export const metadata: Metadata = {
   title,
   description,
   alternates: { canonical: "/bonus" },
-  openGraph: { title, description, type: "website", url: siteUrl("/bonus") },
-  twitter: { card: "summary_large_image", title, description },
+  openGraph: { title, description, type: "website", url: siteUrl("/bonus"), images: [OG_IMAGE] },
+  twitter: { card: "summary_large_image", title, description, images: [TWITTER_IMAGE] },
 };
 
 export default function BonusIndexPage() {

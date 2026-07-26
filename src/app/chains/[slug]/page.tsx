@@ -4,7 +4,7 @@ import { listAirdrops, listChains } from "@/lib/db";
 import { AirdropListing } from "@/components/AirdropListing";
 import { AAds } from "@/components/AAds";
 import { Pagination } from "@/components/Pagination";
-import { breadcrumbJsonLd, jsonLdScript, siteUrl } from "@/lib/seo";
+import { breadcrumbJsonLd, jsonLdScript, siteUrl, OG_IMAGE, TWITTER_IMAGE } from "@/lib/seo";
 
 export const dynamic = "force-dynamic";
 
@@ -45,8 +45,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description,
       type: "website",
       url: siteUrl(`/chains/${chain.slug}`),
+      images: [OG_IMAGE],
     },
-    twitter: { card: "summary_large_image", title, description },
+    twitter: { card: "summary_large_image", title, description, images: [TWITTER_IMAGE] },
     robots: indexable ? undefined : { index: false, follow: true },
   };
 }

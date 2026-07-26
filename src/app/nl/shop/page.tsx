@@ -3,7 +3,7 @@ import Link from "next/link";
 import { listStores, listStoreCategories } from "@/lib/db";
 import { StoreCard } from "@/components/StoreCard";
 import { AAds } from "@/components/AAds";
-import { breadcrumbJsonLd, jsonLdScript, siteUrl } from "@/lib/seo";
+import { breadcrumbJsonLd, jsonLdScript, siteUrl, OG_IMAGE, TWITTER_IMAGE } from "@/lib/seo";
 import { nlCategoryLabel, nlCategorySlug } from "@/lib/store-i18n";
 
 export const dynamic = "force-dynamic";
@@ -17,9 +17,14 @@ export const metadata: Metadata = {
   description,
   alternates: {
     canonical: "/nl/shop",
-    languages: { "nl-NL": siteUrl("/nl/shop"), "en": siteUrl("/shop") },
+    languages: {
+      "nl-NL": siteUrl("/nl/shop"),
+      "en": siteUrl("/shop"),
+      "x-default": siteUrl("/shop"),
+    },
   },
-  openGraph: { title, description, type: "website", url: siteUrl("/nl/shop"), locale: "nl_NL" },
+  openGraph: { title, description, type: "website", url: siteUrl("/nl/shop"), locale: "nl_NL", images: [OG_IMAGE] },
+  twitter: { card: "summary_large_image", title, description, images: [TWITTER_IMAGE] },
 };
 
 export default async function NlShopIndexPage() {

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getStoreBySlug } from "@/lib/db";
 import { renderMarkdown } from "@/lib/markdown";
-import { isStoreIndexable, breadcrumbJsonLd, faqJsonLd, jsonLdScript, siteUrl } from "@/lib/seo";
+import { isStoreIndexable, breadcrumbJsonLd, faqJsonLd, jsonLdScript, siteUrl, OG_IMAGE, TWITTER_IMAGE } from "@/lib/seo";
 import { CashbackBadge } from "@/components/CashbackBadge";
 import { StoreLogo } from "@/components/StoreLogo";
 import { AAds } from "@/components/AAds";
@@ -24,12 +24,18 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const title = `Bitcoin cashback bij ${s.name}${rate} (2026)`;
   const description = `Zo verdien je Bitcoin bij ${s.name} via Satsback — het actuele tarief, hoe de tracking werkt en of het de moeite waard is.`;
   const languages: Record<string, string> = { "nl-NL": siteUrl(`/nl/shop/${s.slug}`) };
-  if (s.has_en) languages["en"] = siteUrl(`/shop/${s.slug}`);
+  if (s.has_en) {
+    languages["en"] = siteUrl(`/shop/${s.slug}`);
+    languages["x-default"] = siteUrl(`/shop/${s.slug}`);
+  } else {
+    languages["x-default"] = siteUrl(`/nl/shop/${s.slug}`);
+  }
   return {
     title,
     description,
     alternates: { canonical: `/nl/shop/${s.slug}`, languages },
-    openGraph: { title, description, type: "article", url: siteUrl(`/nl/shop/${s.slug}`), locale: "nl_NL" },
+    openGraph: { title, description, type: "article", url: siteUrl(`/nl/shop/${s.slug}`), locale: "nl_NL", images: [OG_IMAGE] },
+    twitter: { card: "summary_large_image", title, description, images: [TWITTER_IMAGE] },
     robots: indexable ? undefined : { index: false, follow: true },
   };
 }
@@ -42,6 +48,12 @@ export default async function NlStorePage({ params }: PageProps) {
   const crumbs = breadcrumbJsonLd([
     { name: "Home", url: siteUrl("/") },
     { name: "Shoppen & verdienen", url: siteUrl("/nl/shop") },
+    ...(s.category_slug && s.category_name
+      ? [{
+          name: nlCategoryLabel(s.category_slug, s.category_name),
+          url: siteUrl(`/nl/shop/category/${nlCategorySlug(s.category_slug)}`),
+        }]
+      : []),
     { name: s.name, url: siteUrl(`/nl/shop/${s.slug}`) },
   ]);
   const faq = faqJsonLd(s.faqs);

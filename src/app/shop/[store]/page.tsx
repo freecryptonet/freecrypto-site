@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getStoreBySlug } from "@/lib/db";
 import { renderMarkdown } from "@/lib/markdown";
-import { isStoreIndexable, breadcrumbJsonLd, faqJsonLd, jsonLdScript, siteUrl } from "@/lib/seo";
+import { isStoreIndexable, breadcrumbJsonLd, faqJsonLd, jsonLdScript, siteUrl, OG_IMAGE, TWITTER_IMAGE } from "@/lib/seo";
 import { CashbackBadge } from "@/components/CashbackBadge";
 import { StoreLogo } from "@/components/StoreLogo";
 import { AAds } from "@/components/AAds";
@@ -22,14 +22,17 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const rate = s.cashback_text ? ` — ${s.cashback_kind === "discount" ? s.cashback_text : `${s.cashback_text} back`}` : "";
   const title = `Earn Bitcoin at ${s.name}${rate} (2026)`;
   const description = `How to earn Bitcoin at ${s.name} via Satsback — the current rate, how the tracking works, and whether it's worth it.`;
-  const languages: Record<string, string> = { "en": siteUrl(`/shop/${s.slug}`) };
+  const languages: Record<string, string> = {
+    "en": siteUrl(`/shop/${s.slug}`),
+    "x-default": siteUrl(`/shop/${s.slug}`),
+  };
   if (s.has_nl) languages["nl-NL"] = siteUrl(`/nl/shop/${s.slug}`);
   return {
     title,
     description,
     alternates: { canonical: `/shop/${s.slug}`, languages },
-    openGraph: { title, description, type: "article", url: siteUrl(`/shop/${s.slug}`) },
-    twitter: { card: "summary_large_image", title, description },
+    openGraph: { title, description, type: "article", url: siteUrl(`/shop/${s.slug}`), images: [OG_IMAGE] },
+    twitter: { card: "summary_large_image", title, description, images: [TWITTER_IMAGE] },
     robots: indexable ? undefined : { index: false, follow: true },
   };
 }
@@ -42,6 +45,9 @@ export default async function StorePage({ params }: PageProps) {
   const crumbs = breadcrumbJsonLd([
     { name: "Home", url: siteUrl("/") },
     { name: "Shop & Earn", url: siteUrl("/shop") },
+    ...(s.category_slug && s.category_name
+      ? [{ name: s.category_name, url: siteUrl(`/shop/category/${s.category_slug}`) }]
+      : []),
     { name: s.name, url: siteUrl(`/shop/${s.slug}`) },
   ]);
   const faq = faqJsonLd(s.faqs);
