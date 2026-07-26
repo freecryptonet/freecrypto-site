@@ -18,9 +18,9 @@ export function SiteFooter() {
             freecrypto<span className="text-accent">.net</span>
           </div>
           <p className="mt-3 text-sm text-text-dim max-w-md">
-            A free index of legit crypto airdrops, retroactive drops, and
-            testnet rewards. No wallet signatures required — paste an address,
-            see what you qualify for.
+            Earn real Bitcoin without buying it — shopping cashback, exchange
+            sign-up bonuses, and verified airdrops. No wallet signatures
+            required — paste an address, see what you qualify for.
           </p>
           <p className="mt-4 text-xs text-text-faint max-w-md">
             <strong className="text-text-dim">Disclaimer.</strong>{" "}
@@ -33,10 +33,10 @@ export function SiteFooter() {
         <div>
           <div className="text-sm font-semibold mb-3">Explore</div>
           <ul className="space-y-1.5 text-sm text-text-dim">
-            <li><Link href="/" className="hover:text-text">Active airdrops</Link></li>
-            <li><Link href="/categories/retroactive" className="hover:text-text">Retroactive</Link></li>
-            <li><Link href="/categories/testnet" className="hover:text-text">Testnets</Link></li>
-            <li><Link href="/calendar" className="hover:text-text">Calendar</Link></li>
+            <li><Link href="/earn" className="hover:text-text">How to earn Bitcoin</Link></li>
+            <li><Link href="/shop" className="hover:text-text">Shop &amp; earn</Link></li>
+            <li><Link href="/bonus" className="hover:text-text">Sign-up bonuses</Link></li>
+            <li><Link href="/airdrops" className="hover:text-text">Airdrops</Link></li>
             <li><Link href="/check" className="hover:text-text">Wallet checker</Link></li>
           </ul>
         </div>

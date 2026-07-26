@@ -92,6 +92,12 @@ function Hero() {
             Check your wallet
           </Link>
         </div>
+        <p className="mt-5 text-sm text-text-faint">
+          New to this?{" "}
+          <Link href="/earn" className="text-accent hover:underline">
+            Read the full guide to earning Bitcoin →
+          </Link>
+        </p>
       </div>
     </section>
   );
