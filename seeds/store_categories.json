@@ -6,5 +6,8 @@
   { "slug": "marketplaces", "name": "Marketplaces", "description": "Large general marketplaces with Bitcoin cashback.", "sort_order": 50 },
   { "slug": "services", "name": "Services & Software", "description": "VPNs, courses, and online services paying Bitcoin rewards.", "sort_order": 60 },
   { "slug": "groceries-food", "name": "Groceries & Food", "description": "Supermarkets and food delivery with Bitcoin cashback.", "sort_order": 70 },
-  { "slug": "health-beauty", "name": "Health & Beauty", "description": "Pharmacies and beauty retailers giving BTC back.", "sort_order": 80 }
+  { "slug": "health-beauty", "name": "Health & Beauty", "description": "Pharmacies and beauty retailers giving BTC back.", "sort_order": 80 },
+  { "slug": "home-garden", "name": "Home & Garden", "description": "Furniture, tools, lighting, and home goods with Bitcoin cashback.", "sort_order": 90 },
+  { "slug": "pets", "name": "Pets", "description": "Pet food, supplies, and pharmacies that pay you back in Bitcoin.", "sort_order": 100 },
+  { "slug": "toys-games", "name": "Toys & Games", "description": "Toys, games, and consoles with Bitcoin cashback.", "sort_order": 110 }
 ]

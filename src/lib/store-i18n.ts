@@ -8,6 +8,9 @@ export const NL_CATEGORY_LABEL: Record<string, string> = {
   "services": "Diensten & software",
   "groceries-food": "Boodschappen & eten",
   "health-beauty": "Gezondheid & beauty",
+  "home-garden": "Huis & tuin",
+  "pets": "Huisdieren",
+  "toys-games": "Speelgoed & games",
 };
 
 export function nlCategoryLabel(slug: string, fallback: string): string {
