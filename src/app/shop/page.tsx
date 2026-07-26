@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { listStores, listStoreCategories } from "@/lib/db";
 import { StoreCard } from "@/components/StoreCard";
+import { PayoutProof } from "@/components/PayoutProof";
 import { AAds } from "@/components/AAds";
 import { breadcrumbJsonLd, jsonLdScript, siteUrl, OG_IMAGE, TWITTER_IMAGE } from "@/lib/seo";
 
@@ -61,6 +62,8 @@ export default async function ShopIndexPage() {
           </Link>
         </div>
       </header>
+
+      <PayoutProof className="mb-8" />
 
       <div className="mb-8 flex justify-center">
         <AAds zone="leaderboard" />

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { AAds } from "@/components/AAds";
+import { PayoutProof } from "@/components/PayoutProof";
 import { breadcrumbJsonLd, faqJsonLd, jsonLdScript, siteUrl, OG_IMAGE, TWITTER_IMAGE } from "@/lib/seo";
 
 export const dynamic = "force-static";
@@ -109,6 +110,8 @@ export default function EarnPillarPage() {
           </table>
         </div>
       </section>
+
+      <PayoutProof className="mb-10" />
 
       <div className="prose prose-invert max-w-none">
         <h2>1. Shopping cashback — the easiest sats you&apos;ll ever earn</h2>
