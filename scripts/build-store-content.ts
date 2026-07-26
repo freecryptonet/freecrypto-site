@@ -275,6 +275,24 @@ const NL_CURATION: Record<string, Curation> = {
   "tripcom-13": { category_slug: "travel", geo_scope: "nl", angle: "het online reisbureau" },
   "getyourguide-12": { category_slug: "travel", geo_scope: "nl", angle: "de marktplaats voor tours en activiteiten" },
   "marriott-bonvoy-2": { category_slug: "travel", geo_scope: "nl", angle: "de internationale hotelketen" },
+  // --- scale-up batch 3 (2026-07-26): high-volume global consumer brands that
+  // Dutch shoppers actively search ("[merk] bitcoin cashback") but only had EN
+  // pages, plus a few clearly-identifiable NL-native shops that had no content
+  // at all. Deliberately excludes lotteries (Staatsloterij/Eurojackpot) as
+  // gambling is off-brand for a trust-first earn site, and stores with no clean
+  // category fit. ---
+  "adidas-21": { category_slug: "fashion", geo_scope: "nl", angle: "het wereldwijde sportmerk" },
+  "hm-4": { category_slug: "fashion", geo_scope: "nl", angle: "de bekende internationale modeketen" },
+  "shein-19": { category_slug: "fashion", geo_scope: "nl", angle: "het fast-fashion platform" },
+  "under-armour-23": { category_slug: "fashion", geo_scope: "nl", angle: "het Amerikaanse sportkledingmerk" },
+  "about-you-13": { category_slug: "fashion", geo_scope: "nl", angle: "het Europese modeplatform" },
+  "bergfreunde": { category_slug: "fashion", geo_scope: "nl", angle: "de outdoor- en bergsportwinkel" },
+  "aliexpress": { category_slug: "marketplaces", geo_scope: "nl", angle: "de wereldwijde marktplaats voor goedkope elektronica en zowat alles" },
+  "temu": { category_slug: "marketplaces", geo_scope: "nl", angle: "de snelgroeiende budgetmarktplaats" },
+  "holland-barrett": { category_slug: "health-beauty", geo_scope: "nl", angle: "de winkel voor gezondheid, supplementen en vitamines" },
+  "plus": { category_slug: "groceries-food", geo_scope: "nl", angle: "de landelijke supermarktketen" },
+  "energiedirect-2": { category_slug: "services", geo_scope: "nl", angle: "de energieleverancier" },
+  "bergzeit": { category_slug: "fashion", geo_scope: "nl", angle: "de webshop voor outdoor- en bergsportuitrusting" },
 };
 
 const NL_CAT: Record<string, string> = {
