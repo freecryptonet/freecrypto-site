@@ -13,13 +13,15 @@ import { BONUS_OFFERS } from "@/lib/bonuses";
 export const dynamic = "force-dynamic";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const [airdrops, chains, categories, guides, stores, storeCats] = await Promise.all([
+  const [airdrops, chains, categories, guides, stores, storeCats, nlStores, nlStoreCats] = await Promise.all([
     listAirdropSlugsForSitemap(),
     listChains(),
     listCategories(),
     listGuideSlugsForSitemap(),
-    listStoreSlugsForSitemap(),
-    listStoreCategories(),
+    listStoreSlugsForSitemap("en"),
+    listStoreCategories("en"),
+    listStoreSlugsForSitemap("nl"),
+    listStoreCategories("nl"),
   ]);
 
   const now = new Date();
@@ -61,6 +63,27 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "weekly",
       priority: 0.6,
     }));
+
+  // Dutch (nl) cluster.
+  const nlStoreRoutes: MetadataRoute.Sitemap = nlStores
+    .filter((s) => s.content_chars >= MIN_INDEXABLE_DESCRIPTION_CHARS)
+    .map((s) => ({
+      url: siteUrl(`/nl/shop/${s.slug}`),
+      lastModified: s.updated_at,
+      changeFrequency: "weekly",
+      priority: 0.7,
+    }));
+  const nlStoreCategoryRoutes: MetadataRoute.Sitemap = nlStoreCats
+    .filter((c) => c.store_count > 0)
+    .map((c) => ({
+      url: siteUrl(`/nl/shop/category/${c.slug}`),
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.6,
+    }));
+  const nlStaticRoutes: MetadataRoute.Sitemap = nlStoreRoutes.length
+    ? [{ url: siteUrl("/nl/shop"), lastModified: now, changeFrequency: "daily", priority: 0.8 }]
+    : [];
 
   // Airdrops: only include rows with body text above the indexability
   // threshold. Thin auto-ingested rows get crawled (we still link to them)
@@ -106,9 +129,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   return [
     ...staticRoutes,
+    ...nlStaticRoutes,
     ...bonusRoutes,
     ...storeRoutes,
     ...storeCategoryRoutes,
+    ...nlStoreRoutes,
+    ...nlStoreCategoryRoutes,
     ...guideRoutes,
     ...airdropRoutes,
     ...chainRoutes,

@@ -179,32 +179,172 @@ function faqs(name: string, cbText: string, kind: string) {
   ];
 }
 
+// ============================================================
+// Dutch (nl) cluster — Phase 2. Satsback's inventory is NL-heavy and the
+// Dutch "[winkel] bitcoin cashback" SERP is uncontested (Lolli/Fold are
+// US-only). These render at /nl/shop.
+// ============================================================
+const NL_CURATION: Record<string, Curation> = {
+  "thuisbezorgdnl": { category_slug: "groceries-food", geo_scope: "nl", angle: "de bekendste maaltijdbezorger van Nederland" },
+  "hema": { category_slug: "marketplaces", geo_scope: "nl", angle: "het Nederlandse warenhuis HEMA" },
+  "mediamarkt": { category_slug: "tech-electronics", geo_scope: "nl", angle: "de elektronicaketen MediaMarkt" },
+  "lidlnl": { category_slug: "groceries-food", geo_scope: "nl", angle: "supermarktketen Lidl" },
+  "kpn-2": { category_slug: "services", geo_scope: "nl", angle: "telecomprovider KPN" },
+  "odido-2": { category_slug: "services", geo_scope: "nl", angle: "telecomprovider Odido (voorheen T-Mobile)" },
+  "plein": { category_slug: "marketplaces", geo_scope: "nl", angle: "het online warenhuis Plein.nl" },
+  "anwb-webwinkel": { category_slug: "marketplaces", geo_scope: "nl", angle: "de webwinkel van de ANWB" },
+  "greetznl-3": { category_slug: "marketplaces", geo_scope: "nl", angle: "kaarten- en cadeauwinkel Greetz" },
+  "brunanl": { category_slug: "marketplaces", geo_scope: "nl", angle: "boeken- en tijdschriftenwinkel Bruna" },
+  "douglas": { category_slug: "health-beauty", geo_scope: "nl", angle: "parfumerie- en beautyketen Douglas" },
+  "gall-gall-2": { category_slug: "groceries-food", geo_scope: "nl", angle: "slijterijketen Gall & Gall" },
+  "scapino": { category_slug: "fashion", geo_scope: "nl", angle: "schoenen- en sportwinkel Scapino" },
+  "expert": { category_slug: "tech-electronics", geo_scope: "nl", angle: "elektronicaketen Expert" },
+  "koffievoordeel-2": { category_slug: "groceries-food", geo_scope: "nl", angle: "koffie- en theespecialist Koffievoordeel" },
+  "simyo": { category_slug: "services", geo_scope: "nl", angle: "de voordelige telecomprovider Simyo" },
+  "vidaxlnl": { category_slug: "marketplaces", geo_scope: "nl", angle: "online warenhuis vidaXL voor huis en tuin" },
+  "conrad": { category_slug: "tech-electronics", geo_scope: "nl", angle: "elektronica- en techniekwinkel Conrad" },
+  "plutosport": { category_slug: "fashion", geo_scope: "nl", angle: "sportwinkel Plutosport" },
+  "foot-locker": { category_slug: "fashion", geo_scope: "nl", angle: "sneakerwinkel Foot Locker" },
+  "lounge-by-zalando": { category_slug: "fashion", geo_scope: "nl", angle: "de members-only outlet Lounge by Zalando" },
+  "booking": { category_slug: "travel", geo_scope: "nl", angle: "hotelboekingsplatform Booking.com" },
+  "klm-4": { category_slug: "travel", geo_scope: "nl", angle: "de Nederlandse luchtvaartmaatschappij KLM" },
+  "ibood": { category_slug: "tech-electronics", geo_scope: "nl", angle: "dagaanbiedingensite iBOOD" },
+  "allekabels": { category_slug: "tech-electronics", geo_scope: "nl", angle: "kabel- en elektronicaspecialist Allekabels" },
+  "drogistnl": { category_slug: "health-beauty", geo_scope: "nl", angle: "de online drogist Drogist.nl" },
+};
+
+const NL_CAT: Record<string, string> = {
+  "groceries-food": "boodschappen", "fashion": "kleding", "tech-electronics": "elektronica",
+  "travel": "reis", "marketplaces": "online", "services": "diensten", "health-beauty": "beauty",
+  "bitcoin-gear": "bitcoin",
+};
+
+function nlCat(slug: string): string {
+  return NL_CAT[slug] ?? "online";
+}
+
+function nlRate(text: string): string {
+  return (text || "")
+    .replace(/^up to/i, "tot")
+    .replace(/discount code/i, "kortingscode")
+    .replace(/(\d+)\s*free month/i, "$1 maand gratis");
+}
+
+function nlRewardPhrase(kind: string, text: string): string {
+  const t = nlRate(text);
+  if (kind === "percent") return `${t} van je bestelbedrag terug in Bitcoin, uitbetaald als sats naar een Lightning-wallet die jij beheert`;
+  if (kind === "sats") return `een vast bedrag van ${t} in Bitcoin per bestelling, naar een Lightning-wallet die jij beheert`;
+  if (kind === "discount") return `een ${t} bij het afrekenen — een directe korting in plaats van cashback`;
+  return "Bitcoin cashback op je bestellingen";
+}
+
+function nlDescribe(name: string, angle: string, cbText: string, kind: string, cat: string): string {
+  const reward = `Via Satsback krijg je ${nlRewardPhrase(kind, cbText)}.`;
+  const second = paysBitcoin(kind)
+    ? `Shop je toch al bij ${name}? Dan is dit gratis geld op uitgaven die je sowieso doet. Hieronder de actuele cashback, hoe het tracken écht werkt, en of het de moeite waard is voor een ${nlCat(cat)}-aankoop.`
+    : `Het is een vaste kortingscode in plaats van procentuele cashback, dus je weet de korting vooraf. Hieronder de exacte aanbieding, hoe je hem via Satsback verzilvert, en of het beter is dan een gewone ${nlCat(cat)}-kortingscode zoeken.`;
+  return `## Bitcoin cashback bij ${name}\n\n${name} is ${angle}. ${reward}\n\n${second}`;
+}
+
+function nlHowItWorks(name: string, cbText: string, kind: string): string {
+  if (!paysBitcoin(kind)) {
+    return [
+      `## Zo verzilver je de ${name}-aanbieding`,
+      ``,
+      `1. Maak een gratis Satsback-account aan (geen KYC nodig) en open de ${name}-pagina op Satsback.`,
+      `2. Bekijk de aanbieding — ${nlRate(cbText)} — en kopieer de code of ga door naar ${name}.`,
+      `3. Plak de code bij het afrekenen van ${name}; de korting wordt meteen toegepast.`,
+      ``,
+      `Omdat dit een kortingscode is en geen getrackte cashback, hoef je niet te wachten tot de verkoop bevestigd is — je ziet de korting direct. Codes kunnen verlopen of veranderen, dus check de actuele aanbieding op de ${name}-pagina voor je bestelt.`,
+    ].join("\n");
+  }
+  return [
+    `## Zo werkt Bitcoin cashback bij ${name}`,
+    ``,
+    `1. Maak een gratis Satsback-account aan (geen KYC nodig) en installeer de browser-extensie.`,
+    `2. Ga naar ${name} via Satsback — de extensie vraagt je met één klik om de beloning te activeren.`,
+    `3. Reken af zoals altijd. Je cashback (${nlRate(cbText)}) verschijnt als *in behandeling* in je Satsback-dashboard.`,
+    `4. Zodra ${name} de verkoop bevestigt, kun je de sats opnemen naar elke Bitcoin Lightning-wallet.`,
+    ``,
+    `**Let op — het tracken.** Satsback werkt via affiliate-tracking, en gebruikers melden dat ongeveer twee op de drie bestellingen goed doorkomen (rond de 3,2/5 in de Chrome Web Store). Zet adblockers uit op de ${name}-tab, gebruik geen andere kortings-extensies bij het afrekenen, en houd de Satsback-tab als laatste open voordat je betaalt. Komt een bestelling na een paar dagen niet binnen, dan kan Satsback-support hem met je bonnetje natrekken.`,
+  ].join("\n");
+}
+
+function nlWorthIt(name: string, kind: string, value: number | null, cat: string): string {
+  let verdict: string;
+  if (kind === "percent" && value != null && value >= 3) {
+    verdict = `Met ${nlRate(String(value))}%+ hoort ${name} bij de betere ${nlCat(cat)}-tarieven op Satsback — de twee minuten instellen ruimschoots waard.`;
+  } else if (kind === "percent" && value != null && value >= 1.5) {
+    verdict = `Het tarief is prima voor ${nlCat(cat)}; op een normale bestelling bij ${name} telt het al snel op tot een leuk bedrag aan sats.`;
+  } else if (kind === "discount") {
+    verdict = `Dit is een vaste kortingscode in plaats van procentuele cashback, dus de waarde ligt vast ongeacht je bestelgrootte — het best voor één geplande aankoop bij ${name}.`;
+  } else if (kind === "sats") {
+    verdict = `${name} betaalt hier een vast aantal sats per bestelling, dus het levert relatief het meest op bij kleinere bestellingen.`;
+  } else {
+    verdict = `Het tarief is bescheiden, dus het loont vooral bij grotere bestellingen bij ${name} waar een klein percentage toch flink wat sats wordt.`;
+  }
+  const note = paysBitcoin(kind)
+    ? `Omdat de beloning in Bitcoin wordt uitbetaald, spaar je bij elke aankoop een beetje sats — precies waarom veel mensen sats-back verkiezen boven gewone cashback. De waarde beweegt wel mee met de koers van Bitcoin.`
+    : `Let op: een kortingscode is eenmalig en kan verlopen, dus controleer de actuele aanbieding voordat je erop rekent. Op iets dat je toch al bij ${name} zou kopen, is het gewoon meegenomen.`;
+  return `## Is het de moeite waard?\n\n${verdict}\n\n${note}`;
+}
+
+function nlFaqs(name: string, cbText: string, kind: string) {
+  if (!paysBitcoin(kind)) {
+    return [
+      { question: `Wat is de actuele ${name}-aanbieding op Satsback?`, answer_md: `${nlRate(cbText)}, toe te passen bij het afrekenen van ${name}. Aanbiedingen kunnen wijzigen, dus check de ${name}-pagina voor de actuele code.` },
+      { question: `Moet ik me verifiëren (KYC) om het te gebruiken?`, answer_md: `Nee. Satsback is gratis en vraagt geen KYC — je hebt alleen een gratis account nodig om de ${name}-aanbieding te ontgrendelen.` },
+      { question: `Is het Bitcoin cashback of een korting?`, answer_md: `Bij ${name} is dit een kortingscode — een directe korting bij het afrekenen — en geen getrackte Bitcoin cashback. Hoe dan ook is het gratis te gebruiken via Satsback.` },
+    ];
+  }
+  return [
+    { question: `Hoeveel Bitcoin verdien ik bij ${name}?`, answer_md: `Op dit moment ${nlRate(cbText)}, als sats bijgeschreven in je Satsback-dashboard zodra ${name} de bestelling bevestigt.` },
+    { question: `Moet ik me verifiëren (KYC) om te verdienen?`, answer_md: `Nee. Satsback is gratis en vraagt geen KYC — je hebt alleen een account en de browser-extensie nodig om Bitcoin te verdienen bij ${name}.` },
+    { question: `Wanneer kan ik mijn ${name}-cashback opnemen?`, answer_md: `Zodra de bestelling van *in behandeling* naar *bevestigd* gaat (na de retourtermijn van ${name}), kun je je sats opnemen naar elke Bitcoin Lightning-wallet.` },
+  ];
+}
+
 function main() {
   const raw: RawStore[] = JSON.parse(fs.readFileSync(path.join(process.cwd(), "seeds", "stores.raw.json"), "utf8"));
+  type Faq = { question: string; answer_md: string };
   const out = raw.map((r) => {
     const cur = CURATION[r.satsback_slug];
+    const nlCur = NL_CURATION[r.satsback_slug];
     const cb = parseCashback(r.cashback_text ?? "");
-    if (!cur) {
-      return {
-        slug: r.satsback_slug, name: r.name, satsback_slug: r.satsback_slug, logo_url: r.logo_url,
-        cashback_text: r.cashback_text, category_slug: null as string | null, geo_scope: "global" as Geo,
-        is_bitcoin_native: false, description_md: "", how_it_works_md: "", worth_it_md: "", faqs: [] as Array<{ question: string; answer_md: string }>,
-      };
-    }
-    const btc = !!cur.is_bitcoin_native;
+    const btc = !!cur?.is_bitcoin_native;
+
+    const en = cur
+      ? {
+          description_md: describe(r.satsback_slug, r.name, cur.angle, r.cashback_text ?? "cashback", cb.kind, cur.category_slug, btc),
+          how_it_works_md: howItWorks(r.name, r.cashback_text ?? "your cashback", cb.kind),
+          worth_it_md: worthIt(r.name, cb.kind, cb.value, cur.category_slug, btc),
+          faqs: faqs(r.name, r.cashback_text ?? "the current rate", cb.kind) as Faq[],
+        }
+      : { description_md: "", how_it_works_md: "", worth_it_md: "", faqs: [] as Faq[] };
+
+    const nl = nlCur
+      ? {
+          description_nl_md: nlDescribe(r.name, nlCur.angle, r.cashback_text ?? "cashback", cb.kind, nlCur.category_slug),
+          how_it_works_nl_md: nlHowItWorks(r.name, r.cashback_text ?? "je cashback", cb.kind),
+          worth_it_nl_md: nlWorthIt(r.name, cb.kind, cb.value, nlCur.category_slug),
+          faqs_nl: nlFaqs(r.name, r.cashback_text ?? "het huidige tarief", cb.kind) as Faq[],
+        }
+      : { description_nl_md: "", how_it_works_nl_md: "", worth_it_nl_md: "", faqs_nl: [] as Faq[] };
+
     return {
       slug: r.satsback_slug, name: r.name, satsback_slug: r.satsback_slug, logo_url: r.logo_url,
-      cashback_text: r.cashback_text, category_slug: cur.category_slug, geo_scope: cur.geo_scope,
+      cashback_text: r.cashback_text,
+      category_slug: (cur?.category_slug ?? nlCur?.category_slug ?? null) as string | null,
+      geo_scope: (cur?.geo_scope ?? nlCur?.geo_scope ?? "global") as Geo,
       is_bitcoin_native: btc,
-      description_md: describe(r.satsback_slug, r.name, cur.angle, r.cashback_text ?? "cashback", cb.kind, cur.category_slug, btc),
-      how_it_works_md: howItWorks(r.name, r.cashback_text ?? "your cashback", cb.kind),
-      worth_it_md: worthIt(r.name, cb.kind, cb.value, cur.category_slug, btc),
-      faqs: faqs(r.name, r.cashback_text ?? "the current rate", cb.kind),
+      ...en,
+      ...nl,
     };
   });
   fs.writeFileSync(path.join(process.cwd(), "seeds", "stores.json"), JSON.stringify(out, null, 2));
-  const indexable = out.filter((s) => (s.description_md.length + s.how_it_works_md.length + s.worth_it_md.length) >= 800).length;
-  console.log(`Wrote ${out.length} stores (${indexable} indexable / curated) to seeds/stores.json`);
+  const enIdx = out.filter((s) => (s.description_md.length + s.how_it_works_md.length + s.worth_it_md.length) >= 800).length;
+  const nlIdx = out.filter((s) => (s.description_nl_md.length + s.how_it_works_nl_md.length + s.worth_it_nl_md.length) >= 800).length;
+  console.log(`Wrote ${out.length} stores (${enIdx} EN indexable, ${nlIdx} NL indexable) to seeds/stores.json`);
 }
 
 main();

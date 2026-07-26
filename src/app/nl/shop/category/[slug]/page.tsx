@@ -6,6 +6,7 @@ import { CashbackBadge } from "@/components/CashbackBadge";
 import { StoreLogo } from "@/components/StoreLogo";
 import { AAds } from "@/components/AAds";
 import { breadcrumbJsonLd, jsonLdScript, siteUrl } from "@/lib/seo";
+import { nlCategoryLabel } from "@/lib/store-i18n";
 
 export const dynamic = "force-dynamic";
 
@@ -14,52 +15,54 @@ interface PageProps {
 }
 
 async function findCategory(slug: string) {
-  const cats = await listStoreCategories("en");
+  const cats = await listStoreCategories("nl");
   return cats.find((c) => c.slug === slug) ?? null;
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const cat = await findCategory(slug);
-  if (!cat) return { title: "Category not found", robots: { index: false, follow: false } };
-  const title = `Best Stores for Bitcoin Cashback: ${cat.name} (2026)`;
-  const description =
-    cat.description || `Compare ${cat.name.toLowerCase()} stores that pay Bitcoin cashback via Satsback, ranked by rate.`;
+  if (!cat) return { title: "Categorie niet gevonden", robots: { index: false, follow: false } };
+  const label = nlCategoryLabel(cat.slug, cat.name);
+  const title = `Beste winkels voor Bitcoin cashback: ${label} (2026)`;
+  const description = `Vergelijk ${label.toLowerCase()}-winkels die Bitcoin cashback geven via Satsback, gerangschikt op tarief.`;
   return {
     title,
     description,
-    alternates: { canonical: `/shop/category/${cat.slug}` },
-    openGraph: { title, description, type: "website", url: siteUrl(`/shop/category/${cat.slug}`) },
-    twitter: { card: "summary_large_image", title, description },
+    alternates: {
+      canonical: `/nl/shop/category/${cat.slug}`,
+      languages: { "nl-NL": siteUrl(`/nl/shop/category/${cat.slug}`), "en": siteUrl(`/shop/category/${cat.slug}`) },
+    },
+    openGraph: { title, description, type: "website", url: siteUrl(`/nl/shop/category/${cat.slug}`), locale: "nl_NL" },
     robots: cat.store_count > 0 ? undefined : { index: false, follow: true },
   };
 }
 
-export default async function StoreCategoryPage({ params }: PageProps) {
+export default async function NlStoreCategoryPage({ params }: PageProps) {
   const { slug } = await params;
   const cat = await findCategory(slug);
   if (!cat) notFound();
+  const label = nlCategoryLabel(cat.slug, cat.name);
 
-  const stores = await listStores({ categorySlug: cat.slug, sort: "rate", limit: 100, contentLang: "en" });
+  const stores = await listStores({ categorySlug: cat.slug, sort: "rate", limit: 100, contentLang: "nl" });
 
   return (
     <div className="mx-auto max-w-page px-4 py-8">
-      <nav className="mb-4 text-xs text-text-faint" aria-label="Breadcrumb">
+      <nav className="mb-4 text-xs text-text-faint" aria-label="Kruimelpad">
         <Link href="/" className="hover:text-text-dim">Home</Link>
         <span className="mx-1.5">/</span>
-        <Link href="/shop" className="hover:text-text-dim">Shop &amp; Earn</Link>
+        <Link href="/nl/shop" className="hover:text-text-dim">Shoppen &amp; verdienen</Link>
         <span className="mx-1.5">/</span>
-        <span className="text-text-dim">{cat.name}</span>
+        <span className="text-text-dim">{label}</span>
       </nav>
 
       <header className="mb-6 max-w-3xl">
-        <h1 className="text-h1-page font-bold tracking-tight">Best stores for Bitcoin cashback: {cat.name}</h1>
-        {cat.description ? <p className="mt-2 text-sm text-text-dim">{cat.description}</p> : null}
+        <h1 className="text-h1-page font-bold tracking-tight">Beste winkels voor Bitcoin cashback: {label}</h1>
         <p className="mt-2 text-sm text-text-dim">
-          Every store below pays you back in Bitcoin when you shop through Satsback, ranked by the
-          rate they advertise. Percentage rates reward bigger baskets; fixed sats and discount codes
-          are best on a single planned purchase. Rates change — the figure shown is the current
-          &ldquo;up to&rdquo; ceiling.
+          Elke winkel hieronder betaalt je in Bitcoin wanneer je via Satsback shopt, gerangschikt op
+          het geadverteerde tarief. Procentuele tarieven belonen grotere bestellingen; vaste sats en
+          kortingscodes zijn het best voor één geplande aankoop. Tarieven wijzigen — het getoonde
+          bedrag is het actuele &ldquo;tot&rdquo;-maximum.
         </p>
       </header>
 
@@ -71,8 +74,8 @@ export default async function StoreCategoryPage({ params }: PageProps) {
         <table className="w-full min-w-[420px] border-collapse text-sm">
           <thead>
             <tr className="border-b border-edge text-left text-xs text-text-faint">
-              <th className="py-2 pr-4 font-medium">Store</th>
-              <th className="py-2 pr-4 font-medium">Bitcoin reward</th>
+              <th className="py-2 pr-4 font-medium">Winkel</th>
+              <th className="py-2 pr-4 font-medium">Bitcoin-beloning</th>
               <th className="py-2 font-medium"></th>
             </tr>
           </thead>
@@ -80,16 +83,16 @@ export default async function StoreCategoryPage({ params }: PageProps) {
             {stores.map((s) => (
               <tr key={s.id} className="border-b border-edge/50">
                 <td className="py-3 pr-4">
-                  <Link href={`/shop/${s.slug}`} className="flex items-center gap-3 hover:text-accent">
+                  <Link href={`/nl/shop/${s.slug}`} className="flex items-center gap-3 hover:text-accent">
                     <StoreLogo src={s.logo_url} name={s.name} slug={s.slug} size={28} />
                     <span className="font-medium text-text">{s.name}</span>
                   </Link>
                 </td>
                 <td className="py-3 pr-4">
-                  <CashbackBadge text={s.cashback_text} kind={s.cashback_kind} />
+                  <CashbackBadge text={s.cashback_text} kind={s.cashback_kind} lang="nl" />
                 </td>
                 <td className="py-3 text-right">
-                  <Link href={`/shop/${s.slug}`} className="text-xs text-accent hover:underline">Details →</Link>
+                  <Link href={`/nl/shop/${s.slug}`} className="text-xs text-accent hover:underline">Details →</Link>
                 </td>
               </tr>
             ))}
@@ -103,8 +106,8 @@ export default async function StoreCategoryPage({ params }: PageProps) {
           __html: jsonLdScript(
             breadcrumbJsonLd([
               { name: "Home", url: siteUrl("/") },
-              { name: "Shop & Earn", url: siteUrl("/shop") },
-              { name: cat.name, url: siteUrl(`/shop/category/${cat.slug}`) },
+              { name: "Shoppen & verdienen", url: siteUrl("/nl/shop") },
+              { name: label, url: siteUrl(`/nl/shop/category/${cat.slug}`) },
             ]),
           ),
         }}

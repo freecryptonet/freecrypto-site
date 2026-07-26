@@ -7,6 +7,7 @@ import { isStoreIndexable, breadcrumbJsonLd, faqJsonLd, jsonLdScript, siteUrl } 
 import { CashbackBadge } from "@/components/CashbackBadge";
 import { StoreLogo } from "@/components/StoreLogo";
 import { AAds } from "@/components/AAds";
+import { nlCategoryLabel } from "@/lib/store-i18n";
 
 export const dynamic = "force-dynamic";
 
@@ -16,46 +17,47 @@ interface PageProps {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { store } = await params;
-  const s = await getStoreBySlug(store);
-  if (!s || !s.has_en) return { title: "Store not found", robots: { index: false, follow: false } };
+  const s = await getStoreBySlug(store, "nl");
+  if (!s || !s.has_nl) return { title: "Winkel niet gevonden", robots: { index: false, follow: false } };
   const indexable = isStoreIndexable(s);
-  const rate = s.cashback_text ? ` — ${s.cashback_kind === "discount" ? s.cashback_text : `${s.cashback_text} back`}` : "";
-  const title = `Earn Bitcoin at ${s.name}${rate} (2026)`;
-  const description = `How to earn Bitcoin at ${s.name} via Satsback — the current rate, how the tracking works, and whether it's worth it.`;
-  const languages: Record<string, string> = { "en": siteUrl(`/shop/${s.slug}`) };
-  if (s.has_nl) languages["nl-NL"] = siteUrl(`/nl/shop/${s.slug}`);
+  const rate = s.cashback_text ? ` — ${s.cashback_kind === "discount" ? s.cashback_text : `${s.cashback_text}`}` : "";
+  const title = `Bitcoin cashback bij ${s.name}${rate} (2026)`;
+  const description = `Zo verdien je Bitcoin bij ${s.name} via Satsback — het actuele tarief, hoe de tracking werkt en of het de moeite waard is.`;
+  const languages: Record<string, string> = { "nl-NL": siteUrl(`/nl/shop/${s.slug}`) };
+  if (s.has_en) languages["en"] = siteUrl(`/shop/${s.slug}`);
   return {
     title,
     description,
-    alternates: { canonical: `/shop/${s.slug}`, languages },
-    openGraph: { title, description, type: "article", url: siteUrl(`/shop/${s.slug}`) },
-    twitter: { card: "summary_large_image", title, description },
+    alternates: { canonical: `/nl/shop/${s.slug}`, languages },
+    openGraph: { title, description, type: "article", url: siteUrl(`/nl/shop/${s.slug}`), locale: "nl_NL" },
     robots: indexable ? undefined : { index: false, follow: true },
   };
 }
 
-export default async function StorePage({ params }: PageProps) {
+export default async function NlStorePage({ params }: PageProps) {
   const { store } = await params;
-  const s = await getStoreBySlug(store);
-  if (!s || !s.has_en) notFound();
+  const s = await getStoreBySlug(store, "nl");
+  if (!s || !s.has_nl) notFound();
 
   const crumbs = breadcrumbJsonLd([
     { name: "Home", url: siteUrl("/") },
-    { name: "Shop & Earn", url: siteUrl("/shop") },
-    { name: s.name, url: siteUrl(`/shop/${s.slug}`) },
+    { name: "Shoppen & verdienen", url: siteUrl("/nl/shop") },
+    { name: s.name, url: siteUrl(`/nl/shop/${s.slug}`) },
   ]);
   const faq = faqJsonLd(s.faqs);
 
   return (
     <article className="mx-auto max-w-3xl px-4 py-8">
-      <nav className="mb-4 text-xs text-text-faint" aria-label="Breadcrumb">
+      <nav className="mb-4 text-xs text-text-faint" aria-label="Kruimelpad">
         <Link href="/" className="hover:text-text-dim">Home</Link>
         <span className="mx-1.5">/</span>
-        <Link href="/shop" className="hover:text-text-dim">Shop &amp; Earn</Link>
+        <Link href="/nl/shop" className="hover:text-text-dim">Shoppen &amp; verdienen</Link>
         {s.category_slug && s.category_name ? (
           <>
             <span className="mx-1.5">/</span>
-            <Link href={`/shop/category/${s.category_slug}`} className="hover:text-text-dim">{s.category_name}</Link>
+            <Link href={`/nl/shop/category/${s.category_slug}`} className="hover:text-text-dim">
+              {nlCategoryLabel(s.category_slug, s.category_name)}
+            </Link>
           </>
         ) : null}
         <span className="mx-1.5">/</span>
@@ -65,16 +67,16 @@ export default async function StorePage({ params }: PageProps) {
       <header className="mb-6 flex items-center gap-4">
         <StoreLogo src={s.logo_url} name={s.name} slug={s.slug} size={56} />
         <div>
-          <h1 className="text-h1-page font-bold tracking-tight">Earn Bitcoin at {s.name}</h1>
+          <h1 className="text-h1-page font-bold tracking-tight">Bitcoin cashback bij {s.name}</h1>
           <div className="mt-2">
-            <CashbackBadge text={s.cashback_text} kind={s.cashback_kind} />
+            <CashbackBadge text={s.cashback_text} kind={s.cashback_kind} lang="nl" />
           </div>
         </div>
       </header>
 
-      {s.has_nl ? (
+      {s.has_en ? (
         <p className="mb-4 text-xs text-text-faint">
-          🇳🇱 <Link href={`/nl/shop/${s.slug}`} className="text-accent hover:underline">Lees in het Nederlands</Link>
+          🇬🇧 <Link href={`/shop/${s.slug}`} className="text-accent hover:underline">Read in English</Link>
         </p>
       ) : null}
 
@@ -85,7 +87,7 @@ export default async function StorePage({ params }: PageProps) {
         rel="nofollow sponsored"
         className="my-6 inline-flex rounded-lg bg-accent px-5 py-3 text-sm font-medium text-ink"
       >
-        Start earning at {s.name} — create a free Satsback account →
+        Begin bij {s.name} — maak een gratis Satsback-account aan →
       </a>
 
       <div className="prose prose-invert max-w-none" dangerouslySetInnerHTML={{ __html: renderMarkdown(s.how_it_works_md) }} />
@@ -98,7 +100,7 @@ export default async function StorePage({ params }: PageProps) {
 
       {s.faqs.length > 0 && (
         <section className="mt-10 border-t border-edge pt-8">
-          <h2 className="mb-4 text-h2 font-semibold">Frequently asked questions</h2>
+          <h2 className="mb-4 text-h2 font-semibold">Veelgestelde vragen</h2>
           <dl className="space-y-4">
             {s.faqs.map((f, i) => (
               <div key={i}>

@@ -5,13 +5,30 @@
     "satsback_slug": "thuisbezorgdnl",
     "logo_url": "https://satsback.com/assets/media/partners/thuisbezorgd.svg",
     "cashback_text": "up to 1.6%",
-    "category_slug": null,
-    "geo_scope": "global",
+    "category_slug": "groceries-food",
+    "geo_scope": "nl",
     "is_bitcoin_native": false,
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "## Bitcoin cashback bij Thuisbezorgd.nl\n\nThuisbezorgd.nl is de bekendste maaltijdbezorger van Nederland. Via Satsback krijg je tot 1.6% van je bestelbedrag terug in Bitcoin, uitbetaald als sats naar een Lightning-wallet die jij beheert.\n\nShop je toch al bij Thuisbezorgd.nl? Dan is dit gratis geld op uitgaven die je sowieso doet. Hieronder de actuele cashback, hoe het tracken écht werkt, en of het de moeite waard is voor een boodschappen-aankoop.",
+    "how_it_works_nl_md": "## Zo werkt Bitcoin cashback bij Thuisbezorgd.nl\n\n1. Maak een gratis Satsback-account aan (geen KYC nodig) en installeer de browser-extensie.\n2. Ga naar Thuisbezorgd.nl via Satsback — de extensie vraagt je met één klik om de beloning te activeren.\n3. Reken af zoals altijd. Je cashback (tot 1.6%) verschijnt als *in behandeling* in je Satsback-dashboard.\n4. Zodra Thuisbezorgd.nl de verkoop bevestigt, kun je de sats opnemen naar elke Bitcoin Lightning-wallet.\n\n**Let op — het tracken.** Satsback werkt via affiliate-tracking, en gebruikers melden dat ongeveer twee op de drie bestellingen goed doorkomen (rond de 3,2/5 in de Chrome Web Store). Zet adblockers uit op de Thuisbezorgd.nl-tab, gebruik geen andere kortings-extensies bij het afrekenen, en houd de Satsback-tab als laatste open voordat je betaalt. Komt een bestelling na een paar dagen niet binnen, dan kan Satsback-support hem met je bonnetje natrekken.",
+    "worth_it_nl_md": "## Is het de moeite waard?\n\nHet tarief is prima voor boodschappen; op een normale bestelling bij Thuisbezorgd.nl telt het al snel op tot een leuk bedrag aan sats.\n\nOmdat de beloning in Bitcoin wordt uitbetaald, spaar je bij elke aankoop een beetje sats — precies waarom veel mensen sats-back verkiezen boven gewone cashback. De waarde beweegt wel mee met de koers van Bitcoin.",
+    "faqs_nl": [
+      {
+        "question": "Hoeveel Bitcoin verdien ik bij Thuisbezorgd.nl?",
+        "answer_md": "Op dit moment tot 1.6%, als sats bijgeschreven in je Satsback-dashboard zodra Thuisbezorgd.nl de bestelling bevestigt."
+      },
+      {
+        "question": "Moet ik me verifiëren (KYC) om te verdienen?",
+        "answer_md": "Nee. Satsback is gratis en vraagt geen KYC — je hebt alleen een account en de browser-extensie nodig om Bitcoin te verdienen bij Thuisbezorgd.nl."
+      },
+      {
+        "question": "Wanneer kan ik mijn Thuisbezorgd.nl-cashback opnemen?",
+        "answer_md": "Zodra de bestelling van *in behandeling* naar *bevestigd* gaat (na de retourtermijn van Thuisbezorgd.nl), kun je je sats opnemen naar elke Bitcoin Lightning-wallet."
+      }
+    ]
   },
   {
     "slug": "hema",
@@ -19,13 +36,30 @@
     "satsback_slug": "hema",
     "logo_url": "https://cdn.satsback.com/stores/s/hema-nl-70537.svg",
     "cashback_text": "up to 1%",
-    "category_slug": null,
-    "geo_scope": "global",
+    "category_slug": "marketplaces",
+    "geo_scope": "nl",
     "is_bitcoin_native": false,
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "## Bitcoin cashback bij HEMA\n\nHEMA is het Nederlandse warenhuis HEMA. Via Satsback krijg je tot 1% van je bestelbedrag terug in Bitcoin, uitbetaald als sats naar een Lightning-wallet die jij beheert.\n\nShop je toch al bij HEMA? Dan is dit gratis geld op uitgaven die je sowieso doet. Hieronder de actuele cashback, hoe het tracken écht werkt, en of het de moeite waard is voor een online-aankoop.",
+    "how_it_works_nl_md": "## Zo werkt Bitcoin cashback bij HEMA\n\n1. Maak een gratis Satsback-account aan (geen KYC nodig) en installeer de browser-extensie.\n2. Ga naar HEMA via Satsback — de extensie vraagt je met één klik om de beloning te activeren.\n3. Reken af zoals altijd. Je cashback (tot 1%) verschijnt als *in behandeling* in je Satsback-dashboard.\n4. Zodra HEMA de verkoop bevestigt, kun je de sats opnemen naar elke Bitcoin Lightning-wallet.\n\n**Let op — het tracken.** Satsback werkt via affiliate-tracking, en gebruikers melden dat ongeveer twee op de drie bestellingen goed doorkomen (rond de 3,2/5 in de Chrome Web Store). Zet adblockers uit op de HEMA-tab, gebruik geen andere kortings-extensies bij het afrekenen, en houd de Satsback-tab als laatste open voordat je betaalt. Komt een bestelling na een paar dagen niet binnen, dan kan Satsback-support hem met je bonnetje natrekken.",
+    "worth_it_nl_md": "## Is het de moeite waard?\n\nHet tarief is bescheiden, dus het loont vooral bij grotere bestellingen bij HEMA waar een klein percentage toch flink wat sats wordt.\n\nOmdat de beloning in Bitcoin wordt uitbetaald, spaar je bij elke aankoop een beetje sats — precies waarom veel mensen sats-back verkiezen boven gewone cashback. De waarde beweegt wel mee met de koers van Bitcoin.",
+    "faqs_nl": [
+      {
+        "question": "Hoeveel Bitcoin verdien ik bij HEMA?",
+        "answer_md": "Op dit moment tot 1%, als sats bijgeschreven in je Satsback-dashboard zodra HEMA de bestelling bevestigt."
+      },
+      {
+        "question": "Moet ik me verifiëren (KYC) om te verdienen?",
+        "answer_md": "Nee. Satsback is gratis en vraagt geen KYC — je hebt alleen een account en de browser-extensie nodig om Bitcoin te verdienen bij HEMA."
+      },
+      {
+        "question": "Wanneer kan ik mijn HEMA-cashback opnemen?",
+        "answer_md": "Zodra de bestelling van *in behandeling* naar *bevestigd* gaat (na de retourtermijn van HEMA), kun je je sats opnemen naar elke Bitcoin Lightning-wallet."
+      }
+    ]
   },
   {
     "slug": "aliexpress",
@@ -52,7 +86,11 @@
         "question": "When can I withdraw my AliExpress cashback?",
         "answer_md": "Once the order moves from *pending* to *confirmed* (after AliExpress's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
       }
-    ]
+    ],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "mediamarkt",
@@ -60,13 +98,30 @@
     "satsback_slug": "mediamarkt",
     "logo_url": "https://cdn.satsback.com/stores/partners/mediamarkt-v2.svg",
     "cashback_text": "up to 1.3%",
-    "category_slug": null,
-    "geo_scope": "global",
+    "category_slug": "tech-electronics",
+    "geo_scope": "nl",
     "is_bitcoin_native": false,
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "## Bitcoin cashback bij MediaMarkt\n\nMediaMarkt is de elektronicaketen MediaMarkt. Via Satsback krijg je tot 1.3% van je bestelbedrag terug in Bitcoin, uitbetaald als sats naar een Lightning-wallet die jij beheert.\n\nShop je toch al bij MediaMarkt? Dan is dit gratis geld op uitgaven die je sowieso doet. Hieronder de actuele cashback, hoe het tracken écht werkt, en of het de moeite waard is voor een elektronica-aankoop.",
+    "how_it_works_nl_md": "## Zo werkt Bitcoin cashback bij MediaMarkt\n\n1. Maak een gratis Satsback-account aan (geen KYC nodig) en installeer de browser-extensie.\n2. Ga naar MediaMarkt via Satsback — de extensie vraagt je met één klik om de beloning te activeren.\n3. Reken af zoals altijd. Je cashback (tot 1.3%) verschijnt als *in behandeling* in je Satsback-dashboard.\n4. Zodra MediaMarkt de verkoop bevestigt, kun je de sats opnemen naar elke Bitcoin Lightning-wallet.\n\n**Let op — het tracken.** Satsback werkt via affiliate-tracking, en gebruikers melden dat ongeveer twee op de drie bestellingen goed doorkomen (rond de 3,2/5 in de Chrome Web Store). Zet adblockers uit op de MediaMarkt-tab, gebruik geen andere kortings-extensies bij het afrekenen, en houd de Satsback-tab als laatste open voordat je betaalt. Komt een bestelling na een paar dagen niet binnen, dan kan Satsback-support hem met je bonnetje natrekken.",
+    "worth_it_nl_md": "## Is het de moeite waard?\n\nHet tarief is bescheiden, dus het loont vooral bij grotere bestellingen bij MediaMarkt waar een klein percentage toch flink wat sats wordt.\n\nOmdat de beloning in Bitcoin wordt uitbetaald, spaar je bij elke aankoop een beetje sats — precies waarom veel mensen sats-back verkiezen boven gewone cashback. De waarde beweegt wel mee met de koers van Bitcoin.",
+    "faqs_nl": [
+      {
+        "question": "Hoeveel Bitcoin verdien ik bij MediaMarkt?",
+        "answer_md": "Op dit moment tot 1.3%, als sats bijgeschreven in je Satsback-dashboard zodra MediaMarkt de bestelling bevestigt."
+      },
+      {
+        "question": "Moet ik me verifiëren (KYC) om te verdienen?",
+        "answer_md": "Nee. Satsback is gratis en vraagt geen KYC — je hebt alleen een account en de browser-extensie nodig om Bitcoin te verdienen bij MediaMarkt."
+      },
+      {
+        "question": "Wanneer kan ik mijn MediaMarkt-cashback opnemen?",
+        "answer_md": "Zodra de bestelling van *in behandeling* naar *bevestigd* gaat (na de retourtermijn van MediaMarkt), kun je je sats opnemen naar elke Bitcoin Lightning-wallet."
+      }
+    ]
   },
   {
     "slug": "zooplus-16",
@@ -80,7 +135,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "booking",
@@ -106,6 +165,23 @@
       {
         "question": "When can I withdraw my Booking.com cashback?",
         "answer_md": "Once the order moves from *pending* to *confirmed* (after Booking.com's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
+      }
+    ],
+    "description_nl_md": "## Bitcoin cashback bij Booking.com\n\nBooking.com is hotelboekingsplatform Booking.com. Via Satsback krijg je tot 1% van je bestelbedrag terug in Bitcoin, uitbetaald als sats naar een Lightning-wallet die jij beheert.\n\nShop je toch al bij Booking.com? Dan is dit gratis geld op uitgaven die je sowieso doet. Hieronder de actuele cashback, hoe het tracken écht werkt, en of het de moeite waard is voor een reis-aankoop.",
+    "how_it_works_nl_md": "## Zo werkt Bitcoin cashback bij Booking.com\n\n1. Maak een gratis Satsback-account aan (geen KYC nodig) en installeer de browser-extensie.\n2. Ga naar Booking.com via Satsback — de extensie vraagt je met één klik om de beloning te activeren.\n3. Reken af zoals altijd. Je cashback (tot 1%) verschijnt als *in behandeling* in je Satsback-dashboard.\n4. Zodra Booking.com de verkoop bevestigt, kun je de sats opnemen naar elke Bitcoin Lightning-wallet.\n\n**Let op — het tracken.** Satsback werkt via affiliate-tracking, en gebruikers melden dat ongeveer twee op de drie bestellingen goed doorkomen (rond de 3,2/5 in de Chrome Web Store). Zet adblockers uit op de Booking.com-tab, gebruik geen andere kortings-extensies bij het afrekenen, en houd de Satsback-tab als laatste open voordat je betaalt. Komt een bestelling na een paar dagen niet binnen, dan kan Satsback-support hem met je bonnetje natrekken.",
+    "worth_it_nl_md": "## Is het de moeite waard?\n\nHet tarief is bescheiden, dus het loont vooral bij grotere bestellingen bij Booking.com waar een klein percentage toch flink wat sats wordt.\n\nOmdat de beloning in Bitcoin wordt uitbetaald, spaar je bij elke aankoop een beetje sats — precies waarom veel mensen sats-back verkiezen boven gewone cashback. De waarde beweegt wel mee met de koers van Bitcoin.",
+    "faqs_nl": [
+      {
+        "question": "Hoeveel Bitcoin verdien ik bij Booking.com?",
+        "answer_md": "Op dit moment tot 1%, als sats bijgeschreven in je Satsback-dashboard zodra Booking.com de bestelling bevestigt."
+      },
+      {
+        "question": "Moet ik me verifiëren (KYC) om te verdienen?",
+        "answer_md": "Nee. Satsback is gratis en vraagt geen KYC — je hebt alleen een account en de browser-extensie nodig om Bitcoin te verdienen bij Booking.com."
+      },
+      {
+        "question": "Wanneer kan ik mijn Booking.com-cashback opnemen?",
+        "answer_md": "Zodra de bestelling van *in behandeling* naar *bevestigd* gaat (na de retourtermijn van Booking.com), kun je je sats opnemen naar elke Bitcoin Lightning-wallet."
       }
     ]
   },
@@ -134,7 +210,11 @@
         "question": "When can I withdraw my Holland & Barrett cashback?",
         "answer_md": "Once the order moves from *pending* to *confirmed* (after Holland & Barrett's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
       }
-    ]
+    ],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "anwb-webwinkel",
@@ -142,13 +222,30 @@
     "satsback_slug": "anwb-webwinkel",
     "logo_url": "https://cdn.satsback.com/stores/s/anwb-webwinkel-90637.svg",
     "cashback_text": "up to 2.3%",
-    "category_slug": null,
-    "geo_scope": "global",
+    "category_slug": "marketplaces",
+    "geo_scope": "nl",
     "is_bitcoin_native": false,
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "## Bitcoin cashback bij ANWB Webwinkel\n\nANWB Webwinkel is de webwinkel van de ANWB. Via Satsback krijg je tot 2.3% van je bestelbedrag terug in Bitcoin, uitbetaald als sats naar een Lightning-wallet die jij beheert.\n\nShop je toch al bij ANWB Webwinkel? Dan is dit gratis geld op uitgaven die je sowieso doet. Hieronder de actuele cashback, hoe het tracken écht werkt, en of het de moeite waard is voor een online-aankoop.",
+    "how_it_works_nl_md": "## Zo werkt Bitcoin cashback bij ANWB Webwinkel\n\n1. Maak een gratis Satsback-account aan (geen KYC nodig) en installeer de browser-extensie.\n2. Ga naar ANWB Webwinkel via Satsback — de extensie vraagt je met één klik om de beloning te activeren.\n3. Reken af zoals altijd. Je cashback (tot 2.3%) verschijnt als *in behandeling* in je Satsback-dashboard.\n4. Zodra ANWB Webwinkel de verkoop bevestigt, kun je de sats opnemen naar elke Bitcoin Lightning-wallet.\n\n**Let op — het tracken.** Satsback werkt via affiliate-tracking, en gebruikers melden dat ongeveer twee op de drie bestellingen goed doorkomen (rond de 3,2/5 in de Chrome Web Store). Zet adblockers uit op de ANWB Webwinkel-tab, gebruik geen andere kortings-extensies bij het afrekenen, en houd de Satsback-tab als laatste open voordat je betaalt. Komt een bestelling na een paar dagen niet binnen, dan kan Satsback-support hem met je bonnetje natrekken.",
+    "worth_it_nl_md": "## Is het de moeite waard?\n\nHet tarief is prima voor online; op een normale bestelling bij ANWB Webwinkel telt het al snel op tot een leuk bedrag aan sats.\n\nOmdat de beloning in Bitcoin wordt uitbetaald, spaar je bij elke aankoop een beetje sats — precies waarom veel mensen sats-back verkiezen boven gewone cashback. De waarde beweegt wel mee met de koers van Bitcoin.",
+    "faqs_nl": [
+      {
+        "question": "Hoeveel Bitcoin verdien ik bij ANWB Webwinkel?",
+        "answer_md": "Op dit moment tot 2.3%, als sats bijgeschreven in je Satsback-dashboard zodra ANWB Webwinkel de bestelling bevestigt."
+      },
+      {
+        "question": "Moet ik me verifiëren (KYC) om te verdienen?",
+        "answer_md": "Nee. Satsback is gratis en vraagt geen KYC — je hebt alleen een account en de browser-extensie nodig om Bitcoin te verdienen bij ANWB Webwinkel."
+      },
+      {
+        "question": "Wanneer kan ik mijn ANWB Webwinkel-cashback opnemen?",
+        "answer_md": "Zodra de bestelling van *in behandeling* naar *bevestigd* gaat (na de retourtermijn van ANWB Webwinkel), kun je je sats opnemen naar elke Bitcoin Lightning-wallet."
+      }
+    ]
   },
   {
     "slug": "allekabels",
@@ -156,13 +253,30 @@
     "satsback_slug": "allekabels",
     "logo_url": "https://cdn.satsback.com/stores/partners/allekabels-v2.svg",
     "cashback_text": "up to 2%",
-    "category_slug": null,
-    "geo_scope": "global",
+    "category_slug": "tech-electronics",
+    "geo_scope": "nl",
     "is_bitcoin_native": false,
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "## Bitcoin cashback bij Allekabels\n\nAllekabels is kabel- en elektronicaspecialist Allekabels. Via Satsback krijg je tot 2% van je bestelbedrag terug in Bitcoin, uitbetaald als sats naar een Lightning-wallet die jij beheert.\n\nShop je toch al bij Allekabels? Dan is dit gratis geld op uitgaven die je sowieso doet. Hieronder de actuele cashback, hoe het tracken écht werkt, en of het de moeite waard is voor een elektronica-aankoop.",
+    "how_it_works_nl_md": "## Zo werkt Bitcoin cashback bij Allekabels\n\n1. Maak een gratis Satsback-account aan (geen KYC nodig) en installeer de browser-extensie.\n2. Ga naar Allekabels via Satsback — de extensie vraagt je met één klik om de beloning te activeren.\n3. Reken af zoals altijd. Je cashback (tot 2%) verschijnt als *in behandeling* in je Satsback-dashboard.\n4. Zodra Allekabels de verkoop bevestigt, kun je de sats opnemen naar elke Bitcoin Lightning-wallet.\n\n**Let op — het tracken.** Satsback werkt via affiliate-tracking, en gebruikers melden dat ongeveer twee op de drie bestellingen goed doorkomen (rond de 3,2/5 in de Chrome Web Store). Zet adblockers uit op de Allekabels-tab, gebruik geen andere kortings-extensies bij het afrekenen, en houd de Satsback-tab als laatste open voordat je betaalt. Komt een bestelling na een paar dagen niet binnen, dan kan Satsback-support hem met je bonnetje natrekken.",
+    "worth_it_nl_md": "## Is het de moeite waard?\n\nHet tarief is prima voor elektronica; op een normale bestelling bij Allekabels telt het al snel op tot een leuk bedrag aan sats.\n\nOmdat de beloning in Bitcoin wordt uitbetaald, spaar je bij elke aankoop een beetje sats — precies waarom veel mensen sats-back verkiezen boven gewone cashback. De waarde beweegt wel mee met de koers van Bitcoin.",
+    "faqs_nl": [
+      {
+        "question": "Hoeveel Bitcoin verdien ik bij Allekabels?",
+        "answer_md": "Op dit moment tot 2%, als sats bijgeschreven in je Satsback-dashboard zodra Allekabels de bestelling bevestigt."
+      },
+      {
+        "question": "Moet ik me verifiëren (KYC) om te verdienen?",
+        "answer_md": "Nee. Satsback is gratis en vraagt geen KYC — je hebt alleen een account en de browser-extensie nodig om Bitcoin te verdienen bij Allekabels."
+      },
+      {
+        "question": "Wanneer kan ik mijn Allekabels-cashback opnemen?",
+        "answer_md": "Zodra de bestelling van *in behandeling* naar *bevestigd* gaat (na de retourtermijn van Allekabels), kun je je sats opnemen naar elke Bitcoin Lightning-wallet."
+      }
+    ]
   },
   {
     "slug": "staatsloterij-losse-loten",
@@ -176,7 +290,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "plus",
@@ -190,7 +308,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "plein",
@@ -198,13 +320,30 @@
     "satsback_slug": "plein",
     "logo_url": "https://cdn.satsback.com/stores/s/plein-nl-122450.jpg",
     "cashback_text": "up to 1.3%",
-    "category_slug": null,
-    "geo_scope": "global",
+    "category_slug": "marketplaces",
+    "geo_scope": "nl",
     "is_bitcoin_native": false,
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "## Bitcoin cashback bij Plein\n\nPlein is het online warenhuis Plein.nl. Via Satsback krijg je tot 1.3% van je bestelbedrag terug in Bitcoin, uitbetaald als sats naar een Lightning-wallet die jij beheert.\n\nShop je toch al bij Plein? Dan is dit gratis geld op uitgaven die je sowieso doet. Hieronder de actuele cashback, hoe het tracken écht werkt, en of het de moeite waard is voor een online-aankoop.",
+    "how_it_works_nl_md": "## Zo werkt Bitcoin cashback bij Plein\n\n1. Maak een gratis Satsback-account aan (geen KYC nodig) en installeer de browser-extensie.\n2. Ga naar Plein via Satsback — de extensie vraagt je met één klik om de beloning te activeren.\n3. Reken af zoals altijd. Je cashback (tot 1.3%) verschijnt als *in behandeling* in je Satsback-dashboard.\n4. Zodra Plein de verkoop bevestigt, kun je de sats opnemen naar elke Bitcoin Lightning-wallet.\n\n**Let op — het tracken.** Satsback werkt via affiliate-tracking, en gebruikers melden dat ongeveer twee op de drie bestellingen goed doorkomen (rond de 3,2/5 in de Chrome Web Store). Zet adblockers uit op de Plein-tab, gebruik geen andere kortings-extensies bij het afrekenen, en houd de Satsback-tab als laatste open voordat je betaalt. Komt een bestelling na een paar dagen niet binnen, dan kan Satsback-support hem met je bonnetje natrekken.",
+    "worth_it_nl_md": "## Is het de moeite waard?\n\nHet tarief is bescheiden, dus het loont vooral bij grotere bestellingen bij Plein waar een klein percentage toch flink wat sats wordt.\n\nOmdat de beloning in Bitcoin wordt uitbetaald, spaar je bij elke aankoop een beetje sats — precies waarom veel mensen sats-back verkiezen boven gewone cashback. De waarde beweegt wel mee met de koers van Bitcoin.",
+    "faqs_nl": [
+      {
+        "question": "Hoeveel Bitcoin verdien ik bij Plein?",
+        "answer_md": "Op dit moment tot 1.3%, als sats bijgeschreven in je Satsback-dashboard zodra Plein de bestelling bevestigt."
+      },
+      {
+        "question": "Moet ik me verifiëren (KYC) om te verdienen?",
+        "answer_md": "Nee. Satsback is gratis en vraagt geen KYC — je hebt alleen een account en de browser-extensie nodig om Bitcoin te verdienen bij Plein."
+      },
+      {
+        "question": "Wanneer kan ik mijn Plein-cashback opnemen?",
+        "answer_md": "Zodra de bestelling van *in behandeling* naar *bevestigd* gaat (na de retourtermijn van Plein), kun je je sats opnemen naar elke Bitcoin Lightning-wallet."
+      }
+    ]
   },
   {
     "slug": "ibood",
@@ -212,13 +351,30 @@
     "satsback_slug": "ibood",
     "logo_url": "https://cdn.satsback.com/stores/partners/ibood-v3.svg",
     "cashback_text": "up to 1.6%",
-    "category_slug": null,
-    "geo_scope": "global",
+    "category_slug": "tech-electronics",
+    "geo_scope": "nl",
     "is_bitcoin_native": false,
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "## Bitcoin cashback bij iBOOD\n\niBOOD is dagaanbiedingensite iBOOD. Via Satsback krijg je tot 1.6% van je bestelbedrag terug in Bitcoin, uitbetaald als sats naar een Lightning-wallet die jij beheert.\n\nShop je toch al bij iBOOD? Dan is dit gratis geld op uitgaven die je sowieso doet. Hieronder de actuele cashback, hoe het tracken écht werkt, en of het de moeite waard is voor een elektronica-aankoop.",
+    "how_it_works_nl_md": "## Zo werkt Bitcoin cashback bij iBOOD\n\n1. Maak een gratis Satsback-account aan (geen KYC nodig) en installeer de browser-extensie.\n2. Ga naar iBOOD via Satsback — de extensie vraagt je met één klik om de beloning te activeren.\n3. Reken af zoals altijd. Je cashback (tot 1.6%) verschijnt als *in behandeling* in je Satsback-dashboard.\n4. Zodra iBOOD de verkoop bevestigt, kun je de sats opnemen naar elke Bitcoin Lightning-wallet.\n\n**Let op — het tracken.** Satsback werkt via affiliate-tracking, en gebruikers melden dat ongeveer twee op de drie bestellingen goed doorkomen (rond de 3,2/5 in de Chrome Web Store). Zet adblockers uit op de iBOOD-tab, gebruik geen andere kortings-extensies bij het afrekenen, en houd de Satsback-tab als laatste open voordat je betaalt. Komt een bestelling na een paar dagen niet binnen, dan kan Satsback-support hem met je bonnetje natrekken.",
+    "worth_it_nl_md": "## Is het de moeite waard?\n\nHet tarief is prima voor elektronica; op een normale bestelling bij iBOOD telt het al snel op tot een leuk bedrag aan sats.\n\nOmdat de beloning in Bitcoin wordt uitbetaald, spaar je bij elke aankoop een beetje sats — precies waarom veel mensen sats-back verkiezen boven gewone cashback. De waarde beweegt wel mee met de koers van Bitcoin.",
+    "faqs_nl": [
+      {
+        "question": "Hoeveel Bitcoin verdien ik bij iBOOD?",
+        "answer_md": "Op dit moment tot 1.6%, als sats bijgeschreven in je Satsback-dashboard zodra iBOOD de bestelling bevestigt."
+      },
+      {
+        "question": "Moet ik me verifiëren (KYC) om te verdienen?",
+        "answer_md": "Nee. Satsback is gratis en vraagt geen KYC — je hebt alleen een account en de browser-extensie nodig om Bitcoin te verdienen bij iBOOD."
+      },
+      {
+        "question": "Wanneer kan ik mijn iBOOD-cashback opnemen?",
+        "answer_md": "Zodra de bestelling van *in behandeling* naar *bevestigd* gaat (na de retourtermijn van iBOOD), kun je je sats opnemen naar elke Bitcoin Lightning-wallet."
+      }
+    ]
   },
   {
     "slug": "odido-2",
@@ -226,13 +382,30 @@
     "satsback_slug": "odido-2",
     "logo_url": "https://satsback.com/assets/media/partners/odido.svg",
     "cashback_text": "up to 20%",
-    "category_slug": null,
-    "geo_scope": "global",
+    "category_slug": "services",
+    "geo_scope": "nl",
     "is_bitcoin_native": false,
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "## Bitcoin cashback bij Odido\n\nOdido is telecomprovider Odido (voorheen T-Mobile). Via Satsback krijg je tot 20% van je bestelbedrag terug in Bitcoin, uitbetaald als sats naar een Lightning-wallet die jij beheert.\n\nShop je toch al bij Odido? Dan is dit gratis geld op uitgaven die je sowieso doet. Hieronder de actuele cashback, hoe het tracken écht werkt, en of het de moeite waard is voor een diensten-aankoop.",
+    "how_it_works_nl_md": "## Zo werkt Bitcoin cashback bij Odido\n\n1. Maak een gratis Satsback-account aan (geen KYC nodig) en installeer de browser-extensie.\n2. Ga naar Odido via Satsback — de extensie vraagt je met één klik om de beloning te activeren.\n3. Reken af zoals altijd. Je cashback (tot 20%) verschijnt als *in behandeling* in je Satsback-dashboard.\n4. Zodra Odido de verkoop bevestigt, kun je de sats opnemen naar elke Bitcoin Lightning-wallet.\n\n**Let op — het tracken.** Satsback werkt via affiliate-tracking, en gebruikers melden dat ongeveer twee op de drie bestellingen goed doorkomen (rond de 3,2/5 in de Chrome Web Store). Zet adblockers uit op de Odido-tab, gebruik geen andere kortings-extensies bij het afrekenen, en houd de Satsback-tab als laatste open voordat je betaalt. Komt een bestelling na een paar dagen niet binnen, dan kan Satsback-support hem met je bonnetje natrekken.",
+    "worth_it_nl_md": "## Is het de moeite waard?\n\nMet 20%+ hoort Odido bij de betere diensten-tarieven op Satsback — de twee minuten instellen ruimschoots waard.\n\nOmdat de beloning in Bitcoin wordt uitbetaald, spaar je bij elke aankoop een beetje sats — precies waarom veel mensen sats-back verkiezen boven gewone cashback. De waarde beweegt wel mee met de koers van Bitcoin.",
+    "faqs_nl": [
+      {
+        "question": "Hoeveel Bitcoin verdien ik bij Odido?",
+        "answer_md": "Op dit moment tot 20%, als sats bijgeschreven in je Satsback-dashboard zodra Odido de bestelling bevestigt."
+      },
+      {
+        "question": "Moet ik me verifiëren (KYC) om te verdienen?",
+        "answer_md": "Nee. Satsback is gratis en vraagt geen KYC — je hebt alleen een account en de browser-extensie nodig om Bitcoin te verdienen bij Odido."
+      },
+      {
+        "question": "Wanneer kan ik mijn Odido-cashback opnemen?",
+        "answer_md": "Zodra de bestelling van *in behandeling* naar *bevestigd* gaat (na de retourtermijn van Odido), kun je je sats opnemen naar elke Bitcoin Lightning-wallet."
+      }
+    ]
   },
   {
     "slug": "the-butchery",
@@ -246,7 +419,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "bitbox",
@@ -273,7 +450,11 @@
         "question": "Is it Bitcoin cashback or a discount?",
         "answer_md": "For Bitbox this is a discount code — an instant saving at checkout — rather than tracked Bitcoin cashback. Either way it's free to use through Satsback."
       }
-    ]
+    ],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "blockstream-store",
@@ -300,7 +481,11 @@
         "question": "Is it Bitcoin cashback or a discount?",
         "answer_md": "For Blockstream Store this is a discount code — an instant saving at checkout — rather than tracked Bitcoin cashback. Either way it's free to use through Satsback."
       }
-    ]
+    ],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "cryptosteel",
@@ -327,7 +512,11 @@
         "question": "Is it Bitcoin cashback or a discount?",
         "answer_md": "For Cryptosteel this is a discount code — an instant saving at checkout — rather than tracked Bitcoin cashback. Either way it's free to use through Satsback."
       }
-    ]
+    ],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "freedomia",
@@ -341,7 +530,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "wavespace-instant-btceur-swaps",
@@ -355,7 +548,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "konsensus-network",
@@ -382,7 +579,11 @@
         "question": "Is it Bitcoin cashback or a discount?",
         "answer_md": "For Konsensus Network this is a discount code — an instant saving at checkout — rather than tracked Bitcoin cashback. Either way it's free to use through Satsback."
       }
-    ]
+    ],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "seedor",
@@ -409,7 +610,11 @@
         "question": "Is it Bitcoin cashback or a discount?",
         "answer_md": "For Seedor this is a discount code — an instant saving at checkout — rather than tracked Bitcoin cashback. Either way it's free to use through Satsback."
       }
-    ]
+    ],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "shopinbit",
@@ -436,7 +641,11 @@
         "question": "Is it Bitcoin cashback or a discount?",
         "answer_md": "For ShopinBit this is a discount code — an instant saving at checkout — rather than tracked Bitcoin cashback. Either way it's free to use through Satsback."
       }
-    ]
+    ],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "start9",
@@ -463,7 +672,11 @@
         "question": "Is it Bitcoin cashback or a discount?",
         "answer_md": "For Start9 this is a discount code — an instant saving at checkout — rather than tracked Bitcoin cashback. Either way it's free to use through Satsback."
       }
-    ]
+    ],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "twentytwo",
@@ -477,7 +690,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "wavespace-bitcoin-visa-debit-card",
@@ -504,7 +721,11 @@
         "question": "Is it Bitcoin cashback or a discount?",
         "answer_md": "For wavecard® BTC Debit Card – wave.space this is a discount code — an instant saving at checkout — rather than tracked Bitcoin cashback. Either way it's free to use through Satsback."
       }
-    ]
+    ],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "lidlnl",
@@ -512,13 +733,30 @@
     "satsback_slug": "lidlnl",
     "logo_url": "https://satsback.com/assets/media/partners/lidl.svg",
     "cashback_text": "up to 1%",
-    "category_slug": null,
-    "geo_scope": "global",
+    "category_slug": "groceries-food",
+    "geo_scope": "nl",
     "is_bitcoin_native": false,
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "## Bitcoin cashback bij Lidl.nl\n\nLidl.nl is supermarktketen Lidl. Via Satsback krijg je tot 1% van je bestelbedrag terug in Bitcoin, uitbetaald als sats naar een Lightning-wallet die jij beheert.\n\nShop je toch al bij Lidl.nl? Dan is dit gratis geld op uitgaven die je sowieso doet. Hieronder de actuele cashback, hoe het tracken écht werkt, en of het de moeite waard is voor een boodschappen-aankoop.",
+    "how_it_works_nl_md": "## Zo werkt Bitcoin cashback bij Lidl.nl\n\n1. Maak een gratis Satsback-account aan (geen KYC nodig) en installeer de browser-extensie.\n2. Ga naar Lidl.nl via Satsback — de extensie vraagt je met één klik om de beloning te activeren.\n3. Reken af zoals altijd. Je cashback (tot 1%) verschijnt als *in behandeling* in je Satsback-dashboard.\n4. Zodra Lidl.nl de verkoop bevestigt, kun je de sats opnemen naar elke Bitcoin Lightning-wallet.\n\n**Let op — het tracken.** Satsback werkt via affiliate-tracking, en gebruikers melden dat ongeveer twee op de drie bestellingen goed doorkomen (rond de 3,2/5 in de Chrome Web Store). Zet adblockers uit op de Lidl.nl-tab, gebruik geen andere kortings-extensies bij het afrekenen, en houd de Satsback-tab als laatste open voordat je betaalt. Komt een bestelling na een paar dagen niet binnen, dan kan Satsback-support hem met je bonnetje natrekken.",
+    "worth_it_nl_md": "## Is het de moeite waard?\n\nHet tarief is bescheiden, dus het loont vooral bij grotere bestellingen bij Lidl.nl waar een klein percentage toch flink wat sats wordt.\n\nOmdat de beloning in Bitcoin wordt uitbetaald, spaar je bij elke aankoop een beetje sats — precies waarom veel mensen sats-back verkiezen boven gewone cashback. De waarde beweegt wel mee met de koers van Bitcoin.",
+    "faqs_nl": [
+      {
+        "question": "Hoeveel Bitcoin verdien ik bij Lidl.nl?",
+        "answer_md": "Op dit moment tot 1%, als sats bijgeschreven in je Satsback-dashboard zodra Lidl.nl de bestelling bevestigt."
+      },
+      {
+        "question": "Moet ik me verifiëren (KYC) om te verdienen?",
+        "answer_md": "Nee. Satsback is gratis en vraagt geen KYC — je hebt alleen een account en de browser-extensie nodig om Bitcoin te verdienen bij Lidl.nl."
+      },
+      {
+        "question": "Wanneer kan ik mijn Lidl.nl-cashback opnemen?",
+        "answer_md": "Zodra de bestelling van *in behandeling* naar *bevestigd* gaat (na de retourtermijn van Lidl.nl), kun je je sats opnemen naar elke Bitcoin Lightning-wallet."
+      }
+    ]
   },
   {
     "slug": "koffievoordeel-2",
@@ -526,13 +764,30 @@
     "satsback_slug": "koffievoordeel-2",
     "logo_url": "https://cdn.satsback.com/stores/partners/koffievoordeel-v2.svg",
     "cashback_text": "up to 2.5%",
-    "category_slug": null,
-    "geo_scope": "global",
+    "category_slug": "groceries-food",
+    "geo_scope": "nl",
     "is_bitcoin_native": false,
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "## Bitcoin cashback bij Koffievoordeel\n\nKoffievoordeel is koffie- en theespecialist Koffievoordeel. Via Satsback krijg je tot 2.5% van je bestelbedrag terug in Bitcoin, uitbetaald als sats naar een Lightning-wallet die jij beheert.\n\nShop je toch al bij Koffievoordeel? Dan is dit gratis geld op uitgaven die je sowieso doet. Hieronder de actuele cashback, hoe het tracken écht werkt, en of het de moeite waard is voor een boodschappen-aankoop.",
+    "how_it_works_nl_md": "## Zo werkt Bitcoin cashback bij Koffievoordeel\n\n1. Maak een gratis Satsback-account aan (geen KYC nodig) en installeer de browser-extensie.\n2. Ga naar Koffievoordeel via Satsback — de extensie vraagt je met één klik om de beloning te activeren.\n3. Reken af zoals altijd. Je cashback (tot 2.5%) verschijnt als *in behandeling* in je Satsback-dashboard.\n4. Zodra Koffievoordeel de verkoop bevestigt, kun je de sats opnemen naar elke Bitcoin Lightning-wallet.\n\n**Let op — het tracken.** Satsback werkt via affiliate-tracking, en gebruikers melden dat ongeveer twee op de drie bestellingen goed doorkomen (rond de 3,2/5 in de Chrome Web Store). Zet adblockers uit op de Koffievoordeel-tab, gebruik geen andere kortings-extensies bij het afrekenen, en houd de Satsback-tab als laatste open voordat je betaalt. Komt een bestelling na een paar dagen niet binnen, dan kan Satsback-support hem met je bonnetje natrekken.",
+    "worth_it_nl_md": "## Is het de moeite waard?\n\nHet tarief is prima voor boodschappen; op een normale bestelling bij Koffievoordeel telt het al snel op tot een leuk bedrag aan sats.\n\nOmdat de beloning in Bitcoin wordt uitbetaald, spaar je bij elke aankoop een beetje sats — precies waarom veel mensen sats-back verkiezen boven gewone cashback. De waarde beweegt wel mee met de koers van Bitcoin.",
+    "faqs_nl": [
+      {
+        "question": "Hoeveel Bitcoin verdien ik bij Koffievoordeel?",
+        "answer_md": "Op dit moment tot 2.5%, als sats bijgeschreven in je Satsback-dashboard zodra Koffievoordeel de bestelling bevestigt."
+      },
+      {
+        "question": "Moet ik me verifiëren (KYC) om te verdienen?",
+        "answer_md": "Nee. Satsback is gratis en vraagt geen KYC — je hebt alleen een account en de browser-extensie nodig om Bitcoin te verdienen bij Koffievoordeel."
+      },
+      {
+        "question": "Wanneer kan ik mijn Koffievoordeel-cashback opnemen?",
+        "answer_md": "Zodra de bestelling van *in behandeling* naar *bevestigd* gaat (na de retourtermijn van Koffievoordeel), kun je je sats opnemen naar elke Bitcoin Lightning-wallet."
+      }
+    ]
   },
   {
     "slug": "expert",
@@ -540,13 +795,30 @@
     "satsback_slug": "expert",
     "logo_url": "https://satsback.com/assets/media/partners/expert.svg",
     "cashback_text": "up to 1.8%",
-    "category_slug": null,
-    "geo_scope": "global",
+    "category_slug": "tech-electronics",
+    "geo_scope": "nl",
     "is_bitcoin_native": false,
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "## Bitcoin cashback bij Expert\n\nExpert is elektronicaketen Expert. Via Satsback krijg je tot 1.8% van je bestelbedrag terug in Bitcoin, uitbetaald als sats naar een Lightning-wallet die jij beheert.\n\nShop je toch al bij Expert? Dan is dit gratis geld op uitgaven die je sowieso doet. Hieronder de actuele cashback, hoe het tracken écht werkt, en of het de moeite waard is voor een elektronica-aankoop.",
+    "how_it_works_nl_md": "## Zo werkt Bitcoin cashback bij Expert\n\n1. Maak een gratis Satsback-account aan (geen KYC nodig) en installeer de browser-extensie.\n2. Ga naar Expert via Satsback — de extensie vraagt je met één klik om de beloning te activeren.\n3. Reken af zoals altijd. Je cashback (tot 1.8%) verschijnt als *in behandeling* in je Satsback-dashboard.\n4. Zodra Expert de verkoop bevestigt, kun je de sats opnemen naar elke Bitcoin Lightning-wallet.\n\n**Let op — het tracken.** Satsback werkt via affiliate-tracking, en gebruikers melden dat ongeveer twee op de drie bestellingen goed doorkomen (rond de 3,2/5 in de Chrome Web Store). Zet adblockers uit op de Expert-tab, gebruik geen andere kortings-extensies bij het afrekenen, en houd de Satsback-tab als laatste open voordat je betaalt. Komt een bestelling na een paar dagen niet binnen, dan kan Satsback-support hem met je bonnetje natrekken.",
+    "worth_it_nl_md": "## Is het de moeite waard?\n\nHet tarief is prima voor elektronica; op een normale bestelling bij Expert telt het al snel op tot een leuk bedrag aan sats.\n\nOmdat de beloning in Bitcoin wordt uitbetaald, spaar je bij elke aankoop een beetje sats — precies waarom veel mensen sats-back verkiezen boven gewone cashback. De waarde beweegt wel mee met de koers van Bitcoin.",
+    "faqs_nl": [
+      {
+        "question": "Hoeveel Bitcoin verdien ik bij Expert?",
+        "answer_md": "Op dit moment tot 1.8%, als sats bijgeschreven in je Satsback-dashboard zodra Expert de bestelling bevestigt."
+      },
+      {
+        "question": "Moet ik me verifiëren (KYC) om te verdienen?",
+        "answer_md": "Nee. Satsback is gratis en vraagt geen KYC — je hebt alleen een account en de browser-extensie nodig om Bitcoin te verdienen bij Expert."
+      },
+      {
+        "question": "Wanneer kan ik mijn Expert-cashback opnemen?",
+        "answer_md": "Zodra de bestelling van *in behandeling* naar *bevestigd* gaat (na de retourtermijn van Expert), kun je je sats opnemen naar elke Bitcoin Lightning-wallet."
+      }
+    ]
   },
   {
     "slug": "brekznl",
@@ -560,7 +832,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "klm-4",
@@ -587,6 +863,23 @@
         "question": "When can I withdraw my KLM cashback?",
         "answer_md": "Once the order moves from *pending* to *confirmed* (after KLM's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
       }
+    ],
+    "description_nl_md": "## Bitcoin cashback bij KLM\n\nKLM is de Nederlandse luchtvaartmaatschappij KLM. Via Satsback krijg je tot 1% van je bestelbedrag terug in Bitcoin, uitbetaald als sats naar een Lightning-wallet die jij beheert.\n\nShop je toch al bij KLM? Dan is dit gratis geld op uitgaven die je sowieso doet. Hieronder de actuele cashback, hoe het tracken écht werkt, en of het de moeite waard is voor een reis-aankoop.",
+    "how_it_works_nl_md": "## Zo werkt Bitcoin cashback bij KLM\n\n1. Maak een gratis Satsback-account aan (geen KYC nodig) en installeer de browser-extensie.\n2. Ga naar KLM via Satsback — de extensie vraagt je met één klik om de beloning te activeren.\n3. Reken af zoals altijd. Je cashback (tot 1%) verschijnt als *in behandeling* in je Satsback-dashboard.\n4. Zodra KLM de verkoop bevestigt, kun je de sats opnemen naar elke Bitcoin Lightning-wallet.\n\n**Let op — het tracken.** Satsback werkt via affiliate-tracking, en gebruikers melden dat ongeveer twee op de drie bestellingen goed doorkomen (rond de 3,2/5 in de Chrome Web Store). Zet adblockers uit op de KLM-tab, gebruik geen andere kortings-extensies bij het afrekenen, en houd de Satsback-tab als laatste open voordat je betaalt. Komt een bestelling na een paar dagen niet binnen, dan kan Satsback-support hem met je bonnetje natrekken.",
+    "worth_it_nl_md": "## Is het de moeite waard?\n\nHet tarief is bescheiden, dus het loont vooral bij grotere bestellingen bij KLM waar een klein percentage toch flink wat sats wordt.\n\nOmdat de beloning in Bitcoin wordt uitbetaald, spaar je bij elke aankoop een beetje sats — precies waarom veel mensen sats-back verkiezen boven gewone cashback. De waarde beweegt wel mee met de koers van Bitcoin.",
+    "faqs_nl": [
+      {
+        "question": "Hoeveel Bitcoin verdien ik bij KLM?",
+        "answer_md": "Op dit moment tot 1%, als sats bijgeschreven in je Satsback-dashboard zodra KLM de bestelling bevestigt."
+      },
+      {
+        "question": "Moet ik me verifiëren (KYC) om te verdienen?",
+        "answer_md": "Nee. Satsback is gratis en vraagt geen KYC — je hebt alleen een account en de browser-extensie nodig om Bitcoin te verdienen bij KLM."
+      },
+      {
+        "question": "Wanneer kan ik mijn KLM-cashback opnemen?",
+        "answer_md": "Zodra de bestelling van *in behandeling* naar *bevestigd* gaat (na de retourtermijn van KLM), kun je je sats opnemen naar elke Bitcoin Lightning-wallet."
+      }
     ]
   },
   {
@@ -595,13 +888,30 @@
     "satsback_slug": "scapino",
     "logo_url": "https://cdn.satsback.com/stores/s/scapino-nlnl-112304.svg",
     "cashback_text": "up to 1.3%",
-    "category_slug": null,
-    "geo_scope": "global",
+    "category_slug": "fashion",
+    "geo_scope": "nl",
     "is_bitcoin_native": false,
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "## Bitcoin cashback bij Scapino\n\nScapino is schoenen- en sportwinkel Scapino. Via Satsback krijg je tot 1.3% van je bestelbedrag terug in Bitcoin, uitbetaald als sats naar een Lightning-wallet die jij beheert.\n\nShop je toch al bij Scapino? Dan is dit gratis geld op uitgaven die je sowieso doet. Hieronder de actuele cashback, hoe het tracken écht werkt, en of het de moeite waard is voor een kleding-aankoop.",
+    "how_it_works_nl_md": "## Zo werkt Bitcoin cashback bij Scapino\n\n1. Maak een gratis Satsback-account aan (geen KYC nodig) en installeer de browser-extensie.\n2. Ga naar Scapino via Satsback — de extensie vraagt je met één klik om de beloning te activeren.\n3. Reken af zoals altijd. Je cashback (tot 1.3%) verschijnt als *in behandeling* in je Satsback-dashboard.\n4. Zodra Scapino de verkoop bevestigt, kun je de sats opnemen naar elke Bitcoin Lightning-wallet.\n\n**Let op — het tracken.** Satsback werkt via affiliate-tracking, en gebruikers melden dat ongeveer twee op de drie bestellingen goed doorkomen (rond de 3,2/5 in de Chrome Web Store). Zet adblockers uit op de Scapino-tab, gebruik geen andere kortings-extensies bij het afrekenen, en houd de Satsback-tab als laatste open voordat je betaalt. Komt een bestelling na een paar dagen niet binnen, dan kan Satsback-support hem met je bonnetje natrekken.",
+    "worth_it_nl_md": "## Is het de moeite waard?\n\nHet tarief is bescheiden, dus het loont vooral bij grotere bestellingen bij Scapino waar een klein percentage toch flink wat sats wordt.\n\nOmdat de beloning in Bitcoin wordt uitbetaald, spaar je bij elke aankoop een beetje sats — precies waarom veel mensen sats-back verkiezen boven gewone cashback. De waarde beweegt wel mee met de koers van Bitcoin.",
+    "faqs_nl": [
+      {
+        "question": "Hoeveel Bitcoin verdien ik bij Scapino?",
+        "answer_md": "Op dit moment tot 1.3%, als sats bijgeschreven in je Satsback-dashboard zodra Scapino de bestelling bevestigt."
+      },
+      {
+        "question": "Moet ik me verifiëren (KYC) om te verdienen?",
+        "answer_md": "Nee. Satsback is gratis en vraagt geen KYC — je hebt alleen een account en de browser-extensie nodig om Bitcoin te verdienen bij Scapino."
+      },
+      {
+        "question": "Wanneer kan ik mijn Scapino-cashback opnemen?",
+        "answer_md": "Zodra de bestelling van *in behandeling* naar *bevestigd* gaat (na de retourtermijn van Scapino), kun je je sats opnemen naar elke Bitcoin Lightning-wallet."
+      }
+    ]
   },
   {
     "slug": "proshop",
@@ -615,7 +925,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "adidas-21",
@@ -642,7 +956,11 @@
         "question": "When can I withdraw my adidas cashback?",
         "answer_md": "Once the order moves from *pending* to *confirmed* (after adidas's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
       }
-    ]
+    ],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "alternate",
@@ -669,7 +987,11 @@
         "question": "When can I withdraw my ALTERNATE cashback?",
         "answer_md": "Once the order moves from *pending* to *confirmed* (after ALTERNATE's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
       }
-    ]
+    ],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "lounge-by-zalando",
@@ -696,6 +1018,23 @@
         "question": "When can I withdraw my Lounge by Zalando cashback?",
         "answer_md": "Once the order moves from *pending* to *confirmed* (after Lounge by Zalando's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
       }
+    ],
+    "description_nl_md": "## Bitcoin cashback bij Lounge by Zalando\n\nLounge by Zalando is de members-only outlet Lounge by Zalando. Via Satsback krijg je tot 2.5% van je bestelbedrag terug in Bitcoin, uitbetaald als sats naar een Lightning-wallet die jij beheert.\n\nShop je toch al bij Lounge by Zalando? Dan is dit gratis geld op uitgaven die je sowieso doet. Hieronder de actuele cashback, hoe het tracken écht werkt, en of het de moeite waard is voor een kleding-aankoop.",
+    "how_it_works_nl_md": "## Zo werkt Bitcoin cashback bij Lounge by Zalando\n\n1. Maak een gratis Satsback-account aan (geen KYC nodig) en installeer de browser-extensie.\n2. Ga naar Lounge by Zalando via Satsback — de extensie vraagt je met één klik om de beloning te activeren.\n3. Reken af zoals altijd. Je cashback (tot 2.5%) verschijnt als *in behandeling* in je Satsback-dashboard.\n4. Zodra Lounge by Zalando de verkoop bevestigt, kun je de sats opnemen naar elke Bitcoin Lightning-wallet.\n\n**Let op — het tracken.** Satsback werkt via affiliate-tracking, en gebruikers melden dat ongeveer twee op de drie bestellingen goed doorkomen (rond de 3,2/5 in de Chrome Web Store). Zet adblockers uit op de Lounge by Zalando-tab, gebruik geen andere kortings-extensies bij het afrekenen, en houd de Satsback-tab als laatste open voordat je betaalt. Komt een bestelling na een paar dagen niet binnen, dan kan Satsback-support hem met je bonnetje natrekken.",
+    "worth_it_nl_md": "## Is het de moeite waard?\n\nHet tarief is prima voor kleding; op een normale bestelling bij Lounge by Zalando telt het al snel op tot een leuk bedrag aan sats.\n\nOmdat de beloning in Bitcoin wordt uitbetaald, spaar je bij elke aankoop een beetje sats — precies waarom veel mensen sats-back verkiezen boven gewone cashback. De waarde beweegt wel mee met de koers van Bitcoin.",
+    "faqs_nl": [
+      {
+        "question": "Hoeveel Bitcoin verdien ik bij Lounge by Zalando?",
+        "answer_md": "Op dit moment tot 2.5%, als sats bijgeschreven in je Satsback-dashboard zodra Lounge by Zalando de bestelling bevestigt."
+      },
+      {
+        "question": "Moet ik me verifiëren (KYC) om te verdienen?",
+        "answer_md": "Nee. Satsback is gratis en vraagt geen KYC — je hebt alleen een account en de browser-extensie nodig om Bitcoin te verdienen bij Lounge by Zalando."
+      },
+      {
+        "question": "Wanneer kan ik mijn Lounge by Zalando-cashback opnemen?",
+        "answer_md": "Zodra de bestelling van *in behandeling* naar *bevestigd* gaat (na de retourtermijn van Lounge by Zalando), kun je je sats opnemen naar elke Bitcoin Lightning-wallet."
+      }
     ]
   },
   {
@@ -704,13 +1043,30 @@
     "satsback_slug": "greetznl-3",
     "logo_url": "https://cdn.satsback.com/stores/partners/greetznl-v2.svg",
     "cashback_text": "up to 4.2%",
-    "category_slug": null,
-    "geo_scope": "global",
+    "category_slug": "marketplaces",
+    "geo_scope": "nl",
     "is_bitcoin_native": false,
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "## Bitcoin cashback bij Greetz.nl\n\nGreetz.nl is kaarten- en cadeauwinkel Greetz. Via Satsback krijg je tot 4.2% van je bestelbedrag terug in Bitcoin, uitbetaald als sats naar een Lightning-wallet die jij beheert.\n\nShop je toch al bij Greetz.nl? Dan is dit gratis geld op uitgaven die je sowieso doet. Hieronder de actuele cashback, hoe het tracken écht werkt, en of het de moeite waard is voor een online-aankoop.",
+    "how_it_works_nl_md": "## Zo werkt Bitcoin cashback bij Greetz.nl\n\n1. Maak een gratis Satsback-account aan (geen KYC nodig) en installeer de browser-extensie.\n2. Ga naar Greetz.nl via Satsback — de extensie vraagt je met één klik om de beloning te activeren.\n3. Reken af zoals altijd. Je cashback (tot 4.2%) verschijnt als *in behandeling* in je Satsback-dashboard.\n4. Zodra Greetz.nl de verkoop bevestigt, kun je de sats opnemen naar elke Bitcoin Lightning-wallet.\n\n**Let op — het tracken.** Satsback werkt via affiliate-tracking, en gebruikers melden dat ongeveer twee op de drie bestellingen goed doorkomen (rond de 3,2/5 in de Chrome Web Store). Zet adblockers uit op de Greetz.nl-tab, gebruik geen andere kortings-extensies bij het afrekenen, en houd de Satsback-tab als laatste open voordat je betaalt. Komt een bestelling na een paar dagen niet binnen, dan kan Satsback-support hem met je bonnetje natrekken.",
+    "worth_it_nl_md": "## Is het de moeite waard?\n\nMet 4.2%+ hoort Greetz.nl bij de betere online-tarieven op Satsback — de twee minuten instellen ruimschoots waard.\n\nOmdat de beloning in Bitcoin wordt uitbetaald, spaar je bij elke aankoop een beetje sats — precies waarom veel mensen sats-back verkiezen boven gewone cashback. De waarde beweegt wel mee met de koers van Bitcoin.",
+    "faqs_nl": [
+      {
+        "question": "Hoeveel Bitcoin verdien ik bij Greetz.nl?",
+        "answer_md": "Op dit moment tot 4.2%, als sats bijgeschreven in je Satsback-dashboard zodra Greetz.nl de bestelling bevestigt."
+      },
+      {
+        "question": "Moet ik me verifiëren (KYC) om te verdienen?",
+        "answer_md": "Nee. Satsback is gratis en vraagt geen KYC — je hebt alleen een account en de browser-extensie nodig om Bitcoin te verdienen bij Greetz.nl."
+      },
+      {
+        "question": "Wanneer kan ik mijn Greetz.nl-cashback opnemen?",
+        "answer_md": "Zodra de bestelling van *in behandeling* naar *bevestigd* gaat (na de retourtermijn van Greetz.nl), kun je je sats opnemen naar elke Bitcoin Lightning-wallet."
+      }
+    ]
   },
   {
     "slug": "kpn-2",
@@ -718,13 +1074,30 @@
     "satsback_slug": "kpn-2",
     "logo_url": "https://cdn.satsback.com/stores/s/kpn-mobielnl-1066270.png",
     "cashback_text": "up to 38.261 sats",
-    "category_slug": null,
-    "geo_scope": "global",
+    "category_slug": "services",
+    "geo_scope": "nl",
     "is_bitcoin_native": false,
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "## Bitcoin cashback bij KPN\n\nKPN is telecomprovider KPN. Via Satsback krijg je een vast bedrag van tot 38.261 sats in Bitcoin per bestelling, naar een Lightning-wallet die jij beheert.\n\nShop je toch al bij KPN? Dan is dit gratis geld op uitgaven die je sowieso doet. Hieronder de actuele cashback, hoe het tracken écht werkt, en of het de moeite waard is voor een diensten-aankoop.",
+    "how_it_works_nl_md": "## Zo werkt Bitcoin cashback bij KPN\n\n1. Maak een gratis Satsback-account aan (geen KYC nodig) en installeer de browser-extensie.\n2. Ga naar KPN via Satsback — de extensie vraagt je met één klik om de beloning te activeren.\n3. Reken af zoals altijd. Je cashback (tot 38.261 sats) verschijnt als *in behandeling* in je Satsback-dashboard.\n4. Zodra KPN de verkoop bevestigt, kun je de sats opnemen naar elke Bitcoin Lightning-wallet.\n\n**Let op — het tracken.** Satsback werkt via affiliate-tracking, en gebruikers melden dat ongeveer twee op de drie bestellingen goed doorkomen (rond de 3,2/5 in de Chrome Web Store). Zet adblockers uit op de KPN-tab, gebruik geen andere kortings-extensies bij het afrekenen, en houd de Satsback-tab als laatste open voordat je betaalt. Komt een bestelling na een paar dagen niet binnen, dan kan Satsback-support hem met je bonnetje natrekken.",
+    "worth_it_nl_md": "## Is het de moeite waard?\n\nKPN betaalt hier een vast aantal sats per bestelling, dus het levert relatief het meest op bij kleinere bestellingen.\n\nOmdat de beloning in Bitcoin wordt uitbetaald, spaar je bij elke aankoop een beetje sats — precies waarom veel mensen sats-back verkiezen boven gewone cashback. De waarde beweegt wel mee met de koers van Bitcoin.",
+    "faqs_nl": [
+      {
+        "question": "Hoeveel Bitcoin verdien ik bij KPN?",
+        "answer_md": "Op dit moment tot 38.261 sats, als sats bijgeschreven in je Satsback-dashboard zodra KPN de bestelling bevestigt."
+      },
+      {
+        "question": "Moet ik me verifiëren (KYC) om te verdienen?",
+        "answer_md": "Nee. Satsback is gratis en vraagt geen KYC — je hebt alleen een account en de browser-extensie nodig om Bitcoin te verdienen bij KPN."
+      },
+      {
+        "question": "Wanneer kan ik mijn KPN-cashback opnemen?",
+        "answer_md": "Zodra de bestelling van *in behandeling* naar *bevestigd* gaat (na de retourtermijn van KPN), kun je je sats opnemen naar elke Bitcoin Lightning-wallet."
+      }
+    ]
   },
   {
     "slug": "temu",
@@ -751,7 +1124,11 @@
         "question": "When can I withdraw my Temu cashback?",
         "answer_md": "Once the order moves from *pending* to *confirmed* (after Temu's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
       }
-    ]
+    ],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "gaslichtcom",
@@ -765,7 +1142,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "brunanl",
@@ -773,13 +1154,30 @@
     "satsback_slug": "brunanl",
     "logo_url": "https://cdn.satsback.com/stores/partners/bruna-nl-v2.png",
     "cashback_text": "up to 3.4%",
-    "category_slug": null,
-    "geo_scope": "global",
+    "category_slug": "marketplaces",
+    "geo_scope": "nl",
     "is_bitcoin_native": false,
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "## Bitcoin cashback bij Bruna.nl\n\nBruna.nl is boeken- en tijdschriftenwinkel Bruna. Via Satsback krijg je tot 3.4% van je bestelbedrag terug in Bitcoin, uitbetaald als sats naar een Lightning-wallet die jij beheert.\n\nShop je toch al bij Bruna.nl? Dan is dit gratis geld op uitgaven die je sowieso doet. Hieronder de actuele cashback, hoe het tracken écht werkt, en of het de moeite waard is voor een online-aankoop.",
+    "how_it_works_nl_md": "## Zo werkt Bitcoin cashback bij Bruna.nl\n\n1. Maak een gratis Satsback-account aan (geen KYC nodig) en installeer de browser-extensie.\n2. Ga naar Bruna.nl via Satsback — de extensie vraagt je met één klik om de beloning te activeren.\n3. Reken af zoals altijd. Je cashback (tot 3.4%) verschijnt als *in behandeling* in je Satsback-dashboard.\n4. Zodra Bruna.nl de verkoop bevestigt, kun je de sats opnemen naar elke Bitcoin Lightning-wallet.\n\n**Let op — het tracken.** Satsback werkt via affiliate-tracking, en gebruikers melden dat ongeveer twee op de drie bestellingen goed doorkomen (rond de 3,2/5 in de Chrome Web Store). Zet adblockers uit op de Bruna.nl-tab, gebruik geen andere kortings-extensies bij het afrekenen, en houd de Satsback-tab als laatste open voordat je betaalt. Komt een bestelling na een paar dagen niet binnen, dan kan Satsback-support hem met je bonnetje natrekken.",
+    "worth_it_nl_md": "## Is het de moeite waard?\n\nMet 3.4%+ hoort Bruna.nl bij de betere online-tarieven op Satsback — de twee minuten instellen ruimschoots waard.\n\nOmdat de beloning in Bitcoin wordt uitbetaald, spaar je bij elke aankoop een beetje sats — precies waarom veel mensen sats-back verkiezen boven gewone cashback. De waarde beweegt wel mee met de koers van Bitcoin.",
+    "faqs_nl": [
+      {
+        "question": "Hoeveel Bitcoin verdien ik bij Bruna.nl?",
+        "answer_md": "Op dit moment tot 3.4%, als sats bijgeschreven in je Satsback-dashboard zodra Bruna.nl de bestelling bevestigt."
+      },
+      {
+        "question": "Moet ik me verifiëren (KYC) om te verdienen?",
+        "answer_md": "Nee. Satsback is gratis en vraagt geen KYC — je hebt alleen een account en de browser-extensie nodig om Bitcoin te verdienen bij Bruna.nl."
+      },
+      {
+        "question": "Wanneer kan ik mijn Bruna.nl-cashback opnemen?",
+        "answer_md": "Zodra de bestelling van *in behandeling* naar *bevestigd* gaat (na de retourtermijn van Bruna.nl), kun je je sats opnemen naar elke Bitcoin Lightning-wallet."
+      }
+    ]
   },
   {
     "slug": "conrad",
@@ -805,6 +1203,23 @@
       {
         "question": "When can I withdraw my Conrad cashback?",
         "answer_md": "Once the order moves from *pending* to *confirmed* (after Conrad's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
+      }
+    ],
+    "description_nl_md": "## Bitcoin cashback bij Conrad\n\nConrad is elektronica- en techniekwinkel Conrad. Via Satsback krijg je tot 1.3% van je bestelbedrag terug in Bitcoin, uitbetaald als sats naar een Lightning-wallet die jij beheert.\n\nShop je toch al bij Conrad? Dan is dit gratis geld op uitgaven die je sowieso doet. Hieronder de actuele cashback, hoe het tracken écht werkt, en of het de moeite waard is voor een elektronica-aankoop.",
+    "how_it_works_nl_md": "## Zo werkt Bitcoin cashback bij Conrad\n\n1. Maak een gratis Satsback-account aan (geen KYC nodig) en installeer de browser-extensie.\n2. Ga naar Conrad via Satsback — de extensie vraagt je met één klik om de beloning te activeren.\n3. Reken af zoals altijd. Je cashback (tot 1.3%) verschijnt als *in behandeling* in je Satsback-dashboard.\n4. Zodra Conrad de verkoop bevestigt, kun je de sats opnemen naar elke Bitcoin Lightning-wallet.\n\n**Let op — het tracken.** Satsback werkt via affiliate-tracking, en gebruikers melden dat ongeveer twee op de drie bestellingen goed doorkomen (rond de 3,2/5 in de Chrome Web Store). Zet adblockers uit op de Conrad-tab, gebruik geen andere kortings-extensies bij het afrekenen, en houd de Satsback-tab als laatste open voordat je betaalt. Komt een bestelling na een paar dagen niet binnen, dan kan Satsback-support hem met je bonnetje natrekken.",
+    "worth_it_nl_md": "## Is het de moeite waard?\n\nHet tarief is bescheiden, dus het loont vooral bij grotere bestellingen bij Conrad waar een klein percentage toch flink wat sats wordt.\n\nOmdat de beloning in Bitcoin wordt uitbetaald, spaar je bij elke aankoop een beetje sats — precies waarom veel mensen sats-back verkiezen boven gewone cashback. De waarde beweegt wel mee met de koers van Bitcoin.",
+    "faqs_nl": [
+      {
+        "question": "Hoeveel Bitcoin verdien ik bij Conrad?",
+        "answer_md": "Op dit moment tot 1.3%, als sats bijgeschreven in je Satsback-dashboard zodra Conrad de bestelling bevestigt."
+      },
+      {
+        "question": "Moet ik me verifiëren (KYC) om te verdienen?",
+        "answer_md": "Nee. Satsback is gratis en vraagt geen KYC — je hebt alleen een account en de browser-extensie nodig om Bitcoin te verdienen bij Conrad."
+      },
+      {
+        "question": "Wanneer kan ik mijn Conrad-cashback opnemen?",
+        "answer_md": "Zodra de bestelling van *in behandeling* naar *bevestigd* gaat (na de retourtermijn van Conrad), kun je je sats opnemen naar elke Bitcoin Lightning-wallet."
       }
     ]
   },
@@ -833,7 +1248,11 @@
         "question": "When can I withdraw my ABOUT YOU cashback?",
         "answer_md": "Once the order moves from *pending* to *confirmed* (after ABOUT YOU's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
       }
-    ]
+    ],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "drogistnl",
@@ -841,13 +1260,30 @@
     "satsback_slug": "drogistnl",
     "logo_url": "https://cdn.satsback.com/stores/s/drogist-1053077.svg",
     "cashback_text": "up to 2%",
-    "category_slug": null,
-    "geo_scope": "global",
+    "category_slug": "health-beauty",
+    "geo_scope": "nl",
     "is_bitcoin_native": false,
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "## Bitcoin cashback bij Drogist.nl\n\nDrogist.nl is de online drogist Drogist.nl. Via Satsback krijg je tot 2% van je bestelbedrag terug in Bitcoin, uitbetaald als sats naar een Lightning-wallet die jij beheert.\n\nShop je toch al bij Drogist.nl? Dan is dit gratis geld op uitgaven die je sowieso doet. Hieronder de actuele cashback, hoe het tracken écht werkt, en of het de moeite waard is voor een beauty-aankoop.",
+    "how_it_works_nl_md": "## Zo werkt Bitcoin cashback bij Drogist.nl\n\n1. Maak een gratis Satsback-account aan (geen KYC nodig) en installeer de browser-extensie.\n2. Ga naar Drogist.nl via Satsback — de extensie vraagt je met één klik om de beloning te activeren.\n3. Reken af zoals altijd. Je cashback (tot 2%) verschijnt als *in behandeling* in je Satsback-dashboard.\n4. Zodra Drogist.nl de verkoop bevestigt, kun je de sats opnemen naar elke Bitcoin Lightning-wallet.\n\n**Let op — het tracken.** Satsback werkt via affiliate-tracking, en gebruikers melden dat ongeveer twee op de drie bestellingen goed doorkomen (rond de 3,2/5 in de Chrome Web Store). Zet adblockers uit op de Drogist.nl-tab, gebruik geen andere kortings-extensies bij het afrekenen, en houd de Satsback-tab als laatste open voordat je betaalt. Komt een bestelling na een paar dagen niet binnen, dan kan Satsback-support hem met je bonnetje natrekken.",
+    "worth_it_nl_md": "## Is het de moeite waard?\n\nHet tarief is prima voor beauty; op een normale bestelling bij Drogist.nl telt het al snel op tot een leuk bedrag aan sats.\n\nOmdat de beloning in Bitcoin wordt uitbetaald, spaar je bij elke aankoop een beetje sats — precies waarom veel mensen sats-back verkiezen boven gewone cashback. De waarde beweegt wel mee met de koers van Bitcoin.",
+    "faqs_nl": [
+      {
+        "question": "Hoeveel Bitcoin verdien ik bij Drogist.nl?",
+        "answer_md": "Op dit moment tot 2%, als sats bijgeschreven in je Satsback-dashboard zodra Drogist.nl de bestelling bevestigt."
+      },
+      {
+        "question": "Moet ik me verifiëren (KYC) om te verdienen?",
+        "answer_md": "Nee. Satsback is gratis en vraagt geen KYC — je hebt alleen een account en de browser-extensie nodig om Bitcoin te verdienen bij Drogist.nl."
+      },
+      {
+        "question": "Wanneer kan ik mijn Drogist.nl-cashback opnemen?",
+        "answer_md": "Zodra de bestelling van *in behandeling* naar *bevestigd* gaat (na de retourtermijn van Drogist.nl), kun je je sats opnemen naar elke Bitcoin Lightning-wallet."
+      }
+    ]
   },
   {
     "slug": "joybuy-8",
@@ -861,7 +1297,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "bergfreunde",
@@ -888,7 +1328,11 @@
         "question": "When can I withdraw my Bergfreunde cashback?",
         "answer_md": "Once the order moves from *pending* to *confirmed* (after Bergfreunde's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
       }
-    ]
+    ],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "galaxus-4",
@@ -915,7 +1359,11 @@
         "question": "When can I withdraw my Galaxus cashback?",
         "answer_md": "Once the order moves from *pending* to *confirmed* (after Galaxus's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
       }
-    ]
+    ],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "douglas",
@@ -942,6 +1390,23 @@
         "question": "When can I withdraw my Douglas cashback?",
         "answer_md": "Once the order moves from *pending* to *confirmed* (after Douglas's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
       }
+    ],
+    "description_nl_md": "## Bitcoin cashback bij Douglas\n\nDouglas is parfumerie- en beautyketen Douglas. Via Satsback krijg je tot 2% van je bestelbedrag terug in Bitcoin, uitbetaald als sats naar een Lightning-wallet die jij beheert.\n\nShop je toch al bij Douglas? Dan is dit gratis geld op uitgaven die je sowieso doet. Hieronder de actuele cashback, hoe het tracken écht werkt, en of het de moeite waard is voor een beauty-aankoop.",
+    "how_it_works_nl_md": "## Zo werkt Bitcoin cashback bij Douglas\n\n1. Maak een gratis Satsback-account aan (geen KYC nodig) en installeer de browser-extensie.\n2. Ga naar Douglas via Satsback — de extensie vraagt je met één klik om de beloning te activeren.\n3. Reken af zoals altijd. Je cashback (tot 2%) verschijnt als *in behandeling* in je Satsback-dashboard.\n4. Zodra Douglas de verkoop bevestigt, kun je de sats opnemen naar elke Bitcoin Lightning-wallet.\n\n**Let op — het tracken.** Satsback werkt via affiliate-tracking, en gebruikers melden dat ongeveer twee op de drie bestellingen goed doorkomen (rond de 3,2/5 in de Chrome Web Store). Zet adblockers uit op de Douglas-tab, gebruik geen andere kortings-extensies bij het afrekenen, en houd de Satsback-tab als laatste open voordat je betaalt. Komt een bestelling na een paar dagen niet binnen, dan kan Satsback-support hem met je bonnetje natrekken.",
+    "worth_it_nl_md": "## Is het de moeite waard?\n\nHet tarief is prima voor beauty; op een normale bestelling bij Douglas telt het al snel op tot een leuk bedrag aan sats.\n\nOmdat de beloning in Bitcoin wordt uitbetaald, spaar je bij elke aankoop een beetje sats — precies waarom veel mensen sats-back verkiezen boven gewone cashback. De waarde beweegt wel mee met de koers van Bitcoin.",
+    "faqs_nl": [
+      {
+        "question": "Hoeveel Bitcoin verdien ik bij Douglas?",
+        "answer_md": "Op dit moment tot 2%, als sats bijgeschreven in je Satsback-dashboard zodra Douglas de bestelling bevestigt."
+      },
+      {
+        "question": "Moet ik me verifiëren (KYC) om te verdienen?",
+        "answer_md": "Nee. Satsback is gratis en vraagt geen KYC — je hebt alleen een account en de browser-extensie nodig om Bitcoin te verdienen bij Douglas."
+      },
+      {
+        "question": "Wanneer kan ik mijn Douglas-cashback opnemen?",
+        "answer_md": "Zodra de bestelling van *in behandeling* naar *bevestigd* gaat (na de retourtermijn van Douglas), kun je je sats opnemen naar elke Bitcoin Lightning-wallet."
+      }
     ]
   },
   {
@@ -956,7 +1421,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "ziengs",
@@ -970,7 +1439,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "simyo",
@@ -978,13 +1451,30 @@
     "satsback_slug": "simyo",
     "logo_url": "https://cdn.satsback.com/stores/partners/simyo-v2.svg",
     "cashback_text": "up to 28.341 sats",
-    "category_slug": null,
-    "geo_scope": "global",
+    "category_slug": "services",
+    "geo_scope": "nl",
     "is_bitcoin_native": false,
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "## Bitcoin cashback bij Simyo\n\nSimyo is de voordelige telecomprovider Simyo. Via Satsback krijg je een vast bedrag van tot 28.341 sats in Bitcoin per bestelling, naar een Lightning-wallet die jij beheert.\n\nShop je toch al bij Simyo? Dan is dit gratis geld op uitgaven die je sowieso doet. Hieronder de actuele cashback, hoe het tracken écht werkt, en of het de moeite waard is voor een diensten-aankoop.",
+    "how_it_works_nl_md": "## Zo werkt Bitcoin cashback bij Simyo\n\n1. Maak een gratis Satsback-account aan (geen KYC nodig) en installeer de browser-extensie.\n2. Ga naar Simyo via Satsback — de extensie vraagt je met één klik om de beloning te activeren.\n3. Reken af zoals altijd. Je cashback (tot 28.341 sats) verschijnt als *in behandeling* in je Satsback-dashboard.\n4. Zodra Simyo de verkoop bevestigt, kun je de sats opnemen naar elke Bitcoin Lightning-wallet.\n\n**Let op — het tracken.** Satsback werkt via affiliate-tracking, en gebruikers melden dat ongeveer twee op de drie bestellingen goed doorkomen (rond de 3,2/5 in de Chrome Web Store). Zet adblockers uit op de Simyo-tab, gebruik geen andere kortings-extensies bij het afrekenen, en houd de Satsback-tab als laatste open voordat je betaalt. Komt een bestelling na een paar dagen niet binnen, dan kan Satsback-support hem met je bonnetje natrekken.",
+    "worth_it_nl_md": "## Is het de moeite waard?\n\nSimyo betaalt hier een vast aantal sats per bestelling, dus het levert relatief het meest op bij kleinere bestellingen.\n\nOmdat de beloning in Bitcoin wordt uitbetaald, spaar je bij elke aankoop een beetje sats — precies waarom veel mensen sats-back verkiezen boven gewone cashback. De waarde beweegt wel mee met de koers van Bitcoin.",
+    "faqs_nl": [
+      {
+        "question": "Hoeveel Bitcoin verdien ik bij Simyo?",
+        "answer_md": "Op dit moment tot 28.341 sats, als sats bijgeschreven in je Satsback-dashboard zodra Simyo de bestelling bevestigt."
+      },
+      {
+        "question": "Moet ik me verifiëren (KYC) om te verdienen?",
+        "answer_md": "Nee. Satsback is gratis en vraagt geen KYC — je hebt alleen een account en de browser-extensie nodig om Bitcoin te verdienen bij Simyo."
+      },
+      {
+        "question": "Wanneer kan ik mijn Simyo-cashback opnemen?",
+        "answer_md": "Zodra de bestelling van *in behandeling* naar *bevestigd* gaat (na de retourtermijn van Simyo), kun je je sats opnemen naar elke Bitcoin Lightning-wallet."
+      }
+    ]
   },
   {
     "slug": "albelli-5",
@@ -998,7 +1488,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "vidaxlnl",
@@ -1006,13 +1500,30 @@
     "satsback_slug": "vidaxlnl",
     "logo_url": "https://satsback.com/assets/media/partners/vidaxl.svg",
     "cashback_text": "up to 3.2%",
-    "category_slug": null,
-    "geo_scope": "global",
+    "category_slug": "marketplaces",
+    "geo_scope": "nl",
     "is_bitcoin_native": false,
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "## Bitcoin cashback bij vidaXL.nl\n\nvidaXL.nl is online warenhuis vidaXL voor huis en tuin. Via Satsback krijg je tot 3.2% van je bestelbedrag terug in Bitcoin, uitbetaald als sats naar een Lightning-wallet die jij beheert.\n\nShop je toch al bij vidaXL.nl? Dan is dit gratis geld op uitgaven die je sowieso doet. Hieronder de actuele cashback, hoe het tracken écht werkt, en of het de moeite waard is voor een online-aankoop.",
+    "how_it_works_nl_md": "## Zo werkt Bitcoin cashback bij vidaXL.nl\n\n1. Maak een gratis Satsback-account aan (geen KYC nodig) en installeer de browser-extensie.\n2. Ga naar vidaXL.nl via Satsback — de extensie vraagt je met één klik om de beloning te activeren.\n3. Reken af zoals altijd. Je cashback (tot 3.2%) verschijnt als *in behandeling* in je Satsback-dashboard.\n4. Zodra vidaXL.nl de verkoop bevestigt, kun je de sats opnemen naar elke Bitcoin Lightning-wallet.\n\n**Let op — het tracken.** Satsback werkt via affiliate-tracking, en gebruikers melden dat ongeveer twee op de drie bestellingen goed doorkomen (rond de 3,2/5 in de Chrome Web Store). Zet adblockers uit op de vidaXL.nl-tab, gebruik geen andere kortings-extensies bij het afrekenen, en houd de Satsback-tab als laatste open voordat je betaalt. Komt een bestelling na een paar dagen niet binnen, dan kan Satsback-support hem met je bonnetje natrekken.",
+    "worth_it_nl_md": "## Is het de moeite waard?\n\nMet 3.2%+ hoort vidaXL.nl bij de betere online-tarieven op Satsback — de twee minuten instellen ruimschoots waard.\n\nOmdat de beloning in Bitcoin wordt uitbetaald, spaar je bij elke aankoop een beetje sats — precies waarom veel mensen sats-back verkiezen boven gewone cashback. De waarde beweegt wel mee met de koers van Bitcoin.",
+    "faqs_nl": [
+      {
+        "question": "Hoeveel Bitcoin verdien ik bij vidaXL.nl?",
+        "answer_md": "Op dit moment tot 3.2%, als sats bijgeschreven in je Satsback-dashboard zodra vidaXL.nl de bestelling bevestigt."
+      },
+      {
+        "question": "Moet ik me verifiëren (KYC) om te verdienen?",
+        "answer_md": "Nee. Satsback is gratis en vraagt geen KYC — je hebt alleen een account en de browser-extensie nodig om Bitcoin te verdienen bij vidaXL.nl."
+      },
+      {
+        "question": "Wanneer kan ik mijn vidaXL.nl-cashback opnemen?",
+        "answer_md": "Zodra de bestelling van *in behandeling* naar *bevestigd* gaat (na de retourtermijn van vidaXL.nl), kun je je sats opnemen naar elke Bitcoin Lightning-wallet."
+      }
+    ]
   },
   {
     "slug": "getyourguide-12",
@@ -1039,7 +1550,11 @@
         "question": "When can I withdraw my GetYourGuide cashback?",
         "answer_md": "Once the order moves from *pending* to *confirmed* (after GetYourGuide's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
       }
-    ]
+    ],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "plutosport",
@@ -1047,13 +1562,30 @@
     "satsback_slug": "plutosport",
     "logo_url": "https://cdn.satsback.com/stores/partners/plutosport-v2.svg",
     "cashback_text": "up to 2%",
-    "category_slug": null,
-    "geo_scope": "global",
+    "category_slug": "fashion",
+    "geo_scope": "nl",
     "is_bitcoin_native": false,
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "## Bitcoin cashback bij Plutosport\n\nPlutosport is sportwinkel Plutosport. Via Satsback krijg je tot 2% van je bestelbedrag terug in Bitcoin, uitbetaald als sats naar een Lightning-wallet die jij beheert.\n\nShop je toch al bij Plutosport? Dan is dit gratis geld op uitgaven die je sowieso doet. Hieronder de actuele cashback, hoe het tracken écht werkt, en of het de moeite waard is voor een kleding-aankoop.",
+    "how_it_works_nl_md": "## Zo werkt Bitcoin cashback bij Plutosport\n\n1. Maak een gratis Satsback-account aan (geen KYC nodig) en installeer de browser-extensie.\n2. Ga naar Plutosport via Satsback — de extensie vraagt je met één klik om de beloning te activeren.\n3. Reken af zoals altijd. Je cashback (tot 2%) verschijnt als *in behandeling* in je Satsback-dashboard.\n4. Zodra Plutosport de verkoop bevestigt, kun je de sats opnemen naar elke Bitcoin Lightning-wallet.\n\n**Let op — het tracken.** Satsback werkt via affiliate-tracking, en gebruikers melden dat ongeveer twee op de drie bestellingen goed doorkomen (rond de 3,2/5 in de Chrome Web Store). Zet adblockers uit op de Plutosport-tab, gebruik geen andere kortings-extensies bij het afrekenen, en houd de Satsback-tab als laatste open voordat je betaalt. Komt een bestelling na een paar dagen niet binnen, dan kan Satsback-support hem met je bonnetje natrekken.",
+    "worth_it_nl_md": "## Is het de moeite waard?\n\nHet tarief is prima voor kleding; op een normale bestelling bij Plutosport telt het al snel op tot een leuk bedrag aan sats.\n\nOmdat de beloning in Bitcoin wordt uitbetaald, spaar je bij elke aankoop een beetje sats — precies waarom veel mensen sats-back verkiezen boven gewone cashback. De waarde beweegt wel mee met de koers van Bitcoin.",
+    "faqs_nl": [
+      {
+        "question": "Hoeveel Bitcoin verdien ik bij Plutosport?",
+        "answer_md": "Op dit moment tot 2%, als sats bijgeschreven in je Satsback-dashboard zodra Plutosport de bestelling bevestigt."
+      },
+      {
+        "question": "Moet ik me verifiëren (KYC) om te verdienen?",
+        "answer_md": "Nee. Satsback is gratis en vraagt geen KYC — je hebt alleen een account en de browser-extensie nodig om Bitcoin te verdienen bij Plutosport."
+      },
+      {
+        "question": "Wanneer kan ik mijn Plutosport-cashback opnemen?",
+        "answer_md": "Zodra de bestelling van *in behandeling* naar *bevestigd* gaat (na de retourtermijn van Plutosport), kun je je sats opnemen naar elke Bitcoin Lightning-wallet."
+      }
+    ]
   },
   {
     "slug": "gall-gall-2",
@@ -1061,13 +1593,30 @@
     "satsback_slug": "gall-gall-2",
     "logo_url": "https://cdn.satsback.com/stores/s/gall-en-gall-nl-1072619.png",
     "cashback_text": "up to 2%",
-    "category_slug": null,
-    "geo_scope": "global",
+    "category_slug": "groceries-food",
+    "geo_scope": "nl",
     "is_bitcoin_native": false,
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "## Bitcoin cashback bij Gall & Gall\n\nGall & Gall is slijterijketen Gall & Gall. Via Satsback krijg je tot 2% van je bestelbedrag terug in Bitcoin, uitbetaald als sats naar een Lightning-wallet die jij beheert.\n\nShop je toch al bij Gall & Gall? Dan is dit gratis geld op uitgaven die je sowieso doet. Hieronder de actuele cashback, hoe het tracken écht werkt, en of het de moeite waard is voor een boodschappen-aankoop.",
+    "how_it_works_nl_md": "## Zo werkt Bitcoin cashback bij Gall & Gall\n\n1. Maak een gratis Satsback-account aan (geen KYC nodig) en installeer de browser-extensie.\n2. Ga naar Gall & Gall via Satsback — de extensie vraagt je met één klik om de beloning te activeren.\n3. Reken af zoals altijd. Je cashback (tot 2%) verschijnt als *in behandeling* in je Satsback-dashboard.\n4. Zodra Gall & Gall de verkoop bevestigt, kun je de sats opnemen naar elke Bitcoin Lightning-wallet.\n\n**Let op — het tracken.** Satsback werkt via affiliate-tracking, en gebruikers melden dat ongeveer twee op de drie bestellingen goed doorkomen (rond de 3,2/5 in de Chrome Web Store). Zet adblockers uit op de Gall & Gall-tab, gebruik geen andere kortings-extensies bij het afrekenen, en houd de Satsback-tab als laatste open voordat je betaalt. Komt een bestelling na een paar dagen niet binnen, dan kan Satsback-support hem met je bonnetje natrekken.",
+    "worth_it_nl_md": "## Is het de moeite waard?\n\nHet tarief is prima voor boodschappen; op een normale bestelling bij Gall & Gall telt het al snel op tot een leuk bedrag aan sats.\n\nOmdat de beloning in Bitcoin wordt uitbetaald, spaar je bij elke aankoop een beetje sats — precies waarom veel mensen sats-back verkiezen boven gewone cashback. De waarde beweegt wel mee met de koers van Bitcoin.",
+    "faqs_nl": [
+      {
+        "question": "Hoeveel Bitcoin verdien ik bij Gall & Gall?",
+        "answer_md": "Op dit moment tot 2%, als sats bijgeschreven in je Satsback-dashboard zodra Gall & Gall de bestelling bevestigt."
+      },
+      {
+        "question": "Moet ik me verifiëren (KYC) om te verdienen?",
+        "answer_md": "Nee. Satsback is gratis en vraagt geen KYC — je hebt alleen een account en de browser-extensie nodig om Bitcoin te verdienen bij Gall & Gall."
+      },
+      {
+        "question": "Wanneer kan ik mijn Gall & Gall-cashback opnemen?",
+        "answer_md": "Zodra de bestelling van *in behandeling* naar *bevestigd* gaat (na de retourtermijn van Gall & Gall), kun je je sats opnemen naar elke Bitcoin Lightning-wallet."
+      }
+    ]
   },
   {
     "slug": "winparts",
@@ -1081,7 +1630,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "lego-10",
@@ -1108,7 +1661,11 @@
         "question": "When can I withdraw my LEGO cashback?",
         "answer_md": "Once the order moves from *pending* to *confirmed* (after LEGO's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
       }
-    ]
+    ],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "hallmark",
@@ -1122,7 +1679,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "nedgame",
@@ -1136,7 +1697,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "braadbaas",
@@ -1150,7 +1715,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "barefoot-more-3",
@@ -1164,7 +1733,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "printabout",
@@ -1178,7 +1751,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "simpel",
@@ -1192,7 +1769,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "daka",
@@ -1206,7 +1787,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "batterijenhuis",
@@ -1220,7 +1805,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "trivago",
@@ -1247,7 +1836,11 @@
         "question": "When can I withdraw my Trivago cashback?",
         "answer_md": "Once the order moves from *pending* to *confirmed* (after Trivago's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
       }
-    ]
+    ],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "haarshopnl-2",
@@ -1261,7 +1854,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "prime-video-9",
@@ -1288,7 +1885,11 @@
         "question": "When can I withdraw my Prime Video cashback?",
         "answer_md": "Once the order moves from *pending* to *confirmed* (after Prime Video's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
       }
-    ]
+    ],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "pme-legend-3",
@@ -1302,7 +1903,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "pazzoxnl-2",
@@ -1316,7 +1921,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "mothers-earth",
@@ -1330,7 +1939,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "bergzeit",
@@ -1344,7 +1957,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "sliponlinenl",
@@ -1358,7 +1975,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "hm-4",
@@ -1385,7 +2006,11 @@
         "question": "When can I withdraw my H&M cashback?",
         "answer_md": "Once the order moves from *pending* to *confirmed* (after H&M's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
       }
-    ]
+    ],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "bbquality-2",
@@ -1399,7 +2024,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "kraken-3",
@@ -1413,7 +2042,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "van-asten-babysuperstore",
@@ -1427,7 +2060,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "schuurman-schoenen",
@@ -1441,7 +2078,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "foot-locker",
@@ -1468,6 +2109,23 @@
         "question": "When can I withdraw my Foot Locker cashback?",
         "answer_md": "Once the order moves from *pending* to *confirmed* (after Foot Locker's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
       }
+    ],
+    "description_nl_md": "## Bitcoin cashback bij Foot Locker\n\nFoot Locker is sneakerwinkel Foot Locker. Via Satsback krijg je tot 2.5% van je bestelbedrag terug in Bitcoin, uitbetaald als sats naar een Lightning-wallet die jij beheert.\n\nShop je toch al bij Foot Locker? Dan is dit gratis geld op uitgaven die je sowieso doet. Hieronder de actuele cashback, hoe het tracken écht werkt, en of het de moeite waard is voor een kleding-aankoop.",
+    "how_it_works_nl_md": "## Zo werkt Bitcoin cashback bij Foot Locker\n\n1. Maak een gratis Satsback-account aan (geen KYC nodig) en installeer de browser-extensie.\n2. Ga naar Foot Locker via Satsback — de extensie vraagt je met één klik om de beloning te activeren.\n3. Reken af zoals altijd. Je cashback (tot 2.5%) verschijnt als *in behandeling* in je Satsback-dashboard.\n4. Zodra Foot Locker de verkoop bevestigt, kun je de sats opnemen naar elke Bitcoin Lightning-wallet.\n\n**Let op — het tracken.** Satsback werkt via affiliate-tracking, en gebruikers melden dat ongeveer twee op de drie bestellingen goed doorkomen (rond de 3,2/5 in de Chrome Web Store). Zet adblockers uit op de Foot Locker-tab, gebruik geen andere kortings-extensies bij het afrekenen, en houd de Satsback-tab als laatste open voordat je betaalt. Komt een bestelling na een paar dagen niet binnen, dan kan Satsback-support hem met je bonnetje natrekken.",
+    "worth_it_nl_md": "## Is het de moeite waard?\n\nHet tarief is prima voor kleding; op een normale bestelling bij Foot Locker telt het al snel op tot een leuk bedrag aan sats.\n\nOmdat de beloning in Bitcoin wordt uitbetaald, spaar je bij elke aankoop een beetje sats — precies waarom veel mensen sats-back verkiezen boven gewone cashback. De waarde beweegt wel mee met de koers van Bitcoin.",
+    "faqs_nl": [
+      {
+        "question": "Hoeveel Bitcoin verdien ik bij Foot Locker?",
+        "answer_md": "Op dit moment tot 2.5%, als sats bijgeschreven in je Satsback-dashboard zodra Foot Locker de bestelling bevestigt."
+      },
+      {
+        "question": "Moet ik me verifiëren (KYC) om te verdienen?",
+        "answer_md": "Nee. Satsback is gratis en vraagt geen KYC — je hebt alleen een account en de browser-extensie nodig om Bitcoin te verdienen bij Foot Locker."
+      },
+      {
+        "question": "Wanneer kan ik mijn Foot Locker-cashback opnemen?",
+        "answer_md": "Zodra de bestelling van *in behandeling* naar *bevestigd* gaat (na de retourtermijn van Foot Locker), kun je je sats opnemen naar elke Bitcoin Lightning-wallet."
+      }
     ]
   },
   {
@@ -1482,7 +2140,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "tripcom-13",
@@ -1509,7 +2171,11 @@
         "question": "When can I withdraw my Trip.com cashback?",
         "answer_md": "Once the order moves from *pending* to *confirmed* (after Trip.com's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
       }
-    ]
+    ],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "essent",
@@ -1523,7 +2189,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "superfoodstorenl-3",
@@ -1537,7 +2207,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "under-armour-23",
@@ -1564,7 +2238,11 @@
         "question": "When can I withdraw my Under Armour cashback?",
         "answer_md": "Once the order moves from *pending* to *confirmed* (after Under Armour's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
       }
-    ]
+    ],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "nordvpn",
@@ -1591,7 +2269,11 @@
         "question": "When can I withdraw my NordVPN cashback?",
         "answer_md": "Once the order moves from *pending* to *confirmed* (after NordVPN's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
       }
-    ]
+    ],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "123jaloezie-2",
@@ -1605,7 +2287,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "pharmamarket",
@@ -1619,7 +2305,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "kpn-thuis-2",
@@ -1633,7 +2323,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "jumbo-sports",
@@ -1647,7 +2341,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "hostinger-9",
@@ -1674,7 +2372,11 @@
         "question": "When can I withdraw my Hostinger cashback?",
         "answer_md": "Once the order moves from *pending* to *confirmed* (after Hostinger's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
       }
-    ]
+    ],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "vision-direct",
@@ -1688,7 +2390,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "dekbed-discounter-3",
@@ -1702,7 +2408,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "energiedirect-2",
@@ -1716,7 +2426,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "medpets",
@@ -1730,7 +2444,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "pricewise-internet-tv",
@@ -1744,7 +2462,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "sharkninja-10",
@@ -1771,7 +2493,11 @@
         "question": "When can I withdraw my SharkNinja cashback?",
         "answer_md": "Once the order moves from *pending* to *confirmed* (after SharkNinja's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
       }
-    ]
+    ],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "mango-14",
@@ -1798,7 +2524,11 @@
         "question": "When can I withdraw my Mango cashback?",
         "answer_md": "Once the order moves from *pending* to *confirmed* (after Mango's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
       }
-    ]
+    ],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "voordeeluitjesnl-2",
@@ -1812,7 +2542,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "geldnl",
@@ -1826,7 +2560,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "solcon",
@@ -1840,7 +2578,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "beltegoednl",
@@ -1854,7 +2596,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "factor",
@@ -1868,7 +2614,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "suitableshop",
@@ -1882,7 +2632,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "fietstascom",
@@ -1896,7 +2650,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "123lens",
@@ -1910,7 +2668,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "ohra-huisdierenverzekering-2",
@@ -1924,7 +2686,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "inktwebnl",
@@ -1938,7 +2704,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "goedkoopste-kantoorartikelennl",
@@ -1952,7 +2722,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "eset",
@@ -1979,7 +2753,11 @@
         "question": "When can I withdraw my ESET cashback?",
         "answer_md": "Once the order moves from *pending* to *confirmed* (after ESET's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
       }
-    ]
+    ],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "marriott-bonvoy-2",
@@ -2006,7 +2784,11 @@
         "question": "When can I withdraw my Marriott Bonvoy cashback?",
         "answer_md": "Once the order moves from *pending* to *confirmed* (after Marriott Bonvoy's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
       }
-    ]
+    ],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "auping",
@@ -2020,7 +2802,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "vonroc",
@@ -2034,7 +2820,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "shein-19",
@@ -2061,7 +2851,11 @@
         "question": "When can I withdraw my SHEIN cashback?",
         "answer_md": "Once the order moves from *pending* to *confirmed* (after SHEIN's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
       }
-    ]
+    ],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "turkish-airlines-2",
@@ -2088,7 +2882,11 @@
         "question": "When can I withdraw my Turkish Airlines cashback?",
         "answer_md": "Once the order moves from *pending* to *confirmed* (after Turkish Airlines's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
       }
-    ]
+    ],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "lednl-3",
@@ -2102,7 +2900,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "skyscanner-12",
@@ -2129,7 +2931,11 @@
         "question": "When can I withdraw my Skyscanner cashback?",
         "answer_md": "Once the order moves from *pending* to *confirmed* (after Skyscanner's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
       }
-    ]
+    ],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "staatsloterij-automatisch-meespelen",
@@ -2143,7 +2949,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "eurojackpot-2",
@@ -2157,7 +2967,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "odido-thuis",
@@ -2171,7 +2985,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "energie-van-budget-thuis",
@@ -2185,7 +3003,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "namecheap",
@@ -2212,7 +3034,11 @@
         "question": "When can I withdraw my Namecheap cashback?",
         "answer_md": "Once the order moves from *pending* to *confirmed* (after Namecheap's return window closes), your sats are withdrawable to any Bitcoin Lightning wallet."
       }
-    ]
+    ],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "lampenlichtnl",
@@ -2226,7 +3052,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "luxplus",
@@ -2240,7 +3070,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "jeans-centre",
@@ -2254,7 +3088,11 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   },
   {
     "slug": "dreamland-2",
@@ -2268,6 +3106,10 @@
     "description_md": "",
     "how_it_works_md": "",
     "worth_it_md": "",
-    "faqs": []
+    "faqs": [],
+    "description_nl_md": "",
+    "how_it_works_nl_md": "",
+    "worth_it_nl_md": "",
+    "faqs_nl": []
   }
 ]

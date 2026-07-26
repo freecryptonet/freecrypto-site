@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 
 export default async function HomePage() {
   const [topStores, previewAirdrops, categories] = await Promise.all([
-    listStores({ limit: 8, sort: "rate" }),
+    listStores({ limit: 8, sort: "rate", contentLang: "en" }),
     listAirdrops({ sort: "newest", limit: 6 }),
     listCategories(),
   ]);
