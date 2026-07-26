@@ -7,6 +7,31 @@ import { cn } from "@/lib/cn";
 
 export function AirdropCard({ a }: { a: AirdropListItem }) {
   const detailHref = `/airdrops/${a.slug}`;
+
+  // Only surface metrics that actually have data. Most auto-ingested "points"
+  // programs have no value / funding / score / deadline yet, so rendering the
+  // full grid produced a stack of four "—" placeholders that read as broken.
+  const hasEstValue =
+    a.estimated_value_usd_min != null || a.estimated_value_usd_max != null;
+  const metrics: Array<{ k: string; node: React.ReactNode }> = [
+    hasEstValue && {
+      k: "Est. value",
+      node: formatValueRange(a.estimated_value_usd_min, a.estimated_value_usd_max),
+    },
+    a.funding_raised_usd != null && {
+      k: "Funding raised",
+      node: formatUsd(a.funding_raised_usd, { compact: true }),
+    },
+    a.social_score != null && {
+      k: "Social score",
+      node: `${a.social_score}/100`,
+    },
+    a.end_date && {
+      k: "Ends in",
+      node: <Countdown to={a.end_date} />,
+    },
+  ].filter(Boolean) as Array<{ k: string; node: React.ReactNode }>;
+
   return (
     <article className="card relative flex flex-col p-5 transition-shadow hover:shadow-card">
       <Link href={detailHref} className="absolute inset-0" aria-label={`View ${a.name} airdrop`}>
@@ -38,29 +63,28 @@ export function AirdropCard({ a }: { a: AirdropListItem }) {
       </header>
 
       {a.short_description ? (
-        <p className="mt-3 text-sm text-text-dim line-clamp-2">{a.short_description}</p>
+        <p
+          className={cn(
+            "mt-3 text-sm text-text-dim",
+            metrics.length ? "line-clamp-2" : "line-clamp-4",
+          )}
+        >
+          {a.short_description}
+        </p>
       ) : null}
 
-      <dl className="mt-4 grid grid-cols-2 gap-y-2 text-xs">
-        <dt className="text-text-faint">Est. value</dt>
-        <dd className="text-text font-medium text-right">
-          {formatValueRange(a.estimated_value_usd_min, a.estimated_value_usd_max)}
-        </dd>
-        <dt className="text-text-faint">Funding raised</dt>
-        <dd className="text-text font-medium text-right">
-          {a.funding_raised_usd ? formatUsd(a.funding_raised_usd, { compact: true }) : "—"}
-        </dd>
-        <dt className="text-text-faint">Social score</dt>
-        <dd className="text-text font-medium text-right">
-          {a.social_score != null ? `${a.social_score}/100` : "—"}
-        </dd>
-        <dt className="text-text-faint">Ends in</dt>
-        <dd className="text-right">
-          {a.end_date ? <Countdown to={a.end_date} /> : <span className="text-text-faint">—</span>}
-        </dd>
-      </dl>
+      {metrics.length > 0 ? (
+        <dl className="mt-4 grid grid-cols-2 gap-y-2 text-xs">
+          {metrics.map((m) => (
+            <div key={m.k} className="contents">
+              <dt className="text-text-faint">{m.k}</dt>
+              <dd className="text-text font-medium text-right">{m.node}</dd>
+            </div>
+          ))}
+        </dl>
+      ) : null}
 
-      <footer className="mt-4 pt-3 border-t border-edge/60 flex items-center justify-between gap-2 relative">
+      <footer className="mt-auto pt-4 border-t border-edge/60 flex items-center justify-between gap-2 relative">
         <div className="flex items-center gap-2">
           <KycChip required={a.kyc_required} />
         </div>
