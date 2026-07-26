@@ -14,15 +14,18 @@ const description =
 export const metadata: Metadata = {
   title,
   description,
-  alternates: { canonical: "/shop" },
+  alternates: {
+    canonical: "/shop",
+    languages: { "en": siteUrl("/shop"), "nl-NL": siteUrl("/nl/shop") },
+  },
   openGraph: { title, description, type: "website", url: siteUrl("/shop") },
   twitter: { card: "summary_large_image", title, description },
 };
 
 export default async function ShopIndexPage() {
   const [categories, topStores] = await Promise.all([
-    listStoreCategories(),
-    listStores({ limit: 24, sort: "rate" }),
+    listStoreCategories("en"),
+    listStores({ limit: 24, sort: "rate", contentLang: "en" }),
   ]);
   const activeCats = categories.filter((c) => c.store_count > 0);
 
@@ -41,13 +44,18 @@ export default async function ShopIndexPage() {
           to a Lightning wallet you control, no points or store vouchers. Below are stores worth using
           it for, with honest notes on rates and tracking.
         </p>
-        <a
-          href="/visit/satsback"
-          rel="nofollow sponsored"
-          className="mt-4 inline-flex rounded-lg bg-accent px-5 py-2.5 text-sm font-medium text-ink"
-        >
-          Create a free Satsback account →
-        </a>
+        <div className="mt-4 flex flex-wrap items-center gap-4">
+          <a
+            href="/visit/satsback"
+            rel="nofollow sponsored"
+            className="inline-flex rounded-lg bg-accent px-5 py-2.5 text-sm font-medium text-ink"
+          >
+            Create a free Satsback account →
+          </a>
+          <Link href="/nl/shop" className="text-xs text-text-faint hover:text-accent">
+            🇳🇱 Nederlands
+          </Link>
+        </div>
       </header>
 
       <div className="mb-8 flex justify-center">

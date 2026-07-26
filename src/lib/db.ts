@@ -495,6 +495,9 @@ export interface StoreDetail extends StoreListItem {
   how_it_works_md: string;
   worth_it_md: string;
   satsback_slug: string | null;
+  /** Whether published content exists in each language (for hreflang + guards). */
+  has_en: boolean;
+  has_nl: boolean;
   faqs: Array<{ question: string; answer_md: string }>;
 }
 
@@ -513,6 +516,13 @@ export interface StoreFilters {
   sort?: "rate" | "name";
   limit?: number;
   offset?: number;
+  /** Restrict to stores that have published content in this language. */
+  contentLang?: "en" | "nl";
+}
+
+/** SQL fragment: does the store have content in `lang`? */
+function contentLenExpr(lang: "en" | "nl"): string {
+  return lang === "nl" ? "CHAR_LENGTH(s.description_nl_md)" : "CHAR_LENGTH(s.description_md)";
 }
 
 const STORE_BASE_SELECT = `
@@ -551,6 +561,7 @@ export async function listStores(f: StoreFilters = {}): Promise<StoreListItem[]>
   if (f.categorySlug) { where.push("s.category_slug = ?"); params.push(f.categorySlug); }
   if (f.geo) { where.push("s.geo_scope = ?"); params.push(f.geo); }
   if (f.bitcoinNative != null) { where.push("s.is_bitcoin_native = ?"); params.push(f.bitcoinNative ? 1 : 0); }
+  if (f.contentLang) { where.push(`${contentLenExpr(f.contentLang)} >= 1`); }
   const orderBy = f.sort === "name"
     ? "s.name ASC"
     : "(s.cashback_kind = 'percent') DESC, s.cashback_value DESC, s.name ASC";
@@ -563,14 +574,18 @@ export async function listStores(f: StoreFilters = {}): Promise<StoreListItem[]>
   }
 }
 
-export async function getStoreBySlug(slug: string): Promise<StoreDetail | null> {
+export async function getStoreBySlug(slug: string, lang: "en" | "nl" = "en"): Promise<StoreDetail | null> {
   const pool = getPool();
   if (!pool) return null;
+  const contentCols = lang === "nl"
+    ? "s.description_nl_md AS description_md, s.how_it_works_nl_md AS how_it_works_md, s.worth_it_nl_md AS worth_it_md"
+    : "s.description_md, s.how_it_works_md, s.worth_it_md";
   try {
     const [rows] = await pool.query<RowDataPacket[]>(
       `SELECT s.id, s.slug, s.name, s.logo_url, s.cashback_text, s.cashback_kind,
               s.cashback_value, s.category_slug, s.geo_scope, s.is_bitcoin_native, s.updated_at,
-              s.description_md, s.how_it_works_md, s.worth_it_md, s.satsback_slug,
+              ${contentCols}, s.satsback_slug,
+              CHAR_LENGTH(s.description_md) AS len_en, CHAR_LENGTH(s.description_nl_md) AS len_nl,
               sc.name AS category_name
        FROM stores s
        LEFT JOIN store_categories sc ON sc.slug = s.category_slug
@@ -581,8 +596,8 @@ export async function getStoreBySlug(slug: string): Promise<StoreDetail | null> 
     if (arr.length === 0) return null;
     const base = mapStoreRow(arr[0]);
     const [faqRows] = await pool.query<RowDataPacket[]>(
-      "SELECT question, answer_md FROM faqs WHERE store_id = ? ORDER BY position ASC",
-      [base.id],
+      "SELECT question, answer_md FROM faqs WHERE store_id = ? AND lang = ? ORDER BY position ASC",
+      [base.id, lang],
     );
     return {
       ...base,
@@ -590,6 +605,8 @@ export async function getStoreBySlug(slug: string): Promise<StoreDetail | null> 
       how_it_works_md: String(arr[0].how_it_works_md ?? ""),
       worth_it_md: String(arr[0].worth_it_md ?? ""),
       satsback_slug: (arr[0].satsback_slug as string) ?? null,
+      has_en: (Number(arr[0].len_en) || 0) > 0,
+      has_nl: (Number(arr[0].len_nl) || 0) > 0,
       faqs: faqRows as unknown as Array<{ question: string; answer_md: string }>,
     };
   } catch {
@@ -597,15 +614,16 @@ export async function getStoreBySlug(slug: string): Promise<StoreDetail | null> 
   }
 }
 
-export async function listStoreCategories(): Promise<StoreCategoryRow[]> {
+export async function listStoreCategories(contentLang?: "en" | "nl"): Promise<StoreCategoryRow[]> {
   const pool = getPool();
   if (!pool) return [];
+  const contentFilter = contentLang ? `AND ${contentLenExpr(contentLang)} >= 1` : "";
   try {
     const [rows] = await pool.query<RowDataPacket[]>(`
       SELECT sc.id, sc.slug, sc.name, sc.description,
         COUNT(s.id) AS store_count
       FROM store_categories sc
-      LEFT JOIN stores s ON s.category_slug = sc.slug AND s.deleted_at IS NULL
+      LEFT JOIN stores s ON s.category_slug = sc.slug AND s.deleted_at IS NULL ${contentFilter}
       GROUP BY sc.id
       ORDER BY sc.sort_order ASC, sc.name ASC
     `);
@@ -619,13 +637,16 @@ export async function listStoreCategories(): Promise<StoreCategoryRow[]> {
 }
 
 export interface SitemapStoreRow { slug: string; updated_at: Date; content_chars: number }
-export async function listStoreSlugsForSitemap(): Promise<SitemapStoreRow[]> {
+export async function listStoreSlugsForSitemap(lang: "en" | "nl" = "en"): Promise<SitemapStoreRow[]> {
   const pool = getPool();
   if (!pool) return [];
+  const cols = lang === "nl"
+    ? "(CHAR_LENGTH(description_nl_md) + CHAR_LENGTH(how_it_works_nl_md) + CHAR_LENGTH(worth_it_nl_md))"
+    : "(CHAR_LENGTH(description_md) + CHAR_LENGTH(how_it_works_md) + CHAR_LENGTH(worth_it_md))";
   try {
     const [rows] = await pool.query<RowDataPacket[]>(`
       SELECT slug, updated_at,
-        (CHAR_LENGTH(description_md) + CHAR_LENGTH(how_it_works_md) + CHAR_LENGTH(worth_it_md)) AS content_chars
+        ${cols} AS content_chars
       FROM stores WHERE deleted_at IS NULL ORDER BY updated_at DESC
     `);
     return (rows as unknown as Array<{ slug: string; updated_at: string; content_chars: number }>).map((r) => ({

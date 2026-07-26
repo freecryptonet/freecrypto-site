@@ -357,7 +357,8 @@ async function main() {
       cashback_text: string | null; category_slug: string | null;
       geo_scope: "global" | "eu" | "nl" | "other"; is_bitcoin_native: boolean;
       description_md: string; how_it_works_md: string; worth_it_md: string;
-      faqs: FaqSeed[];
+      description_nl_md?: string; how_it_works_nl_md?: string; worth_it_nl_md?: string;
+      faqs: FaqSeed[]; faqs_nl?: FaqSeed[];
     }
     const stores = readJson<StoreSeed[]>("stores.json");
     console.log(`Seeding ${stores.length} stores…`);
@@ -367,8 +368,9 @@ async function main() {
       await conn.query(
         `INSERT INTO stores
            (slug, name, logo_url, satsback_slug, cashback_text, cashback_kind, cashback_value,
-            category_slug, geo_scope, is_bitcoin_native, description_md, how_it_works_md, worth_it_md)
-         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            category_slug, geo_scope, is_bitcoin_native, description_md, how_it_works_md, worth_it_md,
+            description_nl_md, how_it_works_nl_md, worth_it_nl_md)
+         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
          ON DUPLICATE KEY UPDATE
            name = VALUES(name), logo_url = VALUES(logo_url), satsback_slug = VALUES(satsback_slug),
            cashback_text = VALUES(cashback_text), cashback_kind = VALUES(cashback_kind),
@@ -376,19 +378,31 @@ async function main() {
            geo_scope = VALUES(geo_scope), is_bitcoin_native = VALUES(is_bitcoin_native),
            description_md = IF(VALUES(description_md) = '' OR VALUES(description_md) LIKE 'PLACEHOLDER%', description_md, VALUES(description_md)),
            how_it_works_md = IF(VALUES(how_it_works_md) = '', how_it_works_md, VALUES(how_it_works_md)),
-           worth_it_md = IF(VALUES(worth_it_md) = '', worth_it_md, VALUES(worth_it_md))`,
+           worth_it_md = IF(VALUES(worth_it_md) = '', worth_it_md, VALUES(worth_it_md)),
+           description_nl_md = IF(VALUES(description_nl_md) = '', description_nl_md, VALUES(description_nl_md)),
+           how_it_works_nl_md = IF(VALUES(how_it_works_nl_md) = '', how_it_works_nl_md, VALUES(how_it_works_nl_md)),
+           worth_it_nl_md = IF(VALUES(worth_it_nl_md) = '', worth_it_nl_md, VALUES(worth_it_nl_md))`,
         [s.slug, s.name, s.logo_url ?? null, s.satsback_slug ?? null, cb.text || null, cb.kind, cb.value,
          s.category_slug ?? null, s.geo_scope ?? "global", s.is_bitcoin_native ? 1 : 0,
-         s.description_md ?? "", s.how_it_works_md ?? "", s.worth_it_md ?? ""],
+         s.description_md ?? "", s.how_it_works_md ?? "", s.worth_it_md ?? "",
+         s.description_nl_md ?? "", s.how_it_works_nl_md ?? "", s.worth_it_nl_md ?? ""],
       );
       const [idRows] = await conn.query<RowDataPacket[]>("SELECT id FROM stores WHERE slug = ?", [s.slug]);
       const storeId = (idRows[0] as { id: number } | undefined)?.id;
-      if (storeId && Array.isArray(s.faqs) && s.faqs.length) {
+      if (storeId) {
         await conn.query("DELETE FROM faqs WHERE store_id = ?", [storeId]);
-        for (let i = 0; i < s.faqs.length; i++) {
+        const enFaqs = Array.isArray(s.faqs) ? s.faqs : [];
+        for (let i = 0; i < enFaqs.length; i++) {
           await conn.query(
-            "INSERT INTO faqs (store_id, position, question, answer_md) VALUES (?, ?, ?, ?)",
-            [storeId, i, s.faqs[i].question, s.faqs[i].answer_md],
+            "INSERT INTO faqs (store_id, position, question, answer_md, lang) VALUES (?, ?, ?, ?, 'en')",
+            [storeId, i, enFaqs[i].question, enFaqs[i].answer_md],
+          );
+        }
+        const nlFaqs = Array.isArray(s.faqs_nl) ? s.faqs_nl : [];
+        for (let i = 0; i < nlFaqs.length; i++) {
+          await conn.query(
+            "INSERT INTO faqs (store_id, position, question, answer_md, lang) VALUES (?, ?, ?, ?, 'nl')",
+            [storeId, i, nlFaqs[i].question, nlFaqs[i].answer_md],
           );
         }
       }
