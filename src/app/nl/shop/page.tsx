@@ -4,7 +4,7 @@ import { listStores, listStoreCategories } from "@/lib/db";
 import { StoreCard } from "@/components/StoreCard";
 import { AAds } from "@/components/AAds";
 import { breadcrumbJsonLd, jsonLdScript, siteUrl } from "@/lib/seo";
-import { nlCategoryLabel } from "@/lib/store-i18n";
+import { nlCategoryLabel, nlCategorySlug } from "@/lib/store-i18n";
 
 export const dynamic = "force-dynamic";
 
@@ -64,7 +64,7 @@ export default async function NlShopIndexPage() {
             {activeCats.map((c) => (
               <Link
                 key={c.slug}
-                href={`/nl/shop/category/${c.slug}`}
+                href={`/nl/shop/category/${nlCategorySlug(c.slug)}`}
                 className="card p-4 transition-colors hover:border-accent/60"
               >
                 <div className="text-sm font-semibold text-text">{nlCategoryLabel(c.slug, c.name)}</div>

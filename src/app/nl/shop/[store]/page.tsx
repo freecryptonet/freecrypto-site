@@ -7,7 +7,7 @@ import { isStoreIndexable, breadcrumbJsonLd, faqJsonLd, jsonLdScript, siteUrl } 
 import { CashbackBadge } from "@/components/CashbackBadge";
 import { StoreLogo } from "@/components/StoreLogo";
 import { AAds } from "@/components/AAds";
-import { nlCategoryLabel, nlRate } from "@/lib/store-i18n";
+import { nlCategoryLabel, nlCategorySlug, nlRate } from "@/lib/store-i18n";
 
 export const dynamic = "force-dynamic";
 
@@ -55,7 +55,7 @@ export default async function NlStorePage({ params }: PageProps) {
         {s.category_slug && s.category_name ? (
           <>
             <span className="mx-1.5">/</span>
-            <Link href={`/nl/shop/category/${s.category_slug}`} className="hover:text-text-dim">
+            <Link href={`/nl/shop/category/${nlCategorySlug(s.category_slug)}`} className="hover:text-text-dim">
               {nlCategoryLabel(s.category_slug, s.category_name)}
             </Link>
           </>

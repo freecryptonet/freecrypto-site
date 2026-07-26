@@ -9,6 +9,7 @@ import {
 } from "@/lib/db";
 import { MIN_INDEXABLE_DESCRIPTION_CHARS, siteUrl } from "@/lib/seo";
 import { BONUS_OFFERS } from "@/lib/bonuses";
+import { nlCategorySlug } from "@/lib/store-i18n";
 
 export const dynamic = "force-dynamic";
 
@@ -77,7 +78,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const nlStoreCategoryRoutes: MetadataRoute.Sitemap = nlStoreCats
     .filter((c) => c.store_count > 0)
     .map((c) => ({
-      url: siteUrl(`/nl/shop/category/${c.slug}`),
+      url: siteUrl(`/nl/shop/category/${nlCategorySlug(c.slug)}`),
       lastModified: now,
       changeFrequency: "weekly",
       priority: 0.6,
