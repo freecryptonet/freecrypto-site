@@ -184,33 +184,35 @@ function faqs(name: string, cbText: string, kind: string) {
 // Dutch "[winkel] bitcoin cashback" SERP is uncontested (Lolli/Fold are
 // US-only). These render at /nl/shop.
 // ============================================================
+// Dutch angles read after "{name} is {angle}." — so they must NOT repeat the
+// store name (e.g. "MediaMarkt is de bekende elektronicaketen").
 const NL_CURATION: Record<string, Curation> = {
   "thuisbezorgdnl": { category_slug: "groceries-food", geo_scope: "nl", angle: "de bekendste maaltijdbezorger van Nederland" },
-  "hema": { category_slug: "marketplaces", geo_scope: "nl", angle: "het Nederlandse warenhuis HEMA" },
-  "mediamarkt": { category_slug: "tech-electronics", geo_scope: "nl", angle: "de elektronicaketen MediaMarkt" },
-  "lidlnl": { category_slug: "groceries-food", geo_scope: "nl", angle: "supermarktketen Lidl" },
-  "kpn-2": { category_slug: "services", geo_scope: "nl", angle: "telecomprovider KPN" },
-  "odido-2": { category_slug: "services", geo_scope: "nl", angle: "telecomprovider Odido (voorheen T-Mobile)" },
-  "plein": { category_slug: "marketplaces", geo_scope: "nl", angle: "het online warenhuis Plein.nl" },
+  "hema": { category_slug: "marketplaces", geo_scope: "nl", angle: "het bekende Nederlandse warenhuis" },
+  "mediamarkt": { category_slug: "tech-electronics", geo_scope: "nl", angle: "de bekende elektronicaketen" },
+  "lidlnl": { category_slug: "groceries-food", geo_scope: "nl", angle: "de bekende supermarktketen" },
+  "kpn-2": { category_slug: "services", geo_scope: "nl", angle: "een van de grootste telecomproviders van Nederland" },
+  "odido-2": { category_slug: "services", geo_scope: "nl", angle: "de telecomprovider die voorheen T-Mobile heette" },
+  "plein": { category_slug: "marketplaces", geo_scope: "nl", angle: "het brede online warenhuis" },
   "anwb-webwinkel": { category_slug: "marketplaces", geo_scope: "nl", angle: "de webwinkel van de ANWB" },
-  "greetznl-3": { category_slug: "marketplaces", geo_scope: "nl", angle: "kaarten- en cadeauwinkel Greetz" },
-  "brunanl": { category_slug: "marketplaces", geo_scope: "nl", angle: "boeken- en tijdschriftenwinkel Bruna" },
-  "douglas": { category_slug: "health-beauty", geo_scope: "nl", angle: "parfumerie- en beautyketen Douglas" },
-  "gall-gall-2": { category_slug: "groceries-food", geo_scope: "nl", angle: "slijterijketen Gall & Gall" },
-  "scapino": { category_slug: "fashion", geo_scope: "nl", angle: "schoenen- en sportwinkel Scapino" },
-  "expert": { category_slug: "tech-electronics", geo_scope: "nl", angle: "elektronicaketen Expert" },
-  "koffievoordeel-2": { category_slug: "groceries-food", geo_scope: "nl", angle: "koffie- en theespecialist Koffievoordeel" },
-  "simyo": { category_slug: "services", geo_scope: "nl", angle: "de voordelige telecomprovider Simyo" },
-  "vidaxlnl": { category_slug: "marketplaces", geo_scope: "nl", angle: "online warenhuis vidaXL voor huis en tuin" },
-  "conrad": { category_slug: "tech-electronics", geo_scope: "nl", angle: "elektronica- en techniekwinkel Conrad" },
-  "plutosport": { category_slug: "fashion", geo_scope: "nl", angle: "sportwinkel Plutosport" },
-  "foot-locker": { category_slug: "fashion", geo_scope: "nl", angle: "sneakerwinkel Foot Locker" },
-  "lounge-by-zalando": { category_slug: "fashion", geo_scope: "nl", angle: "de members-only outlet Lounge by Zalando" },
-  "booking": { category_slug: "travel", geo_scope: "nl", angle: "hotelboekingsplatform Booking.com" },
-  "klm-4": { category_slug: "travel", geo_scope: "nl", angle: "de Nederlandse luchtvaartmaatschappij KLM" },
-  "ibood": { category_slug: "tech-electronics", geo_scope: "nl", angle: "dagaanbiedingensite iBOOD" },
-  "allekabels": { category_slug: "tech-electronics", geo_scope: "nl", angle: "kabel- en elektronicaspecialist Allekabels" },
-  "drogistnl": { category_slug: "health-beauty", geo_scope: "nl", angle: "de online drogist Drogist.nl" },
+  "greetznl-3": { category_slug: "marketplaces", geo_scope: "nl", angle: "de bekende kaarten- en cadeauwinkel" },
+  "brunanl": { category_slug: "marketplaces", geo_scope: "nl", angle: "de boeken- en tijdschriftenwinkel" },
+  "douglas": { category_slug: "health-beauty", geo_scope: "nl", angle: "de bekende parfumerie- en beautyketen" },
+  "gall-gall-2": { category_slug: "groceries-food", geo_scope: "nl", angle: "de bekende slijterijketen" },
+  "scapino": { category_slug: "fashion", geo_scope: "nl", angle: "de schoenen- en sportwinkel" },
+  "expert": { category_slug: "tech-electronics", geo_scope: "nl", angle: "de elektronicaketen" },
+  "koffievoordeel-2": { category_slug: "groceries-food", geo_scope: "nl", angle: "de koffie- en theespecialist" },
+  "simyo": { category_slug: "services", geo_scope: "nl", angle: "de voordelige telecomprovider" },
+  "vidaxlnl": { category_slug: "marketplaces", geo_scope: "nl", angle: "het online warenhuis voor huis en tuin" },
+  "conrad": { category_slug: "tech-electronics", geo_scope: "nl", angle: "de elektronica- en techniekwinkel" },
+  "plutosport": { category_slug: "fashion", geo_scope: "nl", angle: "de sportwinkel" },
+  "foot-locker": { category_slug: "fashion", geo_scope: "nl", angle: "de bekende sneakerwinkel" },
+  "lounge-by-zalando": { category_slug: "fashion", geo_scope: "nl", angle: "de members-only mode-outlet van Zalando" },
+  "booking": { category_slug: "travel", geo_scope: "nl", angle: "het bekende hotelboekingsplatform" },
+  "klm-4": { category_slug: "travel", geo_scope: "nl", angle: "de Nederlandse luchtvaartmaatschappij" },
+  "ibood": { category_slug: "tech-electronics", geo_scope: "nl", angle: "de bekende dagaanbiedingensite" },
+  "allekabels": { category_slug: "tech-electronics", geo_scope: "nl", angle: "de kabel- en elektronicaspecialist" },
+  "drogistnl": { category_slug: "health-beauty", geo_scope: "nl", angle: "de online drogist" },
 };
 
 const NL_CAT: Record<string, string> = {
@@ -227,7 +229,9 @@ function nlRate(text: string): string {
   return (text || "")
     .replace(/^up to/i, "tot")
     .replace(/discount code/i, "kortingscode")
-    .replace(/(\d+)\s*free month/i, "$1 maand gratis");
+    .replace(/(\d+)\s*free month/i, "$1 maand gratis")
+    // Dutch decimal comma in percentages ("1.3%" -> "1,3%"); leave sats thousands (38.280) alone.
+    .replace(/(\d)\.(\d+)%/g, "$1,$2%");
 }
 
 function nlRewardPhrase(kind: string, text: string): string {

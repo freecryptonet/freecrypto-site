@@ -13,3 +13,12 @@ export const NL_CATEGORY_LABEL: Record<string, string> = {
 export function nlCategoryLabel(slug: string, fallback: string): string {
   return NL_CATEGORY_LABEL[slug] ?? fallback;
 }
+
+/** Dutch-ify a scraped cashback label: "up to 1.3%" -> "tot 1,3%". */
+export function nlRate(text: string | null): string {
+  return (text || "")
+    .replace(/^up to/i, "tot")
+    .replace(/discount code/i, "kortingscode")
+    .replace(/(\d+)\s*free month/i, "$1 maand gratis")
+    .replace(/(\d)\.(\d+)%/g, "$1,$2%");
+}

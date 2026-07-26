@@ -7,7 +7,7 @@ import { isStoreIndexable, breadcrumbJsonLd, faqJsonLd, jsonLdScript, siteUrl } 
 import { CashbackBadge } from "@/components/CashbackBadge";
 import { StoreLogo } from "@/components/StoreLogo";
 import { AAds } from "@/components/AAds";
-import { nlCategoryLabel } from "@/lib/store-i18n";
+import { nlCategoryLabel, nlRate } from "@/lib/store-i18n";
 
 export const dynamic = "force-dynamic";
 
@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const s = await getStoreBySlug(store, "nl");
   if (!s || !s.has_nl) return { title: "Winkel niet gevonden", robots: { index: false, follow: false } };
   const indexable = isStoreIndexable(s);
-  const rate = s.cashback_text ? ` — ${s.cashback_kind === "discount" ? s.cashback_text : `${s.cashback_text}`}` : "";
+  const rate = s.cashback_text ? ` — ${nlRate(s.cashback_text)}${s.cashback_kind === "discount" ? "" : " terug"}` : "";
   const title = `Bitcoin cashback bij ${s.name}${rate} (2026)`;
   const description = `Zo verdien je Bitcoin bij ${s.name} via Satsback — het actuele tarief, hoe de tracking werkt en of het de moeite waard is.`;
   const languages: Record<string, string> = { "nl-NL": siteUrl(`/nl/shop/${s.slug}`) };
