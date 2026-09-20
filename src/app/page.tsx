@@ -70,7 +70,7 @@ function Hero() {
         </p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
           <Link
-            href="/bonus"
+            href="/programs/category/exchange"
             className="inline-flex items-center gap-2 px-6 py-3.5 rounded-btn bg-text text-ink font-bold text-base hover:opacity-90 transition-opacity"
           >
             Compare exchange bonuses →
@@ -105,7 +105,7 @@ interface Method {
 function WaysToEarn({ shopMetric }: { shopMetric: string }) {
   const methods: Method[] = [
     {
-      href: "/bonus",
+      href: "/programs/category/exchange",
       emoji: "🏦",
       name: "Exchange sign-up bonuses",
       badge: { label: "Highest paying", kind: "hot" },

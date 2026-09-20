@@ -152,7 +152,7 @@ export function EarningsCalculator() {
           </div>
 
           <div className="mt-5 flex flex-wrap gap-2">
-            <Link href="/bonus" className="inline-flex px-4 py-2.5 rounded-btn bg-text text-ink font-bold text-sm hover:opacity-90 transition-opacity">
+            <Link href="/programs/category/exchange" className="inline-flex px-4 py-2.5 rounded-btn bg-text text-ink font-bold text-sm hover:opacity-90 transition-opacity">
               Grab the bonuses →
             </Link>
             <Link href="/shop" className="inline-flex px-4 py-2.5 rounded-btn border border-edge font-semibold text-sm hover:bg-ink-soft transition-colors">

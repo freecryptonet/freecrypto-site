@@ -36,7 +36,7 @@ export default function AboutPage() {
           sats via Satsback, with real rates and honest tracking notes.
         </li>
         <li>
-          <Link href="/bonus">Sign-up bonuses</Link> — the exchange bonuses worth
+          <Link href="/programs/category/exchange">Sign-up bonuses</Link> — the exchange bonuses worth
           claiming, with the actual requirement and the catch spelled out.
         </li>
         <li>

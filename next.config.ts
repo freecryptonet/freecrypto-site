@@ -1,6 +1,13 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  async redirects() {
+    return [
+      // /bonus is superseded by the premium exchange comparison page.
+      { source: "/bonus", destination: "/programs/category/exchange", permanent: true },
+      { source: "/bonus/:slug", destination: "/programs/:slug", permanent: true },
+    ];
+  },
   async headers() {
     return [
       {

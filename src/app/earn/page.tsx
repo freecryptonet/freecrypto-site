@@ -127,7 +127,7 @@ export default function EarnPillarPage() {
         </p>
         <p>
           We compare the ones worth your time — Bitvavo, Coinbase and Nexo — with the real strings
-          attached on the <Link href="/bonus">bonuses page</Link>. Whichever you pick, always open the
+          attached on the <Link href="/programs/category/exchange">bonuses page</Link>. Whichever you pick, always open the
           referral link <em>before</em> you sign up; exchanges rarely add a bonus retroactively. Note
           that most pay only in supported countries, so check eligibility first.
         </p>
@@ -150,7 +150,7 @@ export default function EarnPillarPage() {
           The gentlest on-ramp: exchanges like Coinbase pay small amounts of crypto for watching short
           lessons and passing a quiz. Payouts are modest (a few dollars per token), but it&apos;s
           genuinely free, teaches you the basics, and often comes bundled with the sign-up bonus. →{" "}
-          <Link href="/bonus">See learn-and-earn offers</Link>.
+          <Link href="/programs/category/exchange">See learn-and-earn offers</Link>.
         </p>
 
         <h2>4. Interest and earn — put idle crypto to work</h2>
@@ -158,7 +158,7 @@ export default function EarnPillarPage() {
           If you already hold crypto, earning interest turns a static stack into a growing one.
           Platforms like Nexo pay yield on deposited assets, though this is the one method that needs
           capital and always carries counterparty risk. Only earn interest on funds you can afford to
-          have locked. → <Link href="/bonus">How exchange earn programmes work</Link>.
+          have locked. → <Link href="/programs/category/exchange">How exchange earn programmes work</Link>.
         </p>
 
         <h2>5. Faucets &amp; tasks — easy, but tiny</h2>

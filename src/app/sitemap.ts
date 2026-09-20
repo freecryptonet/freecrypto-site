@@ -5,7 +5,6 @@ import {
   listStoreCategories,
 } from "@/lib/db";
 import { MIN_INDEXABLE_DESCRIPTION_CHARS, siteUrl } from "@/lib/seo";
-import { BONUS_OFFERS } from "@/lib/bonuses";
 import { OPPORTUNITIES } from "@/lib/opportunities";
 import { nlCategorySlug } from "@/lib/store-i18n";
 
@@ -33,13 +32,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: siteUrl("/guides"), lastModified: now, changeFrequency: "weekly", priority: 0.7 },
     { url: siteUrl("/about"), lastModified: now, changeFrequency: "monthly", priority: 0.3 },
   ];
-
-  const bonusRoutes: MetadataRoute.Sitemap = BONUS_OFFERS.map((o) => ({
-    url: siteUrl(`/bonus/${o.slug}`),
-    lastModified: now,
-    changeFrequency: "weekly",
-    priority: 0.7,
-  }));
 
   const programRoutes: MetadataRoute.Sitemap = OPPORTUNITIES.map((o) => ({
     url: siteUrl(`/programs/${o.slug}`),
@@ -118,7 +110,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...nlStaticRoutes,
     ...programCategoryRoutes,
     ...programRoutes,
-    ...bonusRoutes,
     ...storeRoutes,
     ...storeCategoryRoutes,
     ...nlStoreRoutes,
