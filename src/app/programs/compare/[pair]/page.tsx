@@ -170,7 +170,7 @@ export default async function ComparePage(
                   const w = va === vb ? "Tie" : va > vb ? a.name : b.name;
                   return (
                     <tr key={c.key} className="border-b border-edge last:border-0 even:bg-ink-muted/40">
-                      <td className="py-3 px-4 font-medium">{c.label}</td>
+                      <th scope="row" className="py-3 px-4 text-left font-medium">{c.label}</th>
                       <td className={`py-3 px-4 text-center font-mono font-bold tabular-nums ${va >= vb ? accentText : "text-text-faint"}`}>{va}</td>
                       <td className={`py-3 px-4 text-center font-mono font-bold tabular-nums ${vb >= va ? accentText : "text-text-faint"}`}>{vb}</td>
                       <td className="py-3 px-4 text-text-dim">{w}</td>
@@ -178,7 +178,7 @@ export default async function ComparePage(
                   );
                 })}
                 <tr className="border-t-2 border-edge font-bold">
-                  <td className="py-3 px-4">Overall</td>
+                  <th scope="row" className="py-3 px-4 text-left">Overall</th>
                   <td className={`py-3 px-4 text-center font-mono tabular-nums ${sa >= sb ? accentText : "text-text-faint"}`}>{sa.toFixed(1)}</td>
                   <td className={`py-3 px-4 text-center font-mono tabular-nums ${sb >= sa ? accentText : "text-text-faint"}`}>{sb.toFixed(1)}</td>
                   <td className="py-3 px-4">{winner ? winner.name : "Tie"}</td>
@@ -200,7 +200,7 @@ export default async function ComparePage(
               <>{a.name} matches {b.name} on every criterion — decide on price and country availability. {a.blurb}</>
             )}
           </p>
-          <Link href={`/programs/${a.slug}`} className="mt-3 inline-flex text-sm font-bold text-accent hover:underline">Full {a.name} review →</Link>
+          <Link href={`/programs/${a.slug}`} className="mt-3 inline-flex text-sm font-bold text-accent-alt hover:underline">Full {a.name} review →</Link>
         </div>
         <div className="card p-6">
           <h3 className="text-h3">Choose {b.name} if…</h3>
@@ -211,7 +211,7 @@ export default async function ComparePage(
               <>{b.name} matches {a.name} across the board — go by fees and where you live. {b.blurb}</>
             )}
           </p>
-          <Link href={`/programs/${b.slug}`} className="mt-3 inline-flex text-sm font-bold text-accent hover:underline">Full {b.name} review →</Link>
+          <Link href={`/programs/${b.slug}`} className="mt-3 inline-flex text-sm font-bold text-accent-alt hover:underline">Full {b.name} review →</Link>
         </div>
       </section>
 
@@ -221,7 +221,7 @@ export default async function ComparePage(
           {winner
             ? <>{winner.name} edges it overall ({(winner.slug === a.slug ? sa : sb).toFixed(1)} vs {(winner.slug === a.slug ? sb : sa).toFixed(1)}), but the two win on different criteria — pick by what matters to you.</>
             : <>it&apos;s a genuine tie ({sa.toFixed(1)} each) — decide on the single criterion you care about most.</>}{" "}
-          Every score follows the same <Link href="/methodology" className="text-accent hover:underline">5-criteria method</Link>.
+          Every score follows the same <Link href="/methodology" className="text-accent-alt hover:underline">5-criteria method</Link>.
         </p>
       </section>
 

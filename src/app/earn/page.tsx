@@ -99,11 +99,11 @@ export default function EarnPillarPage() {
             <tbody>
               {METHODS.map((m) => (
                 <tr key={m.name} className="border-b border-edge">
-                  <td className="py-3 pr-4 font-semibold text-text">{m.name}</td>
+                  <th scope="row" className="py-3 pr-4 text-left font-semibold text-text">{m.name}</th>
                   <td className="py-3 pr-4 text-text-dim">{m.effort}</td>
                   <td className="py-3 pr-4 font-mono text-accent-alt font-bold">{m.payout}</td>
                   <td className="py-3 pr-4 text-text-dim">{m.best}</td>
-                  <td className="py-3 text-right"><Link href={m.href} className="text-xs font-bold text-accent hover:underline">Start →</Link></td>
+                  <td className="py-3 text-right"><Link href={m.href} className="text-xs font-bold text-accent-alt hover:underline">Start →</Link></td>
                 </tr>
               ))}
             </tbody>
@@ -111,7 +111,7 @@ export default function EarnPillarPage() {
         </div>
         <p className="mt-3 text-xs text-text-faint">
           Want these numbers for your own hours &amp; spending? Try the{" "}
-          <Link href="/calculator" className="text-accent hover:underline">earnings calculator</Link>.
+          <Link href="/calculator" className="text-accent-alt hover:underline">earnings calculator</Link>.
         </p>
       </section>
 

@@ -87,7 +87,7 @@ export default async function AirdropsPage({ searchParams }: PageProps) {
         <p className="mt-2 text-sm text-text-dim">
           Active retroactive drops, testnet incentives, and points programs — with deadlines,
           eligibility, and estimated value. Paste a wallet address into the{" "}
-          <Link href="/check" className="text-accent hover:underline">checker</Link> to see what you
+          <Link href="/check" className="text-accent-alt hover:underline">checker</Link> to see what you
           might already qualify for. No signups, no wallet signatures.
         </p>
       </header>

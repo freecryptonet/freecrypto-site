@@ -116,7 +116,7 @@ export default async function ProgramDetailPage(
               <div className="font-semibold">Our score for {o.name}</div>
               <div className="text-xs text-text-faint">
                 Average of five fixed criteria — see{" "}
-                <Link href="/methodology" className="text-accent hover:underline">how we score</Link>.
+                <Link href="/methodology" className="text-accent-alt hover:underline">how we score</Link>.
               </div>
             </div>
           </div>

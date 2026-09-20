@@ -374,7 +374,7 @@ function HonestyStrip() {
           <p className="mt-1 text-sm text-text-dim">
             Every method lists its typical payout and effort — including when the honest
             answer is &ldquo;barely worth it.&rdquo; See our{" "}
-            <Link href="/methodology" className="text-accent hover:underline">methodology</Link>.
+            <Link href="/methodology" className="text-accent-alt hover:underline">methodology</Link>.
           </p>
         </div>
         <div>
@@ -390,7 +390,7 @@ function HonestyStrip() {
           <h3 className="mt-2 text-h3">Avoid the scams</h3>
           <p className="mt-1 text-sm text-text-dim">
             Learn the red flags before you connect a wallet or fund an account.{" "}
-            <Link href="/earn" className="text-accent hover:underline">See the safety basics →</Link>
+            <Link href="/earn" className="text-accent-alt hover:underline">See the safety basics →</Link>
           </p>
         </div>
       </div>

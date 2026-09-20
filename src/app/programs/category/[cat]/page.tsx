@@ -292,12 +292,12 @@ export default async function CategoryPage(
                 return (
                   <tr key={o.slug} className="border-b border-edge last:border-0 even:bg-ink-muted/40 hover:bg-ink-muted transition-colors">
                     <td className="py-3.5 px-4 font-mono text-text-faint">{i + 1}</td>
-                    <td className="py-3 px-4">
-                      <Link href={`/programs/${o.slug}`} className="font-semibold hover:underline">
+                    <th scope="row" className="py-3.5 px-4 text-left font-semibold">
+                      <Link href={`/programs/${o.slug}`} className="hover:underline">
                         {o.name}
                       </Link>
                       {o.regulated && <span className="ml-2 text-accent-alt" title="regulated">✓</span>}
-                    </td>
+                    </th>
                     <td className={`py-3 px-4 font-mono font-bold tabular-nums ${accentText}`}>
                       {score != null ? score.toFixed(1) : "—"}
                     </td>
@@ -337,7 +337,7 @@ export default async function CategoryPage(
           ))}
         </div>
         <p className="mt-4 text-sm">
-          <Link href="/methodology" className="text-accent hover:underline font-semibold">Read the full methodology →</Link>
+          <Link href="/methodology" className="text-accent-alt hover:underline font-semibold">Read the full methodology →</Link>
         </p>
       </section>
 

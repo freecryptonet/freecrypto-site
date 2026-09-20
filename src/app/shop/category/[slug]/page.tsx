@@ -91,7 +91,7 @@ export default async function StoreCategoryPage({ params }: PageProps) {
                   <CashbackBadge text={s.cashback_text} kind={s.cashback_kind} />
                 </td>
                 <td className="py-3 text-right">
-                  <Link href={`/shop/${s.slug}`} className="text-xs text-accent hover:underline">Details →</Link>
+                  <Link href={`/shop/${s.slug}`} className="text-xs text-accent-alt hover:underline">Details →</Link>
                 </td>
               </tr>
             ))}

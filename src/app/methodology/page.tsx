@@ -71,7 +71,7 @@ export default function MethodologyPage() {
         <p className="mt-1.5 text-sm text-text-dim">
           Payouts change and offers get pulled. If a figure looks off, tell us and we&rsquo;ll
           re-check it — accuracy is the only thing this site has going for it. Try the{" "}
-          <Link href="/calculator" className="text-accent hover:underline font-semibold">earnings calculator</Link>{" "}
+          <Link href="/calculator" className="text-accent-alt hover:underline font-semibold">earnings calculator</Link>{" "}
           to see these numbers applied to your own hours and spending.
         </p>
       </div>

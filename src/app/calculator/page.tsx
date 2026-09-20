@@ -55,11 +55,11 @@ export default function CalculatorPage() {
 
       <p className="mt-4 text-sm text-text-dim max-w-2xl">
         Ready to collect the parts that actually pay? Start with{" "}
-        <Link href="/programs/category/exchange" className="text-accent hover:underline font-semibold">exchange bonuses</Link>{" "}
+        <Link href="/programs/category/exchange" className="text-accent-alt hover:underline font-semibold">exchange bonuses</Link>{" "}
         and{" "}
-        <Link href="/shop" className="text-accent hover:underline font-semibold">Bitcoin cashback</Link>.
+        <Link href="/shop" className="text-accent-alt hover:underline font-semibold">Bitcoin cashback</Link>.
         Curious how we got these figures? Read our{" "}
-        <Link href="/methodology" className="text-accent hover:underline font-semibold">methodology</Link>.
+        <Link href="/methodology" className="text-accent-alt hover:underline font-semibold">methodology</Link>.
       </p>
 
       <div className="my-12 flex justify-center">
