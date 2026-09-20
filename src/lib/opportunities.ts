@@ -537,6 +537,28 @@ export function officialUrl(slug: string): string | null {
   return OFFICIAL_URL[slug] ?? null;
 }
 
+/** Curated head-to-head comparison pages: pair-slug → [programA, programB]. */
+export const COMPARE_PAIRS: Record<string, [string, string]> = {
+  "coinbase-vs-kraken": ["coinbase", "kraken"],
+  "bitvavo-vs-coinbase": ["bitvavo", "coinbase"],
+  "bitvavo-vs-kraken": ["bitvavo", "kraken"],
+  "ledger-vs-trezor": ["ledger", "trezor"],
+  "cryptocom-vs-nexo-card": ["crypto-com-card", "nexo-card"],
+  "lolli-vs-fold": ["lolli", "fold"],
+};
+
+/** Comparison pages that include a given program, for cross-linking from its review. */
+export function comparisonsFor(slug: string): Array<{ pair: string; other: Opportunity }> {
+  const out: Array<{ pair: string; other: Opportunity }> = [];
+  for (const [pair, [x, y]] of Object.entries(COMPARE_PAIRS)) {
+    if (x === slug || y === slug) {
+      const other = getOpportunity(x === slug ? y : x);
+      if (other) out.push({ pair, other });
+    }
+  }
+  return out;
+}
+
 /**
  * Brand colours for logo tiles (approximate official hues). Rendered as a
  * tinted tile with the brand colour as the monogram — branded and premium

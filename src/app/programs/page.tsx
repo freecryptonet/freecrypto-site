@@ -128,6 +128,27 @@ export default function ProgramsPage() {
         ))}
       </div>
 
+      <section className="mt-16">
+        <div className="h-[3px] w-11 rounded bg-accent-alt mb-4" />
+        <h2 className="text-h2">Popular head-to-head comparisons</h2>
+        <p className="mt-2 text-text-dim max-w-2xl">Torn between two? See them scored side by side on the same five criteria.</p>
+        <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {[
+            { href: "/programs/compare/coinbase-vs-kraken", label: "Coinbase vs Kraken" },
+            { href: "/programs/compare/bitvavo-vs-coinbase", label: "Bitvavo vs Coinbase" },
+            { href: "/programs/compare/bitvavo-vs-kraken", label: "Bitvavo vs Kraken" },
+            { href: "/programs/compare/ledger-vs-trezor", label: "Ledger vs Trezor" },
+            { href: "/programs/compare/cryptocom-vs-nexo-card", label: "Crypto.com Card vs Nexo Card" },
+            { href: "/programs/compare/lolli-vs-fold", label: "Lolli vs Fold" },
+          ].map((c) => (
+            <Link key={c.href} href={c.href} className="card p-4 flex items-center justify-between gap-3 transition-colors hover:border-accent/60">
+              <span className="font-bold text-[15px]">{c.label}</span>
+              <span className="text-accent-alt font-bold" aria-hidden>→</span>
+            </Link>
+          ))}
+        </div>
+      </section>
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

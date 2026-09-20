@@ -9,6 +9,7 @@ import {
   officialUrl,
   opportunitiesByCategory,
   overallScore,
+  comparisonsFor,
 } from "@/lib/opportunities";
 import { ScoreNumber, ScoreMeter, ProgramLogo } from "@/components/ProgramCards";
 import { siteUrl, breadcrumbJsonLd, jsonLdScript } from "@/lib/seo";
@@ -40,6 +41,7 @@ export default async function ProgramDetailPage(
   const meta = CATEGORY_META[o.category];
   const url = officialUrl(o.slug);
   const related = opportunitiesByCategory(o.category).filter((x) => x.slug !== o.slug).slice(0, 3);
+  const comparisons = comparisonsFor(o.slug);
   const accentText = meta.tone === "shop" ? "text-accent-warm" : "text-accent-alt";
 
   const facts: Array<[string, string]> = [
@@ -72,6 +74,10 @@ export default async function ProgramDetailPage(
           )}
         </div>
         <div className={`mt-2 font-mono text-lg font-bold ${accentText}`}>{o.reward}</div>
+        <p className="mt-3 font-mono text-xs text-text-faint">
+          Reviewed by the freecrypto.net editorial team · scored on{" "}
+          <Link href="/methodology" className="hover:text-text-dim underline">5 fixed criteria</Link> · last checked {o.lastChecked}
+        </p>
       </header>
 
       {/* Facts + CTA */}
@@ -149,6 +155,21 @@ export default async function ProgramDetailPage(
         </div>
       )}
 
+      {/* Head-to-head comparisons */}
+      {comparisons.length > 0 && (
+        <section className="mt-12 border-t border-edge pt-8">
+          <h2 className="text-h2 mb-4">{o.name} head-to-head</h2>
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+            {comparisons.map(({ pair, other }) => (
+              <Link key={pair} href={`/programs/compare/${pair}`} className="card p-4 flex items-center justify-between gap-3 hover:border-accent/60 transition-colors">
+                <span className="font-bold text-[15px]">{o.name} vs {other.name}</span>
+                <span className="text-accent-alt font-bold" aria-hidden>→</span>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
+
       {/* Related */}
       {related.length > 0 && (
         <section className="mt-12 border-t border-edge pt-8">
@@ -181,6 +202,28 @@ export default async function ProgramDetailPage(
           ),
         }}
       />
+      {overallScore(o.slug) != null && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: jsonLdScript({
+              "@context": "https://schema.org",
+              "@type": "Review",
+              name: `${o.name} review`,
+              itemReviewed: { "@type": "Organization", name: o.name, url: url ?? undefined },
+              reviewRating: {
+                "@type": "Rating",
+                ratingValue: overallScore(o.slug),
+                bestRating: 10,
+                worstRating: 0,
+              },
+              author: { "@type": "Organization", name: "freecrypto.net editorial" },
+              publisher: { "@type": "Organization", name: "freecrypto.net", url: siteUrl("/") },
+              datePublished: "2026-09-20",
+            }),
+          }}
+        />
+      )}
     </div>
   );
 }

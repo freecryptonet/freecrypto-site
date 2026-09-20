@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { listStoreSlugsForSitemap, listStoreCategories } from "@/lib/db";
 import { MIN_INDEXABLE_DESCRIPTION_CHARS, siteUrl } from "@/lib/seo";
-import { OPPORTUNITIES } from "@/lib/opportunities";
+import { OPPORTUNITIES, COMPARE_PAIRS } from "@/lib/opportunities";
 
 export const dynamic = "force-dynamic";
 
@@ -45,6 +45,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.8,
   }));
 
+  const programCompareRoutes: MetadataRoute.Sitemap = Object.keys(COMPARE_PAIRS).map((pair) => ({
+    url: siteUrl(`/programs/compare/${pair}`),
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }));
+
   // Store pages: only indexable rows (curated, >= threshold combined content).
   const storeRoutes: MetadataRoute.Sitemap = stores
     .filter((s) => s.content_chars >= MIN_INDEXABLE_DESCRIPTION_CHARS)
@@ -68,6 +75,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   return [
     ...staticRoutes,
     ...programCategoryRoutes,
+    ...programCompareRoutes,
     ...programRoutes,
     ...storeRoutes,
     ...storeCategoryRoutes,
