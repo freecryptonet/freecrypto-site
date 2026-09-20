@@ -536,3 +536,96 @@ const OFFICIAL_URL: Record<string, string> = {
 export function officialUrl(slug: string): string | null {
   return OFFICIAL_URL[slug] ?? null;
 }
+
+/**
+ * Transparent 0–10 scoring — the honest alternative to fake star ratings.
+ * Each program is rated on five fixed criteria; the overall is their average.
+ * Scores are editorial and deliberately conservative ("Varies" rewards and
+ * unregulated custody are capped). This is our differentiator: show the rubric,
+ * not a made-up 4.8★.
+ */
+export interface Scores {
+  value: number; // reward size & clarity
+  ease: number; // low effort / low friction
+  trust: number; // regulation & reputation
+  terms: number; // clean, few strings attached
+  region: number; // how broadly available (EU/global bias)
+}
+
+export const SCORE_CRITERIA: Array<{ key: keyof Scores; label: string }> = [
+  { key: "value", label: "Reward value" },
+  { key: "ease", label: "Ease / low effort" },
+  { key: "trust", label: "Trust & regulation" },
+  { key: "terms", label: "Clean terms" },
+  { key: "region", label: "Region fit" },
+];
+
+const SCORES: Record<string, Scores> = {
+  bitvavo: { value: 7, ease: 8, trust: 9, terms: 7, region: 6 },
+  coinbase: { value: 7, ease: 8, trust: 9, terms: 6, region: 8 },
+  kraken: { value: 6, ease: 7, trust: 9, terms: 6, region: 8 },
+  bitpanda: { value: 6, ease: 8, trust: 9, terms: 6, region: 6 },
+  nexo: { value: 7, ease: 7, trust: 5, terms: 6, region: 7 },
+  revolut: { value: 5, ease: 9, trust: 8, terms: 6, region: 6 },
+  bybit: { value: 7, ease: 6, trust: 5, terms: 6, region: 5 },
+  okx: { value: 7, ease: 6, trust: 5, terms: 6, region: 5 },
+  "coinbase-learn": { value: 5, ease: 9, trust: 9, terms: 9, region: 7 },
+  "kraken-learn": { value: 3, ease: 9, trust: 9, terms: 9, region: 8 },
+  satsback: { value: 6, ease: 9, trust: 7, terms: 7, region: 8 },
+  lolli: { value: 7, ease: 9, trust: 7, terms: 6, region: 5 },
+  fold: { value: 6, ease: 9, trust: 7, terms: 6, region: 4 },
+  stormx: { value: 6, ease: 8, trust: 6, terms: 6, region: 7 },
+  "crypto-com-card": { value: 6, ease: 8, trust: 7, terms: 4, region: 7 },
+  "nexo-card": { value: 5, ease: 8, trust: 5, terms: 5, region: 6 },
+  plutus: { value: 6, ease: 7, trust: 7, terms: 5, region: 6 },
+  wirex: { value: 5, ease: 7, trust: 7, terms: 5, region: 7 },
+  ledger: { value: 8, ease: 8, trust: 9, terms: 9, region: 9 },
+  trezor: { value: 8, ease: 8, trust: 9, terms: 9, region: 9 },
+  moonpay: { value: 5, ease: 9, trust: 8, terms: 6, region: 9 },
+  transak: { value: 5, ease: 9, trust: 8, terms: 6, region: 9 },
+  freecash: { value: 4, ease: 5, trust: 6, terms: 5, region: 7 },
+  faucetpay: { value: 3, ease: 4, trust: 6, terms: 6, region: 8 },
+};
+
+export function getScores(slug: string): Scores | null {
+  return SCORES[slug] ?? null;
+}
+
+export function overallScore(slug: string): number | null {
+  const s = SCORES[slug];
+  if (!s) return null;
+  const avg = (s.value + s.ease + s.trust + s.terms + s.region) / 5;
+  return Math.round(avg * 10) / 10;
+}
+
+/** Two short pros per program for the ranked cards. The "con" is its `catch`. */
+const PROS: Record<string, string[]> = {
+  bitvavo: ["Low fees + iDEAL/SEPA for EU", "DNB-registered, beginner-friendly"],
+  coinbase: ["Most widely available", "Free learn-and-earn on top"],
+  kraken: ["Strong security & proof-of-reserves", "Wide staking selection"],
+  bitpanda: ["EU-licensed, very simple", "Crypto + stocks in one app"],
+  nexo: ["Bonus paid in real BTC", "Attractive yields"],
+  revolut: ["You probably already have it", "Learn-and-earn built in"],
+  bybit: ["Generous referral & tasks", "Deep liquidity"],
+  okx: ["Frequent reward campaigns", "Built-in Web3 wallet"],
+  "coinbase-learn": ["Genuinely free, no deposit", "Teaches you the basics"],
+  "kraken-learn": ["High-quality, no-hype education", "From a trusted exchange"],
+  satsback: ["Paid in real BTC over Lightning", "900+ stores, fully passive"],
+  lolli: ["High rates at some retailers", "Slick app & extension"],
+  fold: ["Sats on everyday spending", "Fun spin rewards"],
+  stormx: ["Wide store list", "Browser extension"],
+  "crypto-com-card": ["Strong rates at top tiers", "Widely accepted Visa"],
+  "nexo-card": ["Spend without selling", "Crypto cashback"],
+  plutus: ["Up to 3% back", "EU/UK friendly"],
+  wirex: ["Multi-currency accounts", "Long track record"],
+  ledger: ["Market-leading security", "Widest coin support"],
+  trezor: ["Fully open-source", "Audited & trusted"],
+  moonpay: ["Buy in minutes to your wallet", "Very widely integrated"],
+  transak: ["Works inside many wallets/dapps", "Card & bank support"],
+  freecash: ["Real payouts in crypto", "One of the more reputable GPT sites"],
+  faucetpay: ["Great for a first sat", "Many coins supported"],
+};
+
+export function getPros(slug: string): string[] {
+  return PROS[slug] ?? [];
+}

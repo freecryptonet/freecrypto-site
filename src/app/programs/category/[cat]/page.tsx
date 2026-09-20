@@ -5,10 +5,13 @@ import { AAds } from "@/components/AAds";
 import {
   CATEGORY_META,
   PILLARS,
+  SCORE_CRITERIA,
   opportunitiesByCategory,
   officialUrl,
+  overallScore,
   type OppCategory,
 } from "@/lib/opportunities";
+import { FeaturedCard, RankedCard } from "@/components/ProgramCards";
 import { siteUrl, breadcrumbJsonLd, faqJsonLd, jsonLdScript } from "@/lib/seo";
 
 export const dynamic = "force-static";
@@ -211,6 +214,11 @@ export default async function CategoryPage(
   if (!c || !meta) notFound();
 
   const items = opportunitiesByCategory(category);
+  const ranked = [...items].sort(
+    (a, b) => (overallScore(b.slug) ?? 0) - (overallScore(a.slug) ?? 0),
+  );
+  const featured = ranked[0];
+  const rest = ranked.slice(1);
   const accent = meta.tone === "shop" ? "bg-accent-warm" : "bg-accent";
   const accentText = meta.tone === "shop" ? "text-accent-warm" : "text-accent-alt";
   const faq = faqJsonLd(c.faqs);
@@ -239,35 +247,59 @@ export default async function CategoryPage(
         <AAds zone="leaderboard" />
       </div>
 
+      {/* Ranked picks */}
+      {featured && (
+        <section>
+          <h2 className="text-h2 mb-4">Our top pick</h2>
+          <FeaturedCard o={featured} rank={1} />
+          {rest.length > 0 && (
+            <>
+              <h2 className="text-h2 mt-10 mb-4">The rest, ranked</h2>
+              <div className="grid grid-cols-1 gap-4">
+                {rest.map((o, i) => (
+                  <RankedCard key={o.slug} o={o} rank={i + 2} />
+                ))}
+              </div>
+            </>
+          )}
+        </section>
+      )}
+
       {/* Comparison table */}
-      <section>
-        <h2 className="text-h2 mb-4">Compared</h2>
-        <div className="tablecard overflow-x-auto card !p-0">
-          <table className="w-full min-w-[640px] border-collapse text-sm">
+      <section className="mt-14">
+        <h2 className="text-h2 mb-4">Compared at a glance</h2>
+        <div className="overflow-x-auto card !p-0">
+          <table className="w-full min-w-[680px] border-collapse text-sm">
             <thead>
               <tr className="border-b border-edge text-left text-xs text-text-faint">
+                <th className="py-3 px-4 font-medium">#</th>
                 <th className="py-3 px-4 font-medium">Program</th>
+                <th className="py-3 px-4 font-medium">Score</th>
                 <th className="py-3 px-4 font-medium">Reward</th>
                 <th className="py-3 px-4 font-medium">Effort</th>
                 <th className="py-3 px-4 font-medium">Region</th>
-                <th className="py-3 px-4 font-medium">Regulated</th>
                 <th className="py-3 px-4 font-medium"></th>
               </tr>
             </thead>
             <tbody>
-              {items.map((o) => {
+              {ranked.map((o, i) => {
                 const url = officialUrl(o.slug);
+                const score = overallScore(o.slug);
                 return (
                   <tr key={o.slug} className="border-b border-edge last:border-0 hover:bg-ink-muted">
+                    <td className="py-3 px-4 font-mono text-text-faint">{i + 1}</td>
                     <td className="py-3 px-4">
                       <Link href={`/programs/${o.slug}`} className="font-semibold hover:underline">
                         {o.name}
                       </Link>
+                      {o.regulated && <span className="ml-2 text-accent-alt" title="regulated">✓</span>}
                     </td>
-                    <td className={`py-3 px-4 font-mono font-bold ${accentText}`}>{o.reward}</td>
+                    <td className={`py-3 px-4 font-mono font-bold tabular-nums ${accentText}`}>
+                      {score != null ? score.toFixed(1) : "—"}
+                    </td>
+                    <td className="py-3 px-4 font-mono text-text-dim">{o.reward}</td>
                     <td className="py-3 px-4 text-text-dim">{o.effort}</td>
                     <td className="py-3 px-4 text-text-dim">{o.geo}</td>
-                    <td className="py-3 px-4">{o.regulated ? "✓" : "—"}</td>
                     <td className="py-3 px-4 text-right whitespace-nowrap">
                       <Link href={`/programs/${o.slug}`} className="text-xs font-bold text-accent hover:underline">
                         Review
@@ -287,6 +319,23 @@ export default async function CategoryPage(
             </tbody>
           </table>
         </div>
+      </section>
+
+      {/* How we rank */}
+      <section className="mt-14 card p-6">
+        <h2 className="text-h3">How we score</h2>
+        <p className="mt-1.5 text-sm text-text-dim max-w-2xl">
+          Every program gets a transparent 0–10 score — the average of five fixed criteria, not a
+          made-up star rating. &ldquo;Varies&rdquo; rewards and unregulated custody are capped on purpose.
+        </p>
+        <div className="mt-4 flex flex-wrap gap-2">
+          {SCORE_CRITERIA.map((cr) => (
+            <span key={cr.key} className="chip">{cr.label}</span>
+          ))}
+        </div>
+        <p className="mt-4 text-sm">
+          <Link href="/methodology" className="text-accent hover:underline font-semibold">Read the full methodology →</Link>
+        </p>
       </section>
 
       {/* FAQ */}

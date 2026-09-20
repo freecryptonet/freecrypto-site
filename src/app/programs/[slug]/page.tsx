@@ -8,7 +8,9 @@ import {
   getOpportunity,
   officialUrl,
   opportunitiesByCategory,
+  overallScore,
 } from "@/lib/opportunities";
+import { ScoreNumber, ScoreMeter } from "@/components/ProgramCards";
 import { siteUrl, breadcrumbJsonLd, jsonLdScript } from "@/lib/seo";
 
 export const dynamic = "force-static";
@@ -97,6 +99,23 @@ export default async function ProgramDetailPage(
           </p>
         </div>
       </div>
+
+      {/* Transparent score */}
+      {overallScore(o.slug) != null && (
+        <section className="mt-6 card p-5">
+          <div className="flex items-center gap-4 mb-4">
+            <ScoreNumber slug={o.slug} tone={meta.tone} size="lg" />
+            <div>
+              <div className="font-semibold">Our score for {o.name}</div>
+              <div className="text-xs text-text-faint">
+                Average of five fixed criteria — see{" "}
+                <Link href="/methodology" className="text-accent hover:underline">how we score</Link>.
+              </div>
+            </div>
+          </div>
+          <ScoreMeter slug={o.slug} tone={meta.tone} />
+        </section>
+      )}
 
       {/* The honest catch */}
       <div className="mt-6 rounded-card border border-accent-warm/40 bg-accent-warm/[0.06] p-4">
