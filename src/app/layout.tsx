@@ -3,6 +3,7 @@ import { Inter, JetBrains_Mono } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { WebVitals } from "@/components/WebVitals";
 import "./globals.css";
 
 const inter = Inter({
@@ -63,6 +64,7 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <SiteFooter />
         {gaId ? <GoogleAnalytics gaId={gaId} /> : null}
+        {gaId ? <WebVitals /> : null}
       </body>
     </html>
   );
