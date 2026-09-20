@@ -14,6 +14,11 @@ const nextConfig: NextConfig = {
       { source: "/calendar", destination: "/earn", permanent: true },
       { source: "/categories/:slug", destination: "/programs", permanent: true },
       { source: "/chains/:slug", destination: "/programs", permanent: true },
+      // NL cluster removed — English-only for now.
+      { source: "/nl/shop", destination: "/shop", permanent: true },
+      { source: "/nl/shop/category/:slug", destination: "/shop", permanent: true },
+      { source: "/nl/shop/:slug", destination: "/shop/:slug", permanent: true },
+      { source: "/nl/:path*", destination: "/", permanent: true },
     ];
   },
   async headers() {

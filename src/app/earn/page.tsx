@@ -141,8 +141,7 @@ export default function EarnPillarPage() {
         <p>
           It&apos;s the lowest-effort method by far, with one honest caveat: affiliate tracking isn&apos;t
           perfect, so not every order tracks. Treat the sats as a bonus, not a guarantee. →{" "}
-          <Link href="/shop">Browse stores that pay Bitcoin cashback</Link> (or the{" "}
-          <Link href="/nl/shop">Dutch store directory</Link>).
+          <Link href="/shop">Browse stores that pay Bitcoin cashback</Link>.
         </p>
 
         <h2>3. Learn-and-earn — free crypto for beginners</h2>

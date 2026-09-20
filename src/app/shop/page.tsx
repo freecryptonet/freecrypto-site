@@ -17,11 +17,6 @@ export const metadata: Metadata = {
   description,
   alternates: {
     canonical: "/shop",
-    languages: {
-      "en": siteUrl("/shop"),
-      "nl-NL": siteUrl("/nl/shop"),
-      "x-default": siteUrl("/shop"),
-    },
   },
   openGraph: { title, description, type: "website", url: siteUrl("/shop"), images: [OG_IMAGE] },
   twitter: { card: "summary_large_image", title, description, images: [TWITTER_IMAGE] },
@@ -57,9 +52,6 @@ export default async function ShopIndexPage() {
           >
             Create a free Satsback account →
           </a>
-          <Link href="/nl/shop" className="text-xs text-text-faint hover:text-accent">
-            🇳🇱 Nederlands
-          </Link>
         </div>
       </header>
 

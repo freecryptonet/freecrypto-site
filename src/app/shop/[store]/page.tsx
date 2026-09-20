@@ -22,15 +22,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const rate = s.cashback_text ? ` — ${s.cashback_kind === "discount" ? s.cashback_text : `${s.cashback_text} back`}` : "";
   const title = `Earn Bitcoin at ${s.name}${rate} (2026)`;
   const description = `How to earn Bitcoin at ${s.name} via Satsback — the current rate, how the tracking works, and whether it's worth it.`;
-  const languages: Record<string, string> = {
-    "en": siteUrl(`/shop/${s.slug}`),
-    "x-default": siteUrl(`/shop/${s.slug}`),
-  };
-  if (s.has_nl) languages["nl-NL"] = siteUrl(`/nl/shop/${s.slug}`);
   return {
     title,
     description,
-    alternates: { canonical: `/shop/${s.slug}`, languages },
+    alternates: { canonical: `/shop/${s.slug}` },
     openGraph: { title, description, type: "article", url: siteUrl(`/shop/${s.slug}`), images: [OG_IMAGE] },
     twitter: { card: "summary_large_image", title, description, images: [TWITTER_IMAGE] },
     robots: indexable ? undefined : { index: false, follow: true },
@@ -78,11 +73,6 @@ export default async function StorePage({ params }: PageProps) {
         </div>
       </header>
 
-      {s.has_nl ? (
-        <p className="mb-4 text-xs text-text-faint">
-          🇳🇱 <Link href={`/nl/shop/${s.slug}`} className="text-accent hover:underline">Lees in het Nederlands</Link>
-        </p>
-      ) : null}
 
       <div className="prose max-w-none" dangerouslySetInnerHTML={{ __html: renderMarkdown(s.description_md) }} />
 

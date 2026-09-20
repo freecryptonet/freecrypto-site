@@ -6,7 +6,6 @@ import { CashbackBadge } from "@/components/CashbackBadge";
 import { StoreLogo } from "@/components/StoreLogo";
 import { AAds } from "@/components/AAds";
 import { breadcrumbJsonLd, jsonLdScript, siteUrl, OG_IMAGE, TWITTER_IMAGE } from "@/lib/seo";
-import { nlCategorySlug } from "@/lib/store-i18n";
 
 export const dynamic = "force-dynamic";
 
@@ -31,11 +30,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     description,
     alternates: {
       canonical: `/shop/category/${cat.slug}`,
-      languages: {
-        "en": siteUrl(`/shop/category/${cat.slug}`),
-        "nl-NL": siteUrl(`/nl/shop/category/${nlCategorySlug(cat.slug)}`),
-        "x-default": siteUrl(`/shop/category/${cat.slug}`),
-      },
     },
     openGraph: { title, description, type: "website", url: siteUrl(`/shop/category/${cat.slug}`), images: [OG_IMAGE] },
     twitter: { card: "summary_large_image", title, description, images: [TWITTER_IMAGE] },
