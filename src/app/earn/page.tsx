@@ -180,6 +180,27 @@ export default function EarnPillarPage() {
         </p>
       </div>
 
+      <section className="mt-10 card p-6 bg-accent/[0.04] border-accent/30">
+        <div className="grid gap-4 md:grid-cols-[1fr_auto] md:items-center">
+          <div>
+            <div className="font-mono text-xs uppercase tracking-[0.12em] text-accent-alt">Where to start</div>
+            <h2 className="mt-1 text-h3">Grab the two that actually pay first</h2>
+            <p className="mt-1 text-sm text-text-dim">
+              Skip the grind: open a regulated exchange for the sign-up bonus, then turn on Bitcoin
+              cashback for spending you already do.
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-3">
+            <Link href="/programs/category/exchange" className="inline-flex px-5 py-2.5 rounded-btn bg-text text-ink font-bold text-sm hover:opacity-90 transition-opacity">
+              Compare bonuses →
+            </Link>
+            <Link href="/shop" className="inline-flex px-4 py-2.5 rounded-btn bg-ink-muted border border-edge font-bold text-sm hover:bg-edge transition-colors">
+              Set up cashback
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <section className="mt-10 border-t border-edge pt-8">
         <h2 className="mb-4 text-h2">Frequently asked questions</h2>
         <dl className="space-y-4">
