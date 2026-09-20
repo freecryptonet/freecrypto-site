@@ -35,6 +35,7 @@ export function SiteFooter() {
         <div>
           <div className="text-sm font-semibold mb-3">Explore</div>
           <ul className="space-y-1.5 text-sm text-text-dim">
+            <li><Link href="/programs" className="hover:text-text">All programs</Link></li>
             <li><Link href="/earn" className="hover:text-text">Ways to earn</Link></li>
             <li><Link href="/bonus" className="hover:text-text">Exchange bonuses</Link></li>
             <li><Link href="/shop" className="hover:text-text">Bitcoin cashback</Link></li>

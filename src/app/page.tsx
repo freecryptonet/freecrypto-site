@@ -317,8 +317,8 @@ function FeaturedBonuses() {
             exchanges and show the honest terms.
           </p>
         </div>
-        <Link href="/bonus" className="shrink-0 text-sm font-bold text-accent-alt hover:underline">
-          All bonuses →
+        <Link href="/programs" className="shrink-0 text-sm font-bold text-accent-alt hover:underline">
+          Browse all programs →
         </Link>
       </div>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-3">

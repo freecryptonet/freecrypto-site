@@ -6,6 +6,7 @@ import {
 } from "@/lib/db";
 import { MIN_INDEXABLE_DESCRIPTION_CHARS, siteUrl } from "@/lib/seo";
 import { BONUS_OFFERS } from "@/lib/bonuses";
+import { OPPORTUNITIES } from "@/lib/opportunities";
 import { nlCategorySlug } from "@/lib/store-i18n";
 
 export const dynamic = "force-dynamic";
@@ -24,7 +25,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: siteUrl("/"), lastModified: now, changeFrequency: "hourly", priority: 1 },
     { url: siteUrl("/earn"), lastModified: now, changeFrequency: "monthly", priority: 0.9 },
-    { url: siteUrl("/bonus"), lastModified: now, changeFrequency: "weekly", priority: 0.9 },
+    { url: siteUrl("/programs"), lastModified: now, changeFrequency: "weekly", priority: 0.9 },
+    { url: siteUrl("/bonus"), lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: siteUrl("/shop"), lastModified: now, changeFrequency: "daily", priority: 0.9 },
     { url: siteUrl("/calculator"), lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: siteUrl("/methodology"), lastModified: now, changeFrequency: "monthly", priority: 0.5 },
@@ -37,6 +39,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     lastModified: now,
     changeFrequency: "weekly",
     priority: 0.7,
+  }));
+
+  const programRoutes: MetadataRoute.Sitemap = OPPORTUNITIES.map((o) => ({
+    url: siteUrl(`/programs/${o.slug}`),
+    lastModified: now,
+    changeFrequency: "weekly",
+    priority: o.review ? 0.7 : 0.5,
   }));
 
   // Store pages: only indexable rows (curated, >= threshold combined content).
@@ -92,6 +101,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   return [
     ...staticRoutes,
     ...nlStaticRoutes,
+    ...programRoutes,
     ...bonusRoutes,
     ...storeRoutes,
     ...storeCategoryRoutes,

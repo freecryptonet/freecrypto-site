@@ -1,8 +1,8 @@
 import Link from "next/link";
 
 const NAV = [
+  { href: "/programs", label: "All programs" },
   { href: "/earn", label: "Ways to earn" },
-  { href: "/bonus", label: "Exchange bonuses" },
   { href: "/shop", label: "Cashback" },
   { href: "/guides", label: "Guides" },
   { href: "/calculator", label: "Calculator" },
@@ -41,10 +41,10 @@ export function SiteHeader() {
         </nav>
         <div className="flex items-center gap-2">
           <Link
-            href="/bonus"
+            href="/programs"
             className="inline-flex items-center gap-1.5 px-4 py-2 rounded-btn text-sm font-bold bg-text text-ink hover:opacity-90 transition-opacity"
           >
-            Compare bonuses
+            Browse programs
           </Link>
         </div>
       </div>
