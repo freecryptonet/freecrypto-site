@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <article className="mx-auto max-w-2xl px-4 py-12 prose prose-invert">
+    <article className="mx-auto max-w-2xl px-4 py-12 prose">
       <h1>About freecrypto.net</h1>
       <p>
         freecrypto.net is a free guide to earning real Bitcoin from things you

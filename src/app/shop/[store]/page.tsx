@@ -84,7 +84,7 @@ export default async function StorePage({ params }: PageProps) {
         </p>
       ) : null}
 
-      <div className="prose prose-invert max-w-none" dangerouslySetInnerHTML={{ __html: renderMarkdown(s.description_md) }} />
+      <div className="prose max-w-none" dangerouslySetInnerHTML={{ __html: renderMarkdown(s.description_md) }} />
 
       <a
         href="/visit/satsback"
@@ -94,13 +94,13 @@ export default async function StorePage({ params }: PageProps) {
         Start earning at {s.name} — create a free Satsback account →
       </a>
 
-      <div className="prose prose-invert max-w-none" dangerouslySetInnerHTML={{ __html: renderMarkdown(s.how_it_works_md) }} />
+      <div className="prose max-w-none" dangerouslySetInnerHTML={{ __html: renderMarkdown(s.how_it_works_md) }} />
 
       <div className="my-8 flex justify-center">
         <AAds zone="inline" />
       </div>
 
-      <div className="prose prose-invert max-w-none" dangerouslySetInnerHTML={{ __html: renderMarkdown(s.worth_it_md) }} />
+      <div className="prose max-w-none" dangerouslySetInnerHTML={{ __html: renderMarkdown(s.worth_it_md) }} />
 
       {s.faqs.length > 0 && (
         <section className="mt-10 border-t border-edge pt-8">

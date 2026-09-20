@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <article className="mx-auto max-w-2xl px-4 py-12 prose prose-invert">
+    <article className="mx-auto max-w-2xl px-4 py-12 prose">
       <h1>Privacy</h1>
       <p>Short version: we collect as little as possible and never your funds.</p>
 

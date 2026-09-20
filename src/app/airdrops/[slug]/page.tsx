@@ -87,7 +87,7 @@ export default async function AirdropDetailPage({ params }: PageProps) {
           {a.description_md.trim() ? (
             <Section title="About">
               <div
-                className="prose prose-invert prose-sm max-w-none"
+                className="prose prose-sm max-w-none"
                 dangerouslySetInnerHTML={{ __html: renderMarkdown(a.description_md) }}
               />
             </Section>
@@ -96,7 +96,7 @@ export default async function AirdropDetailPage({ params }: PageProps) {
           {a.eligibility_md.trim() ? (
             <Section title="Eligibility">
               <div
-                className="prose prose-invert prose-sm max-w-none"
+                className="prose prose-sm max-w-none"
                 dangerouslySetInnerHTML={{ __html: renderMarkdown(a.eligibility_md) }}
               />
             </Section>
@@ -109,7 +109,7 @@ export default async function AirdropDetailPage({ params }: PageProps) {
           <Section title={a.how_to_claim_md.trim() ? "How to claim" : `Visit ${a.name}`}>
             {a.how_to_claim_md.trim() ? (
               <div
-                className="prose prose-invert prose-sm max-w-none"
+                className="prose prose-sm max-w-none"
                 dangerouslySetInnerHTML={{ __html: renderMarkdown(a.how_to_claim_md) }}
               />
             ) : (
@@ -143,7 +143,7 @@ export default async function AirdropDetailPage({ params }: PageProps) {
                   >
                     <summary className="font-medium text-text">{f.question}</summary>
                     <div
-                      className="prose prose-invert prose-sm max-w-none mt-2 text-text-dim"
+                      className="prose prose-sm max-w-none mt-2 text-text-dim"
                       dangerouslySetInnerHTML={{ __html: renderMarkdown(f.answer_md) }}
                     />
                   </details>

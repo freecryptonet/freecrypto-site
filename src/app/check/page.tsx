@@ -32,7 +32,7 @@ export default function CheckPage() {
         <AAds zone="leaderboard" />
       </div>
 
-      <section className="prose prose-invert prose-sm max-w-none">
+      <section className="prose prose-sm max-w-none">
         <h2>How this works</h2>
         <p>
           We maintain a list of finalized airdrop snapshot contracts. When you

@@ -22,11 +22,11 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://freecrypto.net";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "freecrypto.net — Free Crypto Airdrops, Verified Daily",
+    default: "freecrypto.net — The honest guide to earning free crypto",
     template: "%s · freecrypto.net",
   },
   description:
-    "Track every legit crypto airdrop in one place. Deadlines, eligibility, claim steps, and a free wallet-address checker — no signups, no wallet signatures.",
+    "Ranked, no-hype ways to earn real crypto: exchange sign-up bonuses, Bitcoin cashback, learn-and-earn and faucets — with honest payout numbers so you don't waste time on the wrong ones.",
   openGraph: {
     type: "website",
     siteName: "freecrypto.net",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0B0F19",
+  themeColor: "#FBFCFC",
   width: "device-width",
   initialScale: 1,
 };

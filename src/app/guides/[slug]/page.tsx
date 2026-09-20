@@ -82,7 +82,7 @@ export default async function GuidePage({ params }: PageProps) {
       </header>
 
       <div
-        className="prose prose-invert max-w-none"
+        className="prose max-w-none"
         dangerouslySetInnerHTML={{ __html: renderMarkdown(g.body_md) }}
       />
 

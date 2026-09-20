@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 html,
 body {
-  background: #0B0F19;
-  color: #E6EAF2;
+  background: #FBFCFC;
+  color: #0E1B1E;
   font-family: var(--font-inter), system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -20,77 +20,76 @@ body {
 }
 
 ::selection {
-  background: rgba(34, 211, 168, 0.25);
-  color: #E6EAF2;
+  background: rgba(14, 156, 143, 0.18);
+  color: #0E1B1E;
 }
 
-/* Subtle scanline grid behind the hero. */
+/* Faint grid behind the hero. */
 .bg-grid {
   background-image:
-    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    linear-gradient(to right, rgba(14, 27, 30, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(14, 27, 30, 0.035) 1px, transparent 1px);
   background-size: 32px 32px;
 }
 
+/* Two-tone wash: teal (earn) left → amber (shop) right, fading down. */
 .bg-radial-fade {
-  background: radial-gradient(
-    ellipse at top,
-    rgba(34, 211, 168, 0.12) 0%,
-    rgba(124, 92, 255, 0.08) 30%,
-    transparent 60%
-  );
+  background:
+    radial-gradient(60% 60% at 22% 0%, rgba(14, 156, 143, 0.14) 0%, transparent 60%),
+    radial-gradient(60% 60% at 78% 0%, rgba(207, 122, 34, 0.12) 0%, transparent 60%);
 }
 
-/* Card surface used for every airdrop card and panel. */
+/* Card surface used for panels and tiles. */
 .card {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
-  border: 1px solid #1F2A44;
-  border-radius: 10px;
+  background: #FFFFFF;
+  border: 1px solid #E2E9E8;
+  border-radius: 14px;
+  box-shadow: 0 1px 2px rgba(14, 27, 30, 0.05), 0 8px 24px -12px rgba(14, 27, 30, 0.14);
 }
 
 .card:hover {
-  border-color: #27314E;
+  border-color: #CFDAD8;
 }
 
 .chip {
   display: inline-flex;
   align-items: center;
   gap: 0.25rem;
-  padding: 2px 8px;
+  padding: 2px 9px;
   border-radius: 999px;
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.02em;
-  border: 1px solid #27314E;
-  background: rgba(255, 255, 255, 0.02);
-  color: #9AA3B7;
+  border: 1px solid #E2E9E8;
+  background: #F1F5F4;
+  color: #55666A;
 }
 
 .chip-confirmed {
-  color: #22D3A8;
-  border-color: rgba(34, 211, 168, 0.35);
-  background: rgba(34, 211, 168, 0.08);
+  color: #0A6F65;
+  border-color: rgba(14, 156, 143, 0.35);
+  background: rgba(14, 156, 143, 0.10);
 }
 
 .chip-potential {
-  color: #F0B429;
-  border-color: rgba(240, 180, 41, 0.35);
-  background: rgba(240, 180, 41, 0.08);
+  color: #97530F;
+  border-color: rgba(207, 122, 34, 0.35);
+  background: rgba(207, 122, 34, 0.10);
 }
 
 .chip-ended {
-  color: #6B7388;
-  border-color: #27314E;
+  color: #8A999B;
+  border-color: #E2E9E8;
 }
 
 .chip-kyc {
-  color: #F87171;
-  border-color: rgba(248, 113, 113, 0.35);
-  background: rgba(248, 113, 113, 0.08);
+  color: #B23B3B;
+  border-color: rgba(220, 76, 76, 0.35);
+  background: rgba(220, 76, 76, 0.08);
 }
 
 .chip-no-kyc {
-  color: #22D3A8;
-  border-color: rgba(34, 211, 168, 0.35);
-  background: rgba(34, 211, 168, 0.08);
+  color: #0A6F65;
+  border-color: rgba(14, 156, 143, 0.35);
+  background: rgba(14, 156, 143, 0.10);
 }

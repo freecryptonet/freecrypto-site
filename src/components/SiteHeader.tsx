@@ -1,30 +1,31 @@
 import Link from "next/link";
 
 const NAV = [
-  { href: "/shop", label: "Shop & Earn" },
-  { href: "/bonus", label: "Bonuses" },
-  { href: "/airdrops", label: "Airdrops" },
+  { href: "/earn", label: "Ways to earn" },
+  { href: "/bonus", label: "Exchange bonuses" },
+  { href: "/shop", label: "Cashback" },
   { href: "/guides", label: "Guides" },
+  { href: "/calculator", label: "Calculator" },
 ];
+
+const LOGO_GRADIENT =
+  "conic-gradient(from 90deg at 50% 50%, #0E9C8F, #CF7A22, #0E9C8F)";
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-40 backdrop-blur border-b border-edge/80 bg-ink/80">
-      <div className="mx-auto max-w-page px-4 h-14 flex items-center justify-between">
+    <header className="sticky top-0 z-40 backdrop-blur border-b border-edge bg-ink/85">
+      <div className="mx-auto max-w-page px-4 h-16 flex items-center justify-between">
         <Link
           href="/"
-          className="flex items-center gap-2 font-semibold tracking-tight"
+          className="flex items-center gap-2 font-extrabold tracking-tight text-lg"
         >
           <span
             aria-hidden
             className="inline-block w-7 h-7 rounded-md"
-            style={{
-              background:
-                "conic-gradient(from 90deg at 50% 50%, #22D3A8, #7C5CFF, #22D3A8)",
-            }}
+            style={{ background: LOGO_GRADIENT }}
           />
           <span>
-            freecrypto<span className="text-accent">.net</span>
+            free<span className="text-accent">crypto</span>
           </span>
         </Link>
         <nav className="hidden md:flex items-center gap-1 text-sm">
@@ -32,7 +33,7 @@ export function SiteHeader() {
             <Link
               key={item.href}
               href={item.href}
-              className="px-3 py-1.5 rounded-btn text-text-dim hover:text-text hover:bg-edge/50 transition-colors"
+              className="px-3 py-2 rounded-btn font-semibold text-text-dim hover:text-text hover:bg-ink-muted transition-colors"
             >
               {item.label}
             </Link>
@@ -40,10 +41,10 @@ export function SiteHeader() {
         </nav>
         <div className="flex items-center gap-2">
           <Link
-            href="/check"
-            className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-btn text-sm font-medium bg-accent/15 text-accent border border-accent/30 hover:bg-accent/25 transition-colors"
+            href="/bonus"
+            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-btn text-sm font-bold bg-text text-ink hover:opacity-90 transition-opacity"
           >
-            Check wallet
+            Compare bonuses
           </Link>
         </div>
       </div>

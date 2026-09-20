@@ -38,6 +38,9 @@ export function AAds({ zone, className }: { zone: ZoneKey; className?: string })
   const { w, h, label } = SIZES[zone];
 
   if (!id) {
+    // In production, render nothing until a real zone is configured — a raw
+    // placeholder on the live site reads as unfinished and breaks trust.
+    if (process.env.NODE_ENV === "production") return null;
     return (
       <div
         className={cn(
