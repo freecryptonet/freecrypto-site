@@ -239,7 +239,11 @@ export default async function CategoryPage(
           ))}
         </div>
         <p className="mt-2 font-mono text-xs text-text-faint">
-          {items.length} options · last reviewed Sep 2026 · terms change — check the current offer.
+          {items.length} options · independently scored · last reviewed Sep 2026 · terms change — check the current offer.
+        </p>
+        <p className="mt-3 text-xs text-text-dim max-w-2xl">
+          <span className="font-semibold text-text">How we make money:</span> some links are affiliate
+          links — we may earn a commission at no extra cost to you. It never affects our scores or the ranking.
         </p>
       </header>
 
@@ -254,8 +258,8 @@ export default async function CategoryPage(
           <FeaturedCard o={featured} rank={1} />
           {rest.length > 0 && (
             <>
-              <h2 className="text-h2 mt-10 mb-4">The rest, ranked</h2>
-              <div className="grid grid-cols-1 gap-4">
+              <h2 className="text-h2 mt-12 mb-5">The rest, ranked</h2>
+              <div className="grid grid-cols-1 gap-6">
                 {rest.map((o, i) => (
                   <RankedCard key={o.slug} o={o} rank={i + 2} />
                 ))}
@@ -271,14 +275,14 @@ export default async function CategoryPage(
         <div className="overflow-x-auto card !p-0">
           <table className="w-full min-w-[680px] border-collapse text-sm">
             <thead>
-              <tr className="border-b border-edge text-left text-xs text-text-faint">
-                <th className="py-3 px-4 font-medium">#</th>
-                <th className="py-3 px-4 font-medium">Program</th>
-                <th className="py-3 px-4 font-medium">Score</th>
-                <th className="py-3 px-4 font-medium">Reward</th>
-                <th className="py-3 px-4 font-medium">Effort</th>
-                <th className="py-3 px-4 font-medium">Region</th>
-                <th className="py-3 px-4 font-medium"></th>
+              <tr className="bg-ink-muted border-b border-edge text-left text-[11px] font-semibold uppercase tracking-[0.06em] text-text-dim">
+                <th className="py-3 px-4">#</th>
+                <th className="py-3 px-4">Program</th>
+                <th className="py-3 px-4">Score</th>
+                <th className="py-3 px-4">Reward</th>
+                <th className="py-3 px-4">Effort</th>
+                <th className="py-3 px-4">Region</th>
+                <th className="py-3 px-4"></th>
               </tr>
             </thead>
             <tbody>
@@ -286,8 +290,8 @@ export default async function CategoryPage(
                 const url = officialUrl(o.slug);
                 const score = overallScore(o.slug);
                 return (
-                  <tr key={o.slug} className="border-b border-edge last:border-0 hover:bg-ink-muted">
-                    <td className="py-3 px-4 font-mono text-text-faint">{i + 1}</td>
+                  <tr key={o.slug} className="border-b border-edge last:border-0 even:bg-ink-muted/40 hover:bg-ink-muted transition-colors">
+                    <td className="py-3.5 px-4 font-mono text-text-faint">{i + 1}</td>
                     <td className="py-3 px-4">
                       <Link href={`/programs/${o.slug}`} className="font-semibold hover:underline">
                         {o.name}
@@ -297,21 +301,20 @@ export default async function CategoryPage(
                     <td className={`py-3 px-4 font-mono font-bold tabular-nums ${accentText}`}>
                       {score != null ? score.toFixed(1) : "—"}
                     </td>
-                    <td className="py-3 px-4 font-mono text-text-dim">{o.reward}</td>
-                    <td className="py-3 px-4 text-text-dim">{o.effort}</td>
+                    <td className="py-3.5 px-4 text-text-dim">{o.reward}</td>
+                    <td className="py-3.5 px-4 text-text-dim">{o.effort}</td>
                     <td className="py-3 px-4 text-text-dim">{o.geo}</td>
-                    <td className="py-3 px-4 text-right whitespace-nowrap">
-                      <Link href={`/programs/${o.slug}`} className="text-xs font-bold text-accent hover:underline">
-                        Review
-                      </Link>
-                      {url && (
-                        <>
-                          <span className="mx-1.5 text-edge">|</span>
-                          <a href={url} target="_blank" rel="sponsored nofollow noopener" className="text-xs font-bold text-text-dim hover:text-text">
+                    <td className="py-3.5 px-4 text-right whitespace-nowrap">
+                      <div className="inline-flex items-center gap-2">
+                        <Link href={`/programs/${o.slug}`} className="text-xs font-bold text-text-dim hover:text-text">
+                          Review
+                        </Link>
+                        {url && (
+                          <a href={url} target="_blank" rel="sponsored nofollow noopener" className={`inline-flex items-center gap-1 rounded-btn px-3 py-1.5 text-xs font-bold border ${accentText} ${meta.tone === "shop" ? "border-accent-warm/40 hover:bg-accent-warm/10" : "border-accent/40 hover:bg-accent/10"} transition-colors`}>
                             Visit ↗
                           </a>
-                        </>
-                      )}
+                        )}
+                      </div>
                     </td>
                   </tr>
                 );

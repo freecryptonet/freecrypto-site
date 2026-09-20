@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { AAds } from "@/components/AAds";
+import { ProgramLogo } from "@/components/ProgramCards";
 import {
   OPPORTUNITIES,
   CATEGORY_META,
   opportunitiesByCategory,
   officialUrl,
+  overallScore,
   type Opportunity,
   type OppCategory,
 } from "@/lib/opportunities";
@@ -154,24 +156,32 @@ function ProgramCard({ o }: { o: Opportunity }) {
         tone === "shop" ? "hover:border-accent-warm/60" : "hover:border-accent/60"
       }`}
     >
-      <div className="flex items-start justify-between gap-2">
-        <h3 className="text-h3">
-          <Link href={`/programs/${o.slug}`} className="hover:underline">
-            {o.name}
-          </Link>
-        </h3>
-        {o.regulated ? (
-          <span className="chip chip-confirmed shrink-0">✓ regulated</span>
-        ) : (
-          <span className="chip shrink-0">check terms</span>
-        )}
-      </div>
-      <div
-        className={`mt-1 font-mono text-sm font-bold ${
-          tone === "shop" ? "text-accent-warm" : "text-accent-alt"
-        }`}
-      >
-        {o.reward}
+      <div className="flex items-start gap-3">
+        <ProgramLogo slug={o.slug} name={o.name} tone={tone} />
+        <div className="min-w-0 flex-1">
+          <div className="flex items-start justify-between gap-2">
+            <h3 className="text-h3 leading-tight">
+              <Link href={`/programs/${o.slug}`} className="hover:underline">
+                {o.name}
+              </Link>
+            </h3>
+            {(() => {
+              const sc = overallScore(o.slug);
+              return sc != null ? (
+                <span className={`font-mono text-sm font-extrabold tabular-nums shrink-0 ${tone === "shop" ? "text-accent-warm" : "text-accent-alt"}`}>
+                  {sc.toFixed(1)}<span className="text-text-faint text-[10px] font-bold">/10</span>
+                </span>
+              ) : null;
+            })()}
+          </div>
+          <div
+            className={`mt-0.5 font-mono text-sm font-bold ${
+              tone === "shop" ? "text-accent-warm" : "text-accent-alt"
+            }`}
+          >
+            {o.reward}
+          </div>
+        </div>
       </div>
       <p className="mt-2 text-sm text-text-dim flex-1">{o.blurb}</p>
       <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-[11px] text-text-faint">

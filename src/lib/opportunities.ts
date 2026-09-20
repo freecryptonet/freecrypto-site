@@ -113,7 +113,7 @@ export const OPPORTUNITIES: Opportunity[] = [
     slug: "bitvavo",
     name: "Bitvavo",
     category: "exchange",
-    reward: "Fee-free trading + welcome offer (varies)",
+    reward: "Welcome bonus + fee-free trading",
     payoutType: "Fiat + crypto",
     effort: "Low",
     geo: "EU",
@@ -131,7 +131,7 @@ export const OPPORTUNITIES: Opportunity[] = [
     slug: "coinbase",
     name: "Coinbase",
     category: "exchange",
-    reward: "Referral + learn-and-earn (varies)",
+    reward: "Referral bonus + free learn-and-earn",
     payoutType: "Crypto",
     effort: "Low",
     geo: "Global (varies)",
@@ -149,7 +149,7 @@ export const OPPORTUNITIES: Opportunity[] = [
     slug: "kraken",
     name: "Kraken",
     category: "exchange",
-    reward: "Referral (varies)",
+    reward: "Referral bonus (trade-based)",
     payoutType: "Crypto",
     effort: "Low",
     geo: "Global (varies)",
@@ -167,7 +167,7 @@ export const OPPORTUNITIES: Opportunity[] = [
     slug: "bitpanda",
     name: "Bitpanda",
     category: "exchange",
-    reward: "Referral (varies)",
+    reward: "Referral bonus on first invest",
     payoutType: "Crypto",
     effort: "Low",
     geo: "EU",
@@ -185,7 +185,7 @@ export const OPPORTUNITIES: Opportunity[] = [
     slug: "nexo",
     name: "Nexo",
     category: "exchange",
-    reward: "Sign-up bonus in BTC (varies)",
+    reward: "Sign-up bonus paid in BTC",
     payoutType: "BTC",
     effort: "Low",
     geo: "Global (varies)",
@@ -221,7 +221,7 @@ export const OPPORTUNITIES: Opportunity[] = [
     slug: "bybit",
     name: "Bybit",
     category: "exchange",
-    reward: "Referral + task rewards (varies)",
+    reward: "Referral + task rewards",
     payoutType: "Crypto",
     effort: "Medium",
     geo: "Global (restricted in some regions)",
@@ -234,7 +234,7 @@ export const OPPORTUNITIES: Opportunity[] = [
     slug: "okx",
     name: "OKX",
     category: "exchange",
-    reward: "Referral + mystery-box rewards (varies)",
+    reward: "Referral + reward campaigns",
     payoutType: "Crypto",
     effort: "Medium",
     geo: "Global (restricted in some regions)",
@@ -538,6 +538,71 @@ export function officialUrl(slug: string): string | null {
 }
 
 /**
+ * Brand colours for logo tiles (approximate official hues). Rendered as a
+ * tinted tile with the brand colour as the monogram — branded and premium
+ * without hotlinking external logo files. Drop real SVGs in /public/logos and
+ * swap the Logo component later if desired.
+ */
+const BRAND_COLOR: Record<string, string> = {
+  bitvavo: "#1a44ff",
+  coinbase: "#0052ff",
+  kraken: "#6541d6",
+  bitpanda: "#00b3a4",
+  nexo: "#4a56e2",
+  revolut: "#0666eb",
+  bybit: "#e8a200",
+  okx: "#111111",
+  "coinbase-learn": "#0052ff",
+  "kraken-learn": "#6541d6",
+  satsback: "#f7931a",
+  lolli: "#ff2f92",
+  fold: "#111111",
+  stormx: "#00a7b5",
+  "crypto-com-card": "#103f9e",
+  "nexo-card": "#4a56e2",
+  plutus: "#7b2ff7",
+  wirex: "#0a2d5e",
+  ledger: "#111111",
+  trezor: "#00854d",
+  moonpay: "#7d00ff",
+  transak: "#1a56db",
+  freecash: "#16a34a",
+  faucetpay: "#2f80ed",
+};
+
+export function brandColor(slug: string): string | null {
+  return BRAND_COLOR[slug] ?? null;
+}
+
+/** Real brand logos in /public/logos (SVG from Simple Icons where available,
+ *  else site favicon PNG). Slugs not present fall back to a coloured tile. */
+const LOGO_FILE: Record<string, string> = {
+  coinbase: "coinbase.svg",
+  revolut: "revolut.svg",
+  trezor: "trezor.svg",
+  bitvavo: "bitvavo.png",
+  kraken: "kraken.png",
+  bitpanda: "bitpanda.png",
+  "coinbase-learn": "coinbase-learn.png",
+  "kraken-learn": "kraken-learn.png",
+  satsback: "satsback.png",
+  lolli: "lolli.png",
+  fold: "fold.png",
+  "crypto-com-card": "crypto-com-card.png",
+  plutus: "plutus.png",
+  wirex: "wirex.png",
+  ledger: "ledger.png",
+  moonpay: "moonpay.png",
+  transak: "transak.png",
+  freecash: "freecash.png",
+  faucetpay: "faucetpay.png",
+};
+
+export function logoPath(slug: string): string | null {
+  return LOGO_FILE[slug] ? `/logos/${LOGO_FILE[slug]}` : null;
+}
+
+/**
  * Transparent 0–10 scoring — the honest alternative to fake star ratings.
  * Each program is rated on five fixed criteria; the overall is their average.
  * Scores are editorial and deliberately conservative ("Varies" rewards and
@@ -552,12 +617,12 @@ export interface Scores {
   region: number; // how broadly available (EU/global bias)
 }
 
-export const SCORE_CRITERIA: Array<{ key: keyof Scores; label: string }> = [
-  { key: "value", label: "Reward value" },
-  { key: "ease", label: "Ease / low effort" },
-  { key: "trust", label: "Trust & regulation" },
-  { key: "terms", label: "Clean terms" },
-  { key: "region", label: "Region fit" },
+export const SCORE_CRITERIA: Array<{ key: keyof Scores; label: string; short: string }> = [
+  { key: "value", label: "Reward value", short: "Value" },
+  { key: "ease", label: "Ease / low effort", short: "Ease" },
+  { key: "trust", label: "Trust & regulation", short: "Trust" },
+  { key: "terms", label: "Clean terms", short: "Terms" },
+  { key: "region", label: "Region fit", short: "Region" },
 ];
 
 const SCORES: Record<string, Scores> = {

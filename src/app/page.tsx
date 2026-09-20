@@ -3,6 +3,7 @@ import Link from "next/link";
 import { listStores, type StoreListItem } from "@/lib/db";
 import { StoreCard } from "@/components/StoreCard";
 import { PayoutProof } from "@/components/PayoutProof";
+import { ProgramLogo } from "@/components/ProgramCards";
 import { AAds } from "@/components/AAds";
 import { siteUrl, breadcrumbJsonLd, jsonLdScript } from "@/lib/seo";
 
@@ -272,8 +273,8 @@ function CalculatorTeaser() {
 
 interface Bonus {
   href: string;
+  slug: string;
   name: string;
-  initial: string;
   reward: string;
   note: string;
   terms: string;
@@ -282,26 +283,26 @@ interface Bonus {
 function FeaturedBonuses() {
   const bonuses: Bonus[] = [
     {
-      href: "/bonus",
+      href: "/programs/bitvavo",
+      slug: "bitvavo",
       name: "Bitvavo",
-      initial: "Bv",
-      reward: "€10 + fee-free",
+      reward: "Welcome bonus + fee-free",
       note: "EU-friendly, iDEAL/SEPA, low fees — the easiest first exchange.",
       terms: "EU · ID + small deposit",
     },
     {
-      href: "/bonus",
+      href: "/programs/coinbase",
+      slug: "coinbase",
       name: "Coinbase",
-      initial: "Cb",
-      reward: "Learn & earn",
+      reward: "Referral + learn & earn",
       note: "Free crypto for finishing short lessons — no deposit needed.",
       terms: "Many countries · no deposit",
     },
     {
-      href: "/bonus",
+      href: "/programs/nexo",
+      slug: "nexo",
       name: "Nexo",
-      initial: "Nx",
-      reward: "Sign-up bonus",
+      reward: "Sign-up bonus in BTC",
       note: "Bonus in BTC after you fund and hold — paid in real crypto.",
       terms: "ID + qualifying deposit",
     },
@@ -325,9 +326,7 @@ function FeaturedBonuses() {
         {bonuses.map((b) => (
           <Link key={b.name} href={b.href} className="card p-5 transition-colors hover:border-accent/60">
             <div className="flex items-center gap-3">
-              <span className="grid place-items-center w-11 h-11 rounded-xl bg-ink-muted border border-edge font-extrabold text-accent-alt">
-                {b.initial}
-              </span>
+              <ProgramLogo slug={b.slug} name={b.name} tone="earn" />
               <div>
                 <div className="font-bold">{b.name}</div>
                 <div className="font-mono text-sm text-accent-alt font-bold tabular-nums">{b.reward}</div>

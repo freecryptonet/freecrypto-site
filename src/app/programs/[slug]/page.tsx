@@ -10,7 +10,7 @@ import {
   opportunitiesByCategory,
   overallScore,
 } from "@/lib/opportunities";
-import { ScoreNumber, ScoreMeter } from "@/components/ProgramCards";
+import { ScoreNumber, ScoreMeter, ProgramLogo } from "@/components/ProgramCards";
 import { siteUrl, breadcrumbJsonLd, jsonLdScript } from "@/lib/seo";
 
 export const dynamic = "force-static";
@@ -63,6 +63,7 @@ export default async function ProgramDetailPage(
           {meta.label}
         </div>
         <div className="mt-2 flex items-center gap-3 flex-wrap">
+          <ProgramLogo slug={o.slug} name={o.name} tone={meta.tone} />
           <h1 className="text-h1-page">{o.name}</h1>
           {o.regulated ? (
             <span className="chip chip-confirmed">✓ regulated</span>
