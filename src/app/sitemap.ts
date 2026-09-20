@@ -48,6 +48,21 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: o.review ? 0.7 : 0.5,
   }));
 
+  const programCategoryRoutes: MetadataRoute.Sitemap = [
+    "exchange",
+    "learn-earn",
+    "cashback",
+    "card",
+    "hardware",
+    "onramp",
+    "gpt",
+  ].map((cat) => ({
+    url: siteUrl(`/programs/category/${cat}`),
+    lastModified: now,
+    changeFrequency: "weekly",
+    priority: 0.8,
+  }));
+
   // Store pages: only indexable rows (curated, >= threshold combined content).
   const storeRoutes: MetadataRoute.Sitemap = stores
     .filter((s) => s.content_chars >= MIN_INDEXABLE_DESCRIPTION_CHARS)
@@ -101,6 +116,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   return [
     ...staticRoutes,
     ...nlStaticRoutes,
+    ...programCategoryRoutes,
     ...programRoutes,
     ...bonusRoutes,
     ...storeRoutes,

@@ -5,6 +5,7 @@ import {
   OPPORTUNITIES,
   CATEGORY_META,
   opportunitiesByCategory,
+  officialUrl,
   type Opportunity,
   type OppCategory,
 } from "@/lib/opportunities";
@@ -98,7 +99,17 @@ export default function ProgramsPage() {
                   s.meta.tone === "shop" ? "bg-accent-warm" : "bg-accent"
                 }`}
               />
-              <h2 className="text-h2">{s.meta.label}</h2>
+              <div className="flex items-end justify-between gap-3">
+                <h2 className="text-h2">{s.meta.label}</h2>
+                <Link
+                  href={`/programs/category/${s.cat}`}
+                  className={`shrink-0 text-sm font-bold hover:underline ${
+                    s.meta.tone === "shop" ? "text-accent-warm" : "text-accent-alt"
+                  }`}
+                >
+                  Full guide →
+                </Link>
+              </div>
               <p className="mt-1.5 text-text-dim max-w-2xl">{s.meta.blurb}</p>
             </div>
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
@@ -136,15 +147,19 @@ export default function ProgramsPage() {
 
 function ProgramCard({ o }: { o: Opportunity }) {
   const tone = CATEGORY_META[o.category].tone;
+  const url = officialUrl(o.slug);
   return (
-    <Link
-      href={`/programs/${o.slug}`}
+    <div
       className={`card p-5 flex flex-col transition-colors ${
         tone === "shop" ? "hover:border-accent-warm/60" : "hover:border-accent/60"
       }`}
     >
       <div className="flex items-start justify-between gap-2">
-        <h3 className="text-h3">{o.name}</h3>
+        <h3 className="text-h3">
+          <Link href={`/programs/${o.slug}`} className="hover:underline">
+            {o.name}
+          </Link>
+        </h3>
         {o.regulated ? (
           <span className="chip chip-confirmed shrink-0">✓ regulated</span>
         ) : (
@@ -166,9 +181,26 @@ function ProgramCard({ o }: { o: Opportunity }) {
         <span aria-hidden>·</span>
         <span>{o.payoutType}</span>
       </div>
-      <div className={`mt-3 text-sm font-bold ${tone === "shop" ? "text-accent-warm" : "text-accent"}`}>
-        {o.review ? "Read the review →" : "See details →"}
+      <div className="mt-4 flex items-center gap-3 border-t border-edge pt-3">
+        {url && (
+          <a
+            href={url}
+            target="_blank"
+            rel="sponsored nofollow noopener"
+            className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-btn text-sm font-bold text-ink ${
+              tone === "shop" ? "bg-accent-warm" : "bg-accent"
+            } hover:opacity-90 transition-opacity`}
+          >
+            Visit {o.name} ↗
+          </a>
+        )}
+        <Link
+          href={`/programs/${o.slug}`}
+          className="text-sm font-bold text-text-dim hover:text-text"
+        >
+          {o.review ? "Read review →" : "Details →"}
+        </Link>
       </div>
-    </Link>
+    </div>
   );
 }
