@@ -12,6 +12,7 @@ import {
   comparisonsFor,
 } from "@/lib/opportunities";
 import { ScoreNumber, ScoreMeter, ProgramLogo } from "@/components/ProgramCards";
+import { StickyCta } from "@/components/StickyCta";
 import { siteUrl, breadcrumbJsonLd, jsonLdScript } from "@/lib/seo";
 
 export const dynamic = "force-static";
@@ -224,6 +225,7 @@ export default async function ProgramDetailPage(
           }}
         />
       )}
+      {url && <StickyCta name={o.name} url={url} tone={meta.tone} />}
     </div>
   );
 }

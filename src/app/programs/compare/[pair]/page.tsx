@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AAds } from "@/components/AAds";
 import { ProgramLogo, ScoreNumber } from "@/components/ProgramCards";
+import { StickyCta } from "@/components/StickyCta";
 import {
   getOpportunity,
   overallScore,
@@ -251,6 +252,11 @@ export default async function ComparePage(
         }}
       />
       {faq && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLdScript(faq) }} />}
+      {(() => {
+        const w = winner ?? a;
+        const wu = officialUrl(w.slug);
+        return wu ? <StickyCta name={w.name} url={wu} tone={tone} /> : null;
+      })()}
     </div>
   );
 }
