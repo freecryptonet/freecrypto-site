@@ -157,10 +157,10 @@ export default async function ComparePage(
             <table className="w-full min-w-[560px] border-collapse text-sm">
               <thead>
                 <tr className="bg-ink-muted border-b border-edge text-left text-[11px] font-semibold uppercase tracking-[0.06em] text-text-dim">
-                  <th className="py-3 px-4">Criterion</th>
-                  <th className="py-3 px-4 text-center">{a.name}</th>
-                  <th className="py-3 px-4 text-center">{b.name}</th>
-                  <th className="py-3 px-4">Winner</th>
+                  <th scope="col" className="py-3 px-4">Criterion</th>
+                  <th scope="col" className="py-3 px-4 text-center">{a.name}</th>
+                  <th scope="col" className="py-3 px-4 text-center">{b.name}</th>
+                  <th scope="col" className="py-3 px-4">Winner</th>
                 </tr>
               </thead>
               <tbody>

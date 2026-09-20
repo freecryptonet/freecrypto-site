@@ -19,10 +19,10 @@ export const metadata: Metadata = {
 };
 
 const METHODS = [
-  { name: "Exchange sign-up bonuses", effort: "Low (one-off)", payout: "$10–100+", best: "The single biggest free payout", href: "/bonus" },
+  { name: "Exchange sign-up bonuses", effort: "Low (one-off)", payout: "$10–100+", best: "The single biggest free payout", href: "/programs/category/exchange" },
   { name: "Bitcoin cashback", effort: "Very low", payout: "1–12% back", best: "Money you'd spend anyway", href: "/shop" },
-  { name: "Learn-and-earn", effort: "Low", payout: "$5–40", best: "Total beginners", href: "/bonus" },
-  { name: "Interest / earn", effort: "Low (needs capital)", payout: "Up to ~13% APY", best: "Long-term holders", href: "/bonus" },
+  { name: "Learn-and-earn", effort: "Low", payout: "$5–40", best: "Total beginners", href: "/programs/category/learn-earn" },
+  { name: "Interest / earn", effort: "Low (needs capital)", payout: "Up to ~13% APY", best: "Long-term holders", href: "/programs/nexo" },
   { name: "Faucets & tasks", effort: "High for the payout", payout: "Cents/hour", best: "A first taste only", href: "/calculator" },
 ];
 
@@ -89,11 +89,11 @@ export default function EarnPillarPage() {
           <table className="w-full min-w-[560px] border-collapse text-sm">
             <thead>
               <tr className="border-b border-edge text-left text-xs text-text-faint">
-                <th className="py-2 pr-4 font-medium">Method</th>
-                <th className="py-2 pr-4 font-medium">Effort</th>
-                <th className="py-2 pr-4 font-medium">Typical payout</th>
-                <th className="py-2 pr-4 font-medium">Best for</th>
-                <th className="py-2 font-medium"></th>
+                <th scope="col" className="py-2 pr-4 font-medium">Method</th>
+                <th scope="col" className="py-2 pr-4 font-medium">Effort</th>
+                <th scope="col" className="py-2 pr-4 font-medium">Typical payout</th>
+                <th scope="col" className="py-2 pr-4 font-medium">Best for</th>
+                <th scope="col" className="py-2 font-medium"></th>
               </tr>
             </thead>
             <tbody>

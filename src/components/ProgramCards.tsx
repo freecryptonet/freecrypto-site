@@ -38,17 +38,17 @@ export function ScoreMeter({ slug, tone }: { slug: string; tone: "earn" | "shop"
   if (!s) return null;
   const t = toneClasses(tone);
   return (
-    <dl className="grid grid-cols-1 gap-2.5">
+    <div className="grid grid-cols-1 gap-2.5">
       {SCORE_CRITERIA.map(({ key, label }) => (
         <div key={key} className="flex items-center gap-3">
-          <dt className="w-28 shrink-0 text-xs text-text-dim">{label}</dt>
-          <div className="flex-1 h-2.5 rounded-full bg-edge overflow-hidden">
-            <div className={`h-full rounded-full ${t.accent}`} style={{ width: `${s[key] * 10}%` }} />
-          </div>
-          <dd className="w-6 shrink-0 text-right font-mono text-xs font-bold tabular-nums text-text">{s[key]}</dd>
+          <span className="w-28 shrink-0 text-xs text-text-dim">{label}</span>
+          <span className="flex-1 h-2.5 rounded-full bg-edge overflow-hidden">
+            <span className={`block h-full rounded-full ${t.accent}`} style={{ width: `${s[key] * 10}%` }} />
+          </span>
+          <span className="w-6 shrink-0 text-right font-mono text-xs font-bold tabular-nums text-text">{s[key]}</span>
         </div>
       ))}
-    </dl>
+    </div>
   );
 }
 

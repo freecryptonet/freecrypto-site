@@ -73,9 +73,9 @@ export default async function StoreCategoryPage({ params }: PageProps) {
         <table className="w-full min-w-[420px] border-collapse text-sm">
           <thead>
             <tr className="border-b border-edge text-left text-xs text-text-faint">
-              <th className="py-2 pr-4 font-medium">Store</th>
-              <th className="py-2 pr-4 font-medium">Bitcoin reward</th>
-              <th className="py-2 font-medium"></th>
+              <th scope="col" className="py-2 pr-4 font-medium">Store</th>
+              <th scope="col" className="py-2 pr-4 font-medium">Bitcoin reward</th>
+              <th scope="col" className="py-2 font-medium"></th>
             </tr>
           </thead>
           <tbody>

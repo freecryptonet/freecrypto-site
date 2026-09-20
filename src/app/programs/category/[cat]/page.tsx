@@ -276,13 +276,13 @@ export default async function CategoryPage(
           <table className="w-full min-w-[680px] border-collapse text-sm">
             <thead>
               <tr className="bg-ink-muted border-b border-edge text-left text-[11px] font-semibold uppercase tracking-[0.06em] text-text-dim">
-                <th className="py-3 px-4">#</th>
-                <th className="py-3 px-4">Program</th>
-                <th className="py-3 px-4">Score</th>
-                <th className="py-3 px-4">Reward</th>
-                <th className="py-3 px-4">Effort</th>
-                <th className="py-3 px-4">Region</th>
-                <th className="py-3 px-4"></th>
+                <th scope="col" className="py-3 px-4">#</th>
+                <th scope="col" className="py-3 px-4">Program</th>
+                <th scope="col" className="py-3 px-4">Score</th>
+                <th scope="col" className="py-3 px-4">Reward</th>
+                <th scope="col" className="py-3 px-4">Effort</th>
+                <th scope="col" className="py-3 px-4">Region</th>
+                <th scope="col" className="py-3 px-4"></th>
               </tr>
             </thead>
             <tbody>

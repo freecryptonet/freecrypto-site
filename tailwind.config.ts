@@ -22,15 +22,15 @@ const config: Config = {
           soft: "#CFDAD8",    // hover / stronger border
         },
         accent: {
-          DEFAULT: "#0E9C8F", // teal — EARN / claim / primary
-          alt: "#0A6F65",     // deep teal-ink
-          warm: "#CF7A22",    // amber — SHOP / cashback
-          danger: "#DC4C4C",  // red — warnings / KYC
+          DEFAULT: "#0E9C8F", // teal — EARN / claim / primary (surfaces/bars)
+          alt: "#0A6F65",     // deep teal-ink — use for TEXT (AA on white)
+          warm: "#B5651A",    // amber — SHOP / cashback (AA-safe on white)
+          danger: "#C43D3D",  // red — warnings / KYC
         },
         text: {
           DEFAULT: "#0E1B1E", // primary text (near-black, teal bias)
-          dim: "#55666A",     // secondary text
-          faint: "#8A999B",   // tertiary / captions
+          dim: "#4E6064",     // secondary text (AA)
+          faint: "#5D6E71",   // tertiary / captions (AA on paper)
         },
       },
       fontFamily: {
