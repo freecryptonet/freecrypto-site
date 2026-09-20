@@ -41,7 +41,6 @@ export function SiteFooter() {
             <li><Link href="/shop" className="hover:text-text">Bitcoin cashback</Link></li>
             <li><Link href="/calculator" className="hover:text-text">Earnings calculator</Link></li>
             <li><Link href="/methodology" className="hover:text-text">Our methodology</Link></li>
-            <li><Link href="/guides" className="hover:text-text">Guides</Link></li>
           </ul>
         </div>
 

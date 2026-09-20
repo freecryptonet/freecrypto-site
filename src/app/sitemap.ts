@@ -1,6 +1,5 @@
 import type { MetadataRoute } from "next";
 import {
-  listGuideSlugsForSitemap,
   listStoreSlugsForSitemap,
   listStoreCategories,
 } from "@/lib/db";
@@ -11,8 +10,7 @@ import { nlCategorySlug } from "@/lib/store-i18n";
 export const dynamic = "force-dynamic";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const [guides, stores, storeCats, nlStores, nlStoreCats] = await Promise.all([
-    listGuideSlugsForSitemap(),
+  const [stores, storeCats, nlStores, nlStoreCats] = await Promise.all([
     listStoreSlugsForSitemap("en"),
     listStoreCategories("en"),
     listStoreSlugsForSitemap("nl"),
@@ -23,13 +21,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: siteUrl("/"), lastModified: now, changeFrequency: "hourly", priority: 1 },
-    { url: siteUrl("/earn"), lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: siteUrl("/programs"), lastModified: now, changeFrequency: "weekly", priority: 0.9 },
-    { url: siteUrl("/bonus"), lastModified: now, changeFrequency: "weekly", priority: 0.8 },
+    { url: siteUrl("/earn"), lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: siteUrl("/shop"), lastModified: now, changeFrequency: "daily", priority: 0.9 },
     { url: siteUrl("/calculator"), lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: siteUrl("/methodology"), lastModified: now, changeFrequency: "monthly", priority: 0.5 },
-    { url: siteUrl("/guides"), lastModified: now, changeFrequency: "weekly", priority: 0.7 },
     { url: siteUrl("/about"), lastModified: now, changeFrequency: "monthly", priority: 0.3 },
   ];
 
@@ -96,15 +92,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ? [{ url: siteUrl("/nl/shop"), lastModified: now, changeFrequency: "daily", priority: 0.8 }]
     : [];
 
-  const guideRoutes: MetadataRoute.Sitemap = guides
-    .filter((g) => g.content_chars >= MIN_INDEXABLE_DESCRIPTION_CHARS)
-    .map((g) => ({
-      url: siteUrl(`/guides/${g.slug}`),
-      lastModified: g.updated_at,
-      changeFrequency: "monthly",
-      priority: 0.6,
-    }));
-
   return [
     ...staticRoutes,
     ...nlStaticRoutes,
@@ -114,6 +101,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...storeCategoryRoutes,
     ...nlStoreRoutes,
     ...nlStoreCategoryRoutes,
-    ...guideRoutes,
   ];
 }

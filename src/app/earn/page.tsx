@@ -175,8 +175,8 @@ export default function EarnPillarPage() {
           Every method here is free to <em>start</em>. So the red flag is simple: if a site asks you to{" "}
           <strong>deposit money to unlock</strong> free crypto, or to <strong>sign a wallet
           transaction to &quot;verify&quot;</strong> eligibility, it&apos;s a scam — close the tab. Real
-          free-earning never asks for your money or a signature to check what you&apos;re owed. Read the{" "}
-          <Link href="/guides">safety guides</Link> before you connect a wallet or fund an account.
+          free-earning never asks for your money or a signature to check what you&apos;re owed. See{" "}
+          <Link href="/methodology">how we score &amp; vet</Link> each program before you sign up.
         </p>
       </div>
 

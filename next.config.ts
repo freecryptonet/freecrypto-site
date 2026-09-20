@@ -6,6 +6,14 @@ const nextConfig: NextConfig = {
       // /bonus is superseded by the premium exchange comparison page.
       { source: "/bonus", destination: "/programs/category/exchange", permanent: true },
       { source: "/bonus/:slug", destination: "/programs/:slug", permanent: true },
+      // Airdrop-era surfaces are off-concept — fold into the earn guide.
+      { source: "/guides", destination: "/earn", permanent: true },
+      { source: "/guides/:slug", destination: "/earn", permanent: true },
+      { source: "/airdrops", destination: "/earn", permanent: true },
+      { source: "/airdrops/:slug", destination: "/earn", permanent: true },
+      { source: "/calendar", destination: "/earn", permanent: true },
+      { source: "/categories/:slug", destination: "/programs", permanent: true },
+      { source: "/chains/:slug", destination: "/programs", permanent: true },
     ];
   },
   async headers() {

@@ -1,22 +1,20 @@
 import type { MetadataRoute } from "next";
 import { siteUrl } from "@/lib/seo";
 
-// AI scrapers / model trainers. Block to keep daily-verified airdrop data
-// out of training datasets.
+// AI *training* scrapers — blocked to keep our content out of model training
+// sets. NOTE: AI *search* crawlers (OAI-SearchBot, PerplexityBot, Google-Extended)
+// are deliberately NOT blocked — they drive discovery + referral traffic, which
+// a new low-authority site needs. Only pure trainers/scrapers stay blocked.
 const AI_BOTS = [
+  "GPTBot",
   "ClaudeBot",
   "anthropic-ai",
-  "GPTBot",
-  "OAI-SearchBot",
-  "Google-Extended",
   "CCBot",
   "Bytespider",
-  "PerplexityBot",
   "Amazonbot",
   "Applebot-Extended",
   "Meta-ExternalAgent",
   "Meta-ExternalFetcher",
-  "FacebookBot",
   "Diffbot",
   "ImagesiftBot",
 ];

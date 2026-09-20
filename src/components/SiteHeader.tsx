@@ -4,7 +4,6 @@ const NAV = [
   { href: "/programs", label: "All programs" },
   { href: "/earn", label: "Ways to earn" },
   { href: "/shop", label: "Cashback" },
-  { href: "/guides", label: "Guides" },
   { href: "/calculator", label: "Calculator" },
 ];
 

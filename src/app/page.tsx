@@ -390,7 +390,7 @@ function HonestyStrip() {
           <h3 className="mt-2 text-h3">Avoid the scams</h3>
           <p className="mt-1 text-sm text-text-dim">
             Learn the red flags before you connect a wallet or fund an account.{" "}
-            <Link href="/guides" className="text-accent hover:underline">Read the safety guides →</Link>
+            <Link href="/earn" className="text-accent hover:underline">See the safety basics →</Link>
           </p>
         </div>
       </div>
